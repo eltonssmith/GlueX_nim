@@ -34,7 +34,32 @@ There it enters the straws and flows through them into the upstream plenum. From
 The readout wires pass through the poly-carbonate disc and the upstream plenum to reach the anode wires. 
 They are connected in groups of 20 to 24 to transition boards which are mounted onto the poly-carbonate disc. pre-amplifiers\cite{Barbosa2007} are mounted on high voltage boards which are bolted onto the transition boards. The aluminum end-plate, outer cylindrical wall of the chamber, aluminum components connecting the straws to the aluminum end-plate and the inside walls of the straws are all connected to a common electrical ground. 
 
-\subsection{Forward drift chambers (Lubomir) \label{sec:fdc}}
+\subsection{Forward drift chambers}(Lubomir)
+\label{sec:fdc}
+
+The Forward Drift Chamber (FDC) system consists of 24 disk-shaped planar drift chambers of 1m-diameter.
+They are grouped into four packages inside the bore of the spectrometer magnet.
+Due to the high particle density in the forward region the tracking there requires
+good multi-track separation.
+Therefore, the cathodes on both sides of the wire plane have strips that in addition to the wires are readout allowing for a  reconstruction of a space point on the track from each chamber. 
+The FDC registers tracks with polar angles as low as $1^\circ$ and up to $10^\circ $
+with all the chambers, while having partial coverage up to $20^\circ$.
+
+One FDC chamber consists of a wire plane and two cathode planes on both sides at a distance of $5$~mm from the wires. 
+To minimize the material and allow registration of low energy photons by the outside e.m. calorimeters,
+the frame that holds the wires is made out of Rochacell with a thin G10 skin.
+The wire plane has sense ($20~\mu$m diameter) and field ($80$~$\mu$m) wires $5$~mm apart, forming a field cell of $10\times 10$~mm$^2$. 
+The gas mixture used is $40\%$~Ar and $60\%$~CO$_2$.
+A positive HV of about $2.2$~kV is applied on the sense wires and negative of $0.5$~kV on the field ones. 
+The cathodes are made out of $2$-$\mu$m-thin $Cu$ strips on Kapton foil with a pitch of $5$~mm and are held on ground. The strips on the two cathodes are at $30^\circ $ bewteen each other and at $75^\circ $ and $105^\circ $ angle w.r.t. the wires.
+
+The six chambers of a package are separated by thin aluminized Mylar.
+Each chamber is rotated w.r.t. the previous one by $60^\circ $.
+The total material of a package in the sensitive area is $0.43\%$~R.L. and about half of that in the area along the beam line that has no copper on the cathodes.
+The sense wires in the inner area of $6-7.8$~cm diameter(depending on the distance of the package to the target) are thickened from $20$~$\mu$m to $\sim 80$~$\mu$m which makes them insensitive to the high raters along the beam.
+The distance between the first and last package is $169$~cm. 
+All the chambers are supplied with gas in parallel. 
+In total $2,304$ wires and $10,368$ strips are read using charge pre-amplifiers with $10$~ns peaking time with a gain of $0.5$~mV/pC for the wires and $2.4$~mV/pC for the strips.
 \subsection{Electronics \label{sec:dcelectronics}}
 The high voltage (HV) supply units used are CAEN A1550P with noise-reducing modules added to each crate chassis. 
 The low voltage (LV) supplies are MPOD MPV8008. 
@@ -98,9 +123,9 @@ Gain calibration for the chamber as a whole is performed for each session of dat
 The time calibrations involve finding the time offset needed to place the earliest possible arrival time of pulse signals at 0, and fitting the parameters used to describe the relationship between the pulse arrival time and the closest distance between the track and the anode wire. This is also performed for each session of data-taking. 
 Online monitoring software enables the shift-takers to check that the number of straws recording data, the distribution of signal arrival times and the dE/dx are as expected. 
 
-\subsection{Performance \label{sec:dcperformance}}
+\subsection{Performance\label{sec:dcperformance}}
 
-
+In the FDC the avalanche created around the wire is seen in three projections on the two cathodes and on the wires. 
 
 \subsection{Summary \label{sec:dcsummary}}
  
