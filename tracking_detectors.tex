@@ -52,7 +52,16 @@ This is achieved with additional cathode strips on both sides of the wire plane 
 The FDC registers tracks with polar angles as low as $1^\circ$ and up to $10^\circ $
 with all the chambers, while having partial coverage up to $20^\circ$.
 
-One FDC chamber consists of a wire plane and two cathode planes on both sides at a distance of $5$~mm from the wires. 
+One FDC chamber consists of a wire plane and two cathode planes on both sides at a distance of $5$~mm from the wires (Fig.~\ref{FDC_OneCell}).
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figures/FDC_OneCell.jpg}  
+\caption{\label{FDC_OneCell}
+Artistic view of one FDC chamber (from left to right): upstream cathode, wire plane, downstream cathode, chamber separator.
+}
+\end{center}
+\end{figure}
 To minimize the material and allow registration of low energy photons by the outside e.m. calorimeters,
 the frame that holds the wires is made out of Rochacell with a thin G10 skin.
 The wire plane has sense ($20~\mu$m diameter) and field ($80$~$\mu$m) wires $5$~mm apart, forming a field cell of $10\times 10$~mm$^2$. 
@@ -139,11 +148,11 @@ The detection efficiency and resolution of the CDC have been  reported separatel
 In the FDC the avalanche created around the wire is seen in three projections: on the two cathodes and on the wires.
 The drift time information from the wires is used to reconstruct the hit position perpendicular to the wire.
 The strip charges from the two cathodes are used to reconstruct the avalanche position along the wire. 
-The same strip information can be used to reconstruct the avalanche position perpendicular to the wire which, due to the proximity of the avalanche to the wire, is practically the wire position as illustrated in Fig~\ref{FDC_wires_from_strips}
+The same strip information can be used to reconstruct the avalanche position perpendicular to the wire which, due to the proximity of the avalanche to the wire, is practically the wire position as illustrated in Fig~\ref{FDC_wires_from_strips}.
 \begin{figure}[tbp]
 \begin{center}
-%\includegraphics[width=0.85\textwidth]{figures/FDC_wires_from_strips.pdf}  
-\caption{\label{FDC_wires_from_strips} Wire (avalanche) positions reconstructed from the strips on the two cathodes in one FDC chamber.
+%\includegraphics[width=0.95\textwidth]{figures/FDC_wires_from_strips.pdf}  
+\caption{\label{FDC_wires_from_strips} Wire (avalanche) positions reconstructed from the strip information on the two cathodes in one FDC chamber.
 }   
 \end{center}  
 \end{figure}
