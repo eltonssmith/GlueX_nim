@@ -3,72 +3,19 @@
 %=================================================
 
 \section[The beam line and coherent photon source (Stuart)]{The beam line and coherent photon source \label{sec:beamline}}
-
-%\begin{figure}[t]
-%\begin{center}
-%   %\includegraphics[viewport=1 1 790 %540,clip,angle=0,width=0.98\linewidth]{figs/mainmachine_beamline_dwg}
-%\end{center}
-%\caption{Schematics of the accelerator and the beam extraction system.
-%        }
-%\label{fig:beam:cebaf-dwg} 
-%\end{figure}
-
-
-The Hall D complex has been described in Section \ref{sec:gluexexperiment:complex} and is shown schematically in Fig.~\ref{fig:beam:Draw_beamline}, which shows the Tagger Hall, the collimator cave and Hall D itself. The photon beam is produced in the Tagger Hall, which is described in more detail in Section\,\ref{sec:tag}.
-The dimensions are measured in centimeters unless specified differently.
-
-\begin{figure}[t]
-\begin{center}
-%   \includegraphics[clip=true,width=0.98\linewidth]{figures/gx_beamline_0}
- \includegraphics[clip=true,width=0.98\linewidth]{figures/Draw_beamline.png}
-\end{center}
-\caption{Schematic layout of the Hall D complex.
-        }
-\label{fig:beam:Draw_beamline} 
-\end{figure}
-
-
-A properly aligned thin diamond crystal radiator produces linearly polarized photons via coherent bremsstrahlung \cite{timm1969}.
-The coherent radiation is peaked at certain energies and is linearly polarized, depending on the crystal orientation with respect to the beam.
-The degree of linear polarization in the coherent peak is higher at lower peak energies.
-In the Collimator Cave, about 80~m downstream of the radiator, the photon beam is collimated in order to increase the ratio of the polarized to unpolarized photons.  In the nominal \GX{} configuration, we produce the main coherent peak
-with maximum energy of 9~GeV, and use a 3.4~mm collimator.
-The expected degree of linear polarization in the energy range of
-8.4--9.0~GeV is $\sim$40\% after collimation. The beam energy spectrum
-after collimation and the photon flux are measured by the Pair
-Spectrometer, located in Hall D. The beam polarization can be derived
-from the shape of the spectrum. Independently, the beam polarization
-can be directly measured by the triplet polarimeter upstream of the
-pair spectrometer.
-
- \begin{figure}[t]
-\begin{center}
- \includegraphics[clip=true,width=0.5\linewidth]{figures/gx3102_pi0etaAsym2016_fig0_beam.pdf}
-\end{center}
-\caption{(color online) (a) Photon beam intensity versus energy as measured by the pair spectrometer (not corrected for instrumental acceptance).  (b) Photon beam polarization as a function of beam energy, as measured by the triplet polarimeter, with data points offset horizontally by $\pm0.015$~GeV for clarity.
-        }
-\label{fig:beam:gx3102_pi0etaAsym2016_fig0_beam} 
-\end{figure}
-
-
-
-Finally, the photon beam travels through the \GX{} detector, and
-ultimately goes to the photon beam dump just outside the downstream
-end of the experimental hall.
-The main parameters and properties of the Photon Beam are given in
-Tables~\ref{tab:elecprop} and \ref{tab:operates}.
-
-
-
+The Hall D complex has been described in Section \ref{sec:gluexexperiment:complex} and is shown schematically in Fig.~\ref{fig:beam:Draw_beamline}, which shows the Tagger Hall, the collimator cave and Hall D itself. The CEBAF electron beam enters the Tagger Hall with properties listed in Table\,\ref{tab:elecprop}. The position at the radiator is monitored and
+controlled using the 5C11 and 5C11B beam position monitors located at the end of the accelerator tunnel just upstream of the Tagger Hall. The position of the beam on the collimator
+is initially set by adjusting small corrector magnets at 5C11B. The electron spot size at the radiator is relatively large and converging to a virtual focus located at the collimator 75\,m away. The virtual spot size ($\sim$ 0.5\,mm) is small compared to the intrinsic size of the photon beam on the face of the collimator. The position on the collimator is monitored using the response of 
+the active collimator to the incident photon beam. The stability of the beam is maintained during production by a feedback system that fixes the position of the beam at 5C11B and at the active collimator. The energy and stability of the electron beam can be monitored using the AD00 beam position monitor, which is located immediately upstream of the electron dump.
 
 \begin{table}[tbp]
 \begin{center}
 \caption
-[Assumed and projected electron beam properties]
+[Design properties of the electron beam]
 {Electron beam parameters. The emittance, energy spread and
 the related parameters were
 predicted by a model of the transport line from
-the accelerator to the Hall D photon source. }
+the accelerator to the Hall D photon source. RMS stands for root-mean-square deviation.}
 \label{tab:elecprop}
 \begin{tabular}{|l|c|}
 \hline\hline
@@ -92,15 +39,64 @@ image position stability at collimator & $\pm$200~$\mu$m \\
 \end{table}
 
 
+%\begin{figure}[t]
+%\begin{center}
+%   %\includegraphics[viewport=1 1 790 %540,clip,angle=0,width=0.98\linewidth]{figs/mainmachine_beamline_dwg}
+%\end{center}
+%\caption{Schematics of the accelerator and the beam extraction system.
+%        }
+%\label{fig:beam:cebaf-dwg} 
+%\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+%   \includegraphics[clip=true,width=0.98\linewidth]{figures/gx_beamline_0}
+ \includegraphics[clip=true,width=0.98\linewidth]{figures/Draw_beamline.png}
+\end{center}
+\caption{Schematic layout of the Hall D complex.
+        }
+\label{fig:beam:Draw_beamline} 
+\end{figure}
+
+The photon beam is produced in the Tagger Hall, which is described in more detail in Section\,\ref{sec:tag}.
+A properly aligned thin diamond crystal radiator produces linearly polarized photons via coherent bremsstrahlung \cite{timm1969} in addition to photons due to incoherent scattering.
+The coherent radiation is peaked at certain energies and is linearly polarized, depending on the crystal orientation with respect to the beam.
+The degree of linear polarization in the coherent peak is higher at lower peak photon energies.
+In the Collimator Cave, about 75~m downstream of the radiator, the photon beam is collimated in order to increase the ratio of the polarized to unpolarized photons.  In the nominal \GX{} configuration, we produce the main coherent peak
+with maximum energy of 9~GeV and use a 5.0\,mm  collimator.\footnote{We also have a 3.4~mm collimator, which has been used for some physics production runs.}
+The beam energy spectrum after collimation and the photon flux are measured by the Pair
+Spectrometer, located in Hall D. The photon spectrum and its polarization with a 12\,GeV electron beam are shown in Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}.
+The expected degree of linear polarization in the energy range of 8.4--9.0~GeV is $\sim$40\% after collimation. 
+The beam polarization is directly measured by the triplet polarimeter upstream of the pair spectrometer. The polarization can also be tracked using various physics channels, such as $\rho$ 
+production, even if they cannot determine the absolute value of the polarization. 
+  
+ \begin{figure}[t]
+\begin{center}
+ \includegraphics[clip=true,width=0.5\linewidth]{figures/gx3102_pi0etaAsym2016_fig0_beam.pdf}
+\end{center}
+\caption{(color online) (a) Photon beam intensity versus energy as measured by the pair spectrometer (not corrected for instrumental acceptance).  (b) Photon beam polarization as a function of beam energy, as measured by the triplet polarimeter, with data points offset horizontally by $\pm0.015$~GeV for clarity.
+        }
+\label{fig:beam:gx3102_pi0etaAsym2016_fig0_beam} 
+\end{figure}
+
+In the sections that follow, we describe how the linearly polarized photon beam is produced,  how it is tagged using the tagger spectrometer, how its polarization is determined in the
+triplet polarimeter, how the flux is monitored with the pair spectrometer, and how the flux is calibrated using the total absorption counter. The photon is dumped in the photon beam dump
+just outside the downstream end of the experimental hall.
+The main parameters and properties of the photon beam are given in Table\,\ref{tab:operates}.
+  
+
+
+
 \begin{table}[tbp]
 \begin{center}
-\caption[Operating parameters for an experiment]{\label{tab:operates}
-Operating parameters for an experiment using the coherent bremsstrahlung beam,
+\caption[Typical operating parameters for an experiment]{\label{tab:operates}
+{\color{red}Note: The values in this table need to be checked!}
+Typical operating parameters for an experiment using the coherent bremsstrahlung beam,
 calculated with the properties
-listed in Table \ref{tab:elecprop}, a diamond radiator of thickness 20 $\mu$m, and the standard
-primary collimator of diameter 3.4~mm located at its nominal position.
+listed in Table \ref{tab:elecprop}, a diamond radiator of thickness 50~$\mu$m, and the standard
+primary collimator of diameter 5.0~mm located at its nominal position.
 The electron beam current is taken to 
-be $2.2~\mu$A. The hadronic rates are calculated for 
+be $150$~nA. The hadronic rates are calculated for 
 a 30~cm liquid hydrogen target.}
 %\begin{tabular}{|l|c|c|c|c|}
 %\hline\hline
@@ -118,18 +114,20 @@ a 30~cm liquid hydrogen target.}
 %total hadronic rate & 385 kHz & 365 kHz & 350 kHz & 345 kHz \\
 %tagged hadronic rate & 26 kHz & 14 kHz & 6.3 kHz & 2.1 kHz \\
 
+% The number I entered came from the Bremstrahlung calculator, sometimes estimating averages from the plots
+% Power and rates were taken from original table and reduced by a factor of 5.  ES 10/9/2019
 \begin{tabular}{|l|r|}
 \hline\hline
 $E$ upper edge of the peak & 9~GeV \\
 Peak effective range       & 8.4 - 9.0~GeV\\
-Tagger rate in the effective range & 240~MHz  \\
-$N_{\gamma}$ in the effective range after collimator & 100~MHz  \\
-Maximum polarization in the peak, after collimator & 41\% \\
-Mean polarization in the effective range, after collimator & 37\% \\
-Power on collimator & 4.5~W \\
-Power on target & 0.7~W \\
-Total hadronic rate & 360 kHz \\
-Hadronic rate in the effective range & 15 kHz \\
+Tagger rate in the peak range & 43~MHz  \\
+$N_{\gamma}$ in the peak range after collimator & 24~MHz  \\
+Maximum polarization in the peak, after collimator & 40\% \\
+Mean polarization in the peak range, after collimator & 35\% \\
+Power on collimator & 0.9~W \\
+Power on target & 0.14~W \\
+Total hadronic rate & 70 kHz \\
+Hadronic rate in the peak range & 3 kHz \\
 \hline\hline
 \end{tabular}
 \end{center}
@@ -484,6 +482,14 @@ Not every photon produced at the radiator reaches the hall, and in normal \GX{} 
 
 Using the TAC at normal \GX{} production currents is not possible, as it would very quickly succumb to radiation damage, therefore the TAC is used to measure photons reaching it at low currents with near 100\% efficiency.
 From this measurement, the fraction of bremsstrahlung produced photons reaching \GX{} at nominal operational beam currents can be determined by extrapolation.
+
+Finally, the photon beam travels through the \GX{} detector, and
+ultimately goes to the photon beam dump just outside the downstream
+end of the experimental hall.
+The main parameters and properties of the Photon Beam are given in and \ref{tab:operates}.
+
+
+
 
 \subsection{Flux normalization \label{sec:fluxnorm}}
 (Status 09/30/2019: Materials collated, section will be included after collaboration meeting)
