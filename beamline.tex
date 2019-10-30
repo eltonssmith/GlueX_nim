@@ -283,9 +283,6 @@ It is also used to monitor the photon beam flux and can be used for
 energy calibration of the tagging hodoscope and microscope detectors.
 {\color{red} Comments by Elton: Further description (Can refer back to Fig with photon flux and polarization) What is the timing resolution? Rate of PS triggers? What is the energy resolution? Stability of the system?}
 
-\subsection{Flux normalization \label{sec:fluxnorm}}
-
-{\color{red}(Status 10/24/2019: Materials collated, section may better fit this document as a subsection of the PS discussion, with a longer form description in a dedicated beamline article)}
 
 %\subsubsection[Spectrometer]{Spectrometer\label{sec:beamline:ps-spetrometer}}
 
@@ -526,7 +523,7 @@ Not every photon produced at the radiator reaches the hall, and in normal \GX{} 
 
 Using the TAC at normal \GX{} production currents is not possible, as it would very quickly succumb to radiation damage, therefore the TAC is used to measure photons reaching it at low currents with near 100\% efficiency.
 From this measurement, the fraction of bremsstrahlung produced photons reaching \GX{} at nominal operational beam currents can be determined by extrapolation.
-{\color{red} Comments by Elton: Describe how the PS measures the relative rate and the TAC is used to determine the absolute flux assuming the PS is a linear device.}
+
 
 {\color{red} Comment by Stuart: TAC runs have also been performed using v-wires during GlueX phase I, should we mention this?}
 
@@ -534,3 +531,15 @@ From this measurement, the fraction of bremsstrahlung produced photons reaching 
 %ultimately goes to the photon beam dump just outside the downstream end of the experimental hall.
 %The main parameters and properties of the Photon Beam are given in and \ref{tab:operates}.
 %{\color{red} Comment by Stuart: Hasn't this already been stated at the beginning of this section?}
+
+\subsection{Flux normalization \label{sec:fluxnorm}}
+One quantity of particular interest for GlueX physics analysis is the photon flux.
+This is defined as the number of photons incident on the target integrated over the course of a beamtime, and must be measured in order to determine a reaction cross section.
+Furthermore, in beam asymmetry measurements, data from each state of beam polarization will have slightly different integrated fluxes, the relative ratios of which must be accounted for when extracting the beam asymmetry \cite{AlGhoul:2017nbp}.
+
+As stated in section \ref{sec:tac}, not every photon produced at the radiator reaches the hall, and not every photon reaching the hall causes an interaction that is seen in the detector.
+In a TAC run, the number beam photons passing through the collimator is determined at the Pair Spectrometer ({\color{red}refer to figure of PS yield spectrum}), this is then compared to the nummber of photons reaching the TAC and used to measure the acceptance of the PS.  This allows the acceptance-corrected PS spectrum at physics beam currents to be used to determine the absolute flux.
+
+{\color{red} Comments by Elton: Describe how the PS measures the relative rate and the TAC is used to determine the absolute flux assuming the PS is a linear device.}
+
+{\color{red}(Status 10/29/2019: Above summary can be expanded into a longer form description in a dedicated beamline article, it would also be nice to have a reference for the procedure)}
