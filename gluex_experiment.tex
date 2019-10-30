@@ -16,12 +16,45 @@ The \gx{} experiment is housed in the Hall D complex at Jefferson Lab. This new 
 
 Downstream of the collimator is a thin beryllium radiator used by both the triplet polarimeter which measures the linear polarization of the photons and a pair spectrometer which is used to measure the flux of the photons. More information on the production, tagging and monitoring of the photon beam can be found in Section~\ref{sec:beamline}. The photons then pass through a 30~cm long liquid hydrogen target at the heart of the \gx{} detector. Photons which did not interact in the target travel to the end of the experimental hall where they enter the photon beam dump.
 
-The \gx{} detector is based on a 4~m long solenoidal magnet which is operated at a maximum field of 2~T. A sketch of the detector is shown in Fig.~\ref{fig:gluexsketch}, while more information on the solenoid is in Section~\ref{sec:solenoid}. The liquid-hydrogen target is located 65~cm inside the upstream bore of the magnet. It consists of a 2~cm diameter, 30~cm long volume of hydrogen and is described in Section~\ref{sec:target}. Surrounding the target is the start counter which consists of 30 thin scintillator paddles that bend to a nose on the down-stream end of the target. The start counter is primary detector that identifies the radio-frequency (RF) bunch that contained the incident electron. More information can be found in Section~\ref{sec:scintillators}. 
-\begin{figure}[htbp]\centering
-\includegraphics[width=0.7\textwidth]{figures/GlueX_Sketch.pdf}  
-\caption{\label{fig:gluexsketch} (Color online)         
-Sketch of GlueX detector.  The main systems of the detector are the Start Counter \cite{Pooser:2019rhu}, the Central Drift Chamber (CDC) \cite{VanHaarlem:2010yq} the Forward Drift Chamber (FDC) \cite{Pentchev2017281}, a scintillator-based Time of Flight (TOF) wall and a lead-glass Forward Calorimeter (FCAL) \cite{MORIYA201360}. The Barrel Calorimeter (BCAL) is sandwiched between the drift chambers and the inner radius of the solenoid.}   
-\end{figure}
+The \gx{} detector is based on a 4~m long solenoidal magnet which is operated at a maximum field of 2~T. The layout of the detector is shown in Fig.~\ref{fig:layout_spectrometer}, while more information on the solenoid is in Section~\ref{sec:solenoid}. The liquid-hydrogen target is located 65~cm inside the upstream bore of the magnet. It consists of a 2~cm diameter, 30~cm long volume of hydrogen and is described in Section~\ref{sec:target}. Surrounding the target is the start counter which consists of 30 thin scintillator paddles that bend to a nose on the down-stream end of the target. The start counter is primary detector that identifies the radio-frequency (RF) bunch that contained the incident electron. More information can be found in Section~\ref{sec:scintillators}. 
+
+% ======================================================================================
+
+\begin{figure*}[tbp]
+\centering
+  \includegraphics[angle=0,viewport=95 115 628 500,clip,width=1.0\linewidth]{figures/gluex_spectrometer_drawing_01_bw}%
+  \caption[layout]{GlueX spectrometer layout. Dimensions are given in mm. The
+    numbers show the Z-coordinates of the detectors' centers, or of
+    the front face of the calorimeter modules in case of the FCAL.
+    Glossary: 
+              SC  - Start Counter (Section \ref{sec:st}), 
+              CDC - Central Drift Chamber (Section \ref{sec:cdc}), 
+              FDC - Forward Drift Chamber (Section \ref{sec:fdc}),
+              BCAL - Barrel Calorimeter (Section \ref{sec:bcal}), 
+              TOF -  Time-of-Flight hodoscope (Section \ref{sec:tof}), 
+              FCAL - Forward Calorimeter (Section \ref{sec:fcal}).
+%
+%    \begin{tabular}{lll}
+%       Name  & Detector & Section \\ \hline
+%              SC  & Start Counter & \ref{sec:st} \\ 
+%              CDC & Central Drift Chamber  & \ref{sec:cdc} \\ 
+%              FDC & Forward Drift Chamber  & \ref{sec:fdc} \\ 
+%              BCAL & Barrel Calorimeter    & \ref{sec:bcal} \\ 
+%              TOF &  Time-of-Flight hodoscope & \ref{sec:tof} \\ 
+%              FCAL & Forward Calorimeter    & \ref{sec:fcal} \\ 
+%    \end{tabular}
+    \label{fig:layout_spectrometer}
+  }
+\end{figure*}
+
+% ======================================================================================
+
+
+%\begin{figure}[htbp]\centering
+%\includegraphics[width=0.7\textwidth]{figures/GlueX_Sketch.pdf}  
+%\caption{\label{fig:gluexsketch} (Color online)         
+%Sketch of GlueX detector.  The main systems of the detector are the Start %Counter \cite{Pooser:2019rhu}, the Central Drift Chamber (CDC) %\cite{VanHaarlem:2010yq} the Forward Drift Chamber (FDC) \cite{Pentchev2017281}, %a scintillator-based Time of Flight (TOF) wall and a lead-glass Forward %Calorimeter (FCAL) \cite{MORIYA201360}. The Barrel Calorimeter (BCAL) is %sandwiched between the drift chambers and the inner radius of the solenoid.}   
+%\end{figure}
 
 Starting at a radius of 10~cm from the beam line is the central drift chamber, a cylindrical straw-tube detector. The active volume of the chamber extends from 48~cm upstream to 102~cm downstream of the target center, and from 10~cm to 56~cm in radius. It consists of 28 layers of straw tubes in both axial and two stereo orientations. Downstream of the central tracker is the forward drift chamber. This device consists of four packages, each containing 6 planar layers in alternating $u$-$y$-$v$ orientations. Both cathodes and anodes are readout from the forward chambers, providing 3D space point measurements. More details on the tracking system can be found in Section~\ref{sec:tracking}. 
 
