@@ -6,7 +6,7 @@
 {\color{red}General comment: As we haggle in the beamline group over the level of detail required for this section, it is worth bearing in mind that a longer-form paper dedicated to the beamline is also on our to-do list.  Material and detail felt to be excessive for this document can spill over into that paper}
 
 The Hall D complex has been described in Section \ref{sec:gluexexperiment:complex} and is shown schematically in Fig.~\ref{fig:beam:Draw_beamline}, which shows the Tagger Hall, the collimator cave and Hall D itself. The CEBAF electron beam enters the Tagger Hall with properties listed in Table\,\ref{tab:elecprop}. The position at the radiator is monitored and
-controlled using beam position monitors\footnote{Named 5C11 and 5C11B, positions indicated in Figure \ref{fig:beam:Draw_beamline}} located at the end of the accelerator tunnel just upstream of the Tagger Hall. The position of the beam on the collimator
+controlled using beam position monitors\footnote{Named 5C11 and 5C11B, positions indicated in Figure \ref{fig:beam:Draw_beamline}.} located at the end of the accelerator tunnel just upstream of the Tagger Hall. The position of the beam on the collimator
 is initially set by adjusting small corrector magnets at this location. The electron spot size at the radiator is relatively large and converges to a virtual focus located at the collimator 75\,m away. The virtual spot size ($\sim$ 0.5\,mm) is small compared to the intrinsic size of the photon beam on the face of the collimator. The position on the collimator is monitored using the response of the active collimator to the incident photon beam. The stability of the beam is maintained during production by a feedback system that fixes the position of the beam at the monitor and at the active collimator. The energy and stability of the electron beam can be monitored using an additional beam position monitor, located immediately upstream of the electron dump.
 
 \begin{table}[tbp]
@@ -136,13 +136,13 @@ Hadronic rate in the peak range & 3 kHz \\
 
 
 \subsection{Goniometer and radiators \label{sec:radiators}}
-The goniometer\footnote{Manufactured by Newport Corporation} is a device which can position and precisely move horizontally, vertically and rotationally about the x, y and z axes.
+The goniometer\footnote{Manufactured by Newport Corporation.} is a device which can position and precisely move horizontally, vertically and rotationally about the x, y and z axes.
 The Hall D goniometer holds several radiators, each used depending on the requirements of the experiment.
 
 For the linearly polarized photon beams normally used in \GX{} production running, diamond radiators, typically 50 $\mu m$ thick, are used in the coherent bremsstrahlung technique.
 This technique requires precise alignment of a diamond radiator, in order to produce a highly polarized beam by scattering off the appropriate crystal planes associated with a particular reciprocal lattice vector.
 
-Several thin aluminium radiators, of varying thickness between 1.5 $\mu m$ and 30 $\mu m$\footnote{$2\times10^{-5}$ to $3\times10^{-4}$ radiation lengths}, are installed on the goniometer and a separate rail for amorphous radiators, 615 mm downstream of the goniometer.
+Several thin aluminium radiators, of varying thickness between 1.5 $\mu m$ and 30 $\mu m$\footnote{$2\times10^{-5}$ to $3\times10^{-4}$ radiation lengths.}, are installed on the goniometer and a separate rail for amorphous radiators, 615 mm downstream of the goniometer.
 Data collected using these radiators are used to normalize the incoherent bremsstrahlung component from the linearly polarized beam data.
 
 \subsubsection{Diamond selection and quality control \label{sec:diamonds}}
@@ -157,7 +157,7 @@ Minimising this divergence enhances the coherent bremsstrahlung spectrum, so the
 
 \subsection{Photon tagging system \label{sec:tag}}
 After passing through a radiator, the mixed photon-electron beam produced enters the photon tagging system (``tagger''), where the electrons are swept out of the beamline by a dipole magnet and detected by one of two systems in the tagger focal plane; the broadband hodoscope (TAGH) or the high resolution microscope (TAGM).
-See Fig.\,\ref{fig:beam:tagger-hall}.
+See Fig.\,\ref{fig:beam:BEAM_taggerplot}.
 A permanent, 0.8~T$\cdot$m dipole magnet is located
 downstream of the tagger magnet on the photon beam line, preventing
 the electron beam from reaching Hall D should the tagger magnet trip.
@@ -188,6 +188,41 @@ It is 1.13 m wide, 1.41 m high and 6.3 m long, weighing 80 metric tons, with a n
 {\color{red} Comments by Elton: Need description of field. Summary of mapping. Uncertainty on absolute field? Uniformity? Standard operation and experience.}
 
 
+\subsubsection{Tagger microscope (TAGM)}\label{sec:TAGM}
+The Tagger Microscope is a high-resolution hodoscope that counts post-bremsstrahlung electrons corresponding to the photon energy band of interest to the experiment in Hall D.
+For a 12 GeV incident electron beam in the \GX{} experiment, the microscope is used to tag photons between 8.4 and 9.0 GeV, with 0.1\% energy resolution, and timing resolution of 200 ps.
+This energy range changes depending on the primary electron beam energy, and the device is also designed to be movable to center on other energy ranges as demanded by experiment.
+
+Scintillating fibre bundles are oriented towards the incoming electron axis in the tagger focal plane (Fig.~\ref{fig:TAGM_conceptual}), and read out by silicon photomultipliers (SiPMs) at the other end.
+This detector provides fine segmentation along the direction of the electrons' spread, increasing the energy resolution, as well as allowing selective readout to match the photon collimator acceptance through segmentation in the y-direction.
+
+The TAGM comprises a total of 510, 2$\times$2$\times$20 mm$^3$, multi-clad Saint-Gobain BCF-20 fibers, arranged into 17 bundles of 30 fibers, with each bundle having a 5 row $\times$ 6 column formation. These bundles are spliced to BCF-98 clear fiber light guides, and read out by Hamamatsu SiPMs\footnote{Model S10931-050P.} mounted on a custom built two stage preamplifier board, with flash ADC output.
+The board is capable of providing readout from the individual SiPMs, as well as summing the signals over a column to provide one output for each energy bin.
+To reduce the burden of cabling in the tagger hall, only four columns in the TAGH are cabled for individual readout.
+These are sufficient for monitoring the alignment of the electron beam along the focal plane.
+
+\begin{figure}[tbh]
+\begin{center}
+ \includegraphics[clip=true,width=0.95\linewidth]{figures/TAGM_conceptual.pdf}
+\end{center}
+\caption{Conceptual overview of the Tagger Microscope design, showing the fiber bundles and light guides (left), and the orientation of these bundles normal to the incoming electron beam direction in the tagger focal plane (right)
+        }
+\label{fig:TAGM_conceptual} 
+\end{figure}
+
+\subsubsection{Broadband tagging hodoscope (TAGH)}\label{sec:TAGHIntro}
+The Tagger Hodoscope is a device consisting of $\sim$220 scintillator counters distributed over a length of 9.25 m and mounted just behind the focal plane of the tagger magnet.
+Its function is to provide coarse sampling of the full photon energy range from 25\% to 97\% of incident electron energy (3.0 GeV to 11.7 GeV at an electron beam energy of 12 GeV), with a gap in coverage filled by the higher-resolution tagger microscope. The geometry of the counters in the vicinity of the microscope is shown in Fig.\,\ref{fig:beam:BEAM_taggerdetectors}. 
+This broad coverage aids in alignment of the diamond radiator and expands the \GX{} physics program reach to photon energies beyond the coherent peak alone.
+
+Each counter in the hodoscope comprises a 6 mm thick and 40 mm high EJ-228 scintillator, of varying widths between 3 and 21 millimetres, coupled to a $\mu$-metal shielded Hamamatsu R9800 PMT via a cylindrical acrylic (UVT-PMMA) light guide 22.2 mm in diameter and 120 mm long.
+
+The PMTs are instrumented with an active base designed at Jefferson Lab~\cite{tagh:base}. The base consists of a high-voltage divider and an amplifier powered by current flowing through the divider and provides two signal outputs for flash ADC and TDC.
+The amplifier with a gain factor of 8.5 allows to operate the PMT at  a smaller voltage of 900 V and reduce the PMT anode current, therefore improving the rate capability. The maximum rate of the counter is about 4 MHz.
+
+The counters are mounted with their faces normal to the path of the scattered electrons, in two rows, either 8 cm or 13 cm from the focal plane.
+This allows the counters to be positioned without horizontal gaps in the electron beam direction, enabling complete coverage of the entire tagged photon energy range.
+
 \begin{figure}[tbp]
 \begin{center}
 %   \includegraphics[width=0.95\linewidth]{figures/BEAM_taggerplot.pdf}
@@ -199,41 +234,6 @@ It is 1.13 m wide, 1.41 m high and 6.3 m long, weighing 80 metric tons, with a n
 
 \end{center}
 \end{figure}
-
-\subsubsection{Tagger microscope (TAGM)}\label{sec:TAGM}
-The Tagger Microscope is a high-resolution hodoscope that counts post-bremsstrahlung electrons corresponding to the photon energy band of interest to the experiment in Hall D.
-For a 12 GeV incident electron beam in the \GX{} experiment, the microscope is used to tag photons between 8.4 and 9.0 GeV, with 0.1\% energy resolution, and timing resolution of 200 ps.
-This energy range changes depending on the primary electron beam energy, and the device is also designed to be movable to center on other energy ranges as demanded by experiment.
-
-Scintillating fibre bundles are oriented towards the incoming electron axis in the tagger focal plane (Fig.~\ref{fig:TAGM_conceptual}), and read out by silicon photomultipliers (SiPMs) at the other end.
-This detector provides fine segmentation along the direction of the electrons' spread, increasing the energy resolution, as well as allowing selective readout to match the photon collimator acceptance through segmentation in the y-direction.
-
-The TAGM comprises a total of 510, 2$\times$2$\times$20 mm$^3$, multi-clad Saint-Gobain BCF-20 fibers, arranged into 17 bundles of 30 fibers, with each bundle having a 5 row $\times$ 6 column formation. These bundles are spliced to BCF-98 clear fiber light guides, and read out by Hamamatsu SiPMs\footnote{Model S10931-050P} mounted on a custom built two stage preamplifier board, with flash ADC output.
-The board is capable of providing readout from the individual SiPMs, as well as summing the signals over a column to provide one output for each energy bin.
-To reduce the burden of cabling in the tagger hall, only four columns in the TAGH are cabled for individual readout.
-These are sufficient for monitoring the alignment of the electron beam along the focal plane.
-
-\begin{figure}[ht]
-\begin{center}
- \includegraphics[clip=true,width=0.95\linewidth]{figures/TAGM_conceptual.pdf}
-\end{center}
-\caption{Conceptual overview of the Tagger Microscope design, showing the fiber bundles and light guides (left), and the orientation of these bundles normal to the incoming electron beam direction in the tagger focal plane (right)
-        }
-\label{fig:TAGM_conceptual} 
-\end{figure}
-
-\subsubsection{Broadband tagging hodoscope (TAGH)}\label{sec:TAGHIntro}
-The Tagger Hodoscope is a device consisting of $\sim$220 scintillator counters distributed over a length of 9.25 m and mounted just behind the focal plane of the tagger magnet.
-Its function is to provide coarse sampling of the full photon energy range from 25\% to 97\% of incident electron energy (3.0 GeV to 11.7 GeV at an electron beam energy of 12 GeV), with a gap in coverage filled by the higher-resolution tagger microscope.
-This broad coverage aids in alignment of the diamond radiator and expands the \GX{} physics program reach to photon energies beyond the coherent peak alone.
-
-Each counter in the hodoscope comprises a 6 mm thick and 40 mm high EJ-228 scintillator, of varying widths between 3 and 21 millimetres, coupled to a $\mu$-metal shielded Hamamatsu R9800 PMT via a cylindrical acrylic\footnote{UVT-PMMA} light guide 22.2 mm in diameter and 120 mm long.
-
-The PMTs are instrumented with an active base designed at Jefferson Lab~\cite{tagh:base}. The base consists of a high-voltage divider and an amplifier powered by current flowing through the divider and provides two signal outputs for flash ADC and TDC.
-The amplifier with a gain factor of 8.5 allows to operate the PMT at  a smaller voltage of 900 V and reduce the PMT anode current, therefore improving the rate capability. The maximum rate of the counter is about 4 MHz.
-
-The counters are mounted with their faces normal to the path of the scattered electrons, in two rows, either 8 cm or 13 cm from the focal plane.
-This allows the counters to be positioned without horizontal gaps in the electron beam direction, enabling complete coverage of the entire tagged photon energy range.
 
 The construction of the hodoscope allows for later addition of counters to fully cover the energy range above the coherent peak for other microscope positions by filling the gaps between sampling scintillators. The mounting frame of the hodoscope is suspended from the Tagger-Hall ceiling to provide full flexibility of microscope positioning.
 {\color{red} Comments by Elton: What were typical rates during production running? What is the timing resolution? What is the energy granularity? What is the energy resolution (e.g. compared to PS)?}
