@@ -1,7 +1,3 @@
-%=======================+=========================
-%==============   The beamline     ===============
-%=================================================
-
 \section[The beam line and coherent photon source (Stuart)]{The beam line and coherent photon source \label{sec:beamline}}
 {\color{red}General comment: As we haggle in the beamline group over the level of detail required for this section, it is worth bearing in mind that a longer-form paper dedicated to the beamline is also on our to-do list.  Material and detail felt to be excessive for this document can spill over into that paper}
 
@@ -51,7 +47,7 @@ image position stability at collimator & $\pm$200~$\mu$m \\
 
 \begin{figure}[t]
 \begin{center}
-%   \includegraphics[clip=true,width=0.98\linewidth]{figures/gx_beamline_0}
+%   \includegraphics[clip=true,width=0.98\linewidth]{figures/gx_beamline_0}https://www.overleaf.com/6913428728kzgcdrhmtbjj
  \includegraphics[clip=true,width=0.98\linewidth]{figures/Draw_beamline.png}
 \end{center}
 \caption{Schematic layout of the Hall D complex, showing the Tagger Hall, Hall D, and several of the key beamline devices. Also indicated are the locations of the 5C11B and AD00C beam position monitors.
@@ -270,7 +266,32 @@ The polarimeter uses the process of pair production on atomic electrons in a ber
 Information of the degree of polarization of the photon beam can be obtained by analysing the azimuthal distribution of the scattered atomic electrons measured by this device.
 
 \subsubsection{Determination of photon polarization (M. Dugger/ASU Student)\label{sec:polarization}}
-{\color{red} Summary of how the polarization is determined, include how data are taken and how much statistics is needed to determine the polarization}.
+The triplet polarimeter determines the degree of polarization of the incident photon beam by using the azimuthal distribution of the recoil electron arising from the triplet photoproduction process.
+Triplet photoproduction occurs when the polarized electron beam interacts with the electric field of an atomic electron within a target material and produces a high energy electron-positron pair.
+When coupled with trajectory and energy information of the lepton pair, the azimuthal angular distribution of the recoil electron can provide a measure of the photon beam polarization.
+The cross section for triplet photoproduction can be written as $\sigma_t = \sigma_0 [ 1 - P \Sigma \cos(2\varphi)]$ for a polarized photon beam, where $\sigma_0$ is the unpolarized cross section, $P$ the photon beam polarization, $\Sigma$ the beam asymmetry for the process, and $\varphi$ the azimuthal angle of the recoil electron trajectory with respect to the plane of polarization for the incident photon beam.
+To determine the photon beam polarization, the azimuthal distribution of the recoil electrons is recorded and fit to the function $A [ 1- B \cos(2\varphi)]$  where the variables $A$ and $B$ are parameters of the fit with $B = P \Sigma$.
+
+We have constructed a system for detection of recoil electrons following triplet photoproduction, this system consists of a converter tray and positioning assembly,
+which holds and positions a beryllium foil converter within which the triplet
+photoproduction takes place; a silicon strip detector (SSD) to detect the recoil
+electron from triplet photoproduction, providing energy and azimuthal
+angle information for that particle; a vacuum housing, containing the production target and SSD, supplying a vacuum environment minimizing multiple Coulomb scattering
+between target and SSD, and lastly the preamplifier and signal filtering electronics
+within a Faraday-cage housing.
+In the preamp enclosure, to reduce exterior electromagnetic signal interference,
+the box is lined with a layer of copper foil. Signals from the downstream (azimuthal sector)
+side of the SSD are fed through a vacuum flange into a charge-sensitive preamplifier.
+In operation, the TPOL vacuum box is coupled directly to the evacuated
+beamline through which the polarized photon beam passes. In summation upon entering
+TPOL, the photon beam passes into the beryllium converter, triplet photoproduction takes
+place, the recoil electron is detected by the SSD within the TPOL vacuum chamber.
+Produced electron-positron pairs, as well as any photons that did not interact with the converter material, pass through the downstream port of the vacuum box into the evacuated
+beamline, which in turn passes through a shielding wall into the Hall D experimental area. The electron and positron pair then enter the vacuum box and magnetic field of the GlueX pair
+spectrometer, while photons continue through an evacuated beamline to the target region of
+the GlueX detector.
+Accounting for all sources of uncertainty from this setup, the total estimated systematic
+error in the beam asymmetry $\Sigma$ is 1.5\% \cite{DUGGER2017115}.
 
 \subsection{Pair spectrometer         (Sasha) \label{sec:ps}}
 
@@ -286,15 +307,19 @@ Each detector arm covers a momentum range of $e^\pm$ between 3.0 GeV/c and 6.2 G
 corresponding to reconstructed photon energies between 6~GeV and 12.4~GeV. The relatively
 large acceptance of the hodoscope allows one to reconstruct photons
 with energies in the coherent peak energy region and also in the range
-near the beam end-point energy of 12~GeV. Some details about the performance of the spectrometer are given in~\cite{Somov:2017vhp,Somov:2016bgb}.
+near the beam end-point energy of 12~GeV.
 
 The main purpose of the spectrometer is to measure the spectrum of the
 collimated photon beam and determine the fraction of linearly polarized
 photons in the coherent peak energy region.
 It is also used to monitor the photon beam flux and can be used for 
 energy calibration of the tagging hodoscope and microscope detectors.
-{\color{red} Comments by Elton: Further description (Can refer back to Fig with photon flux and polarization) What is the timing resolution? Rate of PS triggers? What is the energy resolution? Stability of the system?}
 
+The energy resolution of the PS hodoscope is about 25 MeV.
+The time resolution of the PSC counters is about 120 ps. This resolution
+allows one to distinguish the electron beam bunch where the bremsstrahlung photon is emitted and relate hits from the tagging detectors and PS
+from the same event. The PS detector is integrated to the trigger system, as described in Section~\cite{sec:trig}. The typical rate of PS coincidences is
+a few kHz. Details about the performance of the spectrometer are given in~\cite{Somov:2017vhp,Somov:2016bgb}.
 
 %\subsubsection[Spectrometer]{Spectrometer\label{sec:beamline:ps-spetrometer}}
 
@@ -527,6 +552,29 @@ energy calibration of the tagging hodoscope and microscope detectors.
 %\label{fig:beam:ps-signals} 
 %\end{figure}
 
+\subsubsection{Determination of photon flux         \label{sec:ps_flux}}
+The number of beam photons incident on 
+the GlueX target is important for the extraction of cross sections. The photon flux is determined by reconstructing
+$e^\pm$ pairs in the Pair Spectrometer. Data from the PS are 
+collected using a PS trigger, which  runs in parallel to the 
+main GlueX physics trigger, as described in Section~\ref{sec:trig}.
+The number of photons integrated over the run period is obtained
+individually for each tagger counter(TAGH and TAGM), i.e., for
+each specific beam energy range. 
+
+The PS calibration parameter used in the flux determination, a product of the 
+converter thickness, acceptance, and the detection efficiency
+of leptons, is determined using calibration runs with the Total 
+Absorption Counter~\cite{somov_flux}. The TAC is a small calorimeter (see Section~\ref{sec:tac} ) 
+that is inserted into the photon beam and counts the number of beam
+photons. Calibration runs are performed at small beam flux in order
+to control accidental hits in the TAC. Data are acquired simultaneously for
+the PS and TAC. The PS is calibrated by measuring the number of reconstructed
+electromagnetic pairs for the given number of photons provided by the TAC. 
+Uncertainties on the photon flux determinations are currently being investigated.
+The expected precision of the flux determination is on the level of $1\%$.
+
+
 
 \subsection{Total absorption counter \label{sec:tac}}
 The Total Absorption Counter (TAC) is a high-efficiency lead glass calorimeter, used at low beam currents ($<5$nA) to determine the overall efficiency of the coherent bremsstrahlung facility.
@@ -544,14 +592,3 @@ From this measurement, the fraction of bremsstrahlung produced photons reaching 
 %The main parameters and properties of the Photon Beam are given in and \ref{tab:operates}.
 %{\color{red} Comment by Stuart: Hasn't this already been stated at the beginning of this section?}
 
-\subsection{Flux normalization \label{sec:fluxnorm}}
-One quantity of particular interest for GlueX physics analysis is the photon flux.
-This is defined as the number of photons incident on the target integrated over the course of a beamtime, and must be measured in order to determine a reaction cross section.
-Furthermore, in beam asymmetry measurements, data from each state of beam polarization will have slightly different integrated fluxes, the relative ratios of which must be accounted for when extracting the beam asymmetry \cite{AlGhoul:2017nbp}.
-
-As stated in section \ref{sec:tac}, not every photon produced at the radiator reaches the hall, and not every photon reaching the hall causes an interaction that is seen in the detector.
-In a TAC run, the number of beam photons passing through the collimator is determined at the Pair Spectrometer ({\color{red}refer to figure of PS yield spectrum}), this is then compared to the number of photons reaching the TAC and used to measure the acceptance of the PS.  This allows the acceptance-corrected PS spectrum at physics beam currents to be used to determine the absolute flux.
-
-{\color{red} Comments by Elton: Describe how the PS measures the relative rate and the TAC is used to determine the absolute flux assuming the PS is a linear device.}
-
-{\color{red}(Status 10/29/2019: Above summary can be expanded into a longer form description in a dedicated beamline article, it would also be nice to have a reference for the procedure)}
