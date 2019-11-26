@@ -3,7 +3,7 @@
 %=================================================
 
 %------------------------------------------------------------------
-\section[Online computing system (David)]{Online computing system \label{sec:online}}
+\section[Online computing system]{Online computing system \label{sec:online}}
 \subsection{Monitoring \label{sec:onlinemonitoring}}
 
 The Online Monitoring system (OMS) consists of several parts that provide for immediate monitoring of the data, as well near term monitoring ($\sim$hours after acquisition). The immediate monitoring is based on the \textit{RootSpy} system. Figure \ref{fig:online_monitoring_processes} shows a diagram of the processes involved in the RootSpy system and how they couple to the DAQ system using the Event Transfer (ET) software package. ET is part of the CODA DAQ system\cite{coda} and can be used to extract a copy of the data without interfering with the DAQ (i.e. nonblocking mode). The monitoring system utilizes a secondary ET in order to minimize connections to the RAID server running the ER ensuring minimal potential impact to the DAQ through indirect network activity.
