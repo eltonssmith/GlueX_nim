@@ -65,7 +65,7 @@ with maximum energy of 9\,GeV and use a 5.0\,mm collimator.\footnote{A 3.4\,mm c
 The beam energy spectrum after collimation and the photon flux are measured by the Pair
 Spectrometer (section \ref{sec:ps}), located in Hall D. The photon spectrum and its polarization with a 12\,GeV electron beam are shown in Fig.\,\ref{fig:beam:gx3102_pi0etaAsym2016_fig0_beam}.
 The expected degree of linear polarization in the energy range of 8.4--9.0~GeV is $\sim$40\% after collimation. 
-The beam polarization is directly measured by the triplet polarimeter (section \ref{sec:tpol}) upstream of the pair spectrometer. The polarization can also be monitored using various physics channels, such as $\rho$ production, even if they cannot determine the absolute value of the polarization {\color{red}(Alex A has been asked for a short description of this technique, it may fit best as a subsection of \ref{sec:polarization})}.
+The beam polarization is directly measured by the triplet polarimeter (section \ref{sec:tpol}) upstream of the pair spectrometer. The polarization can also be monitored using various physics channels, such as $\rho$ production, even if they cannot determine the absolute value of the polarization {\color{red}(Alex A has been asked for a short description of this technique, it may fit best as a subsection of \ref{sec:polarization})}\cite{gx3076}.
 
 {\color{red} (What about Analytic Bremsstrahlung fitting? Justin performed some of these fits in GlueX? Only for polarization monitoring? Or used in early analyses? \cite{clasnote2011020})}
 
@@ -180,11 +180,11 @@ Electrons that did not interact with the radiator are swept into the electron be
 The Hall D tagger magnet deflects electrons in the horizontal plane, allowing the bremsstrahlung-produced photons to continue to the experimental hall while having the electrons that produced them deposited in the focal plane detectors.
 Electrons that lost a small amount of energy to bremsstrahlung in the
 radiator, or did not interact with the radiator, are deflected by 13.4$^\circ$ into the electron beam dump.
-Electrons that lost more than 25\% of their initial energy are deflected into the focal plane of the magnet, and are detected in either the TAGM or TAGH.
+Electrons that lose more than 25\% of their initial energy are deflected into the focal plane of the magnet, and are detected in either the TAGM or TAGH.
 
-The Hall D tagger magnet is an Elbek-type cryogenic dipole magnet, similar to the JLab Hall B tagger magnet \cite{BORGGREEN19631, Sober2000263}.
-It is 1.13 m wide, 1.41 m high and 6.3 m long, weighing 80 metric tons, with a normal operating field of 1.5 Tesla, a maximum field of 1.75 T, and a pole gap of 30 mm.
-{\color{red} Comments by Elton: Need description of field. Summary of mapping. Uncertainty on absolute field? Uniformity? Standard operation and experience.}
+The Hall D tagger magnet is an Elbek-type cryogenic dipole magnet, similar to the JLab Hall B tagger magnet \cite{BORGGREEN19631, Sober2000263}. The magnet design was optimized using the detailed magnetic field calculation 
+provided by the TOSCA simulation package and the ray tracing of electron beam trajectories~\cite{DIPOLE_YANG,DIPOLE_SOMOV}.
+The magnet is 1.13 m wide, 1.41 m high and 6.3 m long, weighing 80 metric tons, with a normal operating field of 1.5 Tesla for a  12-GeV beam, a maximum field of 1.75 T, and a pole gap of 30 mm. The GlueX experiment requires that the scattered electron beam be measured with an accuracy of 12~MeV (or 0.1\% of the incident electron energy). This requires that the magnetic field integrals along all useful electron trajectories be known to 0.1\%. The magnetic field was mapped at Jefferson Lab and the detailed field maps were augmented by detailed TOSCA calculations which have allowed us to meet these goals. Details of the magnet mapping and uniformity can be found in Ref.\,\cite{gx4271}.
 
 
 \subsubsection{Tagger microscope (TAGM)}\label{sec:TAGM}
@@ -269,7 +269,7 @@ The triplet polarimeter, or TPol, is used to measure the degree of polarization 
 The polarimeter uses the process of pair production on atomic electrons in a beryllium target foil, with these scattered atomic electrons measured using a silicon strip detector.
 Information of the degree of polarization of the photon beam can be obtained by analysing the azimuthal distribution of the scattered atomic electrons measured by this device.
 
-\subsubsection{Determination of photon polarization (M. Dugger/ASU Student)\label{sec:polarization}}
+\subsubsection{Determination of photon polarization \label{sec:polarization}}
 The triplet polarimeter determines the degree of polarization of the incident photon beam by using the azimuthal distribution of the recoil electron arising from the triplet photoproduction process.
 Triplet photoproduction occurs when the polarized electron beam interacts with the electric field of an atomic electron within a target material and produces a high energy electron-positron pair.
 When coupled with trajectory and energy information of the lepton pair, the azimuthal angular distribution of the recoil electron can provide a measure of the photon beam polarization.
@@ -297,7 +297,7 @@ the GlueX detector.
 Accounting for all sources of uncertainty from this setup, the total estimated systematic
 error in the beam asymmetry $\Sigma$ is 1.5\% \cite{DUGGER2017115}.
 
-\subsection{Pair spectrometer         (Sasha) \label{sec:ps}}
+\subsection{Pair spectrometer  \label{sec:ps}}
 
 The Pair Spectrometer \cite{BARBOSA2015376} is located at the entrance to Hall D.
 %(Fig.~\ref{fig:beam:hall-d}).
@@ -563,7 +563,7 @@ the GlueX target is important for the extraction of cross sections. The photon f
 $e^\pm$ pairs in the Pair Spectrometer. Data from the PS are 
 collected using a PS trigger, which  runs in parallel to the 
 main GlueX physics trigger, as described in Section~\ref{sec:trig}.
-The number of photons integrated over the run period is obtained
+The number of beam photons integrated over the run period is obtained
 individually for each tagger counter(TAGH and TAGM), i.e., for
 each specific beam energy range. 
 
@@ -590,7 +590,7 @@ Using the TAC at normal \GX{} production currents is not possible, as it would v
 From this measurement, the fraction of bremsstrahlung produced photons reaching \GX{} at nominal operational beam currents can be determined by extrapolation.
 
 
-{\color{red} Comment by Stuart: TAC runs have also been performed using v-wires during GlueX phase I, should we mention this?}
+%{\color{red} Comment by Stuart: TAC runs have also been performed using v-wires during GlueX phase I, should we mention this?}
 
 %Finally, the photon beam travels through the \GX{} detector, and
 %ultimately goes to the photon beam dump just outside the downstream end of the experimental hall.

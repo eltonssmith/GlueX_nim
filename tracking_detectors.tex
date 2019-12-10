@@ -60,38 +60,42 @@ The anode wires are held at +2.1kV during normal operation.
 
 The Forward Drift Chamber (FDC) consists of 24 disk-shaped planar drift chambers of 1m-diameter.
 They are grouped into four packages inside the bore of the spectrometer magnet.
-Due to the high particle density in the forward region the tracking there requires
-good multi-track separation.
+Forward tracking requires good multi-track separation due to the
+high particle density in the forward region.
 This is achieved with additional cathode strips on both sides of the wire plane allowing for a  reconstruction of a space point on the track from each chamber. 
-The FDC registers tracks with polar angles as low as $1^\circ$ and up to $10^\circ $
+The FDC registers particles emitted into polar angles as low as $1^\circ$ and up to $10^\circ $
 with all the chambers, while having partial coverage up to $20^\circ$.
 
 One FDC chamber consists of a wire plane and two cathode planes on both sides at a distance of $5$~mm from the wires (Fig.~\ref{FDC_OneCell}).
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.75\textwidth]{figures/FDC_OneCell.jpg}  
+%\includegraphics[width=0.75\textwidth]{figures/FDC_OneCell.jpg}  
+\includegraphics[width=0.95\textwidth]{figures/FDC_OneCell2.png} 
 \caption{\label{FDC_OneCell}
-Artistic view of one FDC chamber (from left to right): upstream cathode, wire plane, downstream cathode, chamber separator.
+Artistic view of one FDC chamber (from top to bottom): upstream cathode, wire frame, downstream cathode, ground plane that separates the chambers. The diameter of the active area is $1$~m.
 }
 \end{center}
 \end{figure}
-To minimize the material and allow registration of low energy photons by the outside e.m. calorimeters,
-the frame that holds the wires is made out of Rohacell with a thin G10 skin.
+The frame that holds the wires is made out of Rohacell with a thin
+G10 fiberglass skin in order to minimize the material and
+allow low energy photons to be detected in the outside e.m. calorimeters.
+
 The wire plane has sense ($20~\mu$m diameter) and field ($80$~$\mu$m) wires $5$~mm apart, forming a field cell of $10\times 10$~mm$^2$. 
-The gas mixture used is $40\%$~Ar and $60\%$~CO$_2$.
-A positive HV of about $2.2$~kV is applied on the sense wires and negative of $0.5$~kV on the field ones. 
-The cathodes are made of $2$-$\mu$m-thin $Cu$ strips on Kapton foil with a pitch of $5$~mm and are held on ground. The strips on the two cathodes are at $30^\circ $ between each other and at $75^\circ $ and $105^\circ $ angle w.r.t. the wires.
+To reduce the effects of the magnetic field 
+a "slow" gas mixture of $40\%$~Ar and $60\%$~CO$_2$ is used.
+A positive high voltage of about $2.2$~kV is applied to the sense wires and a negative high voltage of $0.5$~kV to the field wires. 
+The cathodes are made out of $2$-$\mu$m-thin $Cu$ strips on Kapton foil with a pitch of $5$~mm and are held on ground. The strips on the two cathodes are arranged at $30^\circ $ relative to each other and at angles of $75^\circ $ and $105^\circ $ angle with respect to the wires.
 
 The six chambers of a package are separated by thin aluminized Mylar.
-Each chamber is rotated w.r.t. the previous one by $60^\circ $.
-The total material of a package in the sensitive area is $0.43\%$~R.L. and about half of that in the area along the beam line that has no copper on the cathodes.
-The sense wires in the inner area of $6-7.8$~cm diameter (depending on the distance of the package to the target) are thickened from $20$~$\mu$m to $\sim 80$~$\mu$m which makes them insensitive to the high rates along the beam.
+Each chamber is rotated relative to the previous one by $60^\circ $.
+The total material of a package in the sensitive area corresponds to $0.43\%$ radiation lengths  and about half of that in the area along the beam line that has no copper on the cathodes.
+The sense wires in the inner area of $6-7.8$~cm diameter (depending on the distance of the package to the target) are increased in thickness from $20$~$\mu$m to $\sim 80$~$\mu$m which makes them insensitive to the high rates along the beam.
 The distance between the first and last package is $169$~cm. 
 All the chambers are supplied with gas in parallel. 
 In total $2,304$ wires and $10,368$ strips are read using charge preamplifiers with $10$~ns peaking time with a gain of $0.77$~mV/fC for the wires and $2.6$~mV/fC for the strips.
 
 \subsection{Electronics \label{sec:dcelectronics}}
-The high voltage (HV) supply units used are CAEN A1550P\footnote{www.caen.it} with noise-reducing modules added to each crate chassis. 
+The high voltage (HV) supply units used are CAEN A1550P\footnote{www.caen.it} with noise-reducing filter modules added to each crate chassis. 
 The low voltage (LV) supplies are Wiener MPOD MPV8008\footnote{www.wiener-d.com}. 
 The preamplifiers are a custom Jefferson Lab design based on an ASIC~\cite{hdnote2515}
 with 24 channels per board; they are charge-sensitive, and are capacitively coupled to the wires in the CDC and FDC and directly coupled to strips in the FDC. 
@@ -156,8 +160,8 @@ The strip charges from the two cathodes are used to reconstruct the avalanche po
 The same strip information can be used to reconstruct the avalanche position perpendicular to the wire which, due to the proximity of the avalanche to the wire, is practically the wire position as illustrated in Fig~\ref{FDC_wires_from_strips}.
 \begin{figure}[tbp]
 \begin{center}
-%\includegraphics[width=0.95\textwidth]{figures/FDC_wires_from_strips.pdf}  
-\caption{\label{FDC_wires_from_strips} Wire (avalanche) positions reconstructed from the strip information on the two cathodes in one FDC chamber.
+\includegraphics[width=0.95\textwidth]{figures/FDC_wires_from_strips1.pdf}  
+\caption{\label{FDC_wires_from_strips} Wire (avalanche) positions reconstructed from the strip information on the two cathodes in one FDC chamber. Shown is only one quarter of the chamber.
 }   
 \end{center}  
 \end{figure}

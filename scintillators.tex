@@ -50,7 +50,7 @@ The scintillators are optically coupled to SiPM light sensors through a 250~$\mu
 magnetic-field-insensitive SiPMs (Hamamatsu S109031-050P multi-pixel photon counters), whose signals are summed. 
 The on-board electronics provides two signals per paddle, one delivered to a Flash ADC (FADC), the other to a 5$\times$~amplifier that is sent to a discriminator and then to an F1 TDC. 
 
-\subsection[Time-of-flight counters (Beni)]{Time-of-flight counters \label{sec:tof}}
+\subsection[Time-of-flight counters]{Time-of-flight counters \label{sec:tof}}
 The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
 an angular region from 0.6$^{\circ}$ to 13$^{\circ}$ in polar angle. The detector has two planes of
 scintillator paddles stacked in the horizontal and vertical direction, respectively. Most paddles are 252~cm long and 2.54~cm
@@ -76,7 +76,7 @@ shielding based on soft iron is necessary to protect the PMTs from the magnetic 
 \subsection{Electronics \label{sec:scelectronics}}
 The high voltage (HV) to the TOF PMTs is provided by CAEN HV modules of type A1535SN initially controlled by a CAEN SY1527 main frame and
 later upgraded to a SY4527.
-The PMT output is connected to a splitter by a 55' long cables RG-58 coaxial cables {\color{red} Elton: assume cables are the same as for the BCAL; should check}. The signal is split by
+The PMT output is connected to a splitter by a 55' long cables RG-58 coaxial cables. The signal is split by
 a passive splitter into two equal-amplitude signals. One signals is directly connected to a flash ADC250
 analog to digital converter (fADC)~\cite{Dong:2007}, while the second signal passes first through a leading edge discriminator (LED) and then used as an input to a high resolution TDC VX1290A from CAEN~\footnote{CAEN "https://www.caen.it/"}. The digitizer electronics (fADC250s and TDCs) are mounted in VXS crates as described in Section~\ref{sec:trig}.
 The threshold of the leading edge discriminator is controlled for each channel separately and has an intrinsic
