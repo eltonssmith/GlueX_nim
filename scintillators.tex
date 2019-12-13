@@ -7,11 +7,8 @@ region and covers about 90\% of the solid angle for particles
 originating from the center of the target. It is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
 in the coherent peak. It has a high degree of segmentation to limit
-the the per-paddle rates. The time resolution is less than 350 ps
-RMS. The Start Counter provides a timing signal that is relatively
-independent of particle type and trajectory (because of its proximity
-to the target), can provide particle identification via $dE/dx$, and
-can be used in the Level 1 trigger. Details of the design, construction and performance of the ST system can be found in 
+the the per-paddle rates. The time resolution must be sufficient to determine the electron RF bunch that determined the event
+(see Section\,\ref{sec:ebeam}). It provides a timing signal that is relatively independent of particle type and trajectory (because of its proximity to the target), can provide particle identification via $dE/dx$, and can be used in the Level 1 trigger. Details of the design, construction and performance of the ST system can be found in 
 Ref.\,\cite{Pooser:2019rhu}.
 
 \begin{figure}[!htb]
@@ -25,8 +22,7 @@ Ref.\,\cite{Pooser:2019rhu}.
 The ST consist of 30 scintillator paddles arranged in a cylinder for
 most of its length with a ``nose'' section that bends towards the beam
 line at the downstream end. EJ-200 scintillator from Eljen
-Technology\footnote{Eljen Technology,
-  https://eljentechnology.com/products/plastic-scintillators.} was
+Technology\footnote{Eljen Technology, https://eljentechnology.com/products/plastic-scintillators.} was
 selected. EJ-200 has a decay time of 2.1~ns and an attenuation length
 of 380~cm. Silicon photomultiplier (SiPM) detectors were used as light
 sensors. These are not affected by the magnetic field produced by the
@@ -64,7 +60,7 @@ count rate of the paddles well below 2~MHz the two inner most full-length paddle
 Light guides from UV transmitting plastic provide the coupling space between the scintillator and the PMT and allow the 
 magnetic shielding to protect the photo cathode by extending about 5~cm past the PMT entrance window. All paddles are wrapped
 with a layer of a highly reflective material DF2000MA from 3M followed by a layer of strong black Tedlar film for light tightness. 
-The main purpose of the detector is to provide fast timing for charged particles passing through the detector thereby providing information for particle identification and to the determine the event RF beam bunch of the photon that initiated the event. A detailed description of the TOF detector can be found in Ref.\,\cite{GlueXTOFNIM}. 
+The main purpose of the detector is to provide a fast timing for charged particles passing through the detector thereby providing information for particle identification. A detailed description of the TOF detector can be found in Ref.\,\cite{GlueXTOFNIM}. 
 
 The scintillator paddles are read out using 
 photomultiplier tubes (PMT) from Hamamatsu~\footnote{Hamamatsu Photonics, https://www.hamamatsu.com/us/en/index.html.}. Full-length paddles
