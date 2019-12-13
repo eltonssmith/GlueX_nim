@@ -124,7 +124,9 @@ of the other plane. (Color online)}
 \subsection{Performance \label{sec:scperformance}}
 We begin by considering the time resolution of the ST. We note that the purpose of this system is to select the correct beam bunch that generated an interaction in the target, which will be used to determine the event start time using the accelerator RF time. Therefore, the ST resolution does not contribute to the resolution of the flight time as long it is sufficient to pick out the correct beam bunch with high probability.
 
-The ST timing performance can be measured by comparing the event time in the target as measured by the start counter and the time derived from a signal from the CEBAF accelerator which is synched to the RF time structure of the machine. The start counter time must be corrected for the flight path of the charged particle emerging from the event and all instrumental corrections mentioned in the previous section are applied. Fig.~\ref{fig:st-time-resolution} shows the distribution of this time difference. The time from the RF does not contribute significantly to the width of the distribution. Table~\ref{table:st-time-resolution} gives the measured time resolution for the various sections as well as for all sections, with all paddles combined. Also shown is the fraction of tracks kept by a $\pm 1.0$~ns cut around the central value.
+The ST timing performance can be measured by comparing the event time in the target as measured by the start counter and the time derived from a signal from the CEBAF accelerator which is synchronized with the RF time structure of the machine. The start counter time must be corrected for the flight path of the charged particle emerging from the event and all instrumental corrections mentioned in the previous section are applied. Fig.~\ref{fig:st-time-resolution} shows the distribution of this time difference. The average time resolution is $\sigma$=234~ps, although it varies depending on the position of the hit along the counter. 
+%The time from the RF does not contribute significantly to the width of the distribution. 
+%Table~\ref{table:st-time-resolution} gives the measured time resolution for the various sections as well as for all sections, with all paddles combined. Also shown is the fraction of tracks kept by a $\pm 1.0$~ns cut around the central value.
 
 \begin{figure}[tbh]
   \centering
@@ -136,18 +138,19 @@ The ST timing performance can be measured by comparing the event time in the tar
                 \label{fig:st-time-resolution}
 \end{figure}  
 
-\begin{table}[htbp]
-  \centering
-  \begin{tabular}{@{} l *4c @{}}
-    \hline
-    \multicolumn{1}{c}{\textbf{Section}}    & \textbf{All}  & \textbf{Straight}  & \textbf{Bend}  & \textbf{Nose}  \\ 
-    \hline
-    $\mathbf{FWHM}$ & 550~ps & 690~ps & 700~ps & 450~ps \\ 
-    \textbf{Fraction} & 93\% & 92\% & 91\% & 94\% \\\hline
-  \end{tabular}
-  \caption{Average time resolutions (FWHM) and event fractions within a $\pm$ 1~ns window for all 30 ST sectors by independent geometrical regions.}
-  \label{table:st-time-resolution}
-\end{table}  
+%\begin{table}[htbp]
+%  \centering
+%  \begin{tabular}{@{} l *4c @{}}
+%    \hline
+%    \multicolumn{1}{c}{\textbf{Section}}    & \textbf{All}  & %\textbf{Straight}  & \textbf{Bend}  & \textbf{Nose}  \\ 
+%    \hline
+%    $\mathbf{FWHM}$ & 550~ps & 690~ps & 700~ps & 450~ps \\ 
+%    \textbf{Fraction} & 93\% & 92\% & 91\% & 94\% \\\hline
+%  \end{tabular}
+% \caption{Average time resolutions (FWHM) and event fractions within a 
+% $\pm$ 1~ns window for all 30 ST sectors by independent geometrical regions.}
+%  \label{table:st-time-resolution}
+%\end{table}  
 
 The ST can also be used to identify particles using its measurements of differential energy loss per unit path length ($dE/dx$). Fig.~\ref{fig:ST_dEdx_vs_p} shows $dE/dx$ vs. momentum
 for a charged particles matched to the Start Counter. Protons can be

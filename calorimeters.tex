@@ -54,24 +54,25 @@ The average stability of the detector over a period of ten days is better than 1
 For the FCAL, we installed four acrylic panes, each covering the upstream end of one quadrant of the FCAL. Each pane is illuminated by forty LEDs, ten violet, ten blue and twenty green. In addition to monitoring the stability of the readout, the different colors are used to study the wavelength dependence of the transmission of light though the lead glass blocks.  In particular, radiation damage to lead glass inhibits transmission at the blue end of the spectrum and tends to turn glass a brownish color~\cite{Schaefer:2011gw}.  Throughout a several-month run, in the blocks closest to the beam line, the PMT response to violet LED degraded by about 10\% while the response to the green LED is unchanged, characteristic of radiation damage.  Such damage is only evident in the first two layers of blocks surrounding the 12~cm$\times$12~cm beam hole. This damage is likely confined to the upstream end of the block and does not significantly affect the response to particle showers in the body of the glass.
 
 \subsection{Performance \label{sec:calperformance}}
-The performance of the calorimeter is summarized by its ability to measure the energy, position and timing of electromagnetic showers. 
-The energy resolution of the BCAL was extracted from the measured $\pi^0$ and
-$\eta$ mass distributions, which yielded consistent results. To study the $\eta$ mass resolution, we selected events
-using kinematic fits to $\gamma p \rightarrow p \pi^+ \pi^- \gamma \gamma$. 
-This reaction provides a fairly clean sample of $\eta$'s where both photons are recorded in the BCAL. The charged tracks were used to determine the event vertex needed to reconstruct the two-photon invariant mass.  The MC simulation 
-generated $\gamma p \rightarrow p \pi^+ \pi^- \eta$ events, with $\eta\rightarrow \gamma\gamma$, where the kinematics were chosen to approximate the experimental distributions. The fitted Gaussian widths are shown in Fig.\,\ref{fig:bcal:eta_resolution}a as a function of the photon energy, both for data and simulation. 
-The single-photon energy resolution can be determined from the $\eta$ width by neglecting contributions from the opening angle.
-This is shown in Fig.\,\ref{fig:bcal:eta_resolution}b, where one can see that the resolution extracted from the data is only slightly above the MC. If we average the response over the $\pi^0$ and $\eta$ spectra we find 
-$\sigma_E/E$=5.2\%/$\sqrt{E(\rm{GeV})} \oplus$ 3.6\%. The large constant term is artificially large because of the averaging over angles; at a single angle in the forward direction, the constant term is less than 1.7\%.
+The performance of the calorimeter is summarized by its ability to measure the energy, position and timing of electromagnetic showers.
 
-The position resolution ($\sim$\,2.5 cm) is determined by the timing resolution of the system, which was determined to be $\sigma$\,=\,150\,ps at 1\,GeV.
+The energy resolution of each calorimeter was extracted from the measured $\pi^0$ and $\eta$ mass distributions, which yielded consistent results. 
+To study the $\eta$ mass resolution, we selected events using kinematic fits to $\gamma p \rightarrow p \pi^+ \pi^- \gamma \gamma$, with $\eta\rightarrow \gamma\gamma$.  
+The charged pion tracks were used to determine the event vertex needed to accurately reconstruct the two-photon invariant mass.
+This reaction provides a fairly clean sample of $\eta$'s where photons are recorded either both in the BCAL or both in the FCAL. 
+The single-photon energy resolution was determined from Gaussian fits to the $\eta$ invariant mass width, neglecting contributions from uncertainty in the opening angle.
+Monte Carlo simulation of $\gamma p \rightarrow p \pi^+ \pi^- \eta$ events, with the kinematics chosen to approximate the experimental distributions, were used to tune the MC resolution to match the data. 
+The single-photon resolutions are shown in Fig.\,\ref{fig:bcal:eta_resolution}\,a) for the BCAL and Fig.\,\ref{fig:bcal:eta_resolution}\,b) for the FCAL as a function of the photon energy, both for data and simulation. 
+If we average the response over the $\pi^0$ and $\eta$ spectra we find $\sigma_E/E$=5.2\%/$\sqrt{E(\rm{GeV})} \oplus$ 3.6\%. The large constant term is artificially large because of the averaging over angles; at a single angle in the forward direction, the constant term is less than 1.7\%.
+
+The position resolution ($\sim$\,2.5 cm) is determined by the timing resolution of the system, which was determined to be $\sigma=150$\,ps at 1\,GeV.
  
 
 
 \begin{figure}[tbh]\centering
-\includegraphics[width=0.45\textwidth]{figures/data_RMetaBCAL_EnSymmMean_sim_RMetaBCAL_EnSymmMean_sigma.png} \includegraphics[width=0.45\textwidth]{figures/FCAL_energy_resolution.pdf}
+\includegraphics[width=0.45\textwidth]{figures/data_RMetaBCAL_EnSymmMean_sim_RMetaBCAL_EnSymmMean_sigma.pdf} \includegraphics[width=0.45\textwidth]{figures/data_RMetaFCAL_EnSymmMean_sim_E5p0_3p0_RMetaFCAL_EnSymmMean_sigma.pdf}
 \caption{\label{fig:bcal:eta_resolution} 
-The energy resolution of single photons in the a) BCAL and b) FCAL calculated from the $\eta$ mass distribution under the assumption that only the energy resolution contributes to its width
+The energy resolution of single photons in the a) BCAL and b) FCAL calculated from the $\eta$ mass distribution under the assumption that only the energy resolution contributes to its width.  Black circles are data and red squares are simulation.
 (Color online)
  }
 \end{figure}    
