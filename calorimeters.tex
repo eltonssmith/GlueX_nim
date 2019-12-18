@@ -53,6 +53,9 @@ The average stability of the detector over a period of ten days is better than 1
 
 For the FCAL, we installed four acrylic panes, each covering the upstream end of one quadrant of the FCAL. Each pane is illuminated by forty LEDs, ten violet, ten blue and twenty green. In addition to monitoring the stability of the readout, the different colors are used to study the wavelength dependence of the transmission of light though the lead glass blocks.  In particular, radiation damage to lead glass inhibits transmission at the blue end of the spectrum and tends to turn glass a brownish color~\cite{Schaefer:2011gw}.  Throughout a several-month run, in the blocks closest to the beam line, the PMT response to violet LED degraded by about 10\% while the response to the green LED is unchanged, characteristic of radiation damage.  Such damage is only evident in the first two layers of blocks surrounding the 12~cm$\times$12~cm beam hole. This damage is likely confined to the upstream end of the block and does not significantly affect the response to particle showers in the body of the glass.
 
+The energies of photons impinging on a calorimeter are obtained by ``clustering'' or grouping together hits that are close in time and space. Details of the algorithms to obtain shower energies in the BCAL can be found in Ref.\,\cite{BEATTIE201824}  and in Ref.\,\cite{Jones:2006ru} for the FCAL. The clustering in the FCAL requires that hits come within 15 ns of the primary hit and the seed threshold is taken to be 35 MeV, and showers with a single hit are discarded. In the event of overlapping showers, the hit energies are divided amongst the clusters in proportion to that predicted by a typical shower profile. Both detectors have sources of energy-dependent nonlinearities and empirical corrections are developed and applied to minimize the measured energy dependence of the measured $\pi^0$ mass.  
+
+
 \subsection{Performance \label{sec:calperformance}}
 The performance of the calorimeter is summarized by its ability to measure the energy, position and timing of electromagnetic showers.
 
@@ -65,7 +68,7 @@ Monte Carlo simulation of $\gamma p \rightarrow p \pi^+ \pi^- \eta$ events, with
 The single-photon resolutions are shown in Fig.\,\ref{fig:bcal:eta_resolution}\,a) for the BCAL and Fig.\,\ref{fig:bcal:eta_resolution}\,b) for the FCAL as a function of the mean photon energy, both for data and simulation.
 A fit has been performed to the data for each calorimeter to estimate contributions to noise from stochastic and constant processes.  The parameters in the fit are correlated due to the limited range in energy available for this data.
 
-The position resolution ($\sim$\,2.5 cm) is determined by the timing resolution of the system, which was determined to be $\sigma=150$\,ps at 1\,GeV.
+The resolution of the Z position in the BCAL ($\sim$\,2.5 cm) is computed from the timing resolution of the system, which was measured to be $\sigma=150$\,ps at 1\,GeV.
 
 
 \begin{figure}[tbh]\centering
