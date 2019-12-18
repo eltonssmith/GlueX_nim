@@ -39,7 +39,7 @@ The FADCs sample each calorimeter channel every 4~ns and generate raw waveforms 
  (400~ns), which are available for further processing by the firmware upon a trigger signal if there is a threshold crossing. The firmware computes several derived features of the pulse: pedestal, peak value, integral over a selected window, and time of the half-way point on the leading edge. At most one pulse is extracted from each readout window. These pulse features constitute the raw data that is nominally read out from the FADC.  Optionally, the full waveforms can be read out for diagnostic purposes and to check the firmware output against the offline emulation of the parameter extraction; this is done for less than about 1\% of the production runs.
  
 We describe the feature extraction of pulses in more detail.
-Pulses are identified by the first sample that exceeds a threshold, currently set to 5 (8) counts above the average pedestal for the BCAL (FCAL). These thresholds correspond to approximately 2.5 (12) MeV for the BCAL (FCAL). The integral is determined using a fixed number of samples relative to the threshold crossing, which was determined by maximizing the ratio of signal to pedestal noise.  The integration window begins one sample before the threshold time and extends to 26 (15) samples after the threshold time for the BCAL (FCAL).  Typical pedestal widths are $\sigma\sim$1.2-1.3 (0.8) counts for the BCAL (FCAL).  For the BCAL, the pedestals are determined for each channel event-by-event, appropriately scaled, and then subtracted from the peak and integral to obtain signals proportional to the energy deposited in the calorimeter, while for the FCAL, the average pedestal over a run period is determined offline for each channel and its contribution to the pulse integral is subtracted when the data are reconstructed.%See Fig.\,\ref{fig:Plot_waveform10}.
+Pulses are identified by the first sample that exceeds a threshold, currently set to 5 (8) counts above the average pedestal for the BCAL (FCAL). These thresholds correspond to approximately 2.5 (12) MeV for the BCAL (FCAL). The integral is determined using a fixed number of samples relative to the threshold crossing, which was determined by maximizing the ratio of signal to pedestal noise.  The integration window begins one sample before the threshold time and extends to 26 (15) samples after the threshold time for the BCAL (FCAL).  Typical pedestal widths are $\sigma\sim$1.2-1.3 (0.8) counts for the BCAL (FCAL).  For the BCAL, the pedestals are determined for each channel event-by-event, appropriately scaled, and then subtracted from the peak and integral to obtain signals proportional to the energy deposited in the calorimeter, while for the FCAL, the average pedestal over a run period is determined offline for each channel and its contribution to the pulse integral is subtracted when the data are reconstructed.  %See Fig.\,\ref{fig:Plot_waveform10}.  
  The algorithm that determines the time of the pulse is pulse-height independent and therefore no time-walk correction is required for the FADC times~\cite{Bennett:2010nf}.
 
 The outputs of the three inner layers of the BCAL are also connected leading-edge discriminators, which feed the JLab F1 TDCs. The discriminator thresholds are typically set to about 35~mV, but are adjusted
@@ -57,22 +57,21 @@ For the FCAL, we installed four acrylic panes, each covering the upstream end of
 The performance of the calorimeter is summarized by its ability to measure the energy, position and timing of electromagnetic showers.
 
 The energy resolution of each calorimeter was extracted from the measured $\pi^0$ and $\eta$ mass distributions, which yielded consistent results. 
-To study the $\eta$ mass resolution, we selected events using kinematic fits to $\gamma p \rightarrow p \pi^+ \pi^- \gamma \gamma$, with $\eta\rightarrow \gamma\gamma$.  
-The charged pion tracks were used to determine the event vertex needed to accurately reconstruct the two-photon invariant mass.
-This reaction provides a fairly clean sample of $\eta$'s where photons are recorded either both in the BCAL or both in the FCAL. 
+To study the $\eta$ mass resolution, we selected events using kinematic fits to $\gamma p \rightarrow p \pi^+ \pi^- \gamma \gamma$, with $\eta\rightarrow \gamma\gamma$ and the photons having energies within 10\%.
+The proton and pion tracks were used to determine the event vertex, needed to accurately reconstruct the two-photon invariant mass.
+This reaction provides a fairly clean sample of $\eta$'s with energy ``symmetric" photons recorded either both in the BCAL or both in the FCAL. 
 The single-photon energy resolution was determined from Gaussian fits to the $\eta$ invariant mass width, neglecting contributions from uncertainty in the opening angle.
-Monte Carlo simulation of $\gamma p \rightarrow p \pi^+ \pi^- \eta$ events, with the kinematics chosen to approximate the experimental distributions, were used to tune the MC resolution to match the data. 
-The single-photon resolutions are shown in Fig.\,\ref{fig:bcal:eta_resolution}\,a) for the BCAL and Fig.\,\ref{fig:bcal:eta_resolution}\,b) for the FCAL as a function of the photon energy, both for data and simulation. 
-If we average the response over the $\pi^0$ and $\eta$ spectra we find $\sigma_E/E$=5.2\%/$\sqrt{E(\rm{GeV})} \oplus$ 3.6\%. The large constant term is artificially large because of the averaging over angles; at a single angle in the forward direction, the constant term is less than 1.7\%.
+Monte Carlo simulation of $\gamma p \rightarrow p \pi^+ \pi^- \eta$ events, with kinematics chosen to approximate the experimental distributions, were used to tune the MC resolution to match the data. 
+The single-photon resolutions are shown in Fig.\,\ref{fig:bcal:eta_resolution}\,a) for the BCAL and Fig.\,\ref{fig:bcal:eta_resolution}\,b) for the FCAL as a function of the mean photon energy, both for data and simulation.
+A fit has been performed to the data for each calorimeter to estimate contributions to noise from stochastic and constant processes.  The parameters in the fit are correlated due to the limited range in energy available for this data.
 
 The position resolution ($\sim$\,2.5 cm) is determined by the timing resolution of the system, which was determined to be $\sigma=150$\,ps at 1\,GeV.
- 
 
 
 \begin{figure}[tbh]\centering
-\includegraphics[width=0.45\textwidth]{figures/data_RMetaBCAL_EnSymmMean_sim_RMetaBCAL_EnSymmMean_sigma.pdf} \includegraphics[width=0.45\textwidth]{figures/data_RMetaFCAL_EnSymmMean_sim_E5p0_3p0_RMetaFCAL_EnSymmMean_sigma.pdf}
+\includegraphics[width=0.48\textwidth]{figures/fit_BCAL_energy_resolution_sigma.pdf} \includegraphics[width=0.48\textwidth]{figures/fit_FCAL_energy_resolution_sigma.pdf}
 \caption{\label{fig:bcal:eta_resolution} 
-The energy resolution of single photons in the a) BCAL and b) FCAL calculated from the $\eta$ mass distribution under the assumption that only the energy resolution contributes to its width.  Black circles are data and red squares are simulation.
+The energy resolution of single photons in the a) BCAL and b) FCAL calculated from the $\eta$ mass distribution under the assumption that only the energy resolution contributes to its width.  Solid black circles are data and open red squares are simulation.
 (Color online)
  }
 \end{figure}    
