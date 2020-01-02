@@ -14,7 +14,7 @@ void TOF_postracks_1500mev()
    c1->SetFrameBorderMode(0);
    c1->SetFrameBorderMode(0);
    
-   TH1D *h1d__1 = new TH1D("h1d__1","TOF positive charged Tracks p=1.5GeV",400,-0.2,1.2);
+   TH1D *h1d__1 = new TH1D("h1d__1","TOF positive charged tracks p=1.5GeV",400,-0.2,1.2);
    h1d__1->SetBinContent(0,19);
    h1d__1->SetBinContent(6,1);
    h1d__1->SetBinContent(81,1);
@@ -244,12 +244,12 @@ void TOF_postracks_1500mev()
    gaus2->SetChisquare(110.7538);
    gaus2->SetNDF(9);
    gaus2->GetXaxis()->SetLabelFont(42);
-   gaus2->GetXaxis()->SetLabelSize(0.035);
-   gaus2->GetXaxis()->SetTitleSize(0.035);
+   gaus2->GetXaxis()->SetLabelSize(0.05);
+   gaus2->GetXaxis()->SetTitleSize(0.05);
    gaus2->GetXaxis()->SetTitleFont(42);
    gaus2->GetYaxis()->SetLabelFont(42);
-   gaus2->GetYaxis()->SetLabelSize(0.035);
-   gaus2->GetYaxis()->SetTitleSize(0.035);
+   gaus2->GetYaxis()->SetLabelSize(0.05);
+   gaus2->GetYaxis()->SetTitleSize(0.05);
    gaus2->GetYaxis()->SetTitleFont(42);
    gaus2->SetParameter(0,2168.589);
    gaus2->SetParError(0,27.06171);
@@ -267,18 +267,18 @@ void TOF_postracks_1500mev()
    ci = TColor::GetColor("#000099");
    h1d__1->SetLineColor(ci);
    h1d__1->GetXaxis()->SetTitle("#beta");
-   h1d__1->GetXaxis()->SetRange(272,358);
+    h1d__1->GetXaxis()->SetRange(272,358);
    h1d__1->GetXaxis()->SetLabelFont(42);
-   h1d__1->GetXaxis()->SetLabelSize(0.035);
-   h1d__1->GetXaxis()->SetTitleSize(0.035);
+   h1d__1->GetXaxis()->SetLabelSize(0.05);
+   h1d__1->GetXaxis()->SetTitleSize(0.05);
    h1d__1->GetXaxis()->SetTitleFont(42);
    h1d__1->GetYaxis()->SetLabelFont(42);
-   h1d__1->GetYaxis()->SetLabelSize(0.035);
-   h1d__1->GetYaxis()->SetTitleSize(0.035);
+   h1d__1->GetYaxis()->SetLabelSize(0.05);
+   h1d__1->GetYaxis()->SetTitleSize(0.05);
    h1d__1->GetYaxis()->SetTitleFont(42);
    h1d__1->GetZaxis()->SetLabelFont(42);
-   h1d__1->GetZaxis()->SetLabelSize(0.035);
-   h1d__1->GetZaxis()->SetTitleSize(0.035);
+   h1d__1->GetZaxis()->SetLabelSize(0.05);
+   h1d__1->GetZaxis()->SetTitleSize(0.05);
    h1d__1->GetZaxis()->SetTitleFont(42);
    h1d__1->Draw("");
    
@@ -288,21 +288,22 @@ void TOF_postracks_1500mev()
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetTextFont(42);
-   TText *AText = pt->AddText("TOF positive charged Tracks p=1.5GeV");
+   pt->SetTextSize(0.05);
+    TText *AText = pt->AddText("TOF positive charged tracks p=1.5GeV");
    pt->Draw();
-      tex = new TLatex(0.84,800,"Protons");
-   tex->SetTextSize(0.045);
+   TLatex *tex = new TLatex(0.86,700,"p");
+   tex->SetTextSize(0.05);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.95,190,"K^{+}");
-   tex->SetTextSize(0.045);
+   tex->DrawLatex(0.95,190,"K^{+}");
+   tex->SetTextSize(0.05);
    tex->SetLineWidth(2);
-   tex->Draw();
-      tex = new TLatex(1.01,1800,"#pi^{+},e^{+}");
-   tex->SetTextSize(0.045);
+   // tex->Draw();
+   tex->DrawLatex(1.01,1800,"#pi^{+}, e^{+}");
+   tex->SetTextSize(0.05);
    tex->SetLineWidth(2);
-   tex->Draw();
-   
+   // tex->Draw();
+    
    TF1 *f0a3 = new TF1("f0a","gaus",0.95,0.987);
    f0a3->SetFillColor(19);
    f0a3->SetFillStyle(0);
@@ -310,12 +311,12 @@ void TOF_postracks_1500mev()
    f0a3->SetLineWidth(2);
    f0a3->SetLineStyle(2);
    f0a3->GetXaxis()->SetLabelFont(42);
-   f0a3->GetXaxis()->SetLabelSize(0.035);
-   f0a3->GetXaxis()->SetTitleSize(0.035);
+   f0a3->GetXaxis()->SetLabelSize(0.05);
+   f0a3->GetXaxis()->SetTitleSize(0.05);
    f0a3->GetXaxis()->SetTitleFont(42);
    f0a3->GetYaxis()->SetLabelFont(42);
-   f0a3->GetYaxis()->SetLabelSize(0.035);
-   f0a3->GetYaxis()->SetTitleSize(0.035);
+   f0a3->GetYaxis()->SetLabelSize(0.05);
+   f0a3->GetYaxis()->SetTitleSize(0.05);
    f0a3->GetYaxis()->SetTitleFont(42);
    f0a3->SetParameter(0,2168.589);
    f0a3->SetParError(0,0);
@@ -327,11 +328,15 @@ void TOF_postracks_1500mev()
    f0a3->SetParError(2,0);
    f0a3->SetParLimits(2,0,0);
    f0a3->Draw("same");
-      tex = new TLatex(1.01,1000,"#sigma=0.007");
-   tex->SetTextSize(0.045);
+   tex->DrawLatex(1.01,1000,"#sigma=0.007");
+   tex->SetTextSize(0.05);
    tex->SetLineWidth(2);
-   tex->Draw();
+   // tex->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+   
+   c1->SaveAs("TOF_postracks_1500mev.pdf");
+   c1->SaveAs("TOF_postracks_1500mev.png");
+   
 }

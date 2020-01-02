@@ -15,7 +15,7 @@ void TOF_postracks_4000mev()
    c1->SetFrameBorderMode(0);
    
    TH1D *h1d4__3 = new TH1D("h1d4__3","TOF positive charged Tracks p=4.0GeV",187,0.3985,1.053);
-   h1d4__3->SetBinContent(9,1);
+    h1d4__3->SetBinContent(9,1);
    h1d4__3->SetBinContent(10,1);
    h1d4__3->SetBinContent(13,1);
    h1d4__3->SetBinContent(32,1);
@@ -115,12 +115,12 @@ void TOF_postracks_4000mev()
    gaus4->SetChisquare(11.01636);
    gaus4->SetNDF(5);
    gaus4->GetXaxis()->SetLabelFont(42);
-   gaus4->GetXaxis()->SetLabelSize(0.035);
-   gaus4->GetXaxis()->SetTitleSize(0.035);
+   gaus4->GetXaxis()->SetLabelSize(0.07);
+   gaus4->GetXaxis()->SetTitleSize(0.07);
    gaus4->GetXaxis()->SetTitleFont(42);
    gaus4->GetYaxis()->SetLabelFont(42);
-   gaus4->GetYaxis()->SetLabelSize(0.035);
-   gaus4->GetYaxis()->SetTitleSize(0.035);
+   gaus4->GetYaxis()->SetLabelSize(0.07);
+   gaus4->GetYaxis()->SetTitleSize(0.07);
    gaus4->GetYaxis()->SetTitleFont(42);
    gaus4->SetParameter(0,1500.123);
    gaus4->SetParError(0,22.9163);
@@ -140,24 +140,25 @@ void TOF_postracks_4000mev()
    h1d4__3->GetXaxis()->SetTitle("#beta");
    h1d4__3->GetXaxis()->SetRange(150,187);
    h1d4__3->GetXaxis()->SetLabelFont(42);
-   h1d4__3->GetXaxis()->SetLabelSize(0.035);
-   h1d4__3->GetXaxis()->SetTitleSize(0.035);
+   h1d4__3->GetXaxis()->SetLabelSize(0.07);
+   h1d4__3->GetXaxis()->SetTitleOffset(0.5);
+    h1d4__3->GetXaxis()->SetTitleSize(0.07);
    h1d4__3->GetXaxis()->SetTitleFont(42);
    h1d4__3->GetYaxis()->SetLabelFont(42);
-   h1d4__3->GetYaxis()->SetLabelSize(0.035);
-   h1d4__3->GetYaxis()->SetTitleSize(0.035);
+   h1d4__3->GetYaxis()->SetLabelSize(0.07);
+   h1d4__3->GetYaxis()->SetTitleSize(0.07);
    h1d4__3->GetYaxis()->SetTitleFont(42);
    h1d4__3->GetZaxis()->SetLabelFont(42);
-   h1d4__3->GetZaxis()->SetLabelSize(0.035);
-   h1d4__3->GetZaxis()->SetTitleSize(0.035);
+   h1d4__3->GetZaxis()->SetLabelSize(0.07);
+   h1d4__3->GetZaxis()->SetTitleSize(0.07);
    h1d4__3->GetZaxis()->SetTitleFont(42);
    h1d4__3->Draw("");
-   TLatex *   tex = new TLatex(0.96,410,"Protons");
-   tex->SetTextSize(0.045);
+   TLatex *   tex = new TLatex(0.975,450,"p");
+   tex->SetTextSize(0.07);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(1.01,1000,"K^{+}, #pi^{+},e^{+}");
-   tex->SetTextSize(0.045);
+      tex = new TLatex(1.01,1000,"K^{+}, #pi^{+}, e^{+}");
+   tex->SetTextSize(0.07);
    tex->SetLineWidth(2);
    tex->Draw();
    
@@ -168,12 +169,12 @@ void TOF_postracks_4000mev()
    f1a5->SetLineWidth(2);
    f1a5->SetLineStyle(2);
    f1a5->GetXaxis()->SetLabelFont(42);
-   f1a5->GetXaxis()->SetLabelSize(0.035);
-   f1a5->GetXaxis()->SetTitleSize(0.035);
+   f1a5->GetXaxis()->SetLabelSize(0.07);
+   f1a5->GetXaxis()->SetTitleSize(0.07);
    f1a5->GetXaxis()->SetTitleFont(42);
    f1a5->GetYaxis()->SetLabelFont(42);
-   f1a5->GetYaxis()->SetLabelSize(0.035);
-   f1a5->GetYaxis()->SetTitleSize(0.035);
+   f1a5->GetYaxis()->SetLabelSize(0.07);
+   f1a5->GetYaxis()->SetTitleSize(0.07);
    f1a5->GetYaxis()->SetTitleFont(42);
    f1a5->SetParameter(0,1500.123);
    f1a5->SetParError(0,0);
@@ -185,8 +186,8 @@ void TOF_postracks_4000mev()
    f1a5->SetParError(2,0);
    f1a5->SetParLimits(2,0,0);
    f1a5->Draw("same");
-      tex = new TLatex(1.02,200,"#sigma=0.007");
-   tex->SetTextSize(0.045);
+      tex = new TLatex(1.015,700,"#sigma=0.008");
+   tex->SetTextSize(0.07);
    tex->SetLineWidth(2);
    tex->Draw();
    
@@ -196,9 +197,14 @@ void TOF_postracks_4000mev()
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetTextFont(42);
-   AText = pt->AddText("TOF positive charged Tracks p=4.0GeV");
+   pt->SetTextSize(0.07);
+    TText *AText = pt->AddText("TOF positive charged Tracks p=4.0GeV");
    pt->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("TOF_postracks_4000mev.pdf");
+    c1->SaveAs("TOF_postracks_4000mev.png");
+    
 }
