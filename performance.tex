@@ -98,15 +98,31 @@ Detailed studies of detector performance determined the standard fiducial region
 
 \subsection{Kinematic fitting \label{sec:perffitting}}
 
-Kinematic fitting is a powerful tool to improve the resolution of measured particles and to distinguish between different reactions.  In GlueX, this method leverages the fact that the initial state is very well known, with the target proton essentially at rest, and the incident photon energy is measured with very high precision ($<0.1\%$).  The most common kinematic fits that are performed are those that impose energy-momentum conservation between the initial and final state particles.  Additional optional constraints in these fits are for the four-momenta of the daughters of an intermediate particle to add up to a fixed invariant mass, and for all the particles to come from a common vertex (or multiple vertices, in the case of reactions containing long-lived, decaying particles).
+Kinematic fitting is a powerful tool to improve the resolution of measured particles and to distinguish between different reactions.  In GlueX, this method leverages the fact that the initial state is very well known, with the target proton essentially at rest, and the incident photon energy is measured with very high precision ($<0.1\%$), to give substantial improvement in the kinematic quantities determined for exclusive reactions.  The most common kinematic fits that are performed are those that impose energy-momentum conservation between the initial and final state particles.  Additional optional constraints in these fits are for the four-momenta of the daughters of an intermediate particle to add up to a fixed invariant mass, and for all the particles to come from a common vertex (or multiple vertices, in the case of reactions containing long-lived, decaying particles).
 
-To illustrate the performance of the kinematic fit, we first note that the improvement in the invariant mass resolution was seen to be $\approx20\%?$ for common reactions studied at GlueX. 
+To illustrate the performance of the kinematic fit, we use a sample of $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ events selected using a combination of standard particle identification and simple kinematic selections.  Fig.~X showed the $\eta \to \pi^+\pi^-\pi^0$ and the improvement in mass resolution from X~MeV to Y~MeV, which is typical of low-multiplicity meson production reactions.  
+The quality of the kinematic fit is determined using either the probability calculated from the $\chi^2$ of the fit and the number of degrees-of-freedom or the $\chi^2$ of the fit itself. 
+%We first note that the improvement in the invariant mass resolution was seen to be $\approx20\%?$ for common reactions studied at GlueX. 
 %we show the improvement in the invariant mass resolution in the reaction $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ in Fig.~X, and the pull distributions from the fit are illustrated in Fig.~X2.
+
+
 
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
-\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
+%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
+%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
+\caption{\label{fig:kinfitperform}
+(Left) ...
+ (Color online)}
+\end{center}
+\end{figure}
+
+\begin{figure}[tbp]
+\begin{center}
+%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
+%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
+          \includegraphics[width=0.65\textwidth]{pxPull_data17_etaCut.pdf}\\
+          \includegraphics[width=0.65\textwidth]{pxPull_geant4_etaCut.pdf}
 \caption{\label{fig:kinfitperform}
 (Left) ...
  (Color online)}
