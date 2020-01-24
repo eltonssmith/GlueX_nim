@@ -13,7 +13,9 @@ The electronics in the VME/VXS crate can produce data up to 200 MB/s per crate a
 number of crates producing data is about 55.
 The data from the electronic modules are read via the VME back-plane (2eSST, parallel bus) by the crate readout controller (ROC), which is a single board computer running Linux.
 The \gx~ network layout and data flow are shown on Fig.~\ref{fig:CODA}.
-Typical data rates from a single crate are in the range of 10--70~MB/s, depending on the detector type and trigger rate.
+Typical data rates from a %=======================+=========================
+
+single crate are in the range of 10--70~MB/s, depending on the detector type and trigger rate.
 The ROC transfers data over 1~Gbit Ethernet link to Data Concentrators (DC) 40 event fragments at a time. Data Concentrators are programs, which build partial events received from 10-12 crates and run on a dedicated computer node.
 The DC output traffic of 200-600 MB/s is routed to the Event Builder (EB) to build complete events.
 The Event Recorder (ER), which is typically running on the same node as an event builder, write data to the local data storage.

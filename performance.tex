@@ -102,15 +102,21 @@ Kinematic fitting is a powerful tool to improve the resolution of measured parti
 
 To illustrate the performance of the kinematic fit, we use a sample of $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ events selected using a combination of standard particle identification and simple kinematic selections.  Fig.~X showed the $\eta \to \pi^+\pi^-\pi^0$ and the improvement in mass resolution from X~MeV to Y~MeV, which is typical of low-multiplicity meson production reactions.  
 The quality of the kinematic fit is determined using either the probability calculated from the $\chi^2$ of the fit and the number of degrees-of-freedom or the $\chi^2$ of the fit itself. 
-%We first note that the improvement in the invariant mass resolution was seen to be $\approx20\%?$ for common reactions studied at GlueX. 
-%we show the improvement in the invariant mass resolution in the reaction $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ in Fig.~X, and the pull distributions from the fit are illustrated in Fig.~X2.
+We illustrate the distributions of the kinematic fit $\chi^2$ and probability in Fig.~\ref{fig:kinfitperform} for both reconstructed and simulated data.  The agreement between the two is obscured by the larger background in reconstructed data, as illustrated by the extensive tails of the distribution to large $\chi^2$.  
+
+The performance of the reconstruction algorithms and kinematic fit can be studied through investigating the ``pull'' distributions, where the pull of a variable $x$ is defined by comparing its measured values and uncertainties and those resulting from the kinematic fit as follows:
+\begin{equation}
+    \text{pull}_x = \frac{x_\text{fitted} - x_\text{measured}}{\sqrt{\sigma_{x,\text{measured}}^2 - \sigma_{x,\text{fitted}}^2}}.
+\end{equation}
+If the parameters and covariances of reconstructed particles are Gaussian and measured accurately and the fit is performing correctly, then the these pull values are expected to have a Gaussian distribution centered at zero with a $\sigma$ width of 1.  If the pull distributions are not centered at zero, then this is an indication that there is a bias in the measurements or the fit.  If the $\sigma$ varies from unity, then this is an indication that the covariance matrix elements are not correctly estimated.  
+
+As an example, the pull distributions for the momentum components of the $\pi^-$ in reconstructed $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ events are shown in Fig.~\ref{fig:kinfitpullex}
 
 
 
 \begin{figure}[tbp]
 \begin{center}
-%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
-%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
+\includegraphics[width=0.85\textwidth]{figures/Compare_probDist_etaCut.pdf}
 \caption{\label{fig:kinfitperform}
 (Left) ...
  (Color online)}
@@ -118,12 +124,10 @@ The quality of the kinematic fit is determined using either the probability calc
 \end{figure}
 
 \begin{figure}[tbp]
-\begin{center}
-%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
-%\includegraphics[width=0.47\textwidth]{figures/eta_KFit_Prob.pdf}
-          \includegraphics[width=0.65\textwidth]{pxPull_data17_etaCut.pdf}\\
-          \includegraphics[width=0.65\textwidth]{pxPull_geant4_etaCut.pdf}
-\caption{\label{fig:kinfitperform}
+\begin{center}          \includegraphics[width=0.75\textwidth]{figures/pxPull_data17_etaCut.pdf}\\
+\includegraphics[width=0.75\textwidth]{figures/pxPull_geant4_etaCut.pdf}
+
+\caption{\label{fig:kinfitpulls}
 (Left) ...
  (Color online)}
 \end{center}

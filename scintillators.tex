@@ -1,14 +1,19 @@
 \section[Scintillation detectors]{Scintillation detectors \label{sec:scintillators}}
+There are two scintillator based detectors deployed in the \gx{} spectrometer. A small barrel shaped detector surrounding the
+target referred to as Start Counter (ST) and 2-plane hodoscope detector system in the forward direction referred to as
+Time-of-flight (TOF) detector. Both detectors provide timing information but also particle identification based on
+energy loss ($dE/dx$) for the former and flight-time for the latter.
+
 \subsection{Start counter \label{sec:st}}
 
-The Start Counter (ST) detector, shown in Fig.~\ref{fig:st-overview-drawing},
+The ST detector, shown in Fig.~\ref{fig:st-overview-drawing},
 surrounds the target
 region and covers about 90\% of the solid angle for particles
 originating from the center of the target. It is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
 in the coherent peak. It has a high degree of segmentation to limit
-the the per-paddle rates. The time resolution must be sufficient to identify the electron RF bunch that generated the event
-(see Section\,\ref{sec:ebeam}). The ST provides a timing signal that is relatively independent of particle type and trajectory (because of its proximity to the target), can provide particle identification via $dE/dx$, and can be used in the Level 1 trigger. Details of the design, construction and performance of the ST system can be found in 
+the per-paddle rates. The time resolution must be sufficient resolve the RF-beam structure in order to identify the electron beam-bunch from which the event originated
+(see Section\,\ref{sec:ebeam}). The ST provides a timing signal that is relatively independent of particle type and trajectory (because of its proximity to the target), can provide particle identification via $dE/dx$, and can be used in the Level 1 trigger if necessary. Details of the design, construction and performance of the ST system can be found in 
 Ref.\,\cite{Pooser:2019rhu}.
 
 \begin{figure}[!htb]
@@ -19,17 +24,17 @@ Ref.\,\cite{Pooser:2019rhu}.
   axis.\label{fig:st-overview-drawing}}
 \end{figure}
 
-The ST consist of 30 scintillator paddles arranged in a cylinder for
+The ST consist of 30 scintillator paddles arranged in a cylinder of radius 78~mm for
 most of its length with a ``nose'' section that bends towards the beam
-line at the downstream end. EJ-200 scintillator from Eljen
+line to a radius of 20~mm at the downstream end. EJ-200 scintillator from Eljen
 Technology\footnote{Eljen Technology, https://eljentechnology.com/products/plastic-scintillators.} was
 selected. EJ-200 has a decay time of 2.1~ns with a bulk attenuation length
 of 380~cm. Silicon photomultiplier (SiPM) detectors were used as light
 sensors. These are not affected by the magnetic field produced by the
-GlueX solenoid. The SiPMs were placed
-on the upstream end of each scintillator element with a 250~$\mu$m air gap.
+spectometer solenoid. The SiPMs were placed
+at the upstream end of each scintillator element with a 250~$\mu$m air gap.
 Each paddle is read out with an array of four 
-magnetic-field-insensitive SiPMs (Hamamatsu S109031-050P multi-pixel photon counters), whose signals are summed. 
+of these SiPMs (Hamamatsu S109031-050P multi-pixel photon counters), whose signals are summed. 
 The on-board electronics provides two signals per paddle, one delivered to a JLab Flash ADC (FADC), the other to a 5$\times$~amplifier that is sent to a discriminator and then to a JLab F1 TDC. The performance of the ST is discussed in 
 section~\ref{sec:scperformance}.
 
@@ -45,7 +50,7 @@ aluminum support hub at its upstream end. The downstream support
 extends partially into the nose section. The cylindrical length of the Rohacell is further reinforced with three layers of carbon fiber, each layer 650~$\mu$m thick. The assembly is made light-tight with a Tedlar wrapping. The Tedlar is attached to a plastic collar at the upstream end.
 
 \subsection[Time-of-flight counters]{Time-of-flight counters \label{sec:tof}}
-The Time-of-flight (TOF) detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
+The TOF detector is a wall of scintillators located about 5.5~m downstream from the target and covers 
 an angular region from 0.6$^{\circ}$ to 13$^{\circ}$ in polar angle. The detector has two planes of
 scintillator paddles stacked in the horizontal and vertical direction, respectively. Most paddles are 252~cm long and 2.54~cm
 thick with a width of 6~cm. 
@@ -54,11 +59,11 @@ To accommodate the photon beam to pass through the central region,
 an aperture of 12$\times$12\,cm$^2$ is kept
 free of any detector material giving rise to four shorter, single-PMT paddle detectors with a length of 120~cm around the beam hole
 in each detector plane. These paddles also have a width of 6~cm with a thickness of 2.54~cm. In order to keep the
-count rate of the paddles well below 2~MHz the two inner most full-length paddles closest to the beam hole have a reduced width of 3~cm.
+count rate of the paddles well below 2~MHz the two inner most full-length paddles closest to the beam hole on either side have a reduced width of 3~cm.
 Light guides from UV transmitting plastic provide the coupling space between the scintillator and the PMT and allow the 
 magnetic shielding to protect the photo cathode by extending about 5~cm past the PMT entrance window. All paddles are wrapped
 with a layer of a highly reflective material DF2000MA from 3M followed by a layer of strong black Tedlar film for light tightness. 
-The main purpose of the detector is to provide a fast timing for charged particles passing through the detector thereby providing information for particle identification. A detailed description of the TOF detector can be found in Ref.\,\cite{GlueXTOFNIM}. 
+The main purpose of the detector is to provide a fast timing for charged particles passing through the detector thereby providing information for particle identification.
 
 The scintillator paddles are read out using 
 photomultiplier tubes (PMT) from Hamamatsu~\footnote{Hamamatsu Photonics, https://www.hamamatsu.com/us/en/index.html.}. Full-length paddles
