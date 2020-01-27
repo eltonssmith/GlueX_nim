@@ -18,17 +18,17 @@ While installing complex systems, such as a superconducting magnet, we have deve
 
 The cryogenic target and the superconducting solenoid magnet of \gx{} use National Instruments LabView applications. The controls of the target are done using custom-made and vendor-supplied hardware that include built-in remotely accessible control systems and a NI CompactRIO\footnote{https://www.ni.com/en-us/shop/compactrio.html} chassis that communicates with the hardware and serves the variables using internal ChannelAccess server and an EPICS IOC running on the CompactRIO controller, as described in details in Sec~\ref{sec:target}. We also use a National Instruments PXI high performance system\footnote{https://www.ni.com/en-us/shop/pxi.html} to collect data from different sensors as described in Sec.~\ref{sec:solenoid}. 
 
-%\begin{landscape}
- \begin{figure}[p]
+\begin{landscape}
+ \begin{figure}[tbp]
 \begin{center}
-%\includegraphics[height=5cm,bb=35 480 535 760,clip=true]{figures/GlueX_CSS_overview.pdf}
-\includegraphics[height=8cm,clip=true]{figures/GlueX_CSS_overview.pdf}
+\includegraphics[height=10cm,bb=35 480 535 760,clip=true]{figures/GlueX_CSS_overview.pdf}
+%\includegraphics[height=8cm,clip=true]{figures/GlueX_CSS_overview.pdf}
 \caption{Top-level graphical interface for the beamline. This screen provides information on beam currents and rates, radiators, magnet status, target condition, background levels, etc.
 \label{fig:GlueX_CSS_overview}
 }
 \end{center}
 \end{figure}
-%\end{landscape}
+\end{landscape}
 
 \subsection{Supervisory Control and Data Acquisition layer \label{sec:archiver}}
 The Supervisory Control and Data Acquisition (SCADA) layer is the middle layer that distributes the process variables allowing the higher level, and sometimes lower level, applications to use various process variables of Hall D controls system. This layer is based on EPICS and uses ChannelAccess protocol to publish the values of the variables over Ethernet. And because the accelerator controls also uses EPICS, this allows us to efficiently exchange the information between the experiment and the accelerator operations. There are a few dozens of software Input/Out Controller (IOC) processes running on the hosts in the experiment control room that collect the data from different components of the lowest layer. Each of these IOC's is configured to be able to communicate using the protocol appropriate for the remote units from which it needs to exchange data. For instance the EPICS IOC controlling the voltage for the FDC detector needs to be able to communicate with Wiener MPOD and CAEN SYx527 voltage chassis. Although the middle layer is there mostly to distribute the data between different applications it also contains some EPICS-based applications running on IOC's that provide different control loops and software interlocks.  For instance, the low voltage power supplies for the FDC detector (see Sec. \ref{sec:fdc}) are shut off if the temperature or the flow of the coolant in the chiller falls out of required limits. 
