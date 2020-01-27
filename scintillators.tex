@@ -1,6 +1,6 @@
 \section[Scintillation detectors]{Scintillation detectors \label{sec:scintillators}}
 There are two scintillator based detectors deployed in the \gx{} spectrometer. A small barrel shaped detector surrounding the
-target referred to as Start Counter (ST) and 2-plane hodoscope detector system in the forward direction referred to as
+target referred to as the Start Counter (ST) and a 2-plane hodoscope detector system in the forward direction referred to as the
 Time-of-flight (TOF) detector. Both detectors provide timing information but also particle identification based on
 energy loss ($dE/dx$) for the former and flight-time for the latter.
 
@@ -12,7 +12,7 @@ region and covers about 90\% of the solid angle for particles
 originating from the center of the target. It is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
 in the coherent peak. It has a high degree of segmentation to limit
-the per-paddle rates. The time resolution must be sufficient resolve the RF-beam structure in order to identify the electron beam-bunch from which the event originated
+the per-paddle rates. The time resolution must be sufficient to resolve the RF-beam structure and identify the electron beam-bunch from which the event originated
 (see Section\,\ref{sec:ebeam}). The ST provides a timing signal that is relatively independent of particle type and trajectory (because of its proximity to the target), can provide particle identification via $dE/dx$, and can be used in the Level 1 trigger if necessary. Details of the design, construction and performance of the ST system can be found in 
 Ref.\,\cite{Pooser:2019rhu}.
 
@@ -24,7 +24,7 @@ Ref.\,\cite{Pooser:2019rhu}.
   axis.\label{fig:st-overview-drawing}}
 \end{figure}
 
-The ST consist of 30 scintillator paddles arranged in a cylinder of radius 78~mm for
+The ST consists of 30 scintillator paddles arranged in a cylinder of radius 78~mm for
 most of its length with a ``nose'' section that bends towards the beam
 line to a radius of 20~mm at the downstream end. EJ-200 scintillator from Eljen
 Technology\footnote{Eljen Technology, https://eljentechnology.com/products/plastic-scintillators.} was
@@ -99,8 +99,8 @@ The calibration procedures for the TOF system take advantage of the fact that th
 planes of narrow paddles oriented orthogonal to each other, which makes it possible to calibrate the full detector independent
 of any other external detector information. The overlap region of two full-length paddles from the two planes define
 a 6$\times$6~cm$^2$ area for most paddles with a few 3$\times$3~cm$^2$ areas close to the beam hole. The separation between the two detector planes is minimal as they are mounted on top of each other and as such are only separated by their wrapping
-material. While the time-difference TD between the two ends of a paddle is related to the hit position along the paddle
-the mean-time MT is related to the flight time of a particle from the vertex to the paddle. Therefor the MT for two overlapping
+material. While the time-difference (TD) between the two ends of a paddle is related to the hit position along the paddle,
+the mean-time (MT) is related to the flight time of a particle from the vertex to the paddle. Therefor the MT for two overlapping
 paddles must be the same when they are hit by the same particle passing through both of them while the hit position in the horizontal (x) and vertical (y) dimensions are defined by TD of the two paddles. This relationship results in an internally consistent calibration of all paddles with respect to every other paddle.
 
 Prior to finding timing offsets, all times must be corrected for time-walk because of the use of leading edge discriminators, which
@@ -169,7 +169,7 @@ the pion/positron peak and the kaon peak. This is sufficient to identify tracks 
 high certainty. However, at a $\beta$ of 0.98 the probability of the track being a kaon is less than 50\% mainly due to the fact
 that the abundance of pions is close to an order of magnitude larger than kaons. The protons, on the other hand, are very well
 separated from the other particle types and can be identified as such with high confidence over the full range in $\beta$.
-By a track momentum of 4~GeV/c, this has changed and represents the limit at which the TOF can identify protons with high confidence. Again the separation between the large peak containing pions, kaons and positrons is separated from the proton
+At a track momentum of 4~GeV/c, this has changed and represents the limit at which the TOF can identify protons with high confidence. Again the separation between the large peak containing pions, kaons and positrons is separated from the proton
 peak by about 4$\sigma$, while the relative abundance in this case is about a factor of 4. As a consequence, a 4~GeV/c momentum
 track with a $\beta$ of 0.975 is most likely a proton with a small probability of being a pion. At a $\beta$ of 0.98 such
 a track has a similar probability for being a proton or a pion.
