@@ -19,7 +19,6 @@ All file outputs are written to a write-through cache system, which is ultimatel
 
 \begin{figure}[h!]\centering
 \includegraphics[width=0.7\textwidth]{figures/OfflineMonitor_PlotA.pdf}
-\caption[]{\label{fig:offline_monitorA}The scaling of program performance as a function of the number of processing threads. The computer used for the test consisted of 24 full cores (Intel x86\_64) plus 24 hyper threads}
 \end{figure}
 
 In its initial phase, \GX~recorded about 1400 separate physics-quality runs having a total data footprint of about 3 petabytes. The data acquisition system saved the data in $19$ gigabyte files, with all runs consisting of multiple files (typically $100$ or more). Figure~\ref{fig:production_overview} shows an overview of the different production steps for \GX~data, which are described in more detail in the following. 
@@ -30,6 +29,7 @@ In its initial phase, \GX~recorded about 1400 separate physics-quality runs havi
 \caption[]{\label{fig:production_overview}Production flow chart for \GX~data.} 
 \end{figure}
 
+%--------------------------------------------------------------------------
 \subsection{Calibration pass \label{sec:reccalibration}}
 
 Two types of calibration jobs are run, depending on the complexity of the calibration procedures.  Simple, well-understood calibrations such as timing alignment between individual channels and subdetectors or drift chamber gain and time-to-distance calibrations, can be performed with one file of data per run.  These procedures are run either in the online environment or on the batch farm, and can be run several times as needed due to improvements in reconstruction algorithms or other calibrations.
@@ -37,10 +37,12 @@ Two types of calibration jobs are run, depending on the complexity of the calibr
 More complicated calibration procedures, such as calorimeter gain calibration, require more data and are often iterative procedures, requiring several passes through the data.  The raw data is processed as it arrives on the batch farm resulting in histograms or in selected event data files in EVIO or ROOT tree format.  Many of these outputs require that charged particle tracks be reconstructed, but because of the computationally intensive nature of track reconstruction at \GX, the available computing resources at JLab are insufficient for fully reconstructing all of the raw data as it comes in.  Therefore, only about $10-20$\% of the data has the full suite of calibration procedures applied.  The rest has a limited set of procedures, mostly focused on separating out events collected by specialized triggers. 
 The individuals responsible for specific detector calibrations are then responsible for analyzing the skimmed data.
 
+%--------------------------------------------------------------------------
 \subsection{Monitoring pass \label{sec:recmonitoring}}
 
 The red-colored box at the top of Fig.~\ref{fig:production_overview} represents the experimental data that has been copied to the computer center. The left-hand section of the box labeled ``subset" represents the first five files of each run, which are run through the offline monitoring processes. These monitoring jobs are first run during the run to check the quality of the data, but are also run after major changes to calibrations or software to validate those changes. These jobs produce both Reconstructed Events Storage (REST) files and root histogram files for checking the detector and reconstruction performance.
 
+%--------------------------------------------------------------------------
 \subsection{Reconstruction pass \label{sec:recreconstruction}}
 
 When the data is sufficiently well calibrated, we carry out a full production pass on the physics quality data. In the total \GX~data set, about 1400 of the runs were deemed physics quality. The remaining were short runs which were related to engineering and commissioning tests of the experiment. We note that while this number is small compared to the total number of runs, it includes the vast majority of all data recorded during the running period, representing about 3 petabytes. All of these files were reconstructed using several computing resources with an equivalent to more than 20 million core-hours combined. They produced more than $500$ terabytes of REST data files. The large reduction is size, about a factor of six, from collected event data to physics data files allows us to  more quickly and efficiently carry out physics analyses on the data.
@@ -48,6 +50,7 @@ When the data is sufficiently well calibrated, we carry out a full production pa
 
 In the REST production, we included a series of detector performance studies that required access to raw data and that would not be possible on the reconstructed data alone. Many improvements to software and detector calibration resulted from these studies. Similar studies can be made with simulated data to match and assess the detector acceptance.
 
+%--------------------------------------------------------------------------
 \subsection{Offsite Reconstruction}
 \label{sec:recoffsite}
 
@@ -61,19 +64,9 @@ Production processing of \GX~data utilizes offsite HPC resources in addition to 
 
 Container and distributed file system technologies were used for offsite processing. The software binaries as well as calibration constants, field maps etc. were distributed using the CERN-VM-file system (CVMFS). The binaries were all built at JLab using a CentOS7 system. A very lightweight Docker container was made based on CentOS7 that had only a minimal number of system RPMs installed. All other software, including 3rd party packages such as ROOT, were distributed via CVMFS. This meant changes to the container itself were very rare (about once per year). The Docker container was pulled into NERSC's Shifter system without modification. The same container was used to create a Singularity container used at both PSC and on the OSG for \GX~simulation jobs.
 
-Raw data was transferred from JLab to the remote sites using Globus,  which uses GridFTP. The Globus tasks were submitted and managed by the SWIF2 workflow tool written by the JLab Scientific Computing group. SWIF2 was needed to manage the data retrieval from tape, transfer to the remote site, submission of remote jobs, and transfer of processed data back to JLab. Disk space limitations at both JLab and the remote sites meant only a portion of the data set could be on disk simultaneously. Thus, SWIF2 had to manage the jobs through all stages of data transfer and job submission.
+Raw data was transferred from JLab to the remote sites using Globus,  which itself uses GridFTP. The Globus tasks were submitted and managed by the SWIF2 workflow tool written by the JLab Scientific Computing group. SWIF2 was needed to manage the data retrieval from tape, transfer to the remote site, submission of remote jobs, and transfer of processed data back to JLab. Disk space limitations at both JLab and the remote sites meant only a portion of the data set could be on disk at any one point in time. Thus, SWIF2 had to manage the jobs through all stages of data transfer and job submission.
 
-% too much detail?
-% Figure \ref{fig:production_offsite_RunPeriod2018-08_batch01_iNjobs_vs_time} shows the integrated number of jobs processed over several days of a campaign. Campaigns were broken up into batches of jobs which could then be assigned to different facilities for processing. The number of jobs processed per day varied, particularly at NERSC where the footprint of jobs from other fields competing for the resource changed daily.
-
-%\begin{figure}[h!]\centering
-%\includegraphics[width=0.75\textwidth]{figures/production_offsite_RunPeriod2018-08_batch01_iNjobs_vs_time.png}
-%\includegraphics[width=0.75\textwidth]{figures/production_offsite_RunPeriod2018-08_batch03_iNjobs_vs_time.png}
-%\includegraphics[width=0.75\textwidth]{figures/production_offsite_RunPeriod2018-08_batch04_iNjobs_vs_time.png}
-%\caption[]{\label{fig:production_offsite_RunPeriod2018-08_batch01_iNjobs_vs_time}Integrated jobs processed for batches of jobs run at offsite HPC facilities. Top: Jobs run at NERSC Cori II using the ``regular'' queue. Middle: Jobs run at NERSC Cori II using the ``low'' priorty queue. Bottom: Jobs run at PSC Bridges.} 
-%\end{figure}
-
-
+%--------------------------------------------------------------------------
 \subsection{Analysis pass \label{sec:recanalysis}}
 
 The full reconstructed (REST) data is too large to be easily handled by individual analyzers. For that reason, we developed a system to analyze data at Jefferson Lab and extract final-state specific ROOT trees. This step is represented by the right-hand green box at the bottom of Figure~\ref{fig:production_overview}.
