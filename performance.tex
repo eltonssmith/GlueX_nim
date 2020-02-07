@@ -49,14 +49,24 @@ curves show the results of fits to the distributions.
 
 \subsubsection{Invariant Mass Resolution \label{sec:perfchargedresol}}
 
-The invariant mass resolution for resonances decaying into charged particles depends on the momenta and angles of the various decay products.  This resolution has been studied using several different channels:  $K_S\to\pi^+\pi^-$ from $\gamma p \to K_S K^+ \pi^- p$; $\eta \to \pi^+\pi^-\pi^0$ from $\gamma p \to \eta p$; $\Xi^- \to \pi^- \Lambda^0$, $\Lambda^0 \to p \pi^-$ from $\gamma p \to K^+ K^+ \Xi^-$; and $J/\psi \to e^+ e^-$ from $\gamma p \to J/\psi p$.  The results are illustrated in Figs.~\ref{fig:invmass1} and \ref{fig:invmass2}.    In each case, the invariant mass resolution is in the range $4-15$~MeV, after applying a kinematic fit to the full reaction.
+The invariant mass resolution for resonances decaying into charged particles depends on the momenta and angles of the various decay products.  This resolution has been studied using several different channels:  $K_S\to\pi^+\pi^-$ from $\gamma p \to K_S K^+ \pi^- p$;  $\Xi^- \to \pi^- \Lambda^0$, $\Lambda^0 \to p \pi^-$ from $\gamma p \to K^+ K^+ \Xi^-$; and $J/\psi \to e^+ e^-$ from $\gamma p \to J/\psi p$.  The results are illustrated in Figs.~\ref{fig:invmass1} and \ref{fig:invmass2}.  For comparison, a typical meson production channel including both charged particles and photons is also shown: $\omega \to \pi^+\pi^-\pi^0$ from $\gamma p \to \omega p$.   In each case, the invariant mass resolution is in the range $4-15$~MeV, after applying a kinematic fit to the full reaction.
+
+
+\begin{figure}[tpb]
+\begin{center}
+\includegraphics[width=0.42\textwidth]{figures/omega_inv_mass_probCut_001.pdf}
+\includegraphics[width=0.42\textwidth]{figures/jpsi_mass.pdf}
+\caption{\label{fig:invmass1}
+(Left) $\pi^+\pi^-\pi^0$ invariant mass distribution from $\gamma p \to \pi^+\pi^-\pi^0 p$ events, illustrating the strong peak due to $\omega$ meson production.  Other structures can be seen, for example peaks corresponding to the production of $\eta$ and $\phi$ mesons.  The $\omega$ peak resolution is 26.1~MeV using just the reconstructed  particle 4-vectors.  (Right) $e^+e^-$ invariant mass distribution from kinematically fit $\gamma p \to e^+e^- p$ events, illustrating the peak due to $J/\psi\to e^+e^-$ events.  The peak resolution is 13.7~MeV. (Color online)}
+\end{center}
+\end{figure}
 
 \begin{figure}[tpb]
 \begin{center}
 \includegraphics[width=0.42\textwidth]{figures/XimMass_2017-ver30.pdf}
 \includegraphics[width=0.42\textwidth]{figures/jpsi_mass.pdf}
-\caption{\label{fig:invmass1}
-(Left) $\Lambda^0\pi^-$ invariant mass distribution from $\gamma p \to K^+ K^+ \pi^- \pi^- p$ events, illustrating the peak due to $\Xi^- \to \pi^- \Lambda^0$, $\Lambda^0 \to p \pi^-$ events.  The $\Xi^-$ peak resolution is 7.3~MeV using just the reconstructed charged particle 4-vectors, and is 4.6~MeV after a kinematic fit imposing energy and momentum conservation and an additional constraint that the mass of the $p \pi^-$ pairs be that of the $\Lambda^0$ mass,   (Right) $e^+e^-$ invariant mass distribution from kinematically fit $\gamma p \to e^+e^- p$ events, illustrating the peak due to $J/\psi\to e^+e^-$ events.  The peak resolution is 13.7~MeV. (Color online)}
+\caption{\label{fig:invmass2}
+(Left) $\Lambda^0\pi^-$ invariant mass distribution from $\gamma p \to K^+ K^+ \pi^- \pi^- p$ events, illustrating the peak due to $\Xi^- \to \pi^- \Lambda^0$, $\Lambda^0 \to p \pi^-$ events.  The $\Xi^-$ peak resolution is 7.3~MeV using just the reconstructed charged particle 4-vectors, and is 4.6~MeV after a kinematic fit imposing energy and momentum conservation and an additional constraint that the mass of the $p \pi^-$ pairs be that of the $\Lambda^0$ mass.  (Right) $e^+e^-$ invariant mass distribution from kinematically fit $\gamma p \to e^+e^- p$ events, illustrating the peak due to $J/\psi\to e^+e^-$ events.  The peak resolution is 13.7~MeV. (Color online)}
 \end{center}
 \end{figure}
 
@@ -100,9 +110,9 @@ Detailed studies of detector performance determined the standard fiducial region
 
 Kinematic fitting is a powerful tool to improve the resolution of measured particles and to distinguish between different reactions.  In GlueX, this method leverages the fact that the initial state is very well known, with the target proton essentially at rest, and the incident photon energy is measured with very high precision ($<0.1\%$), to give substantial improvement in the kinematic quantities determined for exclusive reactions.  The most common kinematic fits that are performed are those that impose energy-momentum conservation between the initial and final state particles.  Additional optional constraints in these fits are for the four-momenta of the daughters of an intermediate particle to add up to a fixed invariant mass, and for all the particles to come from a common vertex (or multiple vertices, in the case of reactions containing long-lived, decaying particles).
 
-To illustrate the performance of the kinematic fit, we use a sample of $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ events selected using a combination of standard particle identification and simple kinematic selections.  Fig.~X showed the $\eta \to \pi^+\pi^-\pi^0$ and the improvement in mass resolution from X~MeV to Y~MeV, which is typical of low-multiplicity meson production reactions.  
+To illustrate the performance of the kinematic fit, we use a sample of $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ events selected using a combination of standard particle identification and simple kinematic selections.  Fig.~\ref{fig:3pimass} showed the $\eta\to \pi^+\pi^-\pi^0$ peak and and the improvement in $\pi^+\pi^-\pi^0$ mass resolution using the kinematic fit from 2.6~MeV to 1.7~MeV, which is typical of low-multiplicity meson production reactions.  
 The quality of the kinematic fit is determined using either the probability calculated from the $\chi^2$ of the fit and the number of degrees-of-freedom or the $\chi^2$ of the fit itself. 
-We illustrate the distributions of the kinematic fit $\chi^2$ and probability in Fig.~\ref{fig:kinfitperform} for both reconstructed and simulated data.  The agreement between the two is obscured by the larger background in reconstructed data, as illustrated by the extensive tails of the distribution to large $\chi^2$.  
+We illustrate the distributions of the kinematic fit $\chi^2$ and probability in Fig.~\ref{fig:kinfitperform} for both reconstructed and simulated data.  The agreement between the two distributions is good for small $\chi^2$ (large probability), and flat over most of the probability range, indicating good overall performance for most signal events.  The disagreement between the two distributions at larger $\chi^2$ (probability $<0.2$) is due to a combination of background events and deficiencies in the modelling of poorly measured events with large resolution.
 
 The performance of the reconstruction algorithms and kinematic fit can be studied through investigating the ``pull'' distributions, where the pull of a variable $x$ is defined by comparing its measured values and uncertainties and those resulting from the kinematic fit as follows:
 \begin{equation}
@@ -110,25 +120,48 @@ The performance of the reconstruction algorithms and kinematic fit can be studie
 \end{equation}
 If the parameters and covariances of reconstructed particles are Gaussian and measured accurately and the fit is performing correctly, then the these pull values are expected to have a Gaussian distribution centered at zero with a $\sigma$ width of 1.  If the pull distributions are not centered at zero, then this is an indication that there is a bias in the measurements or the fit.  If the $\sigma$ varies from unity, then this is an indication that the covariance matrix elements are not correctly estimated.  
 
-As an example, the pull distributions for the momentum components of the $\pi^-$ in reconstructed $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ events are shown in Fig.~\ref{fig:kinfitpulls}
-
+As an example, the pull distributions for the momentum components of the $\pi^-$ in reconstructed $\gamma p \to \eta p$, $\eta \to \pi^+\pi^-\pi^0$ events are shown in Fig.~\ref{fig:kinfitpulls}.  Both real and simulated data have roughly Gaussian shapes with similar widths.  More insight into the stability of the results of the kinematic fit can be found by studying the variation of the means and widths of the fit distributions as a function of the fit probability.  The results of such a study are summarized in Fig.~\ref{fig:kinfitstudy}.  There is broad agreement between the results from real and simulated data.  The means of the pull distributions are generally around zero (with $p_x$ and its mean of roughly $-0.1$ a notable exception), and the widths within about 20\% of unity.  This level of performance and agreement between data and simulation is acceptable for the initial analysis of data, where very loose cuts on the kinematic fit $\chi^2$ are performed, and steady improvement in the modeling of the covariance matrices of reconstructed particles is expected to continue.
 
 
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.85\textwidth]{figures/Compare_probDist_etaCut.pdf}
+\includegraphics[width=0.75\textwidth]{figures/gluex_nim_kfit_prob.pdf}
 \caption{\label{fig:kinfitperform}
-(Left) ...
+Distribution of kinematic fit (left) probability and (right) $\chi^2$ for reconstructed $\gamma p \to \eta p$,  $\eta \to \pi^+\pi^-\pi^0$ events in data and simulation.  Both distributions agree reasonably for well-measured events, and diverge due to additional background in data and differences in modeling poorly-measured events.
  (Color online)}
 \end{center}
 \end{figure}
 
 \begin{figure}[tbp]
-\begin{center}          \includegraphics[width=0.75\textwidth]{figures/pxPull_data17_etaCut.pdf}\\
-\includegraphics[width=0.75\textwidth]{figures/pxPull_geant4_etaCut.pdf}
+\begin{center}          \includegraphics[width=0.29\textwidth]{figures/gluex_nim_PiMinus_PxPull.pdf}
+\includegraphics[width=0.29\textwidth]{figures/gluex_nim_PiMinus_PyPull.pdf}
+\includegraphics[width=0.29\textwidth]{figures/gluex_nim_PiMinus_PzPull.pdf}
 
 \caption{\label{fig:kinfitpulls}
-(Left) ...
+Pull distributions for momentum components of the $\pi^-$ from reconstructed $\gamma p \to \eta p$,  $\eta \to \pi^+\pi^-\pi^0$ events in data and simulation for events with fit probability $>0.01$: (left) $p_x$, (center) $p_y$, (right) $p_z$.
+ (Color online)}
+\end{center}
+\end{figure}
+
+\begin{figure}[tbp]
+\begin{center}          \includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspx_pulls_mean_data.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspy_pulls_mean_data.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspz_pulls_mean_data.pdf}
+
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspx_pulls_mean_mc.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspy_pulls_mean_mc.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspz_pulls_mean_mc.pdf}
+
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspx_pulls_sigma_data.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspy_pulls_sigma_data.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspz_pulls_sigma_data.pdf}
+
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspx_pulls_sigma_mc.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspy_pulls_sigma_mc.pdf}
+\includegraphics[width=0.3\textwidth]{figures/gluex_nim_pullspz_pulls_sigma_mc.pdf}
+
+\caption{\label{fig:kinfitstudy}
+Pull means and sigmas for the momentum components as a function of fit probability of the $\pi^-$, $p$, and $\gamma$ from reconstructed $\gamma p \to \eta p$,  $\eta \to \pi^+\pi^-\pi^0$ events.
  (Color online)}
 \end{center}
 \end{figure}
@@ -142,21 +175,49 @@ Particle identification in GlueX uses information from both energy loss in diffe
 where $X$ is the given PID variable, $p$ is the particle hypothesis, and $\sigma_X$ is the resolution of this variable.  Finally, multiple PID variables can be combined into one probability, or other figure-of-merit (FOM).   Standard, loose selections on time-of-flight and energy loss are sufficient for initialize physics analyses, while the performance of more complicated selections is being actively studied.
 
 At sufficiently large $\theta$, the energy loss ($dE/dx$) for charged particles in the central drift chamber can be used.   Fig.~\ref{fig:performcdcdedx} illustrates these distributions for positively charged particles, showing a clear separation of pions and protons in the momentum range $\lesssim 1$~GeV. % along with the standard selection used to separate pions and protons.
+The $dE/dx$ resolution is approximately 27\%, with the separation between the pion and proton bands dropping from about $8\sigma$ at $p=0.5$~GeV/$c$ to about $2\sigma$ at $p=1.0$~GeV/$c$, with both bands fully merged by $p=1.5$~GeV/$c$.
 
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.6\textwidth]{figures/cdc_pos_dedx.pdf}
+%\includegraphics[width=0.6\textwidth]{figures/cdc_pos_dedx.pdf}
+\includegraphics[width=0.6\textwidth]{figures/cdc_dedx.pdf}
 \caption{\label{fig:performcdcdedx}
-CDC energy loss ($dE/dx$) for positively charged particles that have at least 8 hits in the detector as a function of measured particle momentum.  The band corresponding to protons curves upwards, showing a larger energy loss than pions and other lighter particles at low momentum.  The two bands show a clear separation for momenta  $\lesssim 1$~GeV.
+CDC energy loss ($dE/dx$) for positively charged particles that have at least 20 hits in the detector as a function of measured particle momentum.  The band corresponding to protons curves upwards, showing a larger energy loss than pions and other lighter particles at low momentum.  The two bands show a clear separation for momenta  $\lesssim 1$~GeV.  A faint kaon band can be seen between them.
 }
 \end{center}
 \end{figure}
 
 The primary means of particle identification is through time of flight measurements, and information from several sources are combined to make the most accurate determination.  The RF reference signal from the accelerator is used to time when each photon bunch enters the target.  The reconstructed final state particles are used to determine which photon bunch most likely generated the detected reaction, with the primary determination being the signals from the Start Counter associated with the charged particle tracks.  This photon bunch determination has a resolution of around 15~ps?. Each charged particle is associated with additional timing information based on the hit in the highest resolution detector that it is associated with, for example the BCAL or TOF.  The time of flight to this measured hit ($t_\mathrm{meas.}$) from the time of the photon bunch that generated the event ($t_\mathrm{RF})$ can be used to distinguish between differently massed particles.  Two common variables that are used are the velocity ($\beta$) determined using the measured time-of-flight and the momentum of the particle, and $\Delta t_\mathrm{RF}$, the difference between the measured and RF times described above after they both have been extrapolated back to the center of the target, assuming some particle hypothesis.
-Some illustrations are given in the associated figures.
+An example of the separation between different particle types can be seen in Fig.~\ref{fig:betavsp}.
+The loose selections used for initial analyses of this data are placed on the $\Delta t_\mathrm{RF}$ distributions, and the momentum dependence of the resolution of this variable in different detectors is shown in Fig.~\ref{fig:timingresol}.  
+Requiring reconstructed particles to have  $\Delta t_\mathrm{RF} \lesssim 1-2$~ns has been found to be sufficient for analyses of high-yield channels which are the focus of initial analysis.  The study of the selections required for more demanding channels is still ongoing.
 
-Electrons are currently primarily identified using the ratio of their energy loss in the electromagnetic calorimeters ($E$) to the momentum reconstructed in the drift chambers ($p$).  This $E/p$ ratio should be approximately 1 for electrons and generally less for hadrons.  This is illustrated in some sample of particles for Fig.~X.  Other variables, such as the shape of the showers generated by the charged particles in the calorimeter, promise to provide additional information to separate electron and hadron showers.
+\begin{figure}[tbp]
+\begin{center}          
+\includegraphics[width=0.29\textwidth]{figures/bcal_deltat_resol.pdf}
+\includegraphics[width=0.29\textwidth]{figures/fcal_deltat_resol.pdf}
+\includegraphics[width=0.29\textwidth]{figures/tof_deltat_resol.pdf}
 
-Particle identification and mis-identification rates are summarized in Fig.~X.
+\caption{\label{fig:timingresol}
+Resolution as a function of particle momentum for  $\Delta t_\mathrm{RF}$ in various subdetectors: (left) BCAL, (center) FCAL, (right) TOF
+ (Color online)}
+\end{center}
+\end{figure}
+
+
+Electrons are currently primarily identified using the ratio of their energy loss in the electromagnetic calorimeters ($E$) to the momentum reconstructed in the drift chambers ($p$).  This $E/p$ ratio should be approximately 1 for electrons and generally less for hadrons.  The overall distribution of this variable is illustrated for both calorimeters in  Fig.~\ref{fig:performeop}.  Other variables, such as the shape of the showers generated by the charged particles in the calorimeter, promise to provide additional information to separate electron and hadron showers.
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{figures/fcal_ep.pdf}
+\includegraphics[width=0.4\textwidth]{figures/fcal_ep.pdf}
+\caption{\label{fig:performeop}
+Electron identification in the calorimeters is performed using the $E/p$ variable, the ratio of the energy loss in the electromagnetic calorimeters ($E$) to the momentum reconstructed in the drift chambers ($p$).  This distribution is show for selected samples of electrons from (left) $\gamma p \to \pi^0$, $\pi^0 \to e^+e^-\gamma$, where the $e^\pm$ are reconstructed in the FCAL, and (right) ....
+}
+\end{center}
+\end{figure}
+
+
+%Particle identification and mis-identification rates are summarized in Fig.~X.
 
 %\subsection{Systematic uncertainties \label{sec:systematics}}

@@ -1,20 +1,17 @@
 void OmegaCompareTheta()
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Tue Jan 28 14:57:02 2020) by ROOT version 6.14/06
-   TCanvas *c1 = new TCanvas("c1", "c1",200,45,1000,700);
-   gStyle->SetOptFit(1);
-   c1->Range(-2.604,0.4,14.756,1.066667);
+//=========  (Wed Oct 16 11:26:56 2019) by ROOT version 6.16/00
+   TCanvas *c1 = new TCanvas("c1", "c1",0,45,1000,714);
+   c1->SetHighLightColor(2);
+   c1->Range(-1.763125,0.4375,15.86813,1.0625);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
-   c1->SetLeftMargin(0.15);
-   c1->SetRightMargin(0.15);
-   c1->SetBottomMargin(0.15);
    c1->SetFrameBorderMode(0);
    c1->SetFrameBorderMode(0);
    
-   Double_t gr_m2_effic_Thetabins_fx1003[40] = {
+   Double_t gr_m2_effic_Thetabins_fx1001[40] = {
    0.25,
    0.75,
    1.25,
@@ -55,7 +52,7 @@ void OmegaCompareTheta()
    18.75,
    19.25,
    19.75};
-   Double_t gr_m2_effic_Thetabins_fy1003[40] = {
+   Double_t gr_m2_effic_Thetabins_fy1001[40] = {
    0.540714,
    0.666808,
    0.7853402,
@@ -96,7 +93,7 @@ void OmegaCompareTheta()
    1,
    0,
    0};
-   Double_t gr_m2_effic_Thetabins_fex1003[40] = {
+   Double_t gr_m2_effic_Thetabins_fex1001[40] = {
    0,
    0,
    0,
@@ -137,7 +134,7 @@ void OmegaCompareTheta()
    0,
    0,
    0};
-   Double_t gr_m2_effic_Thetabins_fey1003[40] = {
+   Double_t gr_m2_effic_Thetabins_fey1001[40] = {
    0.01092551,
    0.007793538,
    0.006856945,
@@ -177,50 +174,47 @@ void OmegaCompareTheta()
    0.195579,
    5.394039,
    0,
-   0};
-   TGraphErrors *gre = new TGraphErrors(40,gr_m2_effic_Thetabins_fx1003,gr_m2_effic_Thetabins_fy1003,gr_m2_effic_Thetabins_fex1003,gr_m2_effic_Thetabins_fey1003);
+   nan};
+   TGraphErrors *gre = new TGraphErrors(40,gr_m2_effic_Thetabins_fx1001,gr_m2_effic_Thetabins_fy1001,gr_m2_effic_Thetabins_fex1001,gr_m2_effic_Thetabins_fey1001);
    gre->SetName("gr_m2_effic_Thetabins");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(4);
-   gre->SetMarkerColor(4);
-   gre->SetMarkerStyle(24);
-   gre->SetMarkerSize(1.2);
+   gre->SetMarkerStyle(20);
+   gre->SetMarkerSize(0.9);
    
-   TH1F *Graph_gr_m2_effic_Thetabins1003 = new TH1F("Graph_gr_m2_effic_Thetabins1003","",100,0,21.7);
-   Graph_gr_m2_effic_Thetabins1003->SetMinimum(0.5);
-   Graph_gr_m2_effic_Thetabins1003->SetMaximum(1);
-   Graph_gr_m2_effic_Thetabins1003->SetDirectory(0);
-   Graph_gr_m2_effic_Thetabins1003->SetStats(0);
+   TH1F *Graph_gr_m2_effic_Thetabins1001 = new TH1F("Graph_gr_m2_effic_Thetabins1001","",100,0,21.7);
+   Graph_gr_m2_effic_Thetabins1001->SetMinimum(0.5);
+   Graph_gr_m2_effic_Thetabins1001->SetMaximum(1);
+   Graph_gr_m2_effic_Thetabins1001->SetDirectory(0);
+   Graph_gr_m2_effic_Thetabins1001->SetStats(0);
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
-   Graph_gr_m2_effic_Thetabins1003->SetLineColor(ci);
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetTitle("Missing Photon Polar Angle (Degrees)");
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetRange(1,56);
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetNdivisions(305);
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetLabelFont(42);
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetLabelSize(0.07);
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetTitleSize(0.07);
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetTitleOffset(0);
-   Graph_gr_m2_effic_Thetabins1003->GetXaxis()->SetTitleFont(42);
-   Graph_gr_m2_effic_Thetabins1003->GetYaxis()->SetTitle("Efficiency");
-   Graph_gr_m2_effic_Thetabins1003->GetYaxis()->SetNdivisions(305);
-   Graph_gr_m2_effic_Thetabins1003->GetYaxis()->SetLabelFont(42);
-   Graph_gr_m2_effic_Thetabins1003->GetYaxis()->SetLabelSize(0.07);
-   Graph_gr_m2_effic_Thetabins1003->GetYaxis()->SetTitleSize(0.07);
-   Graph_gr_m2_effic_Thetabins1003->GetYaxis()->SetTitleOffset(0.9);
-   Graph_gr_m2_effic_Thetabins1003->GetYaxis()->SetTitleFont(42);
-   Graph_gr_m2_effic_Thetabins1003->GetZaxis()->SetLabelFont(42);
-   Graph_gr_m2_effic_Thetabins1003->GetZaxis()->SetLabelSize(0.035);
-   Graph_gr_m2_effic_Thetabins1003->GetZaxis()->SetTitleSize(0.035);
-   Graph_gr_m2_effic_Thetabins1003->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_gr_m2_effic_Thetabins1003);
+   Graph_gr_m2_effic_Thetabins1001->SetLineColor(ci);
+   Graph_gr_m2_effic_Thetabins1001->GetXaxis()->SetTitle("Missing Photon Polar Angle (degrees)");
+   Graph_gr_m2_effic_Thetabins1001->GetXaxis()->SetRange(1,65);
+   Graph_gr_m2_effic_Thetabins1001->GetXaxis()->SetLabelFont(42);
+   Graph_gr_m2_effic_Thetabins1001->GetXaxis()->SetLabelSize(0.035);
+   Graph_gr_m2_effic_Thetabins1001->GetXaxis()->SetTitleSize(0.035);
+   Graph_gr_m2_effic_Thetabins1001->GetXaxis()->SetTitleOffset(1);
+   Graph_gr_m2_effic_Thetabins1001->GetXaxis()->SetTitleFont(42);
+   Graph_gr_m2_effic_Thetabins1001->GetYaxis()->SetTitle("Efficiency");
+   Graph_gr_m2_effic_Thetabins1001->GetYaxis()->SetLabelFont(42);
+   Graph_gr_m2_effic_Thetabins1001->GetYaxis()->SetLabelSize(0.035);
+   Graph_gr_m2_effic_Thetabins1001->GetYaxis()->SetTitleSize(0.035);
+   Graph_gr_m2_effic_Thetabins1001->GetYaxis()->SetTitleOffset(1.3);
+   Graph_gr_m2_effic_Thetabins1001->GetYaxis()->SetTitleFont(42);
+   Graph_gr_m2_effic_Thetabins1001->GetZaxis()->SetLabelFont(42);
+   Graph_gr_m2_effic_Thetabins1001->GetZaxis()->SetLabelSize(0.035);
+   Graph_gr_m2_effic_Thetabins1001->GetZaxis()->SetTitleSize(0.035);
+   Graph_gr_m2_effic_Thetabins1001->GetZaxis()->SetTitleOffset(1);
+   Graph_gr_m2_effic_Thetabins1001->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_gr_m2_effic_Thetabins1001);
    
    gre->Draw("ap");
    
-   Double_t gr_m2_effic_Thetabins_fx1004[40] = {
+   Double_t gr_m2_effic_Thetabins_fx1002[40] = {
    0.25,
    0.75,
    1.25,
@@ -261,7 +255,7 @@ void OmegaCompareTheta()
    18.75,
    19.25,
    19.75};
-   Double_t gr_m2_effic_Thetabins_fy1004[40] = {
+   Double_t gr_m2_effic_Thetabins_fy1002[40] = {
    0.5573828,
    0.7636625,
    0.8948727,
@@ -302,7 +296,7 @@ void OmegaCompareTheta()
    0,
    0,
    0};
-   Double_t gr_m2_effic_Thetabins_fex1004[40] = {
+   Double_t gr_m2_effic_Thetabins_fex1002[40] = {
    0,
    0,
    0,
@@ -343,7 +337,7 @@ void OmegaCompareTheta()
    0,
    0,
    0};
-   Double_t gr_m2_effic_Thetabins_fey1004[40] = {
+   Double_t gr_m2_effic_Thetabins_fey1002[40] = {
    0.02054013,
    0.01492613,
    0.01287335,
@@ -384,62 +378,71 @@ void OmegaCompareTheta()
    0,
    0,
    0};
-   gre = new TGraphErrors(40,gr_m2_effic_Thetabins_fx1004,gr_m2_effic_Thetabins_fy1004,gr_m2_effic_Thetabins_fex1004,gr_m2_effic_Thetabins_fey1004);
+   gre = new TGraphErrors(40,gr_m2_effic_Thetabins_fx1002,gr_m2_effic_Thetabins_fy1002,gr_m2_effic_Thetabins_fex1002,gr_m2_effic_Thetabins_fey1002);
    gre->SetName("gr_m2_effic_Thetabins");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
-   gre->SetLineColor(2);
-   gre->SetMarkerColor(2);
-   gre->SetMarkerStyle(21);
-   gre->SetMarkerSize(1.2);
+
+   ci = TColor::GetColor("#ff00ff");
+   gre->SetLineColor(ci);
+
+   ci = TColor::GetColor("#ff00ff");
+   gre->SetMarkerColor(ci);
+   gre->SetMarkerStyle(20);
+   gre->SetMarkerSize(0.9);
    
-   TH1F *Graph_gr_m2_effic_Thetabins1004 = new TH1F("Graph_gr_m2_effic_Thetabins1004","Graph",100,0,21.7);
-   Graph_gr_m2_effic_Thetabins1004->SetMinimum(0);
-   Graph_gr_m2_effic_Thetabins1004->SetMaximum(1.087228);
-   Graph_gr_m2_effic_Thetabins1004->SetDirectory(0);
-   Graph_gr_m2_effic_Thetabins1004->SetStats(0);
+   TH1F *Graph_gr_m2_effic_Thetabins1002 = new TH1F("Graph_gr_m2_effic_Thetabins1002","Graph",100,0,21.7);
+   Graph_gr_m2_effic_Thetabins1002->SetMinimum(0);
+   Graph_gr_m2_effic_Thetabins1002->SetMaximum(1.087228);
+   Graph_gr_m2_effic_Thetabins1002->SetDirectory(0);
+   Graph_gr_m2_effic_Thetabins1002->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_gr_m2_effic_Thetabins1004->SetLineColor(ci);
-   Graph_gr_m2_effic_Thetabins1004->GetXaxis()->SetLabelFont(42);
-   Graph_gr_m2_effic_Thetabins1004->GetXaxis()->SetLabelSize(0.035);
-   Graph_gr_m2_effic_Thetabins1004->GetXaxis()->SetTitleSize(0.035);
-   Graph_gr_m2_effic_Thetabins1004->GetXaxis()->SetTitleFont(42);
-   Graph_gr_m2_effic_Thetabins1004->GetYaxis()->SetLabelFont(42);
-   Graph_gr_m2_effic_Thetabins1004->GetYaxis()->SetLabelSize(0.035);
-   Graph_gr_m2_effic_Thetabins1004->GetYaxis()->SetTitleSize(0.035);
-   Graph_gr_m2_effic_Thetabins1004->GetYaxis()->SetTitleOffset(0);
-   Graph_gr_m2_effic_Thetabins1004->GetYaxis()->SetTitleFont(42);
-   Graph_gr_m2_effic_Thetabins1004->GetZaxis()->SetLabelFont(42);
-   Graph_gr_m2_effic_Thetabins1004->GetZaxis()->SetLabelSize(0.035);
-   Graph_gr_m2_effic_Thetabins1004->GetZaxis()->SetTitleSize(0.035);
-   Graph_gr_m2_effic_Thetabins1004->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_gr_m2_effic_Thetabins1004);
+   Graph_gr_m2_effic_Thetabins1002->SetLineColor(ci);
+   Graph_gr_m2_effic_Thetabins1002->GetXaxis()->SetLabelFont(42);
+   Graph_gr_m2_effic_Thetabins1002->GetXaxis()->SetLabelSize(0.035);
+   Graph_gr_m2_effic_Thetabins1002->GetXaxis()->SetTitleSize(0.035);
+   Graph_gr_m2_effic_Thetabins1002->GetXaxis()->SetTitleOffset(1);
+   Graph_gr_m2_effic_Thetabins1002->GetXaxis()->SetTitleFont(42);
+   Graph_gr_m2_effic_Thetabins1002->GetYaxis()->SetLabelFont(42);
+   Graph_gr_m2_effic_Thetabins1002->GetYaxis()->SetLabelSize(0.035);
+   Graph_gr_m2_effic_Thetabins1002->GetYaxis()->SetTitleSize(0.035);
+   Graph_gr_m2_effic_Thetabins1002->GetYaxis()->SetTitleFont(42);
+   Graph_gr_m2_effic_Thetabins1002->GetZaxis()->SetLabelFont(42);
+   Graph_gr_m2_effic_Thetabins1002->GetZaxis()->SetLabelSize(0.035);
+   Graph_gr_m2_effic_Thetabins1002->GetZaxis()->SetTitleSize(0.035);
+   Graph_gr_m2_effic_Thetabins1002->GetZaxis()->SetTitleOffset(1);
+   Graph_gr_m2_effic_Thetabins1002->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_gr_m2_effic_Thetabins1002);
    
    gre->Draw("p");
    
-   TLegend *leg = new TLegend(0.45,0.25,0.83,0.4,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.35,0.15,0.85,0.35,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("gr_m2_effic_Thetabins","Data #omega#rightarrow#pi^{+}#pi^{-}#gamma(#gamma)","p");
+   TLegendEntry *entry=leg->AddEntry("gr_m2_effic_Thetabins","Data #omega#rightarrow#pi^{+}#pi^{-}#gamma(#gamma)","pl");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
-   entry->SetMarkerColor(4);
-   entry->SetMarkerStyle(24);
-   entry->SetMarkerSize(1.2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(0.9);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("gr_m2_effic_Thetabins","Signal MC #omega#rightarrow#pi^{+}#pi^{-}#gamma(#gamma)","p");
-   entry->SetLineColor(1);
+   entry=leg->AddEntry("gr_m2_effic_Thetabins","Signal MC #omega#rightarrow#pi^{+}#pi^{-}#gamma(#gamma)","pl");
+
+   ci = TColor::GetColor("#ff00ff");
+   entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
-   entry->SetMarkerColor(2);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1.2);
+
+   ci = TColor::GetColor("#ff00ff");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(0.9);
    entry->SetTextFont(42);
    leg->Draw();
    c1->Modified();
