@@ -27,18 +27,19 @@ void tof_deltat_resol()
    h__7->SetLineWidth(2);
    h__7->GetXaxis()->SetTitle("Momentum [GeV/c]");
    h__7->GetXaxis()->SetLabelFont(42);
-   h__7->GetXaxis()->SetLabelSize(0.035);
-   h__7->GetXaxis()->SetTitleSize(0.06);
+   h__7->GetXaxis()->SetLabelSize(0.07);
+   h__7->GetXaxis()->SetTitleSize(0.07);
    h__7->GetXaxis()->SetTitleFont(42);
    h__7->GetYaxis()->SetTitle("#Delta t_{RF} [ns]");
    h__7->GetYaxis()->SetLabelFont(42);
-   h__7->GetYaxis()->SetLabelSize(0.035);
-   h__7->GetYaxis()->SetTitleSize(0.06);
-   h__7->GetYaxis()->SetTitleOffset(1.1);
+   h__7->GetYaxis()->SetLabelSize(0.07);
+   h__7->GetYaxis()->SetNdivisions(505);
+   h__7->GetYaxis()->SetTitleSize(0.07);
+    h__7->GetYaxis()->SetTitleOffset(1.1);
    h__7->GetYaxis()->SetTitleFont(42);
    h__7->GetZaxis()->SetLabelFont(42);
-   h__7->GetZaxis()->SetLabelSize(0.035);
-   h__7->GetZaxis()->SetTitleSize(0.035);
+   h__7->GetZaxis()->SetLabelSize(0.07);
+   h__7->GetZaxis()->SetTitleSize(0.07);
    h__7->GetZaxis()->SetTitleFont(42);
    h__7->Draw("hist");
    
@@ -48,12 +49,12 @@ void tof_deltat_resol()
    pion19->SetLineColor(2);
    pion19->SetLineWidth(3);
    pion19->GetXaxis()->SetLabelFont(42);
-   pion19->GetXaxis()->SetLabelSize(0.035);
-   pion19->GetXaxis()->SetTitleSize(0.035);
+   pion19->GetXaxis()->SetLabelSize(0.07);
+   pion19->GetXaxis()->SetTitleSize(0.07);
    pion19->GetXaxis()->SetTitleFont(42);
    pion19->GetYaxis()->SetLabelFont(42);
-   pion19->GetYaxis()->SetLabelSize(0.035);
-   pion19->GetYaxis()->SetTitleSize(0.035);
+   pion19->GetYaxis()->SetLabelSize(0.07);
+   pion19->GetYaxis()->SetTitleSize(0.07);
    pion19->GetYaxis()->SetTitleFont(42);
    pion19->SetParameter(0,-8.85e-05);
    pion19->SetParError(0,0);
@@ -78,12 +79,12 @@ void tof_deltat_resol()
    kaon20->SetLineWidth(3);
    kaon20->SetLineStyle(2);
    kaon20->GetXaxis()->SetLabelFont(42);
-   kaon20->GetXaxis()->SetLabelSize(0.035);
-   kaon20->GetXaxis()->SetTitleSize(0.035);
+   kaon20->GetXaxis()->SetLabelSize(0.07);
+   kaon20->GetXaxis()->SetTitleSize(0.07);
    kaon20->GetXaxis()->SetTitleFont(42);
    kaon20->GetYaxis()->SetLabelFont(42);
-   kaon20->GetYaxis()->SetLabelSize(0.035);
-   kaon20->GetYaxis()->SetTitleSize(0.035);
+   kaon20->GetYaxis()->SetLabelSize(0.07);
+   kaon20->GetYaxis()->SetTitleSize(0.07);
    kaon20->GetYaxis()->SetTitleFont(42);
    kaon20->SetParameter(0,0.182);
    kaon20->SetParError(0,0);
@@ -106,12 +107,12 @@ void tof_deltat_resol()
    proton21->SetLineWidth(3);
    proton21->SetLineStyle(3);
    proton21->GetXaxis()->SetLabelFont(42);
-   proton21->GetXaxis()->SetLabelSize(0.035);
-   proton21->GetXaxis()->SetTitleSize(0.035);
+   proton21->GetXaxis()->SetLabelSize(0.07);
+   proton21->GetXaxis()->SetTitleSize(0.07);
    proton21->GetXaxis()->SetTitleFont(42);
    proton21->GetYaxis()->SetLabelFont(42);
-   proton21->GetYaxis()->SetLabelSize(0.035);
-   proton21->GetYaxis()->SetTitleSize(0.035);
+   proton21->GetYaxis()->SetLabelSize(0.07);
+   proton21->GetYaxis()->SetTitleSize(0.07);
    proton21->GetYaxis()->SetTitleFont(42);
    proton21->SetParameter(0,0.2);
    proton21->SetParError(0,0);
@@ -127,7 +128,7 @@ void tof_deltat_resol()
    proton21->SetParLimits(3,0,0);
    proton21->Draw("SAME");
    
-   TLegend *leg = new TLegend(0.65,0.78,0.95,0.95,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.65,0.7,0.95,0.95,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -142,7 +143,8 @@ void tof_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("kaon","Kaon","l");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("kaon","Kaon","l");
 
    ci = TColor::GetColor("#009900");
    entry->SetLineColor(ci);
@@ -152,7 +154,8 @@ void tof_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("proton","Proton","l");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("proton","Proton","l");
    entry->SetLineColor(4);
    entry->SetLineStyle(3);
    entry->SetLineWidth(3);
@@ -160,6 +163,7 @@ void tof_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
+   entry->SetTextSize(0.07);
    leg->Draw();
    TLatex *   tex = new TLatex(2,0.42,"TOF");
    tex->SetTextSize(0.1);
@@ -168,4 +172,7 @@ void tof_deltat_resol()
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+   
+   c1->SaveAs("tof_deltat_resol.pdf");
+    
 }

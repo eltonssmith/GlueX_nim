@@ -27,18 +27,18 @@ void bcal_deltat_resol()
    h__19->SetLineWidth(2);
    h__19->GetXaxis()->SetTitle("Momentum [GeV/c]");
    h__19->GetXaxis()->SetLabelFont(42);
-   h__19->GetXaxis()->SetLabelSize(0.035);
-   h__19->GetXaxis()->SetTitleSize(0.06);
+   h__19->GetXaxis()->SetLabelSize(0.07);
+   h__19->GetXaxis()->SetTitleSize(0.07);
    h__19->GetXaxis()->SetTitleFont(42);
    h__19->GetYaxis()->SetTitle("#Delta t_{RF} [ns]");
    h__19->GetYaxis()->SetLabelFont(42);
-   h__19->GetYaxis()->SetLabelSize(0.035);
-   h__19->GetYaxis()->SetTitleSize(0.06);
+   h__19->GetYaxis()->SetLabelSize(0.07);
+   h__19->GetYaxis()->SetTitleSize(0.07);
    h__19->GetYaxis()->SetTitleOffset(1.1);
    h__19->GetYaxis()->SetTitleFont(42);
    h__19->GetZaxis()->SetLabelFont(42);
-   h__19->GetZaxis()->SetLabelSize(0.035);
-   h__19->GetZaxis()->SetTitleSize(0.035);
+   h__19->GetZaxis()->SetLabelSize(0.07);
+   h__19->GetZaxis()->SetTitleSize(0.07);
    h__19->GetZaxis()->SetTitleFont(42);
    h__19->Draw("hist");
    
@@ -48,12 +48,12 @@ void bcal_deltat_resol()
    pion50->SetLineColor(2);
    pion50->SetLineWidth(3);
    pion50->GetXaxis()->SetLabelFont(42);
-   pion50->GetXaxis()->SetLabelSize(0.035);
-   pion50->GetXaxis()->SetTitleSize(0.035);
+   pion50->GetXaxis()->SetLabelSize(0.07);
+   pion50->GetXaxis()->SetTitleSize(0.07);
    pion50->GetXaxis()->SetTitleFont(42);
    pion50->GetYaxis()->SetLabelFont(42);
-   pion50->GetYaxis()->SetLabelSize(0.035);
-   pion50->GetYaxis()->SetTitleSize(0.035);
+   pion50->GetYaxis()->SetLabelSize(0.07);
+   pion50->GetYaxis()->SetTitleSize(0.07);
    pion50->GetYaxis()->SetTitleFont(42);
    pion50->SetParameter(0,0);
    pion50->SetParError(0,0);
@@ -78,12 +78,12 @@ void bcal_deltat_resol()
    kaon51->SetLineWidth(3);
    kaon51->SetLineStyle(2);
    kaon51->GetXaxis()->SetLabelFont(42);
-   kaon51->GetXaxis()->SetLabelSize(0.035);
-   kaon51->GetXaxis()->SetTitleSize(0.035);
+   kaon51->GetXaxis()->SetLabelSize(0.07);
+   kaon51->GetXaxis()->SetTitleSize(0.07);
    kaon51->GetXaxis()->SetTitleFont(42);
    kaon51->GetYaxis()->SetLabelFont(42);
-   kaon51->GetYaxis()->SetLabelSize(0.035);
-   kaon51->GetYaxis()->SetTitleSize(0.035);
+   kaon51->GetYaxis()->SetLabelSize(0.07);
+   kaon51->GetYaxis()->SetTitleSize(0.07);
    kaon51->GetYaxis()->SetTitleFont(42);
    kaon51->SetParameter(0,0.0013);
    kaon51->SetParError(0,0);
@@ -106,12 +106,12 @@ void bcal_deltat_resol()
    proton52->SetLineWidth(3);
    proton52->SetLineStyle(3);
    proton52->GetXaxis()->SetLabelFont(42);
-   proton52->GetXaxis()->SetLabelSize(0.035);
-   proton52->GetXaxis()->SetTitleSize(0.035);
+   proton52->GetXaxis()->SetLabelSize(0.07);
+   proton52->GetXaxis()->SetTitleSize(0.07);
    proton52->GetXaxis()->SetTitleFont(42);
    proton52->GetYaxis()->SetLabelFont(42);
-   proton52->GetYaxis()->SetLabelSize(0.035);
-   proton52->GetYaxis()->SetTitleSize(0.035);
+   proton52->GetYaxis()->SetLabelSize(0.07);
+   proton52->GetYaxis()->SetTitleSize(0.07);
    proton52->GetYaxis()->SetTitleFont(42);
    proton52->SetParameter(0,0.143);
    proton52->SetParError(0,0);
@@ -127,7 +127,7 @@ void bcal_deltat_resol()
    proton52->SetParLimits(3,0,0);
    proton52->Draw("SAME");
    
-   TLegend *leg = new TLegend(0.65,0.78,0.95,0.95,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.65,0.7,0.95,0.95,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -142,7 +142,8 @@ void bcal_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("kaon","Kaon","l");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("kaon","Kaon","l");
 
    ci = TColor::GetColor("#009900");
    entry->SetLineColor(ci);
@@ -152,7 +153,8 @@ void bcal_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("proton","Proton","l");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("proton","Proton","l");
    entry->SetLineColor(4);
    entry->SetLineStyle(3);
    entry->SetLineWidth(3);
@@ -160,7 +162,8 @@ void bcal_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.07);
+    leg->Draw();
    TLatex *   tex = new TLatex(1.3,0.67,"BCAL");
    tex->SetTextSize(0.1);
    tex->SetLineWidth(2);
@@ -168,4 +171,6 @@ void bcal_deltat_resol()
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("bcal_deltat_resol.pdf");
 }

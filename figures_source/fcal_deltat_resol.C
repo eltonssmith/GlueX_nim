@@ -27,18 +27,18 @@ void fcal_deltat_resol()
    h__12->SetLineWidth(2);
    h__12->GetXaxis()->SetTitle("Momentum [GeV/c]");
    h__12->GetXaxis()->SetLabelFont(42);
-   h__12->GetXaxis()->SetLabelSize(0.035);
-   h__12->GetXaxis()->SetTitleSize(0.06);
+   h__12->GetXaxis()->SetLabelSize(0.07);
+   h__12->GetXaxis()->SetTitleSize(0.07);
    h__12->GetXaxis()->SetTitleFont(42);
    h__12->GetYaxis()->SetTitle("#Delta t_{RF} [ns]");
    h__12->GetYaxis()->SetLabelFont(42);
-   h__12->GetYaxis()->SetLabelSize(0.035);
-   h__12->GetYaxis()->SetTitleSize(0.06);
+   h__12->GetYaxis()->SetLabelSize(0.07);
+   h__12->GetYaxis()->SetTitleSize(0.07);
    h__12->GetYaxis()->SetTitleOffset(1.1);
    h__12->GetYaxis()->SetTitleFont(42);
    h__12->GetZaxis()->SetLabelFont(42);
-   h__12->GetZaxis()->SetLabelSize(0.035);
-   h__12->GetZaxis()->SetTitleSize(0.035);
+   h__12->GetZaxis()->SetLabelSize(0.07);
+   h__12->GetZaxis()->SetTitleSize(0.07);
    h__12->GetZaxis()->SetTitleFont(42);
    h__12->Draw("hist");
    
@@ -48,12 +48,12 @@ void fcal_deltat_resol()
    pion30->SetLineColor(2);
    pion30->SetLineWidth(3);
    pion30->GetXaxis()->SetLabelFont(42);
-   pion30->GetXaxis()->SetLabelSize(0.035);
-   pion30->GetXaxis()->SetTitleSize(0.035);
+   pion30->GetXaxis()->SetLabelSize(0.07);
+   pion30->GetXaxis()->SetTitleSize(0.07);
    pion30->GetXaxis()->SetTitleFont(42);
    pion30->GetYaxis()->SetLabelFont(42);
-   pion30->GetYaxis()->SetLabelSize(0.035);
-   pion30->GetYaxis()->SetTitleSize(0.035);
+   pion30->GetYaxis()->SetLabelSize(0.07);
+   pion30->GetYaxis()->SetTitleSize(0.07);
    pion30->GetYaxis()->SetTitleFont(42);
    pion30->SetParameter(0,0.0474);
    pion30->SetParError(0,0);
@@ -76,12 +76,12 @@ void fcal_deltat_resol()
    proton31->SetLineWidth(3);
    proton31->SetLineStyle(3);
    proton31->GetXaxis()->SetLabelFont(42);
-   proton31->GetXaxis()->SetLabelSize(0.035);
-   proton31->GetXaxis()->SetTitleSize(0.035);
+   proton31->GetXaxis()->SetLabelSize(0.07);
+   proton31->GetXaxis()->SetTitleSize(0.07);
    proton31->GetXaxis()->SetTitleFont(42);
    proton31->GetYaxis()->SetLabelFont(42);
-   proton31->GetYaxis()->SetLabelSize(0.035);
-   proton31->GetYaxis()->SetTitleSize(0.035);
+   proton31->GetYaxis()->SetLabelSize(0.07);
+   proton31->GetYaxis()->SetTitleSize(0.07);
    proton31->GetYaxis()->SetTitleFont(42);
    proton31->SetParameter(0,1);
    proton31->SetParError(0,0);
@@ -97,7 +97,7 @@ void fcal_deltat_resol()
    proton31->SetParLimits(3,0,0);
    proton31->Draw("SAME");
    
-   TLegend *leg = new TLegend(0.65,0.78,0.95,0.95,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.65,0.70,0.95,0.95,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -112,7 +112,8 @@ void fcal_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("proton","Proton","l");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("proton","Proton","l");
    entry->SetLineColor(4);
    entry->SetLineStyle(3);
    entry->SetLineWidth(3);
@@ -120,7 +121,8 @@ void fcal_deltat_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.07);
+    leg->Draw();
    TLatex *   tex = new TLatex(2,3,"FCAL");
    tex->SetTextSize(0.1);
    tex->SetLineWidth(2);
@@ -128,4 +130,7 @@ void fcal_deltat_resol()
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+   
+   c1->SaveAs("fcal_deltat_resol.pdf");
+    
 }
