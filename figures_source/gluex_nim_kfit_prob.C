@@ -3050,7 +3050,7 @@ void gluex_nim_kfit_prob()
    prob_mc__6->GetZaxis()->SetTitleFont(42);
    prob_mc__6->Draw("same");
    
-   TLegend *leg = new TLegend(0.6,0.6,0.9,0.9,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.55,0.7,0.9,0.9,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -3066,7 +3066,8 @@ void gluex_nim_kfit_prob()
    entry->SetMarkerStyle(1);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("prob_mc","Simulation","lpf");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("prob_mc","Simulation","lpf");
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#ff0000");
@@ -3077,7 +3078,8 @@ void gluex_nim_kfit_prob()
    entry->SetMarkerStyle(1);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.07);
+    leg->Draw();
    cf_1->Modified();
    cf->cd();
   
@@ -5185,7 +5187,7 @@ void gluex_nim_kfit_prob()
    kfitChi2_cut__8->GetZaxis()->SetTitleFont(42);
    kfitChi2_cut__8->Draw("same");
    
-   leg = new TLegend(0.6,0.6,0.9,0.9,NULL,"brNDC");
+   leg = new TLegend(0.55,0.7,0.9,0.9,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -5201,7 +5203,8 @@ void gluex_nim_kfit_prob()
    entry->SetMarkerStyle(1);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("prob_mc","Simulation","lpf");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("prob_mc","Simulation","lpf");
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#ff0000");
@@ -5212,10 +5215,13 @@ void gluex_nim_kfit_prob()
    entry->SetMarkerStyle(1);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.07);
+    leg->Draw();
    cf_2->Modified();
    cf->cd();
    cf->Modified();
    cf->cd();
    cf->SetSelected(cf);
+    
+    cf->SaveAs("gluex_nim_kfit_prob.pdf");
 }
