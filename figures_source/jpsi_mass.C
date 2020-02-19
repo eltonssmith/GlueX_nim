@@ -530,12 +530,12 @@ void jpsi_mass()
    signal1->SetChisquare(162.8917);
    signal1->SetNDF(95);
    signal1->GetXaxis()->SetLabelFont(42);
-   signal1->GetXaxis()->SetLabelSize(0.035);
-   signal1->GetXaxis()->SetTitleSize(0.035);
+   signal1->GetXaxis()->SetLabelSize(0.07);
+   signal1->GetXaxis()->SetTitleSize(0.07);
    signal1->GetXaxis()->SetTitleFont(42);
    signal1->GetYaxis()->SetLabelFont(42);
-   signal1->GetYaxis()->SetLabelSize(0.035);
-   signal1->GetYaxis()->SetTitleSize(0.035);
+   signal1->GetYaxis()->SetLabelSize(0.07);
+   signal1->GetYaxis()->SetTitleSize(0.07);
    signal1->GetYaxis()->SetTitleFont(42);
    signal1->SetParameter(0,4.093656);
    signal1->SetParError(0,0.1682343);
@@ -563,20 +563,23 @@ void jpsi_mass()
    MJpsi_withcombos__1->GetXaxis()->SetTitle("e^{+}e^{-} Invariant Mass [GeV/c^{2}]");
    MJpsi_withcombos__1->GetXaxis()->SetRange(381,480);
    MJpsi_withcombos__1->GetXaxis()->SetLabelFont(42);
-   MJpsi_withcombos__1->GetXaxis()->SetLabelSize(0.035);
-   MJpsi_withcombos__1->GetXaxis()->SetTitleSize(0.06);
+   MJpsi_withcombos__1->GetXaxis()->SetLabelSize(0.07);
+   MJpsi_withcombos__1->GetXaxis()->SetTitleSize(0.07);
    MJpsi_withcombos__1->GetXaxis()->SetTitleFont(42);
-   MJpsi_withcombos__1->GetYaxis()->SetTitle("Events / 10 MeV/c^{2}");
+   MJpsi_withcombos__1->GetXaxis()->SetTitleSize(0.07);
+   MJpsi_withcombos__1->GetXaxis()->SetNdivisions(505);
+    MJpsi_withcombos__1->GetYaxis()->SetTitle("Events / 10 MeV/c^{2}");
    MJpsi_withcombos__1->GetYaxis()->SetLabelFont(42);
-   MJpsi_withcombos__1->GetYaxis()->SetLabelSize(0.035);
-   MJpsi_withcombos__1->GetYaxis()->SetTitleSize(0.06);
-   MJpsi_withcombos__1->GetYaxis()->SetTitleOffset(1.1);
+   MJpsi_withcombos__1->GetYaxis()->SetLabelSize(0.07);
+   MJpsi_withcombos__1->GetYaxis()->SetTitleSize(0.07);
+   MJpsi_withcombos__1->GetYaxis()->SetNdivisions(505);
+    MJpsi_withcombos__1->GetYaxis()->SetTitleOffset(1.1);
    MJpsi_withcombos__1->GetYaxis()->SetTitleFont(42);
    MJpsi_withcombos__1->GetZaxis()->SetLabelFont(42);
-   MJpsi_withcombos__1->GetZaxis()->SetLabelSize(0.035);
-   MJpsi_withcombos__1->GetZaxis()->SetTitleSize(0.035);
+   MJpsi_withcombos__1->GetZaxis()->SetLabelSize(0.07);
+   MJpsi_withcombos__1->GetZaxis()->SetTitleSize(0.07);
    MJpsi_withcombos__1->GetZaxis()->SetTitleFont(42);
-   MJpsi_withcombos__1->Draw("hist");
+    MJpsi_withcombos__1->Draw("hist");
    
    TF1 *signal2 = new TF1("signal","gausn(0)+pol1(3)",2.8,3.3);
    signal2->SetFillColor(19);
@@ -586,12 +589,12 @@ void jpsi_mass()
    signal2->SetChisquare(162.8917);
    signal2->SetNDF(95);
    signal2->GetXaxis()->SetLabelFont(42);
-   signal2->GetXaxis()->SetLabelSize(0.035);
-   signal2->GetXaxis()->SetTitleSize(0.035);
+   signal2->GetXaxis()->SetLabelSize(0.07);
+   signal2->GetXaxis()->SetTitleSize(0.07);
    signal2->GetXaxis()->SetTitleFont(42);
    signal2->GetYaxis()->SetLabelFont(42);
-   signal2->GetYaxis()->SetLabelSize(0.035);
-   signal2->GetYaxis()->SetTitleSize(0.035);
+   signal2->GetYaxis()->SetLabelSize(0.07);
+   signal2->GetYaxis()->SetTitleSize(0.07);
    signal2->GetYaxis()->SetTitleFont(42);
    signal2->SetParameter(0,4.093656);
    signal2->SetParError(0,0.1682343);
@@ -616,4 +619,6 @@ void jpsi_mass()
    ccXi->Modified();
    ccXi->cd();
    ccXi->SetSelected(ccXi);
+    
+    ccXi->SaveAs("jpsi_mass.pdf");
 }

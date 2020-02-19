@@ -1,4 +1,4 @@
-void XimMass_2017-ver30()
+void XimMass_2017_ver30()          // note "-" will not work in name
 {
 //=========Macro generated from canvas: ccXi/ccXi
 //=========  (Thu Feb  6 17:50:05 2020) by ROOT version6.08/00
@@ -288,18 +288,20 @@ void XimMass_2017-ver30()
    XiMeasuredaccsub__1->GetXaxis()->SetTitle("#Lambda#pi^{-} Invariant Mass [GeV/c^{2}]");
    XiMeasuredaccsub__1->GetXaxis()->SetRange(151,320);
    XiMeasuredaccsub__1->GetXaxis()->SetLabelFont(42);
-   XiMeasuredaccsub__1->GetXaxis()->SetLabelSize(0.035);
-   XiMeasuredaccsub__1->GetXaxis()->SetTitleSize(0.06);
+   XiMeasuredaccsub__1->GetXaxis()->SetLabelSize(0.07);
+   XiMeasuredaccsub__1->GetXaxis()->SetTitleSize(0.07);
    XiMeasuredaccsub__1->GetXaxis()->SetTitleFont(42);
-   XiMeasuredaccsub__1->GetYaxis()->SetTitle("Events / 1 MeV/c^{2}");
+   XiMeasuredaccsub__1->GetXaxis()->SetNdivisions(505);
+    XiMeasuredaccsub__1->GetYaxis()->SetTitle("Events / 1 MeV/c^{2}");
    XiMeasuredaccsub__1->GetYaxis()->SetLabelFont(42);
-   XiMeasuredaccsub__1->GetYaxis()->SetLabelSize(0.035);
-   XiMeasuredaccsub__1->GetYaxis()->SetTitleSize(0.06);
+   XiMeasuredaccsub__1->GetYaxis()->SetLabelSize(0.07);
+   XiMeasuredaccsub__1->GetYaxis()->SetTitleSize(0.07);
    XiMeasuredaccsub__1->GetYaxis()->SetTitleOffset(1.1);
    XiMeasuredaccsub__1->GetYaxis()->SetTitleFont(42);
-   XiMeasuredaccsub__1->GetZaxis()->SetLabelFont(42);
-   XiMeasuredaccsub__1->GetZaxis()->SetLabelSize(0.035);
-   XiMeasuredaccsub__1->GetZaxis()->SetTitleSize(0.035);
+   XiMeasuredaccsub__1->GetYaxis()->SetNdivisions(505);
+    XiMeasuredaccsub__1->GetZaxis()->SetLabelFont(42);
+   XiMeasuredaccsub__1->GetZaxis()->SetLabelSize(0.07);
+   XiMeasuredaccsub__1->GetZaxis()->SetTitleSize(0.07);
    XiMeasuredaccsub__1->GetZaxis()->SetTitleFont(42);
    XiMeasuredaccsub__1->Draw("hist");
    
@@ -556,24 +558,26 @@ void XimMass_2017-ver30()
    XiKinfitaccsub__2->SetMarkerStyle(21);
    XiKinfitaccsub__2->SetMarkerSize(0.8);
    XiKinfitaccsub__2->GetXaxis()->SetLabelFont(42);
-   XiKinfitaccsub__2->GetXaxis()->SetLabelSize(0.035);
-   XiKinfitaccsub__2->GetXaxis()->SetTitleSize(0.035);
+   XiKinfitaccsub__2->GetXaxis()->SetLabelSize(0.07);
+   XiKinfitaccsub__2->GetXaxis()->SetTitleSize(0.07);
    XiKinfitaccsub__2->GetXaxis()->SetTitleFont(42);
+   XiKinfitaccsub__2->GetXaxis()->SetNdivisions(505);
    XiKinfitaccsub__2->GetYaxis()->SetLabelFont(42);
-   XiKinfitaccsub__2->GetYaxis()->SetLabelSize(0.035);
-   XiKinfitaccsub__2->GetYaxis()->SetTitleSize(0.035);
+   XiKinfitaccsub__2->GetYaxis()->SetLabelSize(0.07);
+   XiKinfitaccsub__2->GetYaxis()->SetTitleSize(0.07);
    XiKinfitaccsub__2->GetYaxis()->SetTitleFont(42);
-   XiKinfitaccsub__2->GetZaxis()->SetLabelFont(42);
-   XiKinfitaccsub__2->GetZaxis()->SetLabelSize(0.035);
-   XiKinfitaccsub__2->GetZaxis()->SetTitleSize(0.035);
+   XiKinfitaccsub__2->GetYaxis()->SetNdivisions(505);
+    XiKinfitaccsub__2->GetZaxis()->SetLabelFont(42);
+   XiKinfitaccsub__2->GetZaxis()->SetLabelSize(0.07);
+   XiKinfitaccsub__2->GetZaxis()->SetTitleSize(0.07);
    XiKinfitaccsub__2->GetZaxis()->SetTitleFont(42);
    XiKinfitaccsub__2->Draw("histsame");
    TLatex *   tex = new TLatex(1.265,390,"#gamma p #rightarrow K^{+} K^{+} #Xi^{-}");
-   tex->SetTextSize(0.09);
+   tex->SetTextSize(0.07);
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.65,0.78,0.95,0.95,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.55,0.78,0.95,0.95,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -590,7 +594,8 @@ void XimMass_2017-ver30()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("XiKinfitaccsub","Kinematically Fit","l");
+   entry->SetTextSize(0.06);
+    entry=leg->AddEntry("XiKinfitaccsub","Kinematically Fit","l");
 
    ci = TColor::GetColor("#000099");
    entry->SetLineColor(ci);
@@ -600,8 +605,12 @@ void XimMass_2017-ver30()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.06);
+    leg->Draw();
    ccXi->Modified();
    ccXi->cd();
    ccXi->SetSelected(ccXi);
+    
+    ccXi->SaveAs("XimMass_2017-ver30.pdf");
+    
 }
