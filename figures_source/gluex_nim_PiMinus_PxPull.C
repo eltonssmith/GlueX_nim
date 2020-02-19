@@ -185,21 +185,21 @@ void gluex_nim_PiMinus_PxPull()
    PiMinus_PxPull_data__15->GetXaxis()->SetTitle("P_{x}-Pull(#pi^{-})");
    PiMinus_PxPull_data__15->GetXaxis()->SetRange(301,700);
    PiMinus_PxPull_data__15->GetXaxis()->SetLabelFont(42);
-   PiMinus_PxPull_data__15->GetXaxis()->SetLabelSize(0.05);
-   PiMinus_PxPull_data__15->GetXaxis()->SetTitleSize(0.075);
+   PiMinus_PxPull_data__15->GetXaxis()->SetLabelSize(0.07);
+   PiMinus_PxPull_data__15->GetXaxis()->SetTitleSize(0.07);
    PiMinus_PxPull_data__15->GetXaxis()->SetTickLength(0.05);
    PiMinus_PxPull_data__15->GetXaxis()->SetTitleOffset(0.85);
    PiMinus_PxPull_data__15->GetXaxis()->SetTitleFont(42);
    PiMinus_PxPull_data__15->GetYaxis()->SetTitle("Entries [a.u.]");
    PiMinus_PxPull_data__15->GetYaxis()->SetLabelFont(42);
-   PiMinus_PxPull_data__15->GetYaxis()->SetLabelSize(0.05);
-   PiMinus_PxPull_data__15->GetYaxis()->SetTitleSize(0.075);
+   PiMinus_PxPull_data__15->GetYaxis()->SetLabelSize(0.07);
+   PiMinus_PxPull_data__15->GetYaxis()->SetTitleSize(0.07);
    PiMinus_PxPull_data__15->GetYaxis()->SetTickLength(0.05);
-   PiMinus_PxPull_data__15->GetYaxis()->SetTitleOffset(0.85);
+   PiMinus_PxPull_data__15->GetYaxis()->SetTitleOffset(1.1);
    PiMinus_PxPull_data__15->GetYaxis()->SetTitleFont(42);
    PiMinus_PxPull_data__15->GetZaxis()->SetLabelFont(42);
-   PiMinus_PxPull_data__15->GetZaxis()->SetLabelSize(0.035);
-   PiMinus_PxPull_data__15->GetZaxis()->SetTitleSize(0.035);
+   PiMinus_PxPull_data__15->GetZaxis()->SetLabelSize(0.07);
+   PiMinus_PxPull_data__15->GetZaxis()->SetTitleSize(0.07);
    PiMinus_PxPull_data__15->GetZaxis()->SetTitleOffset(1);
    PiMinus_PxPull_data__15->GetZaxis()->SetTitleFont(42);
    PiMinus_PxPull_data__15->Draw("");
@@ -522,22 +522,22 @@ void gluex_nim_PiMinus_PxPull()
    PiMinus_PxPull_mc__16->SetLineColor(ci);
    PiMinus_PxPull_mc__16->SetLineWidth(3);
    PiMinus_PxPull_mc__16->GetXaxis()->SetLabelFont(42);
-   PiMinus_PxPull_mc__16->GetXaxis()->SetLabelSize(0.035);
-   PiMinus_PxPull_mc__16->GetXaxis()->SetTitleSize(0.035);
+   PiMinus_PxPull_mc__16->GetXaxis()->SetLabelSize(0.07);
+   PiMinus_PxPull_mc__16->GetXaxis()->SetTitleSize(0.07);
    PiMinus_PxPull_mc__16->GetXaxis()->SetTitleOffset(1);
    PiMinus_PxPull_mc__16->GetXaxis()->SetTitleFont(42);
    PiMinus_PxPull_mc__16->GetYaxis()->SetLabelFont(42);
-   PiMinus_PxPull_mc__16->GetYaxis()->SetLabelSize(0.035);
-   PiMinus_PxPull_mc__16->GetYaxis()->SetTitleSize(0.035);
+   PiMinus_PxPull_mc__16->GetYaxis()->SetLabelSize(0.07);
+   PiMinus_PxPull_mc__16->GetYaxis()->SetTitleSize(0.07);
    PiMinus_PxPull_mc__16->GetYaxis()->SetTitleFont(42);
    PiMinus_PxPull_mc__16->GetZaxis()->SetLabelFont(42);
-   PiMinus_PxPull_mc__16->GetZaxis()->SetLabelSize(0.035);
-   PiMinus_PxPull_mc__16->GetZaxis()->SetTitleSize(0.035);
+   PiMinus_PxPull_mc__16->GetZaxis()->SetLabelSize(0.07);
+   PiMinus_PxPull_mc__16->GetZaxis()->SetTitleSize(0.07);
    PiMinus_PxPull_mc__16->GetZaxis()->SetTitleOffset(1);
    PiMinus_PxPull_mc__16->GetZaxis()->SetTitleFont(42);
    PiMinus_PxPull_mc__16->Draw("same");
    
-   TLegend *leg = new TLegend(0.6,0.6,0.9,0.9,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.6,0.7,0.9,0.9,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -553,7 +553,8 @@ void gluex_nim_PiMinus_PxPull()
    entry->SetMarkerStyle(1);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("PiMinus_PxPull_mc","Simulation","lpf");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("PiMinus_PxPull_mc","Simulation","lpf");
    entry->SetFillStyle(1001);
 
    ci = TColor::GetColor("#ff0000");
@@ -564,8 +565,12 @@ void gluex_nim_PiMinus_PxPull()
    entry->SetMarkerStyle(1);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.07);
+    leg->Draw();
    c3->Modified();
    c3->cd();
    c3->SetSelected(c3);
+    
+    c3->SaveAs("gluex_nim_PiMinus_PxPull.pdf");
+    
 }
