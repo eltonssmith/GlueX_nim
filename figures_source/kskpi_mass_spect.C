@@ -832,18 +832,19 @@ void kskpi_mass_spect()
    MPiPi__3->GetXaxis()->SetTitle("M(#pi^{+}#pi^{-}) [GeV]");
    MPiPi__3->GetXaxis()->SetRange(51,350);
    MPiPi__3->GetXaxis()->SetLabelFont(42);
-   MPiPi__3->GetXaxis()->SetLabelSize(0.055);
-   MPiPi__3->GetXaxis()->SetTitleSize(0.06);
+   MPiPi__3->GetXaxis()->SetLabelSize(0.07);
+   MPiPi__3->GetXaxis()->SetTitleSize(0.07);
    MPiPi__3->GetXaxis()->SetTitleFont(42);
    MPiPi__3->GetYaxis()->SetTitle("Counts / 1 MeV");
    MPiPi__3->GetYaxis()->SetLabelFont(42);
-   MPiPi__3->GetYaxis()->SetLabelSize(0.055);
-   MPiPi__3->GetYaxis()->SetTitleSize(0.06);
-   MPiPi__3->GetYaxis()->SetTitleOffset(1.2);
+   MPiPi__3->GetYaxis()->SetLabelSize(0.07);
+   MPiPi__3->GetYaxis()->SetTitleSize(0.07);
+   MPiPi__3->GetYaxis()->SetNdivisions(505);
+    MPiPi__3->GetYaxis()->SetTitleOffset(1.2);
    MPiPi__3->GetYaxis()->SetTitleFont(42);
    MPiPi__3->GetZaxis()->SetLabelFont(42);
-   MPiPi__3->GetZaxis()->SetLabelSize(0.035);
-   MPiPi__3->GetZaxis()->SetTitleSize(0.035);
+   MPiPi__3->GetZaxis()->SetLabelSize(0.07);
+   MPiPi__3->GetZaxis()->SetTitleSize(0.07);
    MPiPi__3->GetZaxis()->SetTitleFont(42);
    MPiPi__3->Draw("hist");
    
@@ -1653,16 +1654,16 @@ void kskpi_mass_spect()
    MPiPi_Measured__4->SetLineWidth(2);
    MPiPi_Measured__4->GetXaxis()->SetTitle("M(#pi#pi) (GeV)");
    MPiPi_Measured__4->GetXaxis()->SetLabelFont(42);
-   MPiPi_Measured__4->GetXaxis()->SetLabelSize(0.035);
-   MPiPi_Measured__4->GetXaxis()->SetTitleSize(0.035);
+   MPiPi_Measured__4->GetXaxis()->SetLabelSize(0.07);
+   MPiPi_Measured__4->GetXaxis()->SetTitleSize(0.07);
    MPiPi_Measured__4->GetXaxis()->SetTitleFont(42);
    MPiPi_Measured__4->GetYaxis()->SetLabelFont(42);
-   MPiPi_Measured__4->GetYaxis()->SetLabelSize(0.035);
-   MPiPi_Measured__4->GetYaxis()->SetTitleSize(0.035);
+   MPiPi_Measured__4->GetYaxis()->SetLabelSize(0.07);
+   MPiPi_Measured__4->GetYaxis()->SetTitleSize(0.07);
    MPiPi_Measured__4->GetYaxis()->SetTitleFont(42);
    MPiPi_Measured__4->GetZaxis()->SetLabelFont(42);
-   MPiPi_Measured__4->GetZaxis()->SetLabelSize(0.035);
-   MPiPi_Measured__4->GetZaxis()->SetTitleSize(0.035);
+   MPiPi_Measured__4->GetZaxis()->SetLabelSize(0.07);
+   MPiPi_Measured__4->GetZaxis()->SetTitleSize(0.07);
    MPiPi_Measured__4->GetZaxis()->SetTitleFont(42);
    MPiPi_Measured__4->Draw("hist same");
    TLatex *   tex = new TLatex(0.37,8500,"#gamma p #rightarrow K_{S} K^{+} #pi^{-} p,  K_{S} #rightarrow #pi^{+}#pi^{-}");
@@ -1670,14 +1671,14 @@ void kskpi_mass_spect()
    tex->SetLineWidth(2);
    tex->Draw();
    
-   TLegend *leg = new TLegend(0.65,0.58,0.92,0.75,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.58,0.58,0.95,0.75,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("MPiPi","Reconstructed","l");
+   TLegendEntry *entry=leg->AddEntry("MPiPi","Kinematically fit","l");
 
    ci = TColor::GetColor("#000099");
    entry->SetLineColor(ci);
@@ -1687,7 +1688,8 @@ void kskpi_mass_spect()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("MPiPi_Measured","Kinematically fit","l");
+   entry->SetTextSize(0.058);
+    entry=leg->AddEntry("MPiPi_Measured","Measured","l");
    entry->SetLineColor(4);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -1695,8 +1697,12 @@ void kskpi_mass_spect()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.058);
+    leg->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("kskpi_mass_spect.pdf");
+    
 }

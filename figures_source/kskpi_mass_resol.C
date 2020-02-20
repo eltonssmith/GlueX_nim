@@ -27,18 +27,18 @@ void kskpi_mass_resol()
    h__1->SetLineWidth(2);
    h__1->GetXaxis()->SetTitle("K_{S} Momentum [GeV/c]");
    h__1->GetXaxis()->SetLabelFont(42);
-   h__1->GetXaxis()->SetLabelSize(0.055);
-   h__1->GetXaxis()->SetTitleSize(0.06);
+   h__1->GetXaxis()->SetLabelSize(0.07);
+   h__1->GetXaxis()->SetTitleSize(0.07);
    h__1->GetXaxis()->SetTitleFont(42);
-   h__1->GetYaxis()->SetTitle("K_{S} Invariant Mass Resolution [MeV]");
+   h__1->GetYaxis()->SetTitle("K_{S} Invariant Mass #sigma [MeV]");
    h__1->GetYaxis()->SetLabelFont(42);
-   h__1->GetYaxis()->SetLabelSize(0.045);
-   h__1->GetYaxis()->SetTitleSize(0.055);
+   h__1->GetYaxis()->SetLabelSize(0.07);
+   h__1->GetYaxis()->SetTitleSize(0.07);
    h__1->GetYaxis()->SetTitleOffset(1.1);
    h__1->GetYaxis()->SetTitleFont(42);
    h__1->GetZaxis()->SetLabelFont(42);
-   h__1->GetZaxis()->SetLabelSize(0.035);
-   h__1->GetZaxis()->SetTitleSize(0.035);
+   h__1->GetZaxis()->SetLabelSize(0.07);
+   h__1->GetZaxis()->SetTitleSize(0.07);
    h__1->GetZaxis()->SetTitleFont(42);
    h__1->Draw("hist");
    
@@ -115,16 +115,16 @@ void kskpi_mass_resol()
    ci = TColor::GetColor("#000099");
    Graph_Graph1001->SetLineColor(ci);
    Graph_Graph1001->GetXaxis()->SetLabelFont(42);
-   Graph_Graph1001->GetXaxis()->SetLabelSize(0.035);
-   Graph_Graph1001->GetXaxis()->SetTitleSize(0.035);
+   Graph_Graph1001->GetXaxis()->SetLabelSize(0.07);
+   Graph_Graph1001->GetXaxis()->SetTitleSize(0.07);
    Graph_Graph1001->GetXaxis()->SetTitleFont(42);
    Graph_Graph1001->GetYaxis()->SetLabelFont(42);
-   Graph_Graph1001->GetYaxis()->SetLabelSize(0.035);
-   Graph_Graph1001->GetYaxis()->SetTitleSize(0.035);
+   Graph_Graph1001->GetYaxis()->SetLabelSize(0.07);
+   Graph_Graph1001->GetYaxis()->SetTitleSize(0.07);
    Graph_Graph1001->GetYaxis()->SetTitleFont(42);
    Graph_Graph1001->GetZaxis()->SetLabelFont(42);
-   Graph_Graph1001->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph1001->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph1001->GetZaxis()->SetLabelSize(0.07);
+   Graph_Graph1001->GetZaxis()->SetTitleSize(0.07);
    Graph_Graph1001->GetZaxis()->SetTitleFont(42);
    gre->SetHistogram(Graph_Graph1001);
    
@@ -205,22 +205,22 @@ void kskpi_mass_resol()
    ci = TColor::GetColor("#000099");
    Graph_Graph1002->SetLineColor(ci);
    Graph_Graph1002->GetXaxis()->SetLabelFont(42);
-   Graph_Graph1002->GetXaxis()->SetLabelSize(0.035);
-   Graph_Graph1002->GetXaxis()->SetTitleSize(0.035);
+   Graph_Graph1002->GetXaxis()->SetLabelSize(0.07);
+   Graph_Graph1002->GetXaxis()->SetTitleSize(0.07);
    Graph_Graph1002->GetXaxis()->SetTitleFont(42);
    Graph_Graph1002->GetYaxis()->SetLabelFont(42);
-   Graph_Graph1002->GetYaxis()->SetLabelSize(0.035);
-   Graph_Graph1002->GetYaxis()->SetTitleSize(0.035);
+   Graph_Graph1002->GetYaxis()->SetLabelSize(0.07);
+   Graph_Graph1002->GetYaxis()->SetTitleSize(0.07);
    Graph_Graph1002->GetYaxis()->SetTitleFont(42);
    Graph_Graph1002->GetZaxis()->SetLabelFont(42);
-   Graph_Graph1002->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph1002->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph1002->GetZaxis()->SetLabelSize(0.07);
+   Graph_Graph1002->GetZaxis()->SetTitleSize(0.07);
    Graph_Graph1002->GetZaxis()->SetTitleFont(42);
    gre->SetHistogram(Graph_Graph1002);
    
    gre->Draw("p");
    
-   TLegend *leg = new TLegend(0.25,0.75,0.55,0.9,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.25,0.7,0.7,0.9,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -235,7 +235,8 @@ void kskpi_mass_resol()
    entry->SetMarkerStyle(20);
    entry->SetMarkerSize(1.2);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph1","Kinematically fit","lp");
+   entry->SetTextSize(0.07);
+    entry=leg->AddEntry("Graph1","Kinematically fit","lp");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -245,8 +246,10 @@ void kskpi_mass_resol()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1.2);
    entry->SetTextFont(42);
-   leg->Draw();
+   entry->SetTextSize(0.07);
+    leg->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    c1->SaveAs("kskpi_mass_resol.pdf");
 }
