@@ -18,8 +18,9 @@ For all launches, JANA is run multithreaded to make efficient use of the availab
 All file outputs are written to a write-through cache system, which is ultimately backed up to tape.
 
 \begin{figure}[h!]\centering
-\includegraphics[width=0.7\textwidth]{figures/OfflineMonitor_PlotA.pdf}
-\caption[]{\label{fig:offline_monitorA}The scaling of program performance as a function of the number of processing threads. The computer used for the test consisted of 24 full cores (Intel x86\_64) plus 24 hyperthreads.} 
+%\includegraphics[width=0.7\textwidth]{figures/OfflineMonitor_PlotA.pdf}
+\includegraphics[width=1.0\textwidth]{figures/rate_vs_nthread.png}
+\caption[]{\label{fig:offline_monitorA}The scaling of program performance as a function of the number of processing threads. The computer used for the test consisted of 24 full cores (Intel x86\_64) plus 24 hyperthreads. The orange squares are from running multiple processes, each with 12 threads.} 
 \end{figure}
 
 \GX~has recorded about 1400 separate physics-quality runs having a total data footprint of about 3 petabytes. The data acquisition system saved the data in $19$ gigabyte files, with all runs consisting of multiple files (typically $100$ or more). Figure~\ref{fig:production_overview} shows an overview of the different production steps for \GX~data, which are described in more detail in the following. 
