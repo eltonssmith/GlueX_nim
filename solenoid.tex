@@ -12,14 +12,13 @@
 The core of the GlueX spectrometer is a superconducting
 solenoid magnet with a bore of about 2~m in diameter and with an overall 
 yoke length of about 4.8~m. The photon beam passes along the axis of
-the solenoid.  At the nominal current of 1350~A used for the GlueX
-experiment the magnet provides an approximately 2~T field at its axis.
+the solenoid.  At the nominal current of 1350~A used for \gx{}, the magnet provides a magnetic field along the axis of about 2~T.
 
 The magnet was designed and built at SLAC in the early
 1970's~\cite{Alcorn-confer-1972} for the LASS
-spectrometer~\cite{Aston:1987uc}. It employs a cryostatically
-stable design and uses cryostats that were designed to be opened and
-serviced with hand tools. It was refurbished and modified%
+spectrometer~\cite{Aston:1987uc}. The solenoid employs a cryostatically
+stable design with cryostats designed to be opened and
+serviced with hand tools. The magenet was refurbished and modified%
 \footnote{
   The front plate of the flux return yoke was modified, leading to a
   swap of the two front coils and modifications of the return flux
@@ -33,8 +32,8 @@ for the \gx{} experiment~\cite{Ballard:2011tm, Ballard:2015wma}.
 The magnet is constructed of four separate superconducting coils and
 cryostats. The flux return yoke is made of several iron rings.  The
 coils are connected in series. A common liquid helium tank is located
-on top of the magnet providing the gravity feed of the liquid to the
-coils. The layout of the coils' cryostats and the flux return iron
+on top of the magnet, providing a gravity feed of the liquid to the
+coils. The layout of the coil cryostats and the flux return iron
 yoke is shown in Fig.~\ref{fig:layout_spectrometer}.
 Table~\ref{tab:sol:summary} summarizes the important magnet
 parameters.
@@ -89,7 +88,7 @@ parameters.
    \normalsize
  \end{center}
   \caption{
-    The actual parameters of the solenoid.  The units are metric. The
+    Key parameters of the \gx{} solenoid. The
     coils are ordered along the beam direction.
     \label{tab:sol:summary}
   }
@@ -116,7 +115,7 @@ copper strips
 %} 
 to form a rectangular cross section of 7.62$\times$5.33~mm$^2$
 %\cite{Alcorn-confer-1972}.  
-The measured resistivity ratio of the conductor at $\sim{}300^\circ{}$K and
+The measured residual resistivity ratio of the conductor at $\sim{}300^\circ{}$K and
 $\sim{}15^\circ{}$K is $\approx{}$100.  
 %Two types of filaments have
 %been used (see Fig.~\ref{fig:sol:conductor-cartoon} and
@@ -127,7 +126,7 @@ $\sim{}15^\circ{}$K is $\approx{}$100.
 %The coil was wound on G-10 standoff strips glued on the cylindrical
 %inner wall of the liquid helium vessel.  
 As the coil was wound, a 0.64~mm-thick stainless steel support band
-and two 0.2~mm-thick Mylar insulating strips were wound along with it
+and two 0.2~mm-thick Mylar insulating strips were wound together with it
 for pre-tensioning and insulation%
 %(Fig.~\ref{fig:sol:conductor-cartoon})
 . 
@@ -143,46 +142,46 @@ voltage across the subcoils is monitored using special wires passing
 through the coils' chimneys along with the helium supply pipes and the
 main conductor.
 
-The cold helium vessel containing the coil is supported within its
+The cold helium vessel containing the coil is supported within the
 warm cryostat vacuum vessel by a set of columns designed to provide
 sufficient thermal insulation. The columns are equipped with strain
 gauges for monitoring the stresses on the columns. The helium vessel
-is surrounded by a nitrogen-cooled shield made of copper and stainless-steel panels.
+is surrounded by a nitrogen-cooled thermal shield made of copper and stainless-steel panels.
 Super-insulation is placed between the vacuum vessel and the nitrogen
 shield.  The vacuum vessels are attached to the matching iron rings of
 the yoke.
 
 The power supply%
 \footnote{Danfysik System 8000 Type 854.}
-provides up to 10~V DC for ramping the current up or down. It also
-includes a protection circuit, which can be fired by a quench
+provides up to 10~V DC for establishing the operating current while ramping. The supply also
+includes a protection circuit, which can be engaged by a quench
 detector as well as by other signals.  A relatively low dump resistor
 of 0.061~$\Omega$ limits the maximum voltage on the magnet during
 trips to 100~V. The dumping time constant of $L/R \approx 7$~min is
 relatively long, but safe according to the original design of the
 magnet. A large copper mass and the helium bath are able to absorb a
 large amount of energy during a quench without overheating the solder
-joints. This allows for a relatively slow-reacting - 0.5~s decision
-time, but a more noise-proof and ``intelligent'' quench detector.  The
+joints, permitting a relatively slow reacting and ``intelligent'' --but more noise proof-- quench detector with a 0.5~s decision
+time.  The
 quench detector compares the measured voltages on different subcoils
 in order to detect a resistive component that might appear in a
 subcoil.
 %The decision is made based on the measured voltages on the
 %subcoils.  
-During ramping the current up or down such a voltage is proportional
-to the subcoil's inductance.  Relative values of inductance of various
+During ramping the current, such a voltage is proportional
+to the subcoil inductance.  Relative values of inductance of various
 subcoils depend on the value of the current because of saturation
-effects in the iron yoke. There are also transient effects at changes
+effects in the iron yoke. Transient effects are also present at changes
 of the slew rate caused by Foucault currents in the yoke.
 %The quench detector compares
 %voltages on different subcoils in order to detect a resistive
 %component that might appear in a subcoil.  
-The system includes two redundant detectors - one uses analog signals
-and a simplified logic, another is done in the PLC control system (see
+The system includes two redundant detectors: one uses analog signals
+and a simplified logic, another is part of the PLC control system (see
 Section~\ref{sec:sol:controls}) which uses digitized signals. The PLC
-digital programmable device is more sensitive since it takes into
+digital programmable device is more sensitive since this monitoring system takes into
 account the dependence of the coils' inductance on the current and
-provides a better filtering of the noise.  The ramping slew rate is
+provides better noise filtering.  The ramping slew rate is
 limited by the transient imbalance of the voltages on subcoils that
 may trigger the quench detector. Additionally, $\sim$1~ms-long voltage
 spikes of unidentified origin have been observed in coil 2 at high
@@ -198,42 +197,40 @@ surface of the vacuum vessel of each of the coils.
 }
 
 The cooling system is described in detail in Ref.~\cite{Lavendure:2014:refrig}.
-A standalone helium refrigerator located
+A stand-alone helium refrigerator located
 in a building adjacent to Hall D provides liquid helium and nitrogen
 via a transfer line to the Cryogenic Distribution Box above the
 magnet. The transfer line delivers helium at 2.6~atm and 6~K to a Joule-Thomson
 (JT) valve providing liquid to a cylindrical common helium tank in the
 Distribution Box. The level of liquid helium in the tank is measured
-with a superconducting wire probe%
+with a superconducting wire probe;%
 \footnote{
   American Magnetics Model 1700 with HS-1/4-RGD-19"/46"-4LDCP-LL6-S sensor
 }
- and is kept at about half of the tank's diameter. The cold helium gas
- from the tank is returned to the refrigerator which keeps the
+ the liquid level is kept at about half of the tank diameter. The cold helium gas
+ from the tank is returned to the refrigerator, which keeps the
  pressure at the top of the tank at 1.2~atm corresponding to about
- 4.35~K at the surface of the liquid%
+ 4.35~K at the surface of the liquid.%
 \footnote{
   The original implementation at SLAC did not recycle the helium and
   operated at atmospheric pressure.
 }
-.
 Each coil is connected to the common helium tank by two vertical 2-inch
 pipes.  One pipe is open at the bottom of the tank while the other one
 is taller than the typical level of helium inside the tank. The main
 conductor and the wires for voltage monitoring pass through the former
 pipe. Additionally, two $\sim$6~m long, 3/8~inch ID pipes go outside
 the coil's helium vessel, from the Distribution Box to the bottom of
-the coil. One of those pipes is connected to a JT valve in the box,
-and is used to fill the coil initially but is not used during operation.
-Another one reaches the bottom of
+the coil. One of those pipes, connected to a JT valve in the box, is used to fill the coil initially, but is not used during operation.
+The other pipe reaches the bottom of
 the common helium tank in order to provide 
 a thermo-syphon effect essential
 for the proper circulation of helium in the coil. The main current is
-delivered into the helium tank via vapor-cooled leads and is
+delivered into the helium tank via vapor-cooled leads, and is
 distributed to the coils by a superconducting cable. After cooling the
-leads the helium gas is warmed up and returned to the refrigeration
-system. The gas flow through the leads is regulated depending on the
-current in the magnet and at 1350~A the flow is about 0.25~g/s. The
+leads, the helium gas is warmed and returned to the refrigeration
+system. The gas flow through the leads is regulated based on the
+current in the magnet; at 1350~A, the flow is about 0.25~g/s. The
 coils and the Distribution Box are equipped with various sensors for
 temperature, pressure, voltage, and flow rates.
 
@@ -243,7 +240,7 @@ temperature, pressure, voltage, and flow rates.
 }
 
 The control system for the superconducting solenoid, power supply, 
-and cryogenic system, is`` based on Programmable Logic
+and cryogenic system, is based on Programmable Logic
 Controllers (PLC)%
 \footnote{
   Allen-Bradley Programmable Logic Controllers
@@ -252,8 +249,9 @@ Controllers (PLC)%
 .
 The PLC system digitizes the signals from various sensors, communicates with
 other devices, reads out the data into a programmable unit for
-analysis, and sends commands to various devices. Additionally, it is
-connected to EPICS in order to display and archive the data (see
+analysis, and sends commands to various devices. Additionally, the PLC is
+connected to EPICS\footnote{Experimental Physics and 
+Industrial Control System, https://epics.anl.gov.} in order to display and archive the data (see
 Section \ref{sec:controls}).  The practical sampling limit for the readout of the sensor
 is a few Hz, which is too low for
 detection of fast voltage spikes on the coils due to motion, shorts,
@@ -271,16 +269,16 @@ rows with a sampling rate of 10~kHz.  The PLC system reads out the
 data from the PXI system. Additionally, the PXI data are read out by
 an EPICS server at the full 10~kHz sampling rate and are recorded for further analysis.
 
-\subsection[Field Calculation and Measurement]{
-         Field Calculation and Measurement
+\subsection[Field calculation and measurement]{
+         Field calculation and measurement
         \label{sec:sol:field}
 }
 
-The momentum resolution of the GlueX spectrometer is larger than
+The momentum resolution of the \gx{} spectrometer is larger than
 1\% and is dominated by multiple scattering and the spatial
-resolution of the coordinate detectors.  Thus, a fraction of a percent is a
+resolution of the coordinate detectors.  Thus, a fraction of a percent is
 sufficient accuracy for the field determination.  The coils are
-axially symmetric while the flux return yoke is nearly axially
+axially symmetric, while the flux return yoke is nearly axially
 symmetric, apart from the holes for the coil's chimneys. The field was
 calculated using a 2-dimensional field calculator {\it
   Poisson/Superfish}%
@@ -293,16 +291,15 @@ fine structure of the subcoils and the geometry of the yoke
 iron. Different assumptions about the magnetic properties of the yoke
 iron have been used: the {\it Poisson} default AISI 1010 steel, the
 measurements of the original yoke iron made at SLAC, and the 1018
-steel for the filler plates. Since the results of the field
+steel used for the filler plates. Since the results of the field
 calculations differ by less than 0.1\%, the default {\it Poisson} AISI
 1010 steel properties were used for the whole yoke iron in the final
 field map calculations.
 
 The three projections of the magnetic field have been measured along lines
 parallel to the axis, at four values of the radius and at up to six values
-of the azimuthal angle. The calculated field and its deviation from
-the measurements are shown in Fig.~\ref{fig:sol:field_comparison}. The
-tracking detectors occupy a volume of $R<56$~cm and $45<Z<340$~cm. In
+of the azimuthal angle. The calculated field and the measured deviations are shown in Fig.~\ref{fig:sol:field_comparison}. The
+tracking detectors occupy the volume of $R<56$~cm and $45<Z<340$~cm. In
 this volume the field deviation at $R=0$ does not exceed 0.2\%. The
 largest deviation of 1.5\% is observed at the downstream edge of the
 fiducial volume and at the largest radius. Such a field uncertainty in
@@ -311,7 +308,7 @@ most of the fiducial volume the measured field is axially symmetric to
 $\approx$0.1\% and deviates from this symmetry by $\approx$2\% at the
 downstream edge and the largest radius.
 
-The calculated field map is not needed for the track reconstruction and
+The calculated field map is used for track reconstruction and
 physics analysis.
    
 % ======================================================================================
@@ -322,13 +319,11 @@ physics analysis.
      \includegraphics[angle=0,width=1.0\linewidth]{figures/solenoid_field_calc-meas_comparison_7_1_01}%
   \end{center}
   \caption{
-    The full field at 1350~A calculated with {\it Poisson} (the left
-    scale) at the axis and at the edge of the tracking fiducial volume
-    - R=56~cm. The deviations of the measurements from the
-    calculations are shown (the right scale) at the axis, as well as
-    at R=56~cm. The measurements have been done at 6 azimuthal
-    angles. Those demonstrating the largest deviations from the
-    calculations - at 0$^\circ$ and 90$^\circ$ - are shown.  
+    The full field at 1350~A calculated with {\it Poisson} (left
+    scale) on the axis and at the edge of the tracking fiducial volume (R=56~cm). The deviations of the measurements from the
+    calculations are shown (right scale) on the axis, and at R=56~cm. The measurements were made at 6 azimuthal
+    angles. We show the angles (0$^\circ$ and 90$^\circ$) with the largest deviations from the
+    calculations.
 %    In the area most important for tracking $45<Z<320$~cm the
 %    deviations from the calculations are below 0.5\%.
     \label{fig:sol:field_comparison}
