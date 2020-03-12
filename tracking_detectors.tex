@@ -132,12 +132,12 @@ This small admixture of alcohol protects the wire chambers from aging effects ca
 This part of the gas system is located above ground in a separate gas shed, before the gas mixture is transported
 to the experimental hall via polyethylene pipes.
 
-Additional MFCs in the hall allow the exact amount of gas provided to the chambers to be specified. There is one for the CDC and another 
-four for the individual FDC packages. The CDC is operated with a flow of 1.0~l/m while each FDC package is operated with
-a flow of 0.1~l/m. To protect the chambers from over-pressure there is a bypass line at the input to the detectors that
-is open to the atmosphere after a bubbler containing of mineral oil. The height of the oil level determines the maximum possible gas pressure at
+Additional MFCs in the hall allow the exact amount of gas provided to the chambers to be specified: one MFC for the CDC and another 
+four MFCs for the individual FDC packages. The CDC is operated with a flow of 1.0~l/m, while each FDC package is operated with
+a flow of 0.1~l/m. To protect the chambers from over-pressure, there is a bypass line at the input to the detectors that
+is open to the atmosphere following a bubbler containing mineral oil. The height of the oil level determines the maximum possible gas pressure at
 the input to the chambers. There is a second bubbler at the output to protect against possible air back-flow into
-the chamber. The height of its oil above the exhaust line determines the operating pressure inside the chambers.
+the chamber. The height of the oil above the exhaust line determines the operating pressure inside the chambers.
 
 Valves are mounted at many locations in the gas system to monitor various pressures with a single pressure sensor. The pressures of all six FDC chambers are monitored, as well as the CDC gas at the input, downstream gas plenum and the exhaust. 
 A valve in the exhaust line can be used to divert some gas from the chamber to an oxygen sensor. Trace quantities of oxygen will reduce the gas gain and reduce tracking efficiency. The oxygen levels in the chamber are below 100~ppm.
@@ -145,8 +145,8 @@ A valve in the exhaust line can be used to divert some gas from the chamber to a
 \subsection{Calibration, performance and monitoring \label{sec:dccalib}}
 Time calibrations for the drift chambers are used to remove the time offset due to the electronics, so that after calibration the earliest possible arrival time of the pulse signals is at 0~ns. These offsets and the function parameters used to describe the relationship between the pulse arrival time and the closest distance between the track and the anode wire are obtained for each session of data taking. 
 
-The CDC measures the $dE/dx$ of tracks over a wide range of polar angles, including recoiling target protons as well as more forward-going tracks. Gain calibrations are made to ensure that the $dE/dx$ is consistent between tracking paths through different straws and stable over time. 
-The procedure entails matching the position of the minimum ionizing peak for each of the 3522 straws, and then matching the $dE/dx$ at 1.5~GeV/c to the calculated value of 2.0~ keV/cm. This takes place during the early stages of data analysis. Gain calibration for the individual wires is performed each time the HV is switched on and whenever any electronics modules are replaced. Gain calibration for the chamber as a whole is performed for each session of data taking; these are limited to two hours as the gain is very sensitive to the atmospheric pressure. Position calibrations were necessary to describe the small deflection of the straw tubes midway along their length; these were performed in 2016 and repeated in 2017, with no significant difference found between the two sets of results.  Position resolution from the CDC is of the order of 130~$\mu$m and its detection efficiency per straw is over 98\% for tracks up to 4~mm from the wire. The efficiency decreases as the distance between the track and the wire increases, but the close-packing arrangement of the straw tubes and the large number of straws traversed by each track compensate for this. 
+The CDC measures the energy loss, $dE/dx$, of tracks over a wide range of polar angles, including recoiling target protons as well as more forward-going tracks. Gain calibrations are made to ensure that $dE/dx$ is consistent between tracking paths through different straws and stable over time. 
+The procedure entails matching the position of the minimum ionizing peak for each of the 3522 straws, and then matching the $dE/dx$ at 1.5~GeV/c to the calculated value of 2.0~ keV/cm. This takes place during the early stages of data analysis. Gain calibration for the individual wires is performed each time the HV is switched on and whenever any electronics modules are replaced. Gain calibration for the chamber as a whole is performed for each session of data taking; these sessions are limited to two hours as the gain is very sensitive to the atmospheric pressure. Position calibrations were necessary to describe the small deflection of the straw tubes midway along their length; these were performed in 2016 and repeated in 2017, with no significant difference found between the two sets of results.  Position resolution from the CDC is of the order of 130~$\mu$m and its detection efficiency per straw is over 98\% for tracks up to 4~mm from the CDC wire. The efficiency decreases as the distance between the track and the wire increases, but the close-packing arrangement of the straw tubes and the large number of straws traversed by each track compensate for this. 
 
 For the FDC system, an internal per-chamber calibration process is first performed to optimize the track position accuracy.  
 In the FDC the avalanche created around the wire is seen in three projections: on the two cathodes and on the wires.
@@ -156,19 +156,19 @@ The same strip information can be used to reconstruct the avalanche position per
 \begin{figure}[tbp]
 \begin{center}
 \includegraphics[width=0.95\textwidth]{figures/FDC_wires_from_strips1.pdf}  
-\caption{\label{FDC_wires_from_strips} Wire (avalanche) positions reconstructed from the strip information on the two cathodes in one FDC chamber. Shown is only one quarter of the chamber.
+\caption{\label{FDC_wires_from_strips} Wire (avalanche) positions reconstructed from the strip information on the two cathodes in one FDC chamber. Only one quarter of the chamber is shown in this figure.
 }   
 \end{center}  
 \end{figure}
-This is used to align the strips on the two cathodes with respect to the wires. 
-At the same time the residuals of the reconstructed wire positions are an estimate of the strip resolution.
+This strip information is used to align the strips on the two cathodes with respect to the wires. 
+At the same time, the residuals of the reconstructed wire positions are an estimate of the strip resolution.
 The resolutions of the detector were reported earlier \cite{FDC_NIM}. 
 The strip resolution along the wires, estimated from the wire position reconstruction, varies between $180$ and $80$~$\mu$m, depending on the total charge induced on the strips. The drift distance is reconstructed from the drift time with a resolution between $240$ and $140$~$\mu$m
 depending on the distance of the hit to the wire in the $0.5-4.5$~mm range.  
 
 Position offsets and package rotations were determined for both drift chamber systems, first independently, and then together, using the alignment software MILLEPEDE\cite{millepede} in a process described in \cite{GlueXCDCNIM} and in \cite{MikeStaib_thesis}.
 
-Online monitoring software enables the shift-takers to check that the number of channels recording data, the distribution of signal arrival times and the  $dE/dx$ distribution are as expected. 
+Online monitoring software enables shift-takers to check that the number of channels recording data, the distribution of signal arrival times, and the  $dE/dx$ distribution are as expected. 
 
 
 %\subsection{Summary \label{sec:dcsummary}}
