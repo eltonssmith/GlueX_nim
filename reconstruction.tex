@@ -75,11 +75,13 @@ Raw data ware transferred from JLab to the remote sites using Globus\footnote{ht
 
 The full reconstructed (REST) data is too large to be easily handled by individual analyzers. For that reason, a system was developed to analyze data at JLab and extract reaction-specific ROOT trees. This step is represented by the right-hand green box at the bottom of Fig.\,\ref{fig:production_overview}.
 
-Users can specify individual reactions via a web interface (see Fig.~\ref{fig:production_analysis}). Periodically, the submitted reactions are downloaded into a configuration file, which steers the analysis launch. For each reaction, the \GX~analysis library inside the JANA framework creates possible particle combinations from the reconstructed charged tracks and showers saved in the REST format. Common selection criteria are applied for exclusivity and particle identification before performing a kinematic fit, using vertex and four-momentum constraints. Displaced vertices and inclusive reactions are also supported. Objects representing successful particle combinations (e.g. $\pi^0 \rightarrow \gamma\gamma$) and other objects are managed in memory pools, and can be reused by different channels to reduce the overall memory footprint of the process. With this scheme, up to one hundred different reactions can be combned into one launch over the reconstructed data.
+Users can specify individual reactions via a web interface.
+%(see Fig.~\ref{fig:production_analysis}).
+Periodically, the submitted reactions are downloaded into a configuration file, which steers the analysis launch. For each reaction, the \GX~analysis library inside the JANA framework creates possible particle combinations from the reconstructed charged tracks and showers saved in the REST format. Common selection criteria are applied for exclusivity and particle identification before performing a kinematic fit, using vertex and four-momentum constraints. Displaced vertices and inclusive reactions are also supported. Objects representing successful particle combinations (e.g. $\pi^0 \rightarrow \gamma\gamma$) and other objects are managed in memory pools, and can be reused by different channels to reduce the overall memory footprint of the process. With this scheme, up to one hundred different reactions can be combned into one launch over the reconstructed data.
 
 If the kinematic fit converged for one combination of tracks and showers, the event was stored into a reaction-specific but generic ROOT tree, made accessible to the whole collaboration. The total size of these ROOT trees for the full data set strongly depend on the selected reaction, but are small enough to be copied to the user's home institution for a more detailed analysis.
 
-\begin{figure}[h!]\centering
-\includegraphics[width=\textwidth]{figures/analysis_submit_form.png}
-\caption[]{\label{fig:production_analysis}Analysis submission browser form.} 
-\end{figure}
+%\begin{figure}[h!]\centering
+%\includegraphics[width=\textwidth]{figures/analysis_submit_form.png}
+%\caption[]{\label{fig:production_analysis}Analysis submission browser form.} 
+%\end{figure}
