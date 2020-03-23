@@ -13,6 +13,12 @@ void beta_vs_p_positivetracks()
    c1->SetGridy();
    c1->SetFrameBorderMode(0);
    c1->SetFrameBorderMode(0);
+    
+   c1->SetLeftMargin(0.15);
+   gStyle->SetPadLeftMargin(0.25);
+   c1->SetRightMargin(0.15);
+   c1->SetTopMargin(0.05);
+   c1->SetBottomMargin(0.2);
    
    TH2I *BetaVsP_qpL = new TH2I("BetaVsP_qpL","TOF q^{+}",250,0,10,400,-0.2,1.2);
    BetaVsP_qpL->SetBinContent(1,5);
@@ -29673,13 +29679,13 @@ void beta_vs_p_positivetracks()
    BetaVsP_qpL->SetContourLevel(18,1166.696);
    BetaVsP_qpL->SetContourLevel(19,1727.206);
    
-   TPaletteAxis *palette = new TPaletteAxis(5.03125,0.3985,5.3125,1.053,BetaVsP_q+);
+   TPaletteAxis *palette = new TPaletteAxis(5.03125,0.3985,5.3125,1.053,BetaVsP_qpL);
 palette->SetLabelColor(1);
 palette->SetLabelFont(42);
 palette->SetLabelOffset(0.005);
-palette->SetLabelSize(0.035);
+palette->SetLabelSize(0.07);
 palette->SetTitleOffset(1);
-palette->SetTitleSize(0.035);
+palette->SetTitleSize(0.07);
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
@@ -29693,30 +29699,36 @@ palette->SetTitleSize(0.035);
    BetaVsP_qpL->GetXaxis()->SetTitle("p (GeV/c)");
    BetaVsP_qpL->GetXaxis()->SetRange(1,125);
    BetaVsP_qpL->GetXaxis()->SetLabelFont(42);
-   BetaVsP_qpL->GetXaxis()->SetLabelSize(0.035);
-   BetaVsP_qpL->GetXaxis()->SetTitleSize(0.035);
+   BetaVsP_qpL->GetXaxis()->SetLabelSize(0.07);
+   BetaVsP_qpL->GetXaxis()->SetTitleSize(0.07);
    BetaVsP_qpL->GetXaxis()->SetTitleFont(42);
    BetaVsP_qpL->GetYaxis()->SetTitle("#beta");
    BetaVsP_qpL->GetYaxis()->SetRange(172,358);
    BetaVsP_qpL->GetYaxis()->SetLabelFont(42);
-   BetaVsP_qpL->GetYaxis()->SetLabelSize(0.035);
-   BetaVsP_qpL->GetYaxis()->SetTitleSize(0.035);
+   BetaVsP_qpL->GetYaxis()->SetLabelSize(0.07);
+   BetaVsP_qpL->GetYaxis()->SetTitleSize(0.07);
    BetaVsP_qpL->GetYaxis()->SetTitleFont(42);
    BetaVsP_qpL->GetZaxis()->SetLabelFont(42);
-   BetaVsP_qpL->GetZaxis()->SetLabelSize(0.035);
-   BetaVsP_qpL->GetZaxis()->SetTitleSize(0.035);
+   BetaVsP_qpL->GetZaxis()->SetLabelSize(0.05);
+   BetaVsP_qpL->GetZaxis()->SetTitleSize(0.05);
    BetaVsP_qpL->GetZaxis()->SetTitleFont(42);
    BetaVsP_qpL->Draw("colz");
-   
-   TPaveText *pt = new TPaveText(0.4376615,0.9319527,0.5623385,0.995,"blNDC");
+   BetaVsP_qpL->SetTitle("");
+    
+   /*TPaveText *pt = new TPaveText(0.4376615,0.9319527,0.5623385,0.995,"blNDC");
    pt->SetName("title");
    pt->SetBorderSize(0);
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetTextFont(42);
-   TText *AText = pt->AddText("TOF q^{+}");
-   pt->Draw();
+   TText *AText = pt->AddText("");
+   pt->Draw();*/
+    
+ 
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    
+    c1->SaveAs("beta_vs_p_positivetracks.pdf");
 }
