@@ -2,6 +2,19 @@
 %================  Controls  ================
 %=================================================
 
+\begin{landscape}
+ \begin{figure}[tbp]
+\begin{center}
+%\includegraphics[height=10cm,bb=35 480 535 760,clip=true]{figures/GlueX_CSS_overview.pdf}
+\includegraphics[height=10cm,clip=true]{figures/GlueX_CSS_overview.png}
+%\includegraphics[height=8cm,clip=true]{figures/GlueX_CSS_overview.pdf}
+\caption{Top-level graphical interface for the beamline. This screen provides information on beam currents and rates, radiators, magnet status, target condition, background levels, etc.
+\label{fig:GlueX_CSS_overview}
+}
+\end{center}
+\end{figure}
+\end{landscape}
+
 \section[Slow controls]{Slow controls \label{sec:controls}}
 \GX{} must monitor 
 and control tens of thousands of different variables that define the state of the experimental hardware. Different variable values need to be acquired, displayed, archived, and used as inputs to control loops continually with a high degree of reliability. For \gx, approximately 90,000 variables are archived, and many more are monitored.
@@ -17,18 +30,6 @@ Various beam line devices need to be moved during beam operations. Stepper motor
 While installing complex systems, such as a superconducting magnet that requires large numbers of input and output channels and sophisticated logic, custom controls systems were developed for each particular system. For those cases, we used Allen-Bradley CompactLogix and ControlLogix PLC systems\footnote{https://ab.rockwellautomation.com.}. These systems are designed for industrial operations, allow modular design, provide high reliability, and require minimal maintenance. All controls loops are programmed within the PLC application, and are interfaced with EPICS through a TCP/IP-EtherNet/IP-proprietary protocol to allow access by higher level applications to process variables served by the PLC's.  
 
 The cryogenic target and the superconducting solenoid employ National Instruments LabView applications. The target controls use both custom-made and vendor-supplied hardware that include built-in remotely-accessible control systems and an NI CompactRIO\footnote{https://www.ni.com/en-us/shop/compactrio.html} chassis. This chassis communicates with the hardware and serves variables using an internal ChannelAccess server and an EPICS IOC running on the CompactRIO controller, as described in Sec.~\ref{sec:target}. A National Instruments PXI high-performance system\footnote{https://www.ni.com/en-us/shop/pxi.html} is used to collect data from different sensors as described in Sec.~\ref{sec:solenoid}. 
-
-\begin{landscape}
- \begin{figure}[tbp]
-\begin{center}
-\includegraphics[height=10cm,bb=35 480 535 760,clip=true]{figures/GlueX_CSS_overview.pdf}
-%\includegraphics[height=8cm,clip=true]{figures/GlueX_CSS_overview.pdf}
-\caption{Top-level graphical interface for the beamline. This screen provides information on beam currents and rates, radiators, magnet status, target condition, background levels, etc.
-\label{fig:GlueX_CSS_overview}
-}
-\end{center}
-\end{figure}
-\end{landscape}
 
 \subsection{Supervisory Control and Data Acquisition layer \label{sec:archiver}}
 The SCADA layer is the middle layer that distributes the process variables allowing the higher level --and sometimes lower level-- applications to use various process variables of the Hall-D control system. This layer is based on EPICS and uses the ChannelAccess protocol to publish the values of the variables over Ethernet. Because the accelerator controls also use EPICS, efficiently exchange the information between the experiment and accelerator operations is achieved. Several dozen software IOC processes running on hosts in the experiment control room collect data from different components of the lowest layer. Each IOCs is configured to communicate using the protocol appropriate for the remote units with which data exchange is needed. For instance, the IOC controlling the voltage for the FDC detector needs to be able to communicate with the Wiener MPOD and CAEN SYx527 voltage chassis. Although the middle layer is primarily used to distribute data between different applications, that layer also contains some EPICS-based applications running on IOC's that provide different control loops and software interlocks.  For instance, the low-voltage power supplies for the FDC detector (see Sec. \ref{sec:fdc}) are shut off if the temperature or the flow of the coolant in the chiller falls outside of required limits. 
