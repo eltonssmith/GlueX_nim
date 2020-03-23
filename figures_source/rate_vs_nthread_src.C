@@ -2,7 +2,7 @@ void rate_vs_nthread_src()
 {
 //=========Macro generated from canvas: c1/
 //=========  (Fri Feb 21 12:45:34 2020) by ROOT version6.08/06
-   TCanvas *c1 = new TCanvas("c1", "",20,43,1400,600);
+   TCanvas *c1 = new TCanvas("c1", "",20,43,700,500);
    c1->Range(-6.900001,-36.67547,62.1,330.0792);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
@@ -11,31 +11,39 @@ void rate_vs_nthread_src()
    c1->SetGridy();
    c1->SetTickx(1);
    c1->SetTicky(1);
-   c1->SetFrameFillColor(ci);
    c1->SetFrameBorderMode(0);
-   c1->SetFrameFillColor(ci);
    c1->SetFrameBorderMode(0);
-   
+   c1->SetLeftMargin(0.15);
+   c1->SetRightMargin(0.05);
+   c1->SetTopMargin(0.05);
+   c1->SetBottomMargin(0.2);
+
+    
    TH2D *axes__1 = new TH2D("axes__1","Event Processing Rates",100,0,55.2,100,0,293.4037);
    axes__1->SetStats(0);
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
-   axes__1->SetLineColor(ci);
-   axes__1->GetXaxis()->SetTitle("Number of threads");
+   // axes__1->SetLineColor(ci);
+   // c1->SetFrameFillColor(ci);
+    
+    
+    axes__1->SetTitle("");
+    axes__1->GetXaxis()->SetTitle("Number of threads");
    axes__1->GetXaxis()->SetLabelFont(42);
-   axes__1->GetXaxis()->SetLabelSize(0.035);
-   axes__1->GetXaxis()->SetTitleSize(0.035);
+   axes__1->GetXaxis()->SetLabelSize(0.07);
+   axes__1->GetXaxis()->SetTitleSize(0.07);
    axes__1->GetXaxis()->SetTitleFont(42);
    axes__1->GetYaxis()->SetTitle("Event Processing Rate (Hz)");
    axes__1->GetYaxis()->SetLabelFont(42);
-   axes__1->GetYaxis()->SetLabelSize(0.035);
-   axes__1->GetYaxis()->SetTitleSize(0.035);
-   axes__1->GetYaxis()->SetTitleFont(42);
+   axes__1->GetYaxis()->SetLabelSize(0.07);
+   axes__1->GetYaxis()->SetTitleSize(0.07);
+   axes__1->GetYaxis()->SetTitleOffset(1);
+    axes__1->GetYaxis()->SetTitleFont(42);
    axes__1->GetZaxis()->SetLabelFont(42);
-   axes__1->GetZaxis()->SetLabelSize(0.035);
-   axes__1->GetZaxis()->SetTitleSize(0.035);
+   axes__1->GetZaxis()->SetLabelSize(0.07);
+   axes__1->GetZaxis()->SetTitleSize(0.07);
    axes__1->GetZaxis()->SetTitleFont(42);
    axes__1->Draw("");
    
@@ -105,7 +113,7 @@ void rate_vs_nthread_src()
    gre->SetFillColor(1);
 
    ci = TColor::GetColor("#0000ff");
-   gre->SetLineColor(ci);
+   // gre->SetLineColor(ci);
    gre->SetLineWidth(3);
 
    ci = TColor::GetColor("#0000ff");
@@ -180,11 +188,11 @@ void rate_vs_nthread_src()
    marker->SetMarkerSize(2);
    marker->Draw();
    TPave *pave = new TPave(0.552,171.1522,19.872,288.5137,4,"br");
-   pave->Draw();
+   // pave->Draw();
    TLatex *   tex = new TLatex(1.104,259.1733,"R = #frac{1}{T_{serial} + #frac{1}{N_{#varepsilon}}T_{para}}");
    tex->SetTextSize(0.06);
    tex->SetLineWidth(2);
-   tex->Draw();
+   /*tex->Draw();
       tex = new TLatex(1.104,200.4925,"N_{#varepsilon} = N_{thr} - (1-#alpha)(N_{thr}-N_{core})(N_{thr}>N_{core})");
    tex->SetTextSize(0.04);
    tex->SetLineWidth(2);
@@ -214,19 +222,19 @@ void rate_vs_nthread_src()
       tex = new TLatex(30.36,249.3932,"#frac{2#times12 thr.}{1#times24 thr.} = 1.053");
 
    ci = TColor::GetColor("#993300");
-   tex->SetTextColor(ci);
+   // tex->SetTextColor(ci);
    tex->SetLineWidth(2);
    tex->Draw();
       tex = new TLatex(30.36,190.7124,"#frac{4#times12 thr.}{1#times48 thr.} = 1.076");
 
    ci = TColor::GetColor("#993300");
-   tex->SetTextColor(ci);
+   // tex->SetTextColor(ci);
    tex->SetLineWidth(2);
    tex->Draw();
    pave = new TPave(35.88,273.8435,55.2,293.4037,4,"br");
 
    ci = TColor::GetColor("#ffff00");
-   pave->SetFillColor(ci);
+   // pave->SetFillColor(ci);
    pave->Draw();
       tex = new TLatex(39.744,278.7335,"Intel(R) Xeon(R) CPU E5-2670 v3 @ 2.30GHz");
    tex->SetTextSize(0.025);
@@ -268,7 +276,7 @@ void rate_vs_nthread_src()
    tex->SetTextSize(0.035);
    tex->SetTextAngle(270);
    tex->SetLineWidth(2);
-   tex->Draw();
+   tex->Draw();*/
    
    TPaveText *pt = new TPaveText(0.3719742,0.9343728,0.6280258,0.995,"blNDC");
    pt->SetName("title");
@@ -276,9 +284,12 @@ void rate_vs_nthread_src()
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetTextFont(42);
-   AText = pt->AddText("Event Processing Rates");
-   pt->Draw();
+   pt->AddText("Event Processing Rates");
+   // AText = pt->AddText("Event Processing Rates");
+    pt->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("rate_vs_nthread.pdf");
 }
