@@ -174,7 +174,7 @@ void OmegaCompareTheta()
    0.195579,
    5.394039,
    0,
-   nan};
+   0};
    TGraphErrors *gre = new TGraphErrors(40,gr_m2_effic_Thetabins_fx1001,gr_m2_effic_Thetabins_fy1001,gr_m2_effic_Thetabins_fex1001,gr_m2_effic_Thetabins_fey1001);
    gre->SetName("gr_m2_effic_Thetabins");
    gre->SetTitle("");
