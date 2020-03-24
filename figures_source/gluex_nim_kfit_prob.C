@@ -1029,7 +1029,7 @@ void gluex_nim_kfit_prob()
    prob_data__5->GetXaxis()->SetTickLength(0.05);
    prob_data__5->GetXaxis()->SetTitleOffset(0.85);
    prob_data__5->GetXaxis()->SetTitleFont(42);
-   prob_data__5->GetYaxis()->SetTitle("Entries [a.u.]");
+   prob_data__5->GetYaxis()->SetTitle("Events");
    prob_data__5->GetYaxis()->SetLabelFont(42);
    prob_data__5->GetYaxis()->SetLabelSize(0.05);
    prob_data__5->GetYaxis()->SetTitleSize(0.075);
@@ -4110,7 +4110,7 @@ void gluex_nim_kfit_prob()
    kfitChi2_cut__7->GetXaxis()->SetTickLength(0.05);
    kfitChi2_cut__7->GetXaxis()->SetTitleOffset(0.85);
    kfitChi2_cut__7->GetXaxis()->SetTitleFont(42);
-   kfitChi2_cut__7->GetYaxis()->SetTitle("Entries [a.u.]");
+   kfitChi2_cut__7->GetYaxis()->SetTitle("Events");
    kfitChi2_cut__7->GetYaxis()->SetLabelFont(42);
    kfitChi2_cut__7->GetYaxis()->SetLabelSize(0.05);
    kfitChi2_cut__7->GetYaxis()->SetTitleSize(0.075);

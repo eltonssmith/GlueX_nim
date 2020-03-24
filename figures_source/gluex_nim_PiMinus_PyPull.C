@@ -6,14 +6,16 @@ void gluex_nim_PiMinus_PyPull()
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
    c4->Range(-14,-287.49,12.66667,1629.11);
-   c4->SetFillColor(0);
+   /*c4->SetFillColor(0);
    c4->SetBorderMode(0);
    c4->SetBorderSize(2);
    c4->SetLeftMargin(0.15);
    c4->SetBottomMargin(0.15);
    c4->SetFrameBorderMode(0);
-   c4->SetFrameBorderMode(0);
-   
+   c4->SetFrameBorderMode(0);*/
+   gPad->SetMargin(0.2,0.05,0.2,0.05);   // LRBT
+    
+    
    TH1D *PiMinus_PyPull_data__17 = new TH1D("PiMinus_PyPull_data__17","",1000,-25,25);
    PiMinus_PyPull_data__17->SetBinContent(0,1);
    PiMinus_PyPull_data__17->SetBinContent(345,1);
@@ -190,7 +192,7 @@ void gluex_nim_PiMinus_PyPull()
    PiMinus_PyPull_data__17->GetXaxis()->SetTickLength(0.05);
    PiMinus_PyPull_data__17->GetXaxis()->SetTitleOffset(0.85);
    PiMinus_PyPull_data__17->GetXaxis()->SetTitleFont(42);
-   PiMinus_PyPull_data__17->GetYaxis()->SetTitle("Entries [a.u.]");
+   PiMinus_PyPull_data__17->GetYaxis()->SetTitle("Events");
    PiMinus_PyPull_data__17->GetYaxis()->SetLabelFont(42);
    PiMinus_PyPull_data__17->GetYaxis()->SetLabelSize(0.07);
    PiMinus_PyPull_data__17->GetYaxis()->SetTitleSize(0.07);
@@ -203,7 +205,9 @@ void gluex_nim_PiMinus_PyPull()
    PiMinus_PyPull_data__17->GetZaxis()->SetTitleOffset(1);
    PiMinus_PyPull_data__17->GetZaxis()->SetTitleFont(42);
    PiMinus_PyPull_data__17->Draw("");
-   
+   PiMinus_PyPull_data__17->GetXaxis()->SetTitleOffset(1.25);
+   PiMinus_PyPull_data__17->GetYaxis()->SetTitleOffset(0.);
+    
    TH1D *PiMinus_PyPull_mc__18 = new TH1D("PiMinus_PyPull_mc__18","",1000,-25,25);
    PiMinus_PyPull_mc__18->SetBinContent(424,3.684069);
    PiMinus_PyPull_mc__18->SetBinContent(425,1.473628);
@@ -537,7 +541,7 @@ void gluex_nim_PiMinus_PyPull()
    PiMinus_PyPull_mc__18->GetZaxis()->SetTitleFont(42);
    PiMinus_PyPull_mc__18->Draw("same");
    
-   TLegend *leg = new TLegend(0.6,0.7,0.9,0.9,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.65,0.75,0.95,0.95,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
