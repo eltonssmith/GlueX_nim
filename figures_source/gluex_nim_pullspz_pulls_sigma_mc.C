@@ -128,7 +128,7 @@ void gluex_nim_pullspz_pulls_sigma_mc()
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    Graph_Graph1043->SetLineColor(ci);
-   Graph_Graph1043->GetXaxis()->SetTitle("Prob(#chi^{2},NDF) #geq ...");
+   Graph_Graph1043->GetXaxis()->SetTitle("Min Prob(#chi^{2},NDF)");
    Graph_Graph1043->GetXaxis()->SetLabelFont(42);
    Graph_Graph1043->GetXaxis()->SetLabelSize(0.05);
    Graph_Graph1043->GetXaxis()->SetTitleSize(0.07);
