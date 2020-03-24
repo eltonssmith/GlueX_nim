@@ -21,8 +21,8 @@ void plot_CostheEff_NIM_jun19()
    c1_1->SetFillColor(0);
    c1_1->SetBorderMode(0);
    c1_1->SetBorderSize(2);
-   c1_1->SetGridx();
-   c1_1->SetGridy();
+   // c1_1->SetGridx();
+   // c1_1->SetGridy();
    c1_1->SetLeftMargin(0.25);
    c1_1->SetRightMargin(0.05);
    c1_1->SetBottomMargin(0.15);
@@ -194,8 +194,8 @@ void plot_CostheEff_NIM_jun19()
    c1_2->SetFillColor(0);
    c1_2->SetBorderMode(0);
    c1_2->SetBorderSize(2);
-   c1_2->SetGridx();
-   c1_2->SetGridy();
+   // c1_2->SetGridx();
+   // c1_2->SetGridy();
    c1_2->SetLeftMargin(0.25);
    c1_2->SetRightMargin(0.05);
    c1_2->SetBottomMargin(0.15);
@@ -365,9 +365,9 @@ void plot_CostheEff_NIM_jun19()
    c1_3->SetFillColor(0);
    c1_3->SetBorderMode(0);
    c1_3->SetBorderSize(2);
-   c1_3->SetGridx();
-   c1_3->SetGridy();
-   c1_3->SetLeftMargin(0.25);
+   // c1_3->SetGridx();
+   // c1_3->SetGridy();
+   // c1_3->SetLeftMargin(0.25);
    c1_3->SetRightMargin(0.05);
    c1_3->SetBottomMargin(0.15);
    c1_3->SetFrameBorderMode(0);
