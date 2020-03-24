@@ -118,7 +118,7 @@ void gluex_nim_pullspy_pulls_sigma_data()
    gre->SetMarkerStyle(21);
    gre->SetMarkerSize(1.5);
    
-   TH1F *Graph_Graph1019 = new TH1F("Graph_Graph1019","Width P_{y}-Pulls (Data)",100,0,0.99);
+   TH1F *Graph_Graph1019 = new TH1F("Graph_Graph1019","",100,0,0.99);
    Graph_Graph1019->SetMinimum(-1.5);
    Graph_Graph1019->SetMaximum(2);
    Graph_Graph1019->SetDirectory(0);
@@ -128,7 +128,7 @@ void gluex_nim_pullspy_pulls_sigma_data()
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    Graph_Graph1019->SetLineColor(ci);
-   Graph_Graph1019->GetXaxis()->SetTitle("Prob(#chi^{2},NDF) #geq ...");
+   Graph_Graph1019->GetXaxis()->SetTitle("Min Prob(#chi^{2},NDF)");
    Graph_Graph1019->GetXaxis()->SetLabelFont(42);
    Graph_Graph1019->GetXaxis()->SetLabelSize(0.05);
    Graph_Graph1019->GetXaxis()->SetTitleSize(0.07);
@@ -430,7 +430,7 @@ void gluex_nim_pullspy_pulls_sigma_data()
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("","#pi^{-}","lpf");
+   TLegendEntry *entry=leg->AddEntry("entry","#pi^{-}","lpf");
    entry->SetFillStyle(1000);
    entry->SetLineColor(2);
    entry->SetLineStyle(1);
@@ -439,25 +439,30 @@ void gluex_nim_pullspy_pulls_sigma_data()
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1.5);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("","p","lpf");
-   entry->SetFillStyle(1000);
-   entry->SetLineColor(8);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(8);
-   entry->SetMarkerStyle(22);
-   entry->SetMarkerSize(1.5);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("","#gamma_{1}","lpf");
-   entry->SetFillStyle(1000);
-   entry->SetLineColor(4);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(4);
-   entry->SetMarkerStyle(34);
-   entry->SetMarkerSize(1.5);
-   entry->SetTextFont(42);
+   TLegendEntry *entry2=leg->AddEntry("entry2","p","lpf");
+   entry2->SetFillStyle(1000);
+   entry2->SetLineColor(8);
+   entry2->SetLineStyle(1);
+   entry2->SetLineWidth(1);
+   entry2->SetMarkerColor(8);
+   entry2->SetMarkerStyle(22);
+   entry2->SetMarkerSize(1.5);
+   entry2->SetTextFont(42);
+   TLegendEntry *entry3=leg->AddEntry("entry3","p","lpf");
+   entry3->SetFillStyle(1000);
+   entry3->SetLineColor(4);
+   entry3->SetLineStyle(1);
+   entry3->SetLineWidth(1);
+   entry3->SetMarkerColor(4);
+   entry3->SetMarkerStyle(34);
+   entry3->SetMarkerSize(1.5);
+   entry3->SetTextFont(42);
    leg->Draw();
+    
+    
+    TLatex *tex = new TLatex(0.75,0.8,"DATA");
+    tex->SetNDC();
+    tex->Draw();
    
    TPaveText *pt = new TPaveText(0.3202292,0.9242632,0.6797708,0.995,"blNDC");
    pt->SetName("title");
@@ -470,4 +475,7 @@ void gluex_nim_pullspy_pulls_sigma_data()
    cRes_Sigma1->Modified();
    cRes_Sigma1->cd();
    cRes_Sigma1->SetSelected(cRes_Sigma1);
+   
+   cRes_Sigma1->SaveAs("gluex_nim_pullspy_pulls_sigma_data.pdf");
+    
 }
