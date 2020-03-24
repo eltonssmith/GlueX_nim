@@ -367,7 +367,7 @@ void plot_CostheEff_NIM_jun19()
    c1_3->SetBorderSize(2);
    // c1_3->SetGridx();
    // c1_3->SetGridy();
-   // c1_3->SetLeftMargin(0.25);
+   c1_3->SetLeftMargin(0.25);
    c1_3->SetRightMargin(0.05);
    c1_3->SetBottomMargin(0.15);
    c1_3->SetFrameBorderMode(0);
