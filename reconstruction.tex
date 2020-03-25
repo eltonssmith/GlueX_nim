@@ -32,7 +32,7 @@ All file outputs are written to a write-through cache system, which is ultimatel
 \end{figure}
 
 %--------------------------------------------------------------------------
-\subsection{Calibration pass \label{sec:reccalibration}}
+\subsection{Calibration \label{sec:reccalibration}}
 
 Two types of calibration jobs are run, depending on the complexity of the calibration procedures.  Simple, well-understood calibrations such as timing alignment between individual channels and subdetectors or drift chamber gain and time-to-distance calibrations, can be performed with one file of data per run.  These procedures are run either in the online environment or on the batch farm, and can be run several times as needed following any improvements in reconstruction algorithms or other calibrations.
 
@@ -40,12 +40,12 @@ More complicated calibration procedures, such as calorimeter gain calibration, r
 The individuals responsible for specific detector calibrations are then responsible for analyzing the skimmed data.
 
 %--------------------------------------------------------------------------
-\subsection{Monitoring pass \label{sec:recmonitoring}}
+\subsection{Monitoring \label{sec:recmonitoring}}
 
 The red-colored box at the top of Fig.~\ref{fig:production_overview} represents experimental data that has been copied to the computer center and backed up to tape. The left-hand section of the box labeled ``subset" represents the first five files of each run, which are run through offline monitoring processes. These monitoring jobs are first processed during the run to check the quality of the data, but are also processed after major changes to calibrations or software to validate those changes. These jobs produce Reconstructed Events Storage (REST) files and ROOT histogram files for checking the detector and reconstruction performance.
 
 %--------------------------------------------------------------------------
-\subsection{Reconstruction pass \label{sec:recreconstruction}}
+\subsection{Reconstruction \label{sec:recreconstruction}}
 
 When the data is sufficiently well calibrated, a full production pass on the physics quality data is performed. In the current total \GX~data set, about 1400 runs were deemed ``physics quality." The remaining runs were short runs related to engineering and commissioning tests of the experiment; while this remainder is small compared to the total number of runs, it includes the vast majority of all data recorded during the running period, representing about 3 petabytes. All these files were reconstructed using computing resources at several sites, equivalent to more than 20 million core-hours combined. This produced more than $500$ terabytes of REST data files. The large reduction in size from collected event data to physics data files (about a factor of six) permits faster and more efficient physics analyses on the data.
 %, and is also small enough to be fully exported to off-site computer centers, see section~\ref{sec:remote-dist} (not really).
@@ -71,7 +71,7 @@ The binaries were all built at JLab using a CentOS7 system. A very lightweight D
 Raw data ware transferred from JLab to the remote sites using Globus\footnote{https://opensciencegrid.org/technology/policy/globus-toolkit.},  which uses GridFTP. The Globus tasks were submitted and managed by the SWIF2 workflow tool written by the JLab Scientific Computing group. SWIF2 was needed to manage the data retrieval from tape, for transfer to the remote site, for submission of remote jobs, and for transfer of processed data back to JLab. Disk space limitations at both JLab and the remote sites meant only a portion of the data set could be on disk at any one time. Thus, SWIF2 had to manage the jobs through all stages of data transfer and job submission.
 
 %--------------------------------------------------------------------------
-\subsection{Analysis pass \label{sec:recanalysis}}
+\subsection{Analysis \label{sec:recanalysis}}
 
 The full reconstructed (REST) data is too large to be easily handled by individual analyzers. For that reason, a system was developed to analyze data at JLab and extract reaction-specific ROOT trees. This step is represented by the right-hand green box at the bottom of Fig.\,\ref{fig:production_overview}.
 
