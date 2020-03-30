@@ -773,11 +773,8 @@ to the beam endpoint energy near 12~GeV.
 
 
 The pair energy resolution of the PS hodoscope is about 25 MeV.
-The time resolution of the PSC counters is 120 ps. This resolution
-allows determination of the electron beam bunch in which the bremsstrahlung
-photon was emitted, and to associate hits from the tagging detectors and PS
-from the same event. Signals from the PS detector are provided to the trigger system,
-as described in Section~\ref{sec:trig}. The typical rate of PS coincidences
+The time resolution of the PSC counters is 120~ps, which allows coincidence measurements between the tagging detectors and the PS within an electron beam bunch. Signals from the PS detector are delivered to the trigger system,
+as described in Section~\ref{sec:trig}. The typical rate of PS double-arm coincidences
 is a few kHz. Details about the performance of the spectrometer are given in~\cite{Somov:2017vhp,Somov:2016bgb}.
 
 %\subsubsection[Spectrometer]{Spectrometer\label{sec:beamline:ps-spetrometer}}
@@ -1028,7 +1025,7 @@ for leptons, is determined using calibration runs with the Total
 Absorption Counter (TAC)~\cite{somov_flux}. The TAC is a small calorimeter
 (see Section~\ref{sec:tac}) inserted directly into the photon
 beam to count the number of beam photons as a function of energy.
-These absolute flux calibration runs are performed at reduced beam flux in
+These absolute-flux calibration runs are performed at reduced beam intensities in
 order to limit the rate of accidental tagging coincidences.
 Data are acquired simultaneously from the PS and TAC.
 These data enable an absolute flux calibration for the PS
@@ -1039,29 +1036,12 @@ investigated. The expected precision of the flux determination is on
 the level of $1\%$.
 
 \subsection{Total Absorption Counter \label{sec:tac}}
-Not every photon produced at the radiator reaches the hall, and in
-normal \GX{} running, not every photon that reaches the hall causes
-an interaction that is seen in the \GX{} detector.
-The TAC has near 100\% efficiency and is used to empirically
-determine this ``tagging fraction" individually for each tagging counter.
-The device is a high-efficiency lead glass
-calorimeter, used at low beam currents ($<5$nA) to determine the overall
-normalization of the flux from the \GX{} coherent bremsstrahlung facility.
-The TAC was originally developed for and deployed in Hall B, for
-photon beam operations with CLAS
-\cite{clasnote1992014, clasnote1993011,clasnote1999002},
-and was transferred to Hall D to serve the same purpose for \GX{}.
+Only a certain fraction of the photons produced at the radiator reach the target and causes an interaction that is seen in the \gx{} detector.
+The fraction of tagged photons reaching the \gx{} target is determined as a function of energy from individual TAC coincidence measurements with each tagging counter. These ``tagging fractions'' are  used to scale the counts measured in the PS in order to obtain the total tagged flux that reached the GlueX target during a given run period.
 
-Using the TAC at normal \GX{} production currents is not possible,
-as it would be overwhelmed with rate and would very quickly succumb
-to radiation damage. Therefore the TAC is only inserted into the
-beam during special runs at very low intensities where the detector can run
-with near 100\% efficiency.
-From these TAC coincidence measurements, the fraction of tagged photons
-reaching the \GX{} target is determined as a function of energy.
-These fractions are then used to scale the counts measured in the
-PS to obtain the total tagged flux that reached the \GX{} target during
-a given run period.
+The TAC is a high-efficiency lead-glass calorimeter, used at low beam currents ($<$ 5nA) to determine the overall normalization of the flux from the \gx{} coherent bremsstrahlung facility.  Using the device at normal \gx{} production currents is not possible, as it would be overwhelmed with rate and would very quickly succumb to radiation damage. Therefore, the TAC is only inserted into the beam during dedicated runs at very low intensities where the detector can run with near 100\% efficiency.
+The TAC was originally developed for and deployed in Hall B, for photon beam operations with CLAS \cite{clasnote1992014, clasnote1993011,clasnote1999002} .
+
 
 %{\color{red} Comment by Stuart: TAC runs have also been performed using v-wires during GlueX phase I, should we mention this?}
 
