@@ -13,7 +13,21 @@ The capability of the \gx{} detector in reconstructing charged and neutral parti
 %The reconstruction efficiency for different hadron species has been studied using the method described in Sec.~\ref{sec:trackeff}.   Charged pion reconstruction efficiency was studied with a sample of $\gamma p \to p \omega$, $\omega \to \pi^+\pi^-\pi^0$ events.  Charged kaon reconstruction efficiency was studied with samples of $\gamma p \to \phi p$, $\phi \to K^+K^-$ and $\gamma p \to \Lambda(1520) K^+$, $\Lambda(1520) \to p K^-$ events.  Proton reconstruction efficiency was studied with a sample of $\gamma p \to K^+ \Sigma^0$, $\Sigma^0 \to \gamma \Lambda^0$, $\Lambda^0 \to p \pi^-$ events.  
 %The results are illustrated in Fig.~X. The efficiencies determined by data and simulation generally agree to within a few percent.
 
-\subsection{Charged-particle reconstruction efficiency  \label{sec:trackeff}}
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{figures/MissingOmegaFit.pdf}
+\includegraphics[width=0.45\textwidth]{figures/ThreePiFit.pdf}
+\caption{\label{fig:omega mass}
+Reconstructed mass distributions for the reaction $\gamma p \to p\pi^0\pi^{\pm}(\pi^\mp)$ for a bin in $\phi$.
+  (Left) Distribution of the missing mass off the proton.
+(Right) Invariant mass distribution for the $\pi^+\pi^-\pi^0$ system.  The blue curves show the resonant contributions, the black
+curve show the polynomial backgrounds, and the red curve shows the sum.
+ (Color online)}
+\end{center}
+\end{figure}
+
+
+\subsection{Charged-particle reconstruction efficiency  \label{sec:trackeff}}  
 The track reconstruction efficiency was estimated by analyzing $\gamma p \rightarrow p \omega$, $\omega\rightarrow\pi^+\pi^-\pi^0$ events, where the proton, the $\pi^0$, and one of the charged pions were used to predict the three-momentum of the other charged pion. Two methods were used to calculate this efficiency, $\varepsilon=N_{found}/(N_{found}+N_{missing})$.  Events for which no track was reconstructed in the predicted region of 
 phase space contributed to $N_{missing}$, while events where the expected track was reconstructed contributed to $N_{found}$.  For the first method, the $\omega$ yields for $N_{found}$ and $N_{missing}$ were estimated from the missing mass off the 
 proton; for the second method, the invariant mass of the $\pi^+\pi^-\pi^0$ system was used to find $N_{found}$.  This analysis was performed for individual bins of track momentum, $\theta$, and $\phi$.
@@ -23,25 +37,14 @@ agree to within 5\%.
 
 While this reaction only allows the determination of track reconstruction efficiencies for $\theta < 30^\circ$, this covers the majority of charged particles produced in \gx{} due to its fixed-target geometry.  Other reactions are being studied to determine the efficiency at larger angles.
 
+
 \begin{figure}[tbp]
 \begin{center}
-\includegraphics[width=0.45\textwidth]{figures/MissingOmegaFit.pdf}
-\includegraphics[width=0.45\textwidth]{figures/ThreePiFit.pdf}
-\caption{\label{fig:omega mass}
-Reconstructed mass distributions for the reaction $\gamma p \to p\pi^0\pi^{\pm}(\pi^\mp)$ for a bin in $\phi$.
-  (Left) Distribution of the missing mass off the proton.
-(Right) Invariant mass distribution for the $\pi^+\pi^-\pi^0$ system.  The black
-curves show the results of fits to the distributions.
- (Color online)}
-\end{center}
-\end{figure}
-
-\begin{figure}[tpb]
-\begin{center}
 \includegraphics[width=\textwidth]{figures/PiPlusEfficiency.pdf}
-\includegraphics[width=\textwidth]{figures/PiMinusEfficiency.pdf}
+%\includegraphics[width=\textwidth]{figures/PiMinusEfficiency.pdf}
 \caption{\label{fig:tracking efficiency}
-(Top row) Tracking efficiency for $\pi^+$ tracks. (Bottom row) Tracking efficiency for $\pi^-$ tracks.  (Color online)}
+%(Top row) Tracking efficiency for $\pi^+$ tracks. (Bottom row) Tracking efficiency for $\pi^-$ tracks.  (Color online)}
+Tracking efficiency for $\pi^+$ tracks, determined by data and simulation using two methods. (Color online)}
 \end{center}
 \end{figure}
 
