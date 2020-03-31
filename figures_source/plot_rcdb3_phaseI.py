@@ -1,3 +1,5 @@
+
+
 """
 
 rplot_rcdb3_WB.py
@@ -355,15 +357,15 @@ fig = plt.figure(2)
 figs.append(fig)
 
 
-plt.plot(time_days_all,         trig_all.cumsum(),'b.',label='  Tot trigs = '+strtot)
-plt.plot(time_days_para_0_90  , trig_para_0_90.cumsum(),'r.',label='     0 trigs = '+strpara+" ("+strparafrac+" %)")
-plt.plot(time_days_para_45_135, trig_para_45_135.cumsum(),'m.',label='   45 trigs = '+str45+" ("+str45frac+" %)")
-plt.plot(time_days_perp_0_90,   trig_perp_0_90.cumsum(),'g.',label='   90 trigs = '+strperp+" ("+strperpfrac+" %)")
-plt.plot(time_days_perp_45_135, trig_perp_45_135.cumsum(),'c.',label=' 135 trigs = '+str135+" ("+str135frac+" %)")
-plt.plot(time_days_AMO,         trig_AMO.cumsum(),'k.',label='Amo trigs = '+stramo+" ("+stramofrac+" %)")
+plt.plot(time_days_all,         trig_all.cumsum()/1e9,'b.',label='  Tot trigs = '+strtot)
+plt.plot(time_days_para_0_90  , trig_para_0_90.cumsum()/1e9,'r.',label='     0 trigs = '+strpara+" ("+strparafrac+" %)")
+plt.plot(time_days_para_45_135, trig_para_45_135.cumsum()/1e9,'m.',label='   45 trigs = '+str45+" ("+str45frac+" %)")
+plt.plot(time_days_perp_0_90,   trig_perp_0_90.cumsum()/1e9,'g.',label='   90 trigs = '+strperp+" ("+strperpfrac+" %)")
+plt.plot(time_days_perp_45_135, trig_perp_45_135.cumsum()/1e9,'c.',label=' 135 trigs = '+str135+" ("+str135frac+" %)")
+plt.plot(time_days_AMO,         trig_AMO.cumsum()/1e9,'k.',label='Amo trigs = '+stramo+" ("+stramofrac+" %)")
 
 plt.title("GlueX Phase I",fontsize=20)
-plt.ylabel("Trigger Count",fontsize=20)
+plt.ylabel("Trigger Count (Billion)",fontsize=20)
 plt.xlabel("Running Time (live days)",fontsize=20)
 #plt.yticks(fontsize=20)
 #plt.xticks(fontsize=20)
@@ -432,11 +434,11 @@ plt.locator_params(nbins=5)
 nsub = 4
 
 plt.subplot(2,2,nsub)
-plt.plot(run_all,trig_all.cumsum(),'b.')
-plt.plot(run_para,trig_para.cumsum(),'r.')
-plt.plot(run_perp,trig_perp.cumsum(),'k.')
-plt.plot(run_AMO,trig_AMO.cumsum(),'g.')
-plt.ylabel("Int Trig Count")
+plt.plot(run_all,trig_all.cumsum()/1e9,'b.')
+plt.plot(run_para,trig_para.cumsum()/1e19,'r.')
+plt.plot(run_perp,trig_perp.cumsum()/1e9,'k.')
+plt.plot(run_AMO,trig_AMO.cumsum()/1e9,'g.')
+plt.ylabel("Int Trig Count (Billion)")
 plt.xlabel("Run Number")
 ymin, ymax = plt.ylim()
 plt.locator_params(nbins=4)
