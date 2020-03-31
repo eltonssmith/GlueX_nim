@@ -12,13 +12,13 @@
 The core of the GlueX spectrometer is a superconducting
 solenoid magnet with a bore of about 2~m in diameter and with an overall 
 yoke length of about 4.8~m. The photon beam passes along the axis of
-the solenoid.  At the nominal current of 1350~A used for \gx{}, the magnet provides a magnetic field along the axis of about 2~T.
+the solenoid.  At the nominal current of 1350~A, the magnet provides a magnetic field along the axis of about 2~T.
 
 The magnet was designed and built at SLAC in the early
 1970's~\cite{Alcorn-confer-1972} for the LASS
 spectrometer~\cite{Aston:1987uc}. The solenoid employs a cryostatically
 stable design with cryostats designed to be opened and
-serviced with hand tools. The magenet was refurbished and modified%
+serviced with hand tools. The magnet was refurbished and modified%
 \footnote{
   The front plate of the flux return yoke was modified, leading to a
   swap of the two front coils and modifications of the return flux
@@ -30,18 +30,17 @@ serviced with hand tools. The magenet was refurbished and modified%
 for the \gx{} experiment~\cite{Ballard:2011tm, Ballard:2015wma}. 
 
 The magnet is constructed of four separate superconducting coils and
-cryostats. The flux return yoke is made of several iron rings.  The
+cryo\-stats. The flux return yoke is made of several iron rings.  The
 coils are connected in series. A common liquid helium tank is located
 on top of the magnet, providing a gravity feed of the liquid to the
 coils. The layout of the coil cryostats and the flux return iron
 yoke is shown in Fig.~\ref{fig:layout_spectrometer}.
-Table~\ref{tab:sol:summary} summarizes the important magnet
-parameters.
+Table~\ref{tab:sol:summary} summarizes the salient parameters of the  magnet.
 
 % ======================================================================================
   
 
-\begin{table}[h]
+\begin{table}[thp]
  \begin{center}
    \small
    \begin{tabular}{lr}
@@ -89,7 +88,7 @@ parameters.
  \end{center}
   \caption{
     Key parameters of the \gx{} solenoid. The
-    coils are ordered along the beam direction.
+    coils are listed in order along the beam direction.
     \label{tab:sol:summary}
   }
 \end{table}
@@ -155,20 +154,16 @@ The power supply%
 \footnote{Danfysik System 8000 Type 854.}
 provides up to 10~V DC for establishing the operating current while ramping. The supply also
 includes a protection circuit, which can be engaged by a quench
-detector as well as by other signals.  A relatively low dump resistor
-of 0.061~$\Omega$ limits the maximum voltage on the magnet during
-trips to 100~V. The dumping time constant of $L/R \approx 7$~min is
+detector as well as by other signals. During trips, a small dump resistor
+of 0.061~$\Omega$ limits the maximum voltage on the magnet to 100~V. The dumping time constant of $L/R \approx 7$~min is
 relatively long, but safe according to the original design of the
 magnet. A large copper mass and the helium bath are able to absorb a
 large amount of energy during a quench without overheating the solder
-joints, permitting a relatively slow reacting and ``intelligent'' --but more noise proof-- quench detector with a 0.5~s decision
-time.  The
-quench detector compares the measured voltages on different subcoils
-in order to detect a resistive component that might appear in a
-subcoil.
+joints. This permits the use of an ``intelligent''  quench detector with low noise sensitivity and a relatively slow decision time of 0.5~s. The quench detector compares the measured voltages on different subcoils
+in order to detect a resistive component.
 %The decision is made based on the measured voltages on the
 %subcoils.  
-During ramping the current, such a voltage is proportional
+While ramping the current, such a voltage is proportional
 to the subcoil inductance.  Relative values of inductance of various
 subcoils depend on the value of the current because of saturation
 effects in the iron yoke. Transient effects are also present at changes
@@ -183,8 +178,9 @@ digital programmable device is more sensitive since this monitoring system takes
 account the dependence of the coils' inductance on the current and
 provides better noise filtering.  The ramping slew rate is
 limited by the transient imbalance of the voltages on subcoils that
-may trigger the quench detector. Additionally, $\sim$1~ms-long voltage
-spikes of unidentified origin have been observed in coil 2 at high
+may trigger the quench detector. Additionally,
+unexplained voltage spikes of 1~ms duration
+have been observed in coil 2 at high
 slew rates, which can  trigger the quench detector. Powering up the
 magnet to 1350~A takes about 8~h.
 
@@ -309,7 +305,7 @@ $\approx$0.1\% and deviates from this symmetry by $\approx$2\% at the
 downstream edge and the largest radius.
 
 The calculated field map is used for track reconstruction and
-physics analysis.
+physics analyses.
    
 % ======================================================================================
 
