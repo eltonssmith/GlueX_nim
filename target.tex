@@ -27,7 +27,7 @@ are attached outside the condenser, and are used to regulate the heater temperat
 system is filled with liquid hydrogen.
 
 The target cell, shown in Fig.~\ref{fig:TargetCell}, is similar to
-designs used in Hall B at JLab for many years~\cite{HAKOBYAN2008218}.  
+designs used in Hall B at JLab~\cite{HAKOBYAN2008218}.  
 The cell walls are made from 100-$\mu$m-thick aluminized
 polyimide sheet wrapped in a conical shape and glued along the edge,
 overlapping in a 2~mm wide scarf joint.  
@@ -40,12 +40,11 @@ Both the upstream and downstream beam
 windows are made of non-aluminized,
 100~$\mu$m thick polyimide films that have been extruded into the
 shapes indicated in Fig.~\ref{fig:TargetCell}. These windows are clearly
-visible in Fig.~\ref{fig:z-vertex}. All items are glued together using
+visible in Fig.~\ref{fig:z-vertex} where reconstructed vertex positions are shown. All items are glued together using
 a two-part epoxy\footnote{3M Scotch-Weld epoxy adhesive DP190 Gray.}
-that has been in reliable use at cryogenic temperatures at
-JLab for many years. 
+that has been in reliable use at cryogenic temperatures for long periods. 
 A second  heater, attached to the aluminum base,
-is used to empty the cell for empty target measurements.
+is used to empty the cell for background measurements.
 The base is attached to a kinematic mount, which is in turn
 supported inside the vacuum chamber using a system of carbon fiber rods.    
 The mount is used to correct the pitch and yaw
@@ -57,12 +56,12 @@ During normal operation, a sufficient amount of hydrogen gas is condensed from t
 until the target cell, condenser, and interconnecting piping are filled with liquid hydrogen
 and an equilibrium pressure of about 19~psia is achieved.  
 The condenser temperature is regulated at 18~K, while the
-liquid in the cell cools to about 20.1~K, a temperature 1~K below the saturation
+liquid in the cell cools to about 20.1~K. The latter temperature is 1~K below the saturation
 temperature of H$_2$, which eliminates boiling within the cell and permits a more
 accurate determination of the fluid density, 
 $71.2 \pm 0.3$~mg/cm$^3$.  
 The system can be cooled from room temperature and filled with liquid hydrogen in
-approximately six hours.  For empty target runs, the liquid hydrogen is boiled back into the storage tanks in about five minutes.  H$_2$ gas continues to condense and drain towards the target cell, but the condensed hydrogen is immediately 
+approximately six hours.  Prior to measurements using an empty target cell, the liquid hydrogen is boiled back into the storage tanks in about five minutes.  H$_2$ gas continues to condense and drain towards the target cell, but the condensed hydrogen is immediately 
 evaporated by the cell heater.  In this way, the cell does not warm above 40~K and
 can be re-filled with liquid hydrogen in about twenty minutes.
 
@@ -74,11 +73,10 @@ can be re-filled with liquid hydrogen in about twenty minutes.
 
 Operation of the cryotarget is highly automated, requires minimal user intervention,
 and has operated in a very reliable and predictable manner throughout the
-experiment.  The target system is controlled using a
-National Instruments CompactRIO 9030. 
-Control logic and equipment interface is handled by a LabVIEW program, 
+experiment. 
+The target controls\footnote{The control logic uses National Instruments CompactRIO 9030.} are handled by a LabVIEW program, 
 while a standard EPICS softIOC running in Linux provides a
-bridge between the controller and JLab's EPICS enviroment.     
+bridge between the controller and JLab's EPICS enviroment (see Section\,\ref{sec:controls}).     
 Temperature read back and control of the condenser and target cell thermometers
 are managed by a four-input temperature
 controller\footnote{Lake Shore Model 336.} with PID control loops of 50 and 100~W.
