@@ -122,7 +122,8 @@ void fit_BCAL_energy_resolution_sigma()
    f_res15->SetMarkerStyle(20);
    f_res15->SetMarkerSize(1.2);
    f_res15->SetLineWidth(2);
-   f_res15->SetChisquare(393.074);
+   f_res15->SetLineColor(1);
+    f_res15->SetChisquare(393.074);
    f_res15->SetNDF(42);
    f_res15->GetXaxis()->SetNdivisions(508);
    f_res15->GetXaxis()->SetLabelFont(132);
@@ -136,7 +137,7 @@ void fit_BCAL_energy_resolution_sigma()
    f_res15->GetYaxis()->SetTitleSize(0.08);
    f_res15->GetYaxis()->SetTitleOffset(0.9);
    f_res15->GetYaxis()->SetTitleFont(132);
-   f_res15->SetParameter(0,5.017707);
+    f_res15->SetParameter(0,5.017707);
    f_res15->SetParError(0,0.03679788);
    f_res15->SetParLimits(0,0,0);
    f_res15->SetParameter(1,4.423746);
@@ -169,7 +170,9 @@ void fit_BCAL_energy_resolution_sigma()
    SigmaE_data_RMetaBCAL_EnSymmMean__29->GetZaxis()->SetTitleSize(0.08);
    SigmaE_data_RMetaBCAL_EnSymmMean__29->GetZaxis()->SetTitleOffset(1.1);
    SigmaE_data_RMetaBCAL_EnSymmMean__29->GetZaxis()->SetTitleFont(132);
-   SigmaE_data_RMetaBCAL_EnSymmMean__29->Draw("");
+   SigmaE_data_RMetaBCAL_EnSymmMean__29->GetXaxis()->SetRangeUser(0,3);
+   SigmaE_data_RMetaBCAL_EnSymmMean__29->GetYaxis()->SetRangeUser(0,12);
+    SigmaE_data_RMetaBCAL_EnSymmMean__29->Draw("");
    
    TH1D *SigmaE_sim_RMetaBCAL_EnSymmMean__30 = new TH1D("SigmaE_sim_RMetaBCAL_EnSymmMean__30","",200,0,10);
    SigmaE_sim_RMetaBCAL_EnSymmMean__30->SetBinContent(6,9.212968);
@@ -297,4 +300,7 @@ void fit_BCAL_energy_resolution_sigma()
    canvas_BCAL_energy_resolution->Modified();
    canvas_BCAL_energy_resolution->cd();
    canvas_BCAL_energy_resolution->SetSelected(canvas_BCAL_energy_resolution);
+    
+    canvas_BCAL_energy_resolution->SaveAs("fit_BCAL_energy_resolution_sigma.pdf");
 }
+

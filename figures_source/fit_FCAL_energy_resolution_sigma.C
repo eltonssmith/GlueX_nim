@@ -94,13 +94,14 @@ void fit_FCAL_energy_resolution_sigma()
    SigmaE_data_RMetaFCAL_EnSymmMean__27->SetEntries(33);
    SigmaE_data_RMetaFCAL_EnSymmMean__27->SetStats(0);
    
-   TF1 *f_res14 = new TF1("f_res","sqrt([0]*[0]/x + [1]*[1])",0,5, TF1::EAddToList::kNo);
+    TF1 *f_res14 = new TF1("f_res","sqrt([0]*[0]/x + [1]*[1])",1.5,5.5, TF1::EAddToList::kNo);
    f_res14->SetFillColor(19);
    f_res14->SetFillStyle(0);
    f_res14->SetMarkerStyle(20);
    f_res14->SetMarkerSize(1.2);
    f_res14->SetLineWidth(2);
-   f_res14->SetChisquare(55.91829);
+   f_res14->SetLineColor(1);
+    f_res14->SetChisquare(55.91829);
    f_res14->SetNDF(30);
    f_res14->GetXaxis()->SetNdivisions(508);
    f_res14->GetXaxis()->SetLabelFont(132);
@@ -147,7 +148,9 @@ void fit_FCAL_energy_resolution_sigma()
    SigmaE_data_RMetaFCAL_EnSymmMean__27->GetZaxis()->SetTitleSize(0.08);
    SigmaE_data_RMetaFCAL_EnSymmMean__27->GetZaxis()->SetTitleOffset(1.1);
    SigmaE_data_RMetaFCAL_EnSymmMean__27->GetZaxis()->SetTitleFont(132);
-   SigmaE_data_RMetaFCAL_EnSymmMean__27->Draw("");
+   SigmaE_data_RMetaFCAL_EnSymmMean__27->GetXaxis()->SetRangeUser(0,6);
+   SigmaE_data_RMetaFCAL_EnSymmMean__27->GetYaxis()->SetRangeUser(0,12);
+    SigmaE_data_RMetaFCAL_EnSymmMean__27->Draw("");
    
    TH1D *SigmaE_sim_E5p0_3p0_RMetaFCAL_EnSymmMean__28 = new TH1D("SigmaE_sim_E5p0_3p0_RMetaFCAL_EnSymmMean__28","",100,0,10);
    SigmaE_sim_E5p0_3p0_RMetaFCAL_EnSymmMean__28->SetBinContent(18,6.423372);
@@ -253,4 +256,6 @@ void fit_FCAL_energy_resolution_sigma()
    canvas_FCAL_energy_resolution->Modified();
    canvas_FCAL_energy_resolution->cd();
    canvas_FCAL_energy_resolution->SetSelected(canvas_FCAL_energy_resolution);
+   canvas_FCAL_energy_resolution->SaveAs("fit_FCAL_energy_resolution_sigma.pdf");
+    
 }
