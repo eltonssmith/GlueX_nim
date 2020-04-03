@@ -41,11 +41,11 @@ aluminum support hub at the upstream end. The downstream support
 extends partially into the nose section. The cylindrical length of the Rohacell is further reinforced with three layers of carbon fiber, each layer being 650~$\mu$m thick. The assembly is made light-tight with a Tedlar wrapping, attached to a plastic collar at the upstream end.
 
 Silicon photomultiplier detectors are used as light
-sensors, as SiPMs these are not affected by the magnetic field produced by the solenoid. The SiPMs were placed
+sensors, as these are not affected by the magnetic field produced by the solenoid. The SiPMs were placed
 at the upstream end of each scintillator element with a 250~$\mu$m air gap.
 Each paddle is read out with an array of four 
 SiPMs (Hamamatsu S109031-050P multi-pixel photon counters) whose signals are summed. 
-The on-board electronics provides two signals per paddle, one delivered to a JLab FADC, and the other to a 5$\times$~amplifier that is sent to a discriminator and then to a JLab F1 TDC. 
+The on-board electronics provides two signals per paddle, one delivered to an FADC, and the other to a 5$\times$~amplifier that is sent to a discriminator and then to a TDC. 
 %The performance of the ST is discussed in section~\ref{sec:scperformance}.
 
 \subsection[Time-of-Flight counters]{Time-of-flight counters \label{sec:tof}}
@@ -73,14 +73,14 @@ at the outer end of the detector. These type H10534 tubes have ten stages and ar
 \subsection{Electronics \label{sec:scelectronics}}
 High voltage for the TOF PMTs is provided by CAEN HV modules of type A1535SN, initially controlled by a CAEN SY1527 main frame and
 later upgraded to a SY4527.
-The PMT outputs are connected to a passive splitter by a 55'-long RG-58 coaxial cables. The signal is split into two equal-amplitude signals. One signal is directly connected to a FADC~\cite{Dong:2007}, while the second signal passes first through a leading-edge discriminator and is then used as an input to a high resolution TDC VX1290A from CAEN.\footnote{CAEN "https://www.caen.it/"} The digitizing modules (FADCs and TDCs) are mounted in VXS crates as described in Section~\ref{sec:trig}.
+The PMT outputs are connected to a passive splitter by a 55'-long RG-58 coaxial cables. The signal is split into two equal-amplitude signals. One signal is directly connected to a FADC~\cite{Dong:2007}, while the second signal passes first through a leading-edge discriminator and is then used as an input to a high resolution TDC. The digitizing modules are mounted in VXS crates as described in Section~\ref{sec:trig}.
 The threshold of the leading-edge discriminator is controlled separately for each channel and has an intrinsic
 deadtime of about 25~ns.
 
 The sparcification threshold for the FADC is set to 120 (160) counts for the ST (TOF), with the nominal pedestal set at 100 counts. The high voltage of each TOF PMT is adjusted to generate the amplitude of the signal from a minimum-ionizing particle of at least 400 ADC counts above baseline. The data from the FADC is provided by the FPGA algorithm and consists
 of two words per channel with information about pedestal, signal amplitude, signal integral, and timing.
 
-The timing signals from the ST system are registered using the JLab F1 TDCs, which have a nominal least count of 58~ps. In order to take advantage of the higher intrinsic resolution of the TOF counters, this system uses the VX1290A TDCs, which are multi-hit high-resolution TDCs with a buffer of up to 8 words per channel and a nominal least count of 25~ps. Since these TDCs provide the best time measurements in the \gx{} detector, the timing of the accelerator RF signal is also
+The timing signals from the ST system are registered using the JLab F1 TDCs, which have a nominal least count of 58~ps. In order to take advantage of the higher intrinsic resolution of the TOF counters, this system uses the VX1290A TDCs from CAEN\footnote{CAEN, https://www.caen.it/}, which are multi-hit high-resolution TDCs with a buffer of up to 8 words per channel and a nominal least count of 25~ps. Since these TDCs provide the best time measurements in the \gx{} detector, the timing of the accelerator RF signal is also
 digitized using these TDCs.
 
 \subsection{Calibration and monitoring \label{sec:sccalib}}
@@ -94,12 +94,10 @@ The propagation time is measured as a function of the hit position in a paddle a
 The calibration procedures for the TOF system take advantage of the two
 planes of narrow paddles oriented orthogonal to each other, which permits calibration of the full TOF detector independent
 of any other external detector information. The overlap region of two full-length paddles from the two planes define
-a 6$\times$6~cm$^2$ area for most paddles, with a few 3$\times$3~cm$^2$ areas close to the beam hole. The separation between the two detector planes is minimal as they are mounted on top of each other and are only separated by wrapping
+a 6$\times$6~cm$^2$ area for most paddles, with a few 3$\times$3~cm$^2$ areas close to the beam hole. The separation between the two detector planes is minimal as they are mounted adjacent to each other, separated only by wrapping
 material. While the time-difference (TD) between the two ends of a paddle is related to the hit position along the paddle,
 the mean-time (MT) is related to the flight time of a particle from the vertex to the paddle. Therefore, the MT for two overlapping
-paddles must be the same when hit by the same particle passing through both paddles, while the hit position in the horizontal (X) and vertical (Y) dimensions are defined by the TD of the two paddles. This relationship results in an internally consistent calibration of all paddles with respect to every other paddle.
-
-Prior to finding timing offsets for calibration, all times must corrected for the amplitude-dependent walk. The relation between time at threshold and signal amplitude is parameterized and used to correct for time slewing.
+paddles must be the same when hit by the same particle passing through both paddles, while the hit position in the horizontal and vertical dimensions are defined by the TD of the two paddles. This relationship results in an internally consistent calibration of all paddles with respect to every other paddle. Prior to finding timing offsets for calibration, all times must corrected for the amplitude-dependent walk. The relation between time at threshold and signal amplitude is parameterized and used to correct for time slewing.
 
 After all full-length paddles have been calibrated, they can be used themselves as references to
 calibrate the remaining eight short paddles that only have single-ended readout.  Again we use the fact that any overlap region of two paddles from different
