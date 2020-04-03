@@ -56,8 +56,8 @@ gStyle->SetFillColor(0);
     Double_t A1=1;
     Double_t mu1=0.;
     Double_t sigma1=0.23;
-    Double_t A2=0;
-    Double_t mu2=0.;
+    Double_t A2=0.1;
+    Double_t mu2=-0.5;
     Double_t sigma2=0.5;
     Double_t c1=1;
     Double_t c2=0;
@@ -72,10 +72,14 @@ gStyle->SetFillColor(0);
     // DoubleGauss->FixParameter(7,0);
     // DoubleGauss->FixParameter(8,0);
     //DoubleGauss->FixParameter(9,0);
+    DoubleGauss->SetParLimits(0,0,100);
+    DoubleGauss->SetParLimits(3,0,100);
+    /*DoubleGauss->SetParLimits(2,0,2);
+    DoubleGauss->SetParLimits(4,0,2);*/
     
-   TCanvas *c0 = new TCanvas("c0","c0 plot_STresol",200,10,700,700);
-   c0->SetGridx();
-   c0->SetGridy();
+   TCanvas *c0 = new TCanvas("c0","c0 plot_STresol",200,10,700,500);
+   // c0->SetGridx();
+   // c0->SetGridy();
    c0->SetLeftMargin(0.25);
    c0->SetRightMargin(0.05);
    c0->SetTopMargin(0.05);
@@ -120,11 +124,33 @@ gStyle->SetFillColor(0);
     gr_STdiff->Fit("DoubleGauss","","",-1,1);
     gr_STdiff->Draw("Ap");
     
-    /*TLatex *text = new TLatex (0.25,0.8,"After settling,");
+    /*Double_t mu1=2.92622e-02;
+    Double_t mu1s=7.68567e-05;
+    Double_t mu2=6.58625e-01;
+    Double_t mu2s=3.07517e-04;
+    Double_t sigma1=1.91500e-01;
+    Double_t sigma1s=5.70437e-05;
+    Double_t sigma2=3.97301e-01;
+    Double_t sigma2s=5.85381e-04;*/
+    
+    mu1 = DoubleGauss->GetParameter(1);
+    sigma1 = abs(DoubleGauss->GetParameter(2));
+    mu2 = DoubleGauss->GetParameter(4);
+    sigma2 = abs(DoubleGauss->GetParameter(5));
+    
+    TString tex;
+    tex.Form("#mu_{1} = %.3f ns",mu1);
+    TLatex *text = new TLatex (0.7,0.9,tex);
     text->SetNDC();
-    text->SetTextSize(0.03);
+    text->SetTextSize(0.05);
     text->Draw();
-    text->DrawLatex(0.25,0.76,"Current=0.2 #mu A at 2000 V");*/
- 
+    tex.Form("#sigma_{1} = %.3f ns",sigma1);
+    text->DrawLatex(0.7,0.82,tex);
+    tex.Form("#mu_{2} = %.3f ns",mu2);
+    text->DrawLatex(0.7,0.74,tex);
+    tex.Form("#sigma_{2} = %.3f ns",sigma2);
+    text->DrawLatex(0.7,0.66,tex);
+    
+    
     c0->SaveAs("st_tr_fit.pdf");
 }

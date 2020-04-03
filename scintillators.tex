@@ -114,9 +114,9 @@ of the other plane. (Color online)}
 \end{figure}
 
 \subsection{Performance \label{sec:scperformance}}
-The purpose of the ST is to select the correct beam bunch that generated an interaction in the target, which will be used to determine the event start time using the accelerator RF time. Therefore, the ST resolution does not contribute to the resolution of the flight time as long as the resolution is sufficient to pick out the correct beam bunch with high probability.
+The purpose of the ST is to select the electron beam bunch that generated the tagged photon which induced a reaction in the target. The corresponding time derived from a signal from the CEBAF accelerator, which is synchronized with the RF time structure of the machine, is used to determine the event start time. Therefore, the ST resolution does not contribute to the resolution of the flight time as long as the resolution is sufficient to pick out the correct beam bunch with high probability.
 
-The ST timing performance can be measured by comparing the event time in the target as measured by the start counter and the time derived from a signal from the CEBAF accelerator, which is synchronized with the RF time structure of the machine. The start counter time must be corrected for the flight path of the charged particle emerging from the event, and all instrumental corrections mentioned in the previous section must be applied. Fig.~\ref{fig:st-time-resolution} shows the distribution of this time difference. The average time resolution is $\sigma$=234~ps, although the resolution varies depending on the position of the hit along the counter. 
+The ST timing performance can be determined by comparing the event time at the target measured by the start counter and the accelerator RF time. The start counter time must be corrected for the flight path of the charged particle emerging from the event, and all instrumental corrections mentioned in the previous section must be applied. Fig.~\ref{fig:st-time-resolution} shows the distribution of this time difference. The average time resolution is about $\sigma$=234~ps, where the resolution varies depending on the position of the hit along the counter. 
 
 %Table~\ref{table:st-time-resolution} gives the measured time resolution for the various sections as well as for all sections, with all paddles combined. Also shown is the fraction of tracks kept by a $\pm 1.0$~ns cut around the central value.
 
@@ -143,8 +143,8 @@ The ST timing performance can be measured by comparing the event time in the tar
 %  \label{table:st-time-resolution}
 %\end{table}  
 
-The ST can also be used to identify particles using $dE/dx$. Fig.~\ref{fig:ST_dEdx_vs_p} shows $dE/dx$ versus momentum, $p$,
-for charged particles matched to the Start Counter. Protons can be
+The ST is also used to identify particles using $dE/dx$. Fig.~\ref{fig:ST_dEdx_vs_p} shows $dE/dx$ versus momentum, $p$,
+for charged particles tracked to the Start Counter. Protons can be
 separated from pions up to $p=0.9$~GeV/$c$.
 
 \begin{figure*}[!htb]
@@ -157,20 +157,20 @@ separated from pions up to $p=0.9$~GeV/$c$.
 \end{figure*}
 
 The performance of the TOF detector for particle identification (PID) was investigated by considering the relative number of
-particle types within the event sample. Events were selected with at least three fully-reconstructed positively-charged tracks, with at least one of these tracks intersecting the TOF detector. More pions are expected than protons, and more protons than kaons. Looking at the distribution of velocity, $\beta$, of these tracks as a function of momentum, the bands from protons, kaons and pions are easily identified (see Fig.~\ref{fig:betavsp}). 
+particle types within the event sample. Events with at least three fully-reconstructed positively-charged tracks were selected, with at least one of these tracks intersecting the TOF detector. More pions are expected than protons, and more protons than kaons. Looking at the distribution of velocity, $\beta$, of these tracks as a function of momentum, the bands from protons, kaons and pions are identified (see Fig.~\ref{fig:betavsp}). 
 
 The distributions of $\beta$ at two specific track momenta, 2~GeV/c and 4~GeV/c (see Fig.~\ref{fig:betaproj}), are illustrative of the PID capability of the TOF detector. At $p=2$~GeV/c, the TOF detector provides about a 4$\sigma$ separation between
 the pion/positron peak and the kaon peak, sufficient to identify tracks as kaons with $\beta=0.97$, or lower, with very
 high certainty. However, at  $\beta=0.98$, the probability of the track being a kaon is less than 50\%, due to the abundance of pions that is an order of magnitude larger than kaons. The protons, on the other hand, are very well
 separated from the other particle types and can be identified with high confidence over the full range in $\beta$.
-At a track momentum of 4~GeV/c, PID becomes much more difficult and represents the limit at which the TOF can identify protons with high confidence. The separation between the large peak containing pions, kaons and positrons from the proton
+At a track momentum of 4~GeV/c, PID becomes much more difficult and represents the limit at which the a time-of-flight measurement can identify protons with high confidence. The separation between the large peak containing pions, kaons and positrons from the proton
 peak is about 4$\sigma$, while the relative abundance in this case is about a factor of 4. As a consequence, a 4~GeV/c momentum
 track with $\beta=0.975$ is most likely a proton, with a small probability of being a pion. At $\beta=0.98$, such
 a track has a similar probability for being a proton or a pion.
 \begin{figure}[tbp]
-\begin{center}
+\begin{center}    
 \includegraphics[width=0.6\textwidth]{figures/beta_vs_p_positivetracks.pdf}
-\caption{\label{fig:betavsp}$\beta$ of positive charged tracks versus track momentum, showing obvious bands for $e^+$, $\pi^+$, $K^+$ and $p$. The color coding of the third dimension
+\caption{\label{fig:betavsp}$\beta$ of positive charged tracks versus track momentum, showing bands for $e^+$, $\pi^+$, $K^+$ and $p$. The color coding of the third dimension
 is in logarithmic scale.(Color online)}
 \end{center}
 \end{figure}
