@@ -10,12 +10,12 @@ This section describes the \GX ~software and computing systems  used for data mo
 %------------------------------------------------------------------
 \subsection{Monitoring \label{sec:onlinemonitoring}}
 
-The Online Monitoring system consists of multiple stages that provide immediate monitoring of the data, as well as near-term monitoring (a few hours after acquisition). Immediate monitoring is based on the \textit{RootSpy} system\cite{rootspy} written for use in \GX, though its design is not \GX ~specific. Figure \ref{fig:online_monitoring_processes} shows a diagram of the processes involved in the RootSpy system and how those processes are coupled to the DAQ system. The Event Transfer System (ET) process is part of the CODA DAQ system \cite{coda} and is used to extract a copy of a portion of the datastream without interfering with data acquisition. The monitoring system uses a secondary ET to minimize connections to the RAID server running the Event Recorder process.
+The Online Monitoring system consists of multiple stages that provide immediate monitoring of the data, as well as near-term monitoring (a few hours after acquisition). Immediate monitoring is based on the \textit{RootSpy} system\cite{rootspy} written for use in \GX, though its design is not experiment specific. Figure \ref{fig:online_monitoring_processes} shows a diagram of the processes involved in the RootSpy system and how those processes are coupled to the DAQ system. The Event Transfer System (ET) process is part of the CODA DAQ system \cite{coda} and is used to extract a copy of a portion of the datastream without interfering with data acquisition. The monitoring system uses a secondary ET to minimize connections to the RAID server running the Event Recorder process.
 
 \begin{figure}[tbp]
 \begin{center}
 \includegraphics[width=0.99\textwidth, clip,trim=1.5cm 0.9cm 1.7cm 0.8cm]{figures/online_monitoring_processes.pdf}
-\caption{\label{fig:online_monitoring_processes}Processes distributed across several computers in the counting house in the online monitoring system. DC, EB, and ER are the Data Concentrator, Event Builder, and Event Recorder processes, respectively, in the CODA DAQ system.}   
+\caption{\label{fig:online_monitoring_processes}Processes distributed across several computers in the online monitoring system. DC, EB, and ER are the Data Concentrator, Event Builder, and Event Recorder processes, respectively, in the CODA DAQ system.}   
 \end{center}  
 \end{figure}
 
@@ -35,7 +35,7 @@ Plots are displayed via a set of ROOT macros, each responsible for drawing a sin
 \end{center}  
 \end{figure}
 
-There are several client programs that summarize the information available in the histograms produced by \textit{RootSpy} and generate output that make it easy to assess the uniformity and quality of the data. One of these is the \textit{RSTimeSeries} program, which periodically inserts data into an InfluxDB time series database. The database provides a web-accessible strip chart of detector hit rates and reconstructed quantities (e.g. number of $\rho$'s per 1k triggers). Another is the \textit{RSArchiver} program that gathers summed histograms to be displayed in the Plot Browser\footnote{https://halldweb.jlab.org/data\_monitoring/Plot\_Browser.html.} website. Plot Browser provides easy comparison of plots between different runs and between different analysis passes. Jobs are automatically submitted to the JLab SciComp farm for full reconstruction of the first five files (100GB) of each run. The results are displayed in Plot Browser and may be compared directly with the online analysis of the same run.
+There are several client programs that summarize the information available in the histograms produced by \textit{RootSpy} and generate output that make it easy to assess the uniformity and quality of the data. One of these is the \textit{RSTimeSeries} program, which periodically inserts data into an InfluxDB time series database. The database provides a web-accessible strip chart of detector hit rates and reconstructed quantities (e.g. number of $\rho$'s per 1k triggers). Another is the \textit{RSArchiver} program that gathers summed histograms to be displayed in the Plot Browser\footnote{https://halldweb.jlab.org/data\_monitoring/Plot\_Browser.html.} website. Plot Browser provides easy comparison of plots between different runs and between different analysis passes. Jobs are automatically submitted to the JLab farm for full reconstruction of the first five files (100GB) of each run. The results are displayed in Plot Browser and may be compared directly with the online analysis of the same run.
 
 
 %------------------------------------------------------------------
