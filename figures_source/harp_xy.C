@@ -130,11 +130,22 @@ void fit_and_plot(double sx[3], double sigx[3], double sigxerr[3],
 
    TCanvas *c1 = new TCanvas("c1", "", 800, 600);
    c1->SetSupportGL(1);
+   c1->SetLeftMargin(0.25);
+   c1->SetRightMargin(0.05);
+   c1->SetTopMargin(0.05);
+   c1->SetBottomMargin(0.2);
    xfitf->SetTitle(""); // "sigma x vs accelerator s"
-   xfitf->GetXaxis()->SetTitle("accelerator s coordinate (m)");
+   xfitf->GetXaxis()->SetTitle("accelerator coordinate (m)");
    xfitf->GetYaxis()->SetTitle("#sigma_{x} (mm)");
-   xfitf->SetMinimum(0);
-   xfitf->SetMaximum(xmax);
+   xfitf->GetXaxis()->SetTitleSize(0.07);
+   xfitf->GetXaxis()->SetLabelSize(0.07);
+   xfitf->GetXaxis()->SetNdivisions(505);
+   xfitf->GetYaxis()->SetTitleSize(0.07);
+   xfitf->GetYaxis()->SetLabelSize(0.07);
+   xfitf->GetYaxis()->SetNdivisions(505);
+    xfitf->SetMinimum(0);
+   xmax =1.5;   // set same y-axis for x and y
+    xfitf->SetMaximum(xmax);
    xfitf->Draw();
    xdata->Draw("P");
    xshade->Draw("f");
@@ -150,10 +161,17 @@ void fit_and_plot(double sx[3], double sigx[3], double sigxerr[3],
    c1->Print("harp-x-767755.pdf");
    c1->Print("harp-x-767755.png");
    yfitf->SetTitle(""); // "sigma y vs accelerator s"
-   yfitf->GetXaxis()->SetTitle("accelerator s coordinate (m)");
+   yfitf->GetXaxis()->SetTitle("accelerator coordinate (m)");
    yfitf->GetYaxis()->SetTitle("#sigma_{y} (mm)");
-   yfitf->SetMinimum(0);
-   yfitf->SetMaximum(ymax);
+    yfitf->GetXaxis()->SetTitleSize(0.07);
+    yfitf->GetXaxis()->SetLabelSize(0.07);
+    yfitf->GetXaxis()->SetNdivisions(505);
+    yfitf->GetYaxis()->SetTitleSize(0.07);
+    yfitf->GetYaxis()->SetLabelSize(0.07);
+    yfitf->GetYaxis()->SetNdivisions(505);
+    yfitf->SetMinimum(0);
+    ymax =1.5;   // set same y-axis for x and y
+    yfitf->SetMaximum(ymax);
    yfitf->Draw();
    ydata->Draw("P");
    yshade->Draw("f");
