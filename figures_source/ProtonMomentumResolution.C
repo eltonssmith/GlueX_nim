@@ -13,9 +13,9 @@ void ProtonMomentumResolution()
    c1->SetTicky(1);
    c1->SetLeftMargin(0.15);
    c1->SetRightMargin(0.05);
-   c1->SetBottomMargin(0.125);
-   c1->SetFrameBorderMode(0);
-   c1->SetFrameBorderMode(0);
+    c1->SetBottomMargin(0.2);
+   c1->SetTopMargin(0.125);
+    c1->SetLogx();
    
    TH1D *DeltaPOverP_vs_theta_2__1 = new TH1D("DeltaPOverP_vs_theta_2__1","Momentum resolution for proton tracks",120,0.5,120.5);
    DeltaPOverP_vs_theta_2__1->SetBinContent(1,0.116439);
@@ -273,7 +273,7 @@ void ProtonMomentumResolution()
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetLabelFont(42);
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetLabelSize(0.07);
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleSize(0.07);
-   DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleOffset(0.85);
+    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleOffset(1.25);
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleFont(42);
    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetTitle("#sigma_{p}/p");
    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetLabelFont(42);
@@ -285,7 +285,10 @@ void ProtonMomentumResolution()
    DeltaPOverP_vs_theta_2__1->GetZaxis()->SetLabelSize(0.07);
    DeltaPOverP_vs_theta_2__1->GetZaxis()->SetTitleSize(0.07);
    DeltaPOverP_vs_theta_2__1->GetZaxis()->SetTitleFont(42);
-   DeltaPOverP_vs_theta_2__1->Draw("");
+   DeltaPOverP_vs_theta_2__1->GetXaxis()->SetRangeUser(2,200);
+    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetRangeUser(0,0.1);
+    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetNdivisions(505);
+    DeltaPOverP_vs_theta_2__1->Draw("");
    
    TH1D *DeltaPOverP_vs_theta_2__2 = new TH1D("DeltaPOverP_vs_theta_2__2","Fitted value of par[2]=Sigma",120,0.5,120.5);
    DeltaPOverP_vs_theta_2__2->SetBinContent(1,0.1181021);
@@ -811,7 +814,7 @@ void ProtonMomentumResolution()
    DeltaPOverP_vs_theta_2__3->GetZaxis()->SetTitleFont(42);
    DeltaPOverP_vs_theta_2__3->Draw("same");
    
-   TLegend *leg = new TLegend(0.55,0.55,0.9,0.85,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.62,0.6,0.92,0.85,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -855,4 +858,6 @@ void ProtonMomentumResolution()
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("ProtonMomentumResolution.pdf");
 }

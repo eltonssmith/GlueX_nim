@@ -13,13 +13,14 @@ void PionMomentumResolution()
    c1->SetTicky(1);
    c1->SetLeftMargin(0.15);
    c1->SetRightMargin(0.05);
-   c1->SetBottomMargin(0.125);
-   c1->SetFrameBorderMode(0);
-   c1->SetFrameBorderMode(0);
+    c1->SetBottomMargin(0.2);
+   c1->SetTopMargin(0.125);
+   c1->SetLogx();
    
    TH1D *DeltaPOverP_vs_theta_2__1 = new TH1D("DeltaPOverP_vs_theta_2__1","Momentum resolution for #pi^{-} tracks",120,0.5,120.5);
-   DeltaPOverP_vs_theta_2__1->SetBinContent(1,0.4586986);
-   DeltaPOverP_vs_theta_2__1->SetBinContent(2,0.07437398);
+   // DeltaPOverP_vs_theta_2__1->SetBinContent(1,0.4586986);    // avoid root plotting errors
+   DeltaPOverP_vs_theta_2__1->SetBinContent(1,-1);
+    DeltaPOverP_vs_theta_2__1->SetBinContent(2,0.07437398);
    DeltaPOverP_vs_theta_2__1->SetBinContent(3,0.07386743);
    DeltaPOverP_vs_theta_2__1->SetBinContent(4,0.05347064);
    DeltaPOverP_vs_theta_2__1->SetBinContent(5,0.04296513);
@@ -273,7 +274,7 @@ void PionMomentumResolution()
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetLabelFont(42);
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetLabelSize(0.07);
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleSize(0.07);
-   DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleOffset(0.85);
+    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleOffset(1.25);
    DeltaPOverP_vs_theta_2__1->GetXaxis()->SetTitleFont(42);
    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetTitle("#sigma_{p}/p");
    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetLabelFont(42);
@@ -285,11 +286,15 @@ void PionMomentumResolution()
    DeltaPOverP_vs_theta_2__1->GetZaxis()->SetLabelSize(0.07);
    DeltaPOverP_vs_theta_2__1->GetZaxis()->SetTitleSize(0.07);
    DeltaPOverP_vs_theta_2__1->GetZaxis()->SetTitleFont(42);
-   DeltaPOverP_vs_theta_2__1->Draw("");
+   DeltaPOverP_vs_theta_2__1->GetXaxis()->SetRangeUser(2,200);
+    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetRangeUser(0,0.1);
+    DeltaPOverP_vs_theta_2__1->GetYaxis()->SetNdivisions(505);
+    DeltaPOverP_vs_theta_2__1->Draw("");
    
    TH1D *DeltaPOverP_vs_theta_2__2 = new TH1D("DeltaPOverP_vs_theta_2__2","Fitted value of par[2]=Sigma",120,0.5,120.5);
-   DeltaPOverP_vs_theta_2__2->SetBinContent(1,0.07093556);
-   DeltaPOverP_vs_theta_2__2->SetBinContent(2,0.04828325);
+   // DeltaPOverP_vs_theta_2__2->SetBinContent(1,0.07093556);
+   DeltaPOverP_vs_theta_2__2->SetBinContent(1,-1);
+    DeltaPOverP_vs_theta_2__2->SetBinContent(2,0.04828325);
    DeltaPOverP_vs_theta_2__2->SetBinContent(3,0.03344711);
    DeltaPOverP_vs_theta_2__2->SetBinContent(4,0.02767468);
    DeltaPOverP_vs_theta_2__2->SetBinContent(5,0.02209847);
@@ -550,8 +555,9 @@ void PionMomentumResolution()
    DeltaPOverP_vs_theta_2__2->Draw("same");
    
    TH1D *DeltaPOverP_vs_theta_2__3 = new TH1D("DeltaPOverP_vs_theta_2__3","Fitted value of par[2]=Sigma",120,0.5,120.5);
-   DeltaPOverP_vs_theta_2__3->SetBinContent(1,0.1079576);
-   DeltaPOverP_vs_theta_2__3->SetBinContent(2,0.04750338);
+   // DeltaPOverP_vs_theta_2__3->SetBinContent(1,0.1079576);
+   DeltaPOverP_vs_theta_2__3->SetBinContent(1,-1);
+    DeltaPOverP_vs_theta_2__3->SetBinContent(2,0.04750338);
    DeltaPOverP_vs_theta_2__3->SetBinContent(3,0.03609357);
    DeltaPOverP_vs_theta_2__3->SetBinContent(4,0.02710472);
    DeltaPOverP_vs_theta_2__3->SetBinContent(5,0.02124691);
@@ -812,8 +818,9 @@ void PionMomentumResolution()
    DeltaPOverP_vs_theta_2__3->Draw("same");
    
    TH1D *DeltaPOverP_vs_theta_2__4 = new TH1D("DeltaPOverP_vs_theta_2__4","Fitted value of par[2]=Sigma",120,0.5,120.5);
-   DeltaPOverP_vs_theta_2__4->SetBinContent(1,0.2767589);
-   DeltaPOverP_vs_theta_2__4->SetBinContent(2,0.06059131);
+   // DeltaPOverP_vs_theta_2__4->SetBinContent(1,0.2767589);
+   DeltaPOverP_vs_theta_2__4->SetBinContent(1,-1);
+    DeltaPOverP_vs_theta_2__4->SetBinContent(2,0.06059131);
    DeltaPOverP_vs_theta_2__4->SetBinContent(3,0.04518171);
    DeltaPOverP_vs_theta_2__4->SetBinContent(4,0.03066789);
    DeltaPOverP_vs_theta_2__4->SetBinContent(5,0.02755388);
@@ -1074,8 +1081,9 @@ void PionMomentumResolution()
    DeltaPOverP_vs_theta_2__4->Draw("same");
    
    TH1D *DeltaPOverP_vs_theta_2__5 = new TH1D("DeltaPOverP_vs_theta_2__5","Fitted value of par[2]=Sigma",120,0.5,120.5);
-   DeltaPOverP_vs_theta_2__5->SetBinContent(1,0.1600763);
-   DeltaPOverP_vs_theta_2__5->SetBinContent(2,0.08364747);
+   // DeltaPOverP_vs_theta_2__5->SetBinContent(1,0.1600763);
+   DeltaPOverP_vs_theta_2__5->SetBinContent(1,-1);
+    DeltaPOverP_vs_theta_2__5->SetBinContent(2,0.08364747);
    DeltaPOverP_vs_theta_2__5->SetBinContent(3,0.05304073);
    DeltaPOverP_vs_theta_2__5->SetBinContent(4,0.04348461);
    DeltaPOverP_vs_theta_2__5->SetBinContent(5,0.03526608);
@@ -1335,7 +1343,7 @@ void PionMomentumResolution()
    DeltaPOverP_vs_theta_2__5->GetZaxis()->SetTitleFont(42);
    DeltaPOverP_vs_theta_2__5->Draw("same");
    
-   TLegend *leg = new TLegend(0.55,0.45,0.9,0.875,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.62,0.5,0.92,0.85,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -1395,4 +1403,6 @@ void PionMomentumResolution()
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("PionMomentumResolution.pdf");
 }

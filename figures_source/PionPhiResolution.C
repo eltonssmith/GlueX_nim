@@ -13,9 +13,10 @@ void PionPhiResolution()
    c1->SetTicky(1);
    c1->SetLeftMargin(0.15);
    c1->SetRightMargin(0.05);
-   c1->SetBottomMargin(0.125);
-   c1->SetFrameBorderMode(0);
-   c1->SetFrameBorderMode(0);
+    c1->SetBottomMargin(0.2);
+   c1->SetTopMargin(0.125);
+    c1->SetLogx();
+    
    
    TH1D *DeltaPhi_vs_theta_2__1 = new TH1D("DeltaPhi_vs_theta_2__1","Azimuthal angle resultion for #pi^{-} tracks",120,0.5,120.5);
    DeltaPhi_vs_theta_2__1->SetBinContent(1,45.97079);
@@ -273,7 +274,7 @@ void PionPhiResolution()
    DeltaPhi_vs_theta_2__1->GetXaxis()->SetLabelFont(42);
    DeltaPhi_vs_theta_2__1->GetXaxis()->SetLabelSize(0.07);
    DeltaPhi_vs_theta_2__1->GetXaxis()->SetTitleSize(0.07);
-   DeltaPhi_vs_theta_2__1->GetXaxis()->SetTitleOffset(0.85);
+    DeltaPhi_vs_theta_2__1->GetXaxis()->SetTitleOffset(1.25);
    DeltaPhi_vs_theta_2__1->GetXaxis()->SetTitleFont(42);
    DeltaPhi_vs_theta_2__1->GetYaxis()->SetTitle("#sigma_{#phi} [#circ]");
    DeltaPhi_vs_theta_2__1->GetYaxis()->SetLabelFont(42);
@@ -285,8 +286,9 @@ void PionPhiResolution()
    DeltaPhi_vs_theta_2__1->GetZaxis()->SetLabelSize(0.07);
    DeltaPhi_vs_theta_2__1->GetZaxis()->SetTitleSize(0.07);
    DeltaPhi_vs_theta_2__1->GetZaxis()->SetTitleFont(42);
+   DeltaPhi_vs_theta_2__1->GetXaxis()->SetRangeUser(2,200);
    DeltaPhi_vs_theta_2__1->Draw("");
-   
+    
    TH1D *DeltaPhi_vs_theta_2__2 = new TH1D("DeltaPhi_vs_theta_2__2","Fitted value of par[2]=Sigma",120,0.5,120.5);
    DeltaPhi_vs_theta_2__2->SetBinContent(1,23.05878);
    DeltaPhi_vs_theta_2__2->SetBinContent(2,7.410689);
@@ -1325,7 +1327,7 @@ void PionPhiResolution()
    DeltaPhi_vs_theta_2__5->GetZaxis()->SetTitleFont(42);
    DeltaPhi_vs_theta_2__5->Draw("same");
    
-   TLegend *leg = new TLegend(0.55,0.55,0.9,0.85,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.62,0.55,0.92,0.85,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -1385,4 +1387,6 @@ void PionPhiResolution()
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("PionPhiResolution.pdf");
 }
