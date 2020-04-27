@@ -50,7 +50,7 @@ Five thermocouples are located in each plenum and used to monitor the temperatur
 The downstream plenum is 2.54~cm deep, with a sidewall of ROHACELL\footnote{www.rohacell.com} and a final outer wall of aluminized Mylar film, and the upstream plenum is 3.18~cm deep, with a polycarbonate sidewall and a polycarbonate disc outer wall. 
 
 The readout cables pass through the polycarbonate disc and the upstream plenum to reach the anode wires. 
-The cables are connected in groups of 20 to 24 to transition boards mounted onto the polycarbonate disc; the disc also support the connectors for the high-voltage boards. 
+The cables are connected in groups of 20 to 24 to transition boards mounted onto the polycarbonate disc; the disc also supports the connectors for the high-voltage boards. 
 Preamplifiers~\cite{hdnote2515} are mounted on the high-voltage boards. The aluminum endplate, outer cylindrical wall of the chamber, aluminum components connecting the straws to the aluminum endplate and the inside walls of the straws are all connected to a common electrical ground. 
 The anode wires are held at +2.1~kV during normal operation. 
 
@@ -58,7 +58,7 @@ The anode wires are held at +2.1~kV during normal operation.
 \subsection[Forward Drift Chamber]{Forward Drift Chamber
 \label{sec:fdc} }
 
-The Forward Drift Chamber (FDC) consists of 24 disk-shaped planar drift chambers of 1~m diameter.
+The Forward Drift Chamber (FDC) consists of 24 disc-shaped planar drift chambers of 1~m diameter \cite{FDC_NIM}.
 They are grouped into four packages inside the bore of the spectrometer magnet.
 Forward tracking requires good multi-track separation due to the
 high particle density in the forward region.
@@ -107,7 +107,7 @@ The signal cables from different regions of the drift chambers are distributed b
 The FADC firmware is activated by a signal from the \gx{} trigger. The firmware then computes the following quantities for pulses observed above a given threshold within a given time window: pulse number, arrival time, pulse height, pulse integral, pedestal level preceding the pulse, and a quality factor indicating the accuracy of the computed arrival time. 
 Signal filtering and interpolation are used to obtain the arrival time to the nearest 0.8~ns. 
 The firmware performs these calculations both for the CDC and FDC alike, and uses different readout modes to provide the data with the precision required by the separate detectors. 
-For example, the CDC electronics read out only one pulse but require both pulse height and integral, while the FDC electronics read out up to four pulses and does not require a pulse integral.  
+For example, the CDC electronics read out only one pulse but require both pulse height and integral, while the FDC electronics read out up to four pulses and do not require a pulse integral.  
 
 The FDC anode wires are read out using the JLab pipeline F1 TDC\cite{hdnote1021} with a nominal least count of 120~ps. 
 
@@ -117,7 +117,7 @@ the two gases is slightly different for the two tracking chambers, the gas syste
 lines provides over-pressure protection to the gas system, and filters in the gas lines provide protection against potential
 pollution of the gas from the supply. Both gases are mixed using mass flow controllers (MFCs) that can be 
 configured
-to provide the desired mixing ratio of argon and CO$_{2}$.  The MFCs and their control electronics are from
+to provide the desired mixing ratio of argon and CO$_{2}$.  MFCs and control electronics from
 BROOKS Instruments\footnote{BROOKS Instruments, https://www.brooksinstrument.com/en/products/mass-flow-controllers.} are used throughout.
 
 The mixed gas is filled into storage tanks, with one tank for the CDC and another for the FDC. The pressures are

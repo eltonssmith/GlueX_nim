@@ -8,10 +8,10 @@
 
 %\subsection{Performance \label{sec:daqperformance}}
 
-The \gx{} data acquisition software uses the CEBAF Data Acquisition (CODA) framework. CODA is a software toolkit of applications and libraries that allows customized data acquisition systems based on distributed commercial networks. A detailed description of CODA software and hardware can be found in Ref.\,\cite{CLAS12DAQ}. 
+The \gx{} data acquisition software uses the CEBAF Online Data Acquisition (CODA) framework. CODA is a software toolkit of applications and libraries that allows customized data acquisition systems based on distributed commercial networks. A detailed description of CODA software and hardware can be found in Ref.\,\cite{CLAS12DAQ}. 
 
 The maximum readout capability of the electronics in the VME/VXS crate is 200 MB/s per crate and the number of crates producing data is about 55.
-The data from the electronic modules are read via the VME back-plane (2eSST, parallel bus) by the crate readout controller (ROC), which is a single board computer running Linux.
+The data from the electronic modules are read via the VME back-plane (2eSST, parallel bus) by the crate readout controller (ROC), which is a single-board computer running Linux.
 The \gx~ network layout and data flow are shown in Fig.~\ref{fig:CODA}.
 Typical data rates from a single ROC are in the range of 20--70~MB/s, depending on the detector type and trigger rate.
 The ROC transfers data over 1~Gbit Ethernet links to Data Concentrators (DC) using buffers containing event fragments from 40 triggers at a time. Data Concentrators are programs that build partial events received from 10-12 crates and run on a dedicated computer node.

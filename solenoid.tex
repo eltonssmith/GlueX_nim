@@ -9,9 +9,8 @@
 \subsection[Overview]{Overview \label{sec:sol:overview}
 }
 
-The core of the GlueX spectrometer is a superconducting
-solenoid magnet with a bore of about 2~m in diameter and with an overall 
-yoke length of about 4.8~m. The photon beam passes along the axis of
+The core of the \gx{} spectrometer is a superconducting
+solenoid with a bore diameter and overall yoke length of approximately 2~m and 4.8~m, respectively. The photon beam passes along the axis of
 the solenoid.  At the nominal current of 1350~A, the magnet provides a magnetic field along the axis of about 2~T.
 
 The magnet was designed and built at SLAC in the early
@@ -112,7 +111,7 @@ copper strips
 %  %copper. 
 %  Our measurements show RRR$\approx{}$100.
 %} 
-to form a rectangular cross section of 7.62$\times$5.33~mm$^2$
+to form a rectangular cross section of 7.62$\times$5.33~mm$^2$.
 %\cite{Alcorn-confer-1972}.  
 The measured residual resistivity ratio of the conductor at $\sim{}300^\circ{}$K and
 $\sim{}15^\circ{}$K is $\approx{}$100.  
@@ -137,8 +136,8 @@ contains a number of ``double pancakes'' with the same number of
 turns.
 %(see Table~\ref{tab:sol:coils-turns}). 
 Each double pancake is made from a single piece of conductor. The
-voltage across the subcoils is monitored using special wires passing
-through the coils' chimneys along with the helium supply pipes and the
+voltage across the subcoils is monitored using special wires. These pass
+through vertical cryostats, called chimneys, along with the helium supply pipes and the
 main conductor.
 
 The cold helium vessel containing the coil is supported within the
@@ -196,7 +195,7 @@ The cooling system is described in detail in Ref.~\cite{Lavendure:2014:refrig}.
 A stand-alone helium refrigerator located
 in a building adjacent to Hall D provides liquid helium and nitrogen
 via a transfer line to the Cryogenic Distribution Box above the
-magnet. The transfer line delivers helium at 2.6~atm and 6~K to a Joule-Thomson
+magnet. The transfer line delivers helium at 2.6~atm, and 6~K to a Joule-Thomson
 (JT) valve providing liquid to a cylindrical common helium tank in the
 Distribution Box. The level of liquid helium in the tank is measured
 with a superconducting wire probe;%
@@ -251,13 +250,10 @@ Industrial Control System, https://epics.anl.gov.} in order to display and archi
 Section \ref{sec:controls}).  The practical sampling limit for the readout of the sensor
 is a few Hz, which is too low for
 detection of fast voltage spikes on the coils due to motion, shorts,
-or other effects. Therefore, the voltage taps from the coils
-and the pickup coils are read
-out by a PXI%
-\footnote{
+or other effects. Therefore, the voltage taps from the coils and the pickup coils are read
+out by a PXI system\footnote{
   National Instruments, PXI Platform, \url{http://www.ni.com/pxi/}.
-}%
-system, which provides a sampling rate of about 100~kHz. The
+}, which provides a sampling rate of about 100~kHz. The
 PXI system also reads out several accelerometers attached to the
 coils' chimneys, which can detect motion inside the coils. The PXI
 CPU performs initial integration and arranges the data in time-wise
@@ -275,7 +271,7 @@ The momentum resolution of the \gx{} spectrometer is larger than
 resolution of the coordinate detectors.  Thus, a fraction of a percent is
 sufficient accuracy for the field determination.  The coils are
 axially symmetric, while the flux return yoke is nearly axially
-symmetric, apart from the holes for the coil's chimneys. The field was
+symmetric, apart from the holes for the chimneys. The field was
 calculated using a 2-dimensional field calculator {\it
   Poisson/Superfish}%
 \footnote{

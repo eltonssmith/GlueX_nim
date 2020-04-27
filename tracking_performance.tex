@@ -15,9 +15,7 @@ layers. Candidates that emerge from the target, and pass through both FDC and CD
 The second stage uses a Kalman filter \cite{KalmanFilter, KalmanFilter2} to find the fitted track parameters
 \{z,D,$\phi$,$\tan\lambda$,$q/p_T$\}
 at the position of closest approach of the track to the beam line. The track candidate parameters are used as an initial guess, where D is the signed distance of closest approach to the beam line.  The Kalman filter proceeds in steps from the hits farthest from the beam line toward the beam line. Energy loss and multiple scattering are taken into account at each step along the way, according to a map of the magnetic field within the bore of the solenoid magnet.
-
-For the 
-first initial pass of the filter, the drift time information from the 
+For the initial pass of the filter, the drift time information from the 
 wires is not used.  Each particle is assumed to be a pion, except for low momentum track 
 candidates ($p<0.8$~GeV/$c$), for which the fits are performed with a proton hypothesis.
 

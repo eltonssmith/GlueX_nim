@@ -13,7 +13,7 @@ originating from the center of the target. The ST is designed to operate
 at tagged photon beam intensities of up to $10^8$ photons per second
 in the coherent peak, and has a high degree of segmentation to limit
 the per-paddle rates. The time resolution must be sufficient to resolve the RF beam structure and identify the electron beam bunch from which the event originated
-(see Section\,\ref{sec:ebeam}). The ST provides a timing signal that is relatively independent of particle type and trajectory (because of its proximity to the target) and can be used in the Level 1 trigger if necessary. The specific energy deposits dE/dx in ST are used for charged-particle identification in combination with the flight-time from the TOF.
+(see Section\,\ref{sec:ebeam}). The ST provides a timing signal that is relatively independent of particle type and trajectory (because of its proximity to the target) and can be used in the Level 1 trigger if necessary. The specific energy deposits $dE/dx$ in ST are used for charged-particle identification in combination with the flight-time from the TOF.
 Details of the design, construction and performance of the ST system can be found in 
 Ref.\,\cite{Pooser:2019rhu}.
 
@@ -49,7 +49,7 @@ The on-board electronics provides two signals per paddle, one delivered to an FA
 %The performance of the ST is discussed in section~\ref{sec:scperformance}.
 
 \subsection[Time-of-Flight counters]{Time-of-flight counters \label{sec:tof}}
-The TOF system delivers fast timing signals from charged particles passing through the detector thereby providing information for particle identification.
+The TOF system delivers fast timing signals from charged particles passing through the detector, thereby providing information for particle identification.
 The TOF detector is a wall of scintillators located about 5.5~m downstream from the target, covering 
 a polar angular region from 0.6$^{\circ}$ to 13$^{\circ}$. The detector has two planes of
 scintillator paddles stacked in the horizontal and vertical direction. Most paddles are 252~cm long and 2.54~cm
@@ -59,7 +59,7 @@ To allow the photon beam to pass through the central region,
 an aperture of 12$\times$12\,cm$^2$ is kept
 free of any detector material by using four shorter, single-PMT paddle detectors with a length of 120~cm around the beam hole
 in each detector plane. These paddles also have a width of 6~cm and a thickness of 2.54~cm. In order to keep the
-count rate of the paddles well below 2~MHz the two inner-most full-length paddles closest to the beam hole on either side have a reduced width of 3~cm.
+count rate of the paddles well below 2~MHz the two innermost full-length paddles closest to the beam hole on either side have a reduced width of 3~cm.
 Light guides built out of UV transmitting plastic provide the coupling between the scintillator and the PMT and allow the 
 magnetic shielding to protect the photocathode by extending about 5~cm past the PMT entrance window. All paddles are wrapped
 with a layer of a highly reflective material (DF2000MA from 3M) followed by a layer of strong black Tedlar film for light tightness. 
@@ -77,7 +77,7 @@ The PMT outputs are connected to a passive splitter by a 55'-long RG-58 coaxial 
 The threshold of the leading-edge discriminator is controlled separately for each channel and has an intrinsic
 deadtime of about 25~ns.
 
-The sparcification threshold for the FADC is set to 120 (160) counts for the ST (TOF), with the nominal pedestal set at 100 counts. The high voltage of each TOF PMT is adjusted to generate the amplitude of the signal from a minimum-ionizing particle of at least 400 ADC counts above baseline. The data from the FADC is provided by the FPGA algorithm and consists
+The sparsification threshold for the FADC is set to 120 (160) counts for the ST (TOF), with the nominal pedestal set at 100 counts. The high voltage of each TOF PMT is adjusted to generate a signal amplitude of at least 400 ADC counts above baseline from a minimum-ionizing particle. The data from the FADC are provided by the FPGA algorithm and consist
 of two words per channel with information about pedestal, signal amplitude, signal integral, and timing.
 
 The timing signals from the ST system are registered using the JLab F1 TDCs, which have a nominal least count of 58~ps. In order to take advantage of the higher intrinsic resolution of the TOF counters, this system uses the VX1290A TDCs from CAEN\footnote{CAEN, https://www.caen.it/}, which are multi-hit high-resolution TDCs with a buffer of up to 8 words per channel and a nominal least count of 25~ps. Since these TDCs provide the best time measurements in the \gx{} detector, the timing of the accelerator RF signal is also
@@ -92,12 +92,12 @@ For the time-walk correction for each paddle of the ST, the detector signal is s
 The propagation time is measured as a function of the hit position in a paddle as determined by well-reconstructed charged particle tracks. The propagation velocity is measured in three regions of the counter (``straight,'' ``bend,'' and ``nose'') and is not assumed to be a single value for all hits. The light attenuation is also measured at several positions along the counter using charged particle tracks. The energy-per-unit pathlength in the paddle as a function of distance from the SiPM is fit to a modified exponential, with different parameters allowed for the straight section and the nose section, with continuity enforced at the section boundary.
 
 The calibration procedures for the TOF system take advantage of the two
-planes of narrow paddles oriented orthogonal to each other, which permits calibration of the full TOF detector independent
-of any other external detector information. The overlap region of two full-length paddles from the two planes define
+planes of narrow paddles oriented orthogonal to each other, which permits calibration of the full TOF detector independently
+of any other external detector information. The overlap region of two full-length paddles from the two planes defines
 a 6$\times$6~cm$^2$ area for most paddles, with a few 3$\times$3~cm$^2$ areas close to the beam hole. The separation between the two detector planes is minimal as they are mounted adjacent to each other, separated only by wrapping
 material. While the time-difference (TD) between the two ends of a paddle is related to the hit position along the paddle,
 the mean-time (MT) is related to the flight time of a particle from the vertex to the paddle. Therefore, the MT for two overlapping
-paddles must be the same when hit by the same particle passing through both paddles, while the hit position in the horizontal and vertical dimensions are defined by the TD of the two paddles. This relationship results in an internally consistent calibration of all paddles with respect to every other paddle. Prior to finding timing offsets for calibration, all times must corrected for the amplitude-dependent walk. The relation between time at threshold and signal amplitude is parameterized and used to correct for time slewing.
+paddles must be the same when hit by the same particle passing through both paddles, while the hit positions in the horizontal and vertical dimensions are defined by the TD of the two paddles. This relationship results in an internally consistent calibration of all paddles with respect to every other paddle. Prior to finding timing offsets for calibration, all times are corrected for the amplitude-dependent walk. The relation between time at threshold and signal amplitude is parameterized and used to correct for time slewing.
 
 After all full-length paddles have been calibrated, they can be used themselves as references to
 calibrate the remaining eight short paddles that only have single-ended readout.  Again we use the fact that any overlap region of two paddles from different
@@ -163,7 +163,7 @@ The distributions of $\beta$ at two specific track momenta, 2~GeV/c and 4~GeV/c 
 the pion/positron peak and the kaon peak, sufficient to identify tracks as kaons with $\beta=0.97$, or lower, with very
 high certainty. However, at  $\beta=0.98$, the probability of the track being a kaon is less than 50\%, due to the abundance of pions that is an order of magnitude larger than kaons. The protons, on the other hand, are very well
 separated from the other particle types and can be identified with high confidence over the full range in $\beta$.
-At a track momentum of 4~GeV/c, PID becomes much more difficult and represents the limit at which the a time-of-flight measurement can identify protons with high confidence. The separation between the large peak containing pions, kaons and positrons from the proton
+At a track momentum of 4~GeV/c, PID becomes much more difficult and represents the limit at which the time-of-flight measurement can identify protons with high confidence. The separation between the large peak containing pions, kaons and positrons from the proton
 peak is about 4$\sigma$, while the relative abundance in this case is about a factor of 4. As a consequence, a 4~GeV/c momentum
 track with $\beta=0.975$ is most likely a proton, with a small probability of being a pion. At $\beta=0.98$, such
 a track has a similar probability for being a proton or a pion.
