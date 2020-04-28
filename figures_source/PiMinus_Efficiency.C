@@ -11,10 +11,10 @@ void PiMinus_Efficiency()
    c3->SetBorderSize(2);
    c3->SetTickx(1);
    c3->SetTicky(1);
-   c3->SetLeftMargin(0.14);
-   c3->SetTopMargin(0.02);
-   c3->SetBottomMargin(0.13);
-   c3->SetFrameBorderMode(0);
+   c3->SetLeftMargin(0.15);
+   c3->SetRightMargin(0.05);
+   c3->SetTopMargin(0.05);
+   c3->SetBottomMargin(0.25);
   
 // ------------>Primitives in pad: c3_1
    TPad *c3_1 = new TPad("c3_1", "c3_1",0.01,0.01,0.3233333,0.99);
@@ -26,10 +26,10 @@ void PiMinus_Efficiency()
    c3_1->SetBorderSize(2);
    c3_1->SetTickx(1);
    c3_1->SetTicky(1);
-   c3_1->SetLeftMargin(0.14);
-   c3_1->SetTopMargin(0.02);
-   c3_1->SetBottomMargin(0.13);
-   c3_1->SetFrameBorderMode(0);
+   c3_1->SetLeftMargin(0.2);
+   c3_1->SetRightMargin(0.05);
+   c3_1->SetTopMargin(0.05);
+   c3_1->SetBottomMargin(0.2);
    
    TH1F *phi_mmop_reco_1__1 = new TH1F("phi_mmop_reco_1__1","Data (Method 1)",20,-183.6,176.4);
    phi_mmop_reco_1__1->SetBinContent(1,0.9250575);
@@ -72,7 +72,7 @@ void PiMinus_Efficiency()
    phi_mmop_reco_1__1->SetBinError(18,0.002183117);
    phi_mmop_reco_1__1->SetBinError(19,0.003971848);
    phi_mmop_reco_1__1->SetBinError(20,0.004256804);
-   phi_mmop_reco_1__1->SetMinimum(0);
+    phi_mmop_reco_1__1->SetMinimum(.40);
    phi_mmop_reco_1__1->SetMaximum(1.05);
    phi_mmop_reco_1__1->SetEntries(454904.3);
 
@@ -86,18 +86,19 @@ void PiMinus_Efficiency()
    phi_mmop_reco_1__1->SetMarkerStyle(20);
    phi_mmop_reco_1__1->GetXaxis()->SetTitle("#phi (deg)");
    phi_mmop_reco_1__1->GetXaxis()->SetLabelFont(42);
-   phi_mmop_reco_1__1->GetXaxis()->SetLabelSize(0.05);
-   phi_mmop_reco_1__1->GetXaxis()->SetTitleSize(0.06);
+   phi_mmop_reco_1__1->GetXaxis()->SetLabelSize(0.07);
+   phi_mmop_reco_1__1->GetXaxis()->SetTitleSize(0.07);
    phi_mmop_reco_1__1->GetXaxis()->SetTitleFont(42);
-   phi_mmop_reco_1__1->GetYaxis()->SetTitle("#pi^{-} efficiency");
+   phi_mmop_reco_1__1->GetXaxis()->SetNdivisions(505);
+    phi_mmop_reco_1__1->GetYaxis()->SetTitle("#pi^{-} efficiency");
    phi_mmop_reco_1__1->GetYaxis()->SetLabelFont(42);
-   phi_mmop_reco_1__1->GetYaxis()->SetLabelSize(0.05);
-   phi_mmop_reco_1__1->GetYaxis()->SetTitleSize(0.06);
-   phi_mmop_reco_1__1->GetYaxis()->SetTitleOffset(1.05);
+   phi_mmop_reco_1__1->GetYaxis()->SetLabelSize(0.07);
+   phi_mmop_reco_1__1->GetYaxis()->SetTitleSize(0.07);
+   phi_mmop_reco_1__1->GetYaxis()->SetTitleOffset(1.5);
    phi_mmop_reco_1__1->GetYaxis()->SetTitleFont(42);
    phi_mmop_reco_1__1->GetZaxis()->SetLabelFont(42);
-   phi_mmop_reco_1__1->GetZaxis()->SetLabelSize(0.05);
-   phi_mmop_reco_1__1->GetZaxis()->SetTitleSize(0.06);
+   phi_mmop_reco_1__1->GetZaxis()->SetLabelSize(0.07);
+   phi_mmop_reco_1__1->GetZaxis()->SetTitleSize(0.07);
    phi_mmop_reco_1__1->GetZaxis()->SetTitleFont(42);
    phi_mmop_reco_1__1->Draw("");
    
@@ -142,7 +143,7 @@ void PiMinus_Efficiency()
    phi_yield_1__2->SetBinError(18,0.001499703);
    phi_yield_1__2->SetBinError(19,0.005896717);
    phi_yield_1__2->SetBinError(20,0.001435139);
-   phi_yield_1__2->SetMinimum(0);
+    phi_yield_1__2->SetMinimum(0.4);
    phi_yield_1__2->SetMaximum(1.05);
    phi_yield_1__2->SetEntries(11563.47);
 
@@ -154,18 +155,18 @@ void PiMinus_Efficiency()
    phi_yield_1__2->SetMarkerStyle(20);
    phi_yield_1__2->GetXaxis()->SetTitle("#phi (deg)");
    phi_yield_1__2->GetXaxis()->SetLabelFont(42);
-   phi_yield_1__2->GetXaxis()->SetLabelSize(0.05);
-   phi_yield_1__2->GetXaxis()->SetTitleSize(0.06);
+   phi_yield_1__2->GetXaxis()->SetLabelSize(0.07);
+   phi_yield_1__2->GetXaxis()->SetTitleSize(0.07);
    phi_yield_1__2->GetXaxis()->SetTitleFont(42);
    phi_yield_1__2->GetYaxis()->SetTitle("#pi^{-} efficiency (method 2)");
    phi_yield_1__2->GetYaxis()->SetLabelFont(42);
-   phi_yield_1__2->GetYaxis()->SetLabelSize(0.05);
-   phi_yield_1__2->GetYaxis()->SetTitleSize(0.06);
-   phi_yield_1__2->GetYaxis()->SetTitleOffset(1.05);
+   phi_yield_1__2->GetYaxis()->SetLabelSize(0.07);
+   phi_yield_1__2->GetYaxis()->SetTitleSize(0.07);
+    phi_yield_1__2->GetYaxis()->SetTitleOffset(1.05);
    phi_yield_1__2->GetYaxis()->SetTitleFont(42);
    phi_yield_1__2->GetZaxis()->SetLabelFont(42);
-   phi_yield_1__2->GetZaxis()->SetLabelSize(0.05);
-   phi_yield_1__2->GetZaxis()->SetTitleSize(0.06);
+   phi_yield_1__2->GetZaxis()->SetLabelSize(0.07);
+   phi_yield_1__2->GetZaxis()->SetTitleSize(0.07);
    phi_yield_1__2->GetZaxis()->SetTitleFont(42);
    phi_yield_1__2->Draw("same");
    
@@ -220,18 +221,18 @@ void PiMinus_Efficiency()
    phi_mmop_reco_1__3->SetMarkerStyle(25);
    phi_mmop_reco_1__3->GetXaxis()->SetTitle("#phi_{mmop} (deg)");
    phi_mmop_reco_1__3->GetXaxis()->SetLabelFont(42);
-   phi_mmop_reco_1__3->GetXaxis()->SetLabelSize(0.05);
-   phi_mmop_reco_1__3->GetXaxis()->SetTitleSize(0.06);
+   phi_mmop_reco_1__3->GetXaxis()->SetLabelSize(0.07);
+   phi_mmop_reco_1__3->GetXaxis()->SetTitleSize(0.07);
    phi_mmop_reco_1__3->GetXaxis()->SetTitleFont(42);
    phi_mmop_reco_1__3->GetYaxis()->SetTitle("#omega yield / 18#circ");
    phi_mmop_reco_1__3->GetYaxis()->SetLabelFont(42);
-   phi_mmop_reco_1__3->GetYaxis()->SetLabelSize(0.05);
-   phi_mmop_reco_1__3->GetYaxis()->SetTitleSize(0.06);
+   phi_mmop_reco_1__3->GetYaxis()->SetLabelSize(0.07);
+   phi_mmop_reco_1__3->GetYaxis()->SetTitleSize(0.07);
    phi_mmop_reco_1__3->GetYaxis()->SetTitleOffset(1.05);
    phi_mmop_reco_1__3->GetYaxis()->SetTitleFont(42);
    phi_mmop_reco_1__3->GetZaxis()->SetLabelFont(42);
-   phi_mmop_reco_1__3->GetZaxis()->SetLabelSize(0.05);
-   phi_mmop_reco_1__3->GetZaxis()->SetTitleSize(0.06);
+   phi_mmop_reco_1__3->GetZaxis()->SetLabelSize(0.07);
+   phi_mmop_reco_1__3->GetZaxis()->SetTitleSize(0.07);
    phi_mmop_reco_1__3->GetZaxis()->SetTitleFont(42);
    phi_mmop_reco_1__3->Draw("same");
    
@@ -286,18 +287,18 @@ void PiMinus_Efficiency()
    phi_yield_1__4->SetMarkerStyle(25);
    phi_yield_1__4->GetXaxis()->SetTitle("#phi_{mmop} (deg)");
    phi_yield_1__4->GetXaxis()->SetLabelFont(42);
-   phi_yield_1__4->GetXaxis()->SetLabelSize(0.05);
-   phi_yield_1__4->GetXaxis()->SetTitleSize(0.06);
+   phi_yield_1__4->GetXaxis()->SetLabelSize(0.07);
+   phi_yield_1__4->GetXaxis()->SetTitleSize(0.07);
    phi_yield_1__4->GetXaxis()->SetTitleFont(42);
    phi_yield_1__4->GetYaxis()->SetTitle("#omega yield / 18#circ");
    phi_yield_1__4->GetYaxis()->SetLabelFont(42);
-   phi_yield_1__4->GetYaxis()->SetLabelSize(0.05);
-   phi_yield_1__4->GetYaxis()->SetTitleSize(0.06);
+   phi_yield_1__4->GetYaxis()->SetLabelSize(0.07);
+   phi_yield_1__4->GetYaxis()->SetTitleSize(0.07);
    phi_yield_1__4->GetYaxis()->SetTitleOffset(1.05);
    phi_yield_1__4->GetYaxis()->SetTitleFont(42);
    phi_yield_1__4->GetZaxis()->SetLabelFont(42);
-   phi_yield_1__4->GetZaxis()->SetLabelSize(0.05);
-   phi_yield_1__4->GetZaxis()->SetTitleSize(0.06);
+   phi_yield_1__4->GetZaxis()->SetLabelSize(0.07);
+   phi_yield_1__4->GetZaxis()->SetTitleSize(0.07);
    phi_yield_1__4->GetZaxis()->SetTitleFont(42);
    phi_yield_1__4->Draw("same");
    c3_1->Modified();
@@ -313,10 +314,10 @@ void PiMinus_Efficiency()
    c3_2->SetBorderSize(2);
    c3_2->SetTickx(1);
    c3_2->SetTicky(1);
-   c3_2->SetLeftMargin(0.14);
-   c3_2->SetTopMargin(0.02);
-   c3_2->SetBottomMargin(0.13);
-   c3_2->SetFrameBorderMode(0);
+   c3_2->SetLeftMargin(0.2);
+   c3_2->SetRightMargin(0.05);
+   c3_2->SetTopMargin(0.05);
+   c3_2->SetBottomMargin(0.2);
    
    TH1F *theta_data_efficiency_1__5 = new TH1F("theta_data_efficiency_1__5","",20,-0.3,29.7);
    theta_data_efficiency_1__5->SetBinContent(1,0.4986895);
@@ -359,7 +360,7 @@ void PiMinus_Efficiency()
    theta_data_efficiency_1__5->SetBinError(18,0.01851542);
    theta_data_efficiency_1__5->SetBinError(19,0.01234366);
    theta_data_efficiency_1__5->SetBinError(20,0.01611281);
-   theta_data_efficiency_1__5->SetMinimum(0);
+    theta_data_efficiency_1__5->SetMinimum(0.4);
    theta_data_efficiency_1__5->SetMaximum(1.05);
    theta_data_efficiency_1__5->SetEntries(20);
 
@@ -371,17 +372,17 @@ void PiMinus_Efficiency()
    theta_data_efficiency_1__5->SetMarkerStyle(20);
    theta_data_efficiency_1__5->GetXaxis()->SetTitle("#theta (deg)");
    theta_data_efficiency_1__5->GetXaxis()->SetLabelFont(42);
-   theta_data_efficiency_1__5->GetXaxis()->SetLabelSize(0.05);
-   theta_data_efficiency_1__5->GetXaxis()->SetTitleSize(0.06);
+   theta_data_efficiency_1__5->GetXaxis()->SetLabelSize(0.07);
+   theta_data_efficiency_1__5->GetXaxis()->SetTitleSize(0.07);
    theta_data_efficiency_1__5->GetXaxis()->SetTitleFont(42);
    theta_data_efficiency_1__5->GetYaxis()->SetLabelFont(42);
-   theta_data_efficiency_1__5->GetYaxis()->SetLabelSize(0.05);
-   theta_data_efficiency_1__5->GetYaxis()->SetTitleSize(0.06);
+   theta_data_efficiency_1__5->GetYaxis()->SetLabelSize(0.07);
+   theta_data_efficiency_1__5->GetYaxis()->SetTitleSize(0.07);
    theta_data_efficiency_1__5->GetYaxis()->SetTitleOffset(1.05);
    theta_data_efficiency_1__5->GetYaxis()->SetTitleFont(42);
    theta_data_efficiency_1__5->GetZaxis()->SetLabelFont(42);
-   theta_data_efficiency_1__5->GetZaxis()->SetLabelSize(0.05);
-   theta_data_efficiency_1__5->GetZaxis()->SetTitleSize(0.06);
+   theta_data_efficiency_1__5->GetZaxis()->SetLabelSize(0.07);
+   theta_data_efficiency_1__5->GetZaxis()->SetTitleSize(0.07);
    theta_data_efficiency_1__5->GetZaxis()->SetTitleFont(42);
    theta_data_efficiency_1__5->Draw("");
    
@@ -426,7 +427,7 @@ void PiMinus_Efficiency()
    theta_data_m2_efficiency_1__6->SetBinError(18,0.0164095);
    theta_data_m2_efficiency_1__6->SetBinError(19,0.02801099);
    theta_data_m2_efficiency_1__6->SetBinError(20,0.02131131);
-   theta_data_m2_efficiency_1__6->SetMinimum(0);
+    theta_data_m2_efficiency_1__6->SetMinimum(0.4);
    theta_data_m2_efficiency_1__6->SetMaximum(1.05);
    theta_data_m2_efficiency_1__6->SetEntries(20);
 
@@ -438,17 +439,17 @@ void PiMinus_Efficiency()
    theta_data_m2_efficiency_1__6->SetMarkerStyle(20);
    theta_data_m2_efficiency_1__6->GetXaxis()->SetTitle("#theta (deg)");
    theta_data_m2_efficiency_1__6->GetXaxis()->SetLabelFont(42);
-   theta_data_m2_efficiency_1__6->GetXaxis()->SetLabelSize(0.05);
-   theta_data_m2_efficiency_1__6->GetXaxis()->SetTitleSize(0.06);
+   theta_data_m2_efficiency_1__6->GetXaxis()->SetLabelSize(0.07);
+   theta_data_m2_efficiency_1__6->GetXaxis()->SetTitleSize(0.07);
    theta_data_m2_efficiency_1__6->GetXaxis()->SetTitleFont(42);
    theta_data_m2_efficiency_1__6->GetYaxis()->SetLabelFont(42);
-   theta_data_m2_efficiency_1__6->GetYaxis()->SetLabelSize(0.05);
-   theta_data_m2_efficiency_1__6->GetYaxis()->SetTitleSize(0.06);
+   theta_data_m2_efficiency_1__6->GetYaxis()->SetLabelSize(0.07);
+   theta_data_m2_efficiency_1__6->GetYaxis()->SetTitleSize(0.07);
    theta_data_m2_efficiency_1__6->GetYaxis()->SetTitleOffset(1.05);
    theta_data_m2_efficiency_1__6->GetYaxis()->SetTitleFont(42);
    theta_data_m2_efficiency_1__6->GetZaxis()->SetLabelFont(42);
-   theta_data_m2_efficiency_1__6->GetZaxis()->SetLabelSize(0.05);
-   theta_data_m2_efficiency_1__6->GetZaxis()->SetTitleSize(0.06);
+   theta_data_m2_efficiency_1__6->GetZaxis()->SetLabelSize(0.07);
+   theta_data_m2_efficiency_1__6->GetZaxis()->SetTitleSize(0.07);
    theta_data_m2_efficiency_1__6->GetZaxis()->SetTitleFont(42);
    theta_data_m2_efficiency_1__6->Draw("same");
    
@@ -493,17 +494,17 @@ void PiMinus_Efficiency()
    theta_gen_efficiency_1__7->SetMarkerStyle(25);
    theta_gen_efficiency_1__7->GetXaxis()->SetTitle("#theta (deg)");
    theta_gen_efficiency_1__7->GetXaxis()->SetLabelFont(42);
-   theta_gen_efficiency_1__7->GetXaxis()->SetLabelSize(0.05);
-   theta_gen_efficiency_1__7->GetXaxis()->SetTitleSize(0.06);
+   theta_gen_efficiency_1__7->GetXaxis()->SetLabelSize(0.07);
+   theta_gen_efficiency_1__7->GetXaxis()->SetTitleSize(0.07);
    theta_gen_efficiency_1__7->GetXaxis()->SetTitleFont(42);
    theta_gen_efficiency_1__7->GetYaxis()->SetLabelFont(42);
-   theta_gen_efficiency_1__7->GetYaxis()->SetLabelSize(0.05);
-   theta_gen_efficiency_1__7->GetYaxis()->SetTitleSize(0.06);
+   theta_gen_efficiency_1__7->GetYaxis()->SetLabelSize(0.07);
+   theta_gen_efficiency_1__7->GetYaxis()->SetTitleSize(0.07);
    theta_gen_efficiency_1__7->GetYaxis()->SetTitleOffset(1.05);
    theta_gen_efficiency_1__7->GetYaxis()->SetTitleFont(42);
    theta_gen_efficiency_1__7->GetZaxis()->SetLabelFont(42);
-   theta_gen_efficiency_1__7->GetZaxis()->SetLabelSize(0.05);
-   theta_gen_efficiency_1__7->GetZaxis()->SetTitleSize(0.06);
+   theta_gen_efficiency_1__7->GetZaxis()->SetLabelSize(0.07);
+   theta_gen_efficiency_1__7->GetZaxis()->SetTitleSize(0.07);
    theta_gen_efficiency_1__7->GetZaxis()->SetTitleFont(42);
    theta_gen_efficiency_1__7->Draw("same");
    
@@ -548,17 +549,17 @@ void PiMinus_Efficiency()
    theta_gen_m2_efficiency_1__8->SetMarkerStyle(25);
    theta_gen_m2_efficiency_1__8->GetXaxis()->SetTitle("#theta (deg)");
    theta_gen_m2_efficiency_1__8->GetXaxis()->SetLabelFont(42);
-   theta_gen_m2_efficiency_1__8->GetXaxis()->SetLabelSize(0.05);
-   theta_gen_m2_efficiency_1__8->GetXaxis()->SetTitleSize(0.06);
+   theta_gen_m2_efficiency_1__8->GetXaxis()->SetLabelSize(0.07);
+   theta_gen_m2_efficiency_1__8->GetXaxis()->SetTitleSize(0.07);
    theta_gen_m2_efficiency_1__8->GetXaxis()->SetTitleFont(42);
    theta_gen_m2_efficiency_1__8->GetYaxis()->SetLabelFont(42);
-   theta_gen_m2_efficiency_1__8->GetYaxis()->SetLabelSize(0.05);
-   theta_gen_m2_efficiency_1__8->GetYaxis()->SetTitleSize(0.06);
+   theta_gen_m2_efficiency_1__8->GetYaxis()->SetLabelSize(0.07);
+   theta_gen_m2_efficiency_1__8->GetYaxis()->SetTitleSize(0.07);
    theta_gen_m2_efficiency_1__8->GetYaxis()->SetTitleOffset(1.05);
    theta_gen_m2_efficiency_1__8->GetYaxis()->SetTitleFont(42);
    theta_gen_m2_efficiency_1__8->GetZaxis()->SetLabelFont(42);
-   theta_gen_m2_efficiency_1__8->GetZaxis()->SetLabelSize(0.05);
-   theta_gen_m2_efficiency_1__8->GetZaxis()->SetTitleSize(0.06);
+   theta_gen_m2_efficiency_1__8->GetZaxis()->SetLabelSize(0.07);
+   theta_gen_m2_efficiency_1__8->GetZaxis()->SetTitleSize(0.07);
    theta_gen_m2_efficiency_1__8->GetZaxis()->SetTitleFont(42);
    theta_gen_m2_efficiency_1__8->Draw("same");
    c3_2->Modified();
@@ -574,10 +575,10 @@ void PiMinus_Efficiency()
    c3_3->SetBorderSize(2);
    c3_3->SetTickx(1);
    c3_3->SetTicky(1);
-   c3_3->SetLeftMargin(0.14);
-   c3_3->SetTopMargin(0.02);
-   c3_3->SetBottomMargin(0.13);
-   c3_3->SetFrameBorderMode(0);
+   c3_3->SetLeftMargin(0.2);
+   c3_3->SetRightMargin(0.05);
+   c3_3->SetTopMargin(0.05);
+   c3_3->SetBottomMargin(0.2);
    
    TH1F *p_mmop_reco_1__9 = new TH1F("p_mmop_reco_1__9","",12,-0.1,5.9);
    p_mmop_reco_1__9->SetBinContent(1,0.7648473);
@@ -605,7 +606,7 @@ void PiMinus_Efficiency()
    p_mmop_reco_1__9->SetBinError(11,0.003049609);
    p_mmop_reco_1__9->SetBinError(12,0.004716576);
    p_mmop_reco_1__9->SetBinError(13,0);
-   p_mmop_reco_1__9->SetMinimum(0);
+    p_mmop_reco_1__9->SetMinimum(0.4);
    p_mmop_reco_1__9->SetMaximum(1.05);
    p_mmop_reco_1__9->SetEntries(252010.7);
 
@@ -617,17 +618,17 @@ void PiMinus_Efficiency()
    p_mmop_reco_1__9->SetMarkerStyle(20);
    p_mmop_reco_1__9->GetXaxis()->SetTitle("p (GeV)");
    p_mmop_reco_1__9->GetXaxis()->SetLabelFont(42);
-   p_mmop_reco_1__9->GetXaxis()->SetLabelSize(0.05);
-   p_mmop_reco_1__9->GetXaxis()->SetTitleSize(0.06);
+   p_mmop_reco_1__9->GetXaxis()->SetLabelSize(0.07);
+   p_mmop_reco_1__9->GetXaxis()->SetTitleSize(0.07);
    p_mmop_reco_1__9->GetXaxis()->SetTitleFont(42);
    p_mmop_reco_1__9->GetYaxis()->SetLabelFont(42);
-   p_mmop_reco_1__9->GetYaxis()->SetLabelSize(0.05);
-   p_mmop_reco_1__9->GetYaxis()->SetTitleSize(0.06);
+   p_mmop_reco_1__9->GetYaxis()->SetLabelSize(0.07);
+   p_mmop_reco_1__9->GetYaxis()->SetTitleSize(0.07);
    p_mmop_reco_1__9->GetYaxis()->SetTitleOffset(1.05);
    p_mmop_reco_1__9->GetYaxis()->SetTitleFont(42);
    p_mmop_reco_1__9->GetZaxis()->SetLabelFont(42);
-   p_mmop_reco_1__9->GetZaxis()->SetLabelSize(0.05);
-   p_mmop_reco_1__9->GetZaxis()->SetTitleSize(0.06);
+   p_mmop_reco_1__9->GetZaxis()->SetLabelSize(0.07);
+   p_mmop_reco_1__9->GetZaxis()->SetTitleSize(0.07);
    p_mmop_reco_1__9->GetZaxis()->SetTitleFont(42);
    p_mmop_reco_1__9->Draw("");
    
@@ -669,17 +670,17 @@ void PiMinus_Efficiency()
    p_yield_1__10->SetMarkerStyle(20);
    p_yield_1__10->GetXaxis()->SetTitle("p (GeV)");
    p_yield_1__10->GetXaxis()->SetLabelFont(42);
-   p_yield_1__10->GetXaxis()->SetLabelSize(0.05);
-   p_yield_1__10->GetXaxis()->SetTitleSize(0.06);
+   p_yield_1__10->GetXaxis()->SetLabelSize(0.07);
+   p_yield_1__10->GetXaxis()->SetTitleSize(0.07);
    p_yield_1__10->GetXaxis()->SetTitleFont(42);
    p_yield_1__10->GetYaxis()->SetLabelFont(42);
-   p_yield_1__10->GetYaxis()->SetLabelSize(0.05);
-   p_yield_1__10->GetYaxis()->SetTitleSize(0.06);
+   p_yield_1__10->GetYaxis()->SetLabelSize(0.07);
+   p_yield_1__10->GetYaxis()->SetTitleSize(0.07);
    p_yield_1__10->GetYaxis()->SetTitleOffset(1.05);
    p_yield_1__10->GetYaxis()->SetTitleFont(42);
    p_yield_1__10->GetZaxis()->SetLabelFont(42);
-   p_yield_1__10->GetZaxis()->SetLabelSize(0.05);
-   p_yield_1__10->GetZaxis()->SetTitleSize(0.06);
+   p_yield_1__10->GetZaxis()->SetLabelSize(0.07);
+   p_yield_1__10->GetZaxis()->SetTitleSize(0.07);
    p_yield_1__10->GetZaxis()->SetTitleFont(42);
    p_yield_1__10->Draw("same");
    
@@ -719,18 +720,18 @@ void PiMinus_Efficiency()
    p_mmop_reco_1__11->SetMarkerStyle(25);
    p_mmop_reco_1__11->GetXaxis()->SetTitle("p_{mmop} (GeV)");
    p_mmop_reco_1__11->GetXaxis()->SetLabelFont(42);
-   p_mmop_reco_1__11->GetXaxis()->SetLabelSize(0.05);
-   p_mmop_reco_1__11->GetXaxis()->SetTitleSize(0.06);
+   p_mmop_reco_1__11->GetXaxis()->SetLabelSize(0.07);
+   p_mmop_reco_1__11->GetXaxis()->SetTitleSize(0.07);
    p_mmop_reco_1__11->GetXaxis()->SetTitleFont(42);
    p_mmop_reco_1__11->GetYaxis()->SetTitle("#omega yield / 0.5 GeV");
    p_mmop_reco_1__11->GetYaxis()->SetLabelFont(42);
-   p_mmop_reco_1__11->GetYaxis()->SetLabelSize(0.05);
-   p_mmop_reco_1__11->GetYaxis()->SetTitleSize(0.06);
+   p_mmop_reco_1__11->GetYaxis()->SetLabelSize(0.07);
+   p_mmop_reco_1__11->GetYaxis()->SetTitleSize(0.07);
    p_mmop_reco_1__11->GetYaxis()->SetTitleOffset(1.05);
    p_mmop_reco_1__11->GetYaxis()->SetTitleFont(42);
    p_mmop_reco_1__11->GetZaxis()->SetLabelFont(42);
-   p_mmop_reco_1__11->GetZaxis()->SetLabelSize(0.05);
-   p_mmop_reco_1__11->GetZaxis()->SetTitleSize(0.06);
+   p_mmop_reco_1__11->GetZaxis()->SetLabelSize(0.07);
+   p_mmop_reco_1__11->GetZaxis()->SetTitleSize(0.07);
    p_mmop_reco_1__11->GetZaxis()->SetTitleFont(42);
    p_mmop_reco_1__11->Draw("same");
    
@@ -770,18 +771,18 @@ void PiMinus_Efficiency()
    p_yield_1__12->SetMarkerStyle(25);
    p_yield_1__12->GetXaxis()->SetTitle("p_{mmop} (GeV)");
    p_yield_1__12->GetXaxis()->SetLabelFont(42);
-   p_yield_1__12->GetXaxis()->SetLabelSize(0.05);
-   p_yield_1__12->GetXaxis()->SetTitleSize(0.06);
+   p_yield_1__12->GetXaxis()->SetLabelSize(0.07);
+   p_yield_1__12->GetXaxis()->SetTitleSize(0.07);
    p_yield_1__12->GetXaxis()->SetTitleFont(42);
    p_yield_1__12->GetYaxis()->SetTitle("#omega yield / 0.5 GeV");
    p_yield_1__12->GetYaxis()->SetLabelFont(42);
-   p_yield_1__12->GetYaxis()->SetLabelSize(0.05);
-   p_yield_1__12->GetYaxis()->SetTitleSize(0.06);
+   p_yield_1__12->GetYaxis()->SetLabelSize(0.07);
+   p_yield_1__12->GetYaxis()->SetTitleSize(0.07);
    p_yield_1__12->GetYaxis()->SetTitleOffset(1.05);
    p_yield_1__12->GetYaxis()->SetTitleFont(42);
    p_yield_1__12->GetZaxis()->SetLabelFont(42);
-   p_yield_1__12->GetZaxis()->SetLabelSize(0.05);
-   p_yield_1__12->GetZaxis()->SetTitleSize(0.06);
+   p_yield_1__12->GetZaxis()->SetLabelSize(0.07);
+   p_yield_1__12->GetZaxis()->SetTitleSize(0.07);
    p_yield_1__12->GetZaxis()->SetTitleFont(42);
    p_yield_1__12->Draw("same");
    c3_3->Modified();
@@ -789,4 +790,7 @@ void PiMinus_Efficiency()
    c3->Modified();
    c3->cd();
    c3->SetSelected(c3);
+    
+    c3->SaveAs("PiMinus_Efficiency.pdf");
+    
 }

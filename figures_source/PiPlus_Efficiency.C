@@ -76,7 +76,7 @@ void PiPlus_Efficiency()
    phi_mmop_reco_1__1->SetBinError(18,0.003896132);
    phi_mmop_reco_1__1->SetBinError(19,0.003857247);
    phi_mmop_reco_1__1->SetBinError(20,0.00386911);
-   phi_mmop_reco_1__1->SetMinimum(0);
+    phi_mmop_reco_1__1->SetMinimum(0.4);
    phi_mmop_reco_1__1->SetMaximum(1.05);
    phi_mmop_reco_1__1->SetEntries(443876.4);
 
@@ -147,7 +147,7 @@ void PiPlus_Efficiency()
    phi_yield_1__2->SetBinError(18,0.005651899);
    phi_yield_1__2->SetBinError(19,0.00599662);
    phi_yield_1__2->SetBinError(20,0.001333343);
-   phi_yield_1__2->SetMinimum(0);
+    phi_yield_1__2->SetMinimum(0.4);
    phi_yield_1__2->SetMaximum(1.05);
    phi_yield_1__2->SetEntries(6611.821);
 
@@ -368,7 +368,7 @@ void PiPlus_Efficiency()
    theta_data_efficiency_1__5->SetBinError(18,0.009617687);
    theta_data_efficiency_1__5->SetBinError(19,0.01226747);
    theta_data_efficiency_1__5->SetBinError(20,0.02039542);
-   theta_data_efficiency_1__5->SetMinimum(0);
+    theta_data_efficiency_1__5->SetMinimum(0.4);
    theta_data_efficiency_1__5->SetMaximum(1.05);
    theta_data_efficiency_1__5->SetEntries(20);
 
@@ -435,7 +435,7 @@ void PiPlus_Efficiency()
    theta_data_m2_efficiency_1__6->SetBinError(18,0.006542242);
    theta_data_m2_efficiency_1__6->SetBinError(19,0.009709227);
    theta_data_m2_efficiency_1__6->SetBinError(20,0.01106503);
-   theta_data_m2_efficiency_1__6->SetMinimum(0);
+    theta_data_m2_efficiency_1__6->SetMinimum(0.4);
    theta_data_m2_efficiency_1__6->SetMaximum(1.05);
    theta_data_m2_efficiency_1__6->SetEntries(20);
 
@@ -616,7 +616,7 @@ void PiPlus_Efficiency()
    p_mmop_reco_1__9->SetBinError(11,0.002896394);
    p_mmop_reco_1__9->SetBinError(12,0.004322366);
    p_mmop_reco_1__9->SetBinError(13,0);
-   p_mmop_reco_1__9->SetMinimum(0);
+    p_mmop_reco_1__9->SetMinimum(0.4);
    p_mmop_reco_1__9->SetMaximum(1.05);
    p_mmop_reco_1__9->SetEntries(231440.1);
 
@@ -668,7 +668,7 @@ void PiPlus_Efficiency()
    p_yield_1__10->SetBinError(11,0.0020581);
    p_yield_1__10->SetBinError(12,0.003073157);
    p_yield_1__10->SetBinError(13,0);
-   p_yield_1__10->SetMinimum(0);
+    p_yield_1__10->SetMinimum(0.4);
    p_yield_1__10->SetMaximum(1.05);
    p_yield_1__10->SetEntries(18693.51);
 
