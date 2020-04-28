@@ -64,7 +64,7 @@ Production processing of \GX~data uses offsite high-performance computing resour
 \begin{figure}[htb]\centering
 \includegraphics[width=0.49\textwidth]{figures/production_offsite_rate_vs_nthreads_NERSC.pdf}
 \includegraphics[width=0.49\textwidth]{figures/production_offsite_rate_vs_nthreads_PSC.pdf}
-\caption[]{\label{fig:production_offsite_rate_vs_nthreads_NERSC}Event processing rate versus number of threads for reconstruction jobs on NERSC Cori II (left) and PSC Bridges (right). The slope changes in the NERSC plot is due to the KNL architecture, which had four hardware threads per core. For PSC Bridges, hyper-threading is disabled and the plot shows a single slope.} 
+\caption[]{\label{fig:production_offsite_rate_vs_nthreads_NERSC}Event processing rate versus number of threads for reconstruction jobs on NERSC Cori II (left) and PSC Bridges (right). The slope changes in the NERSC plot are due to the KNL architecture, which had four hardware threads per core. For PSC Bridges, hyper-threading is disabled and the plot shows a single slope.} 
 \end{figure}
 
 Container and distributed file system technologies were used for offsite processing. The software binaries as well as calibration constants, field maps, etc. were distributed using the CERN-VM-file system (CVMFS). 
