@@ -16,6 +16,7 @@ void beta_vs_p_positivetracks()
     
    c1->SetLeftMargin(0.15);
    gStyle->SetPadLeftMargin(0.25);
+    gStyle->SetPalette(kRainBow);
    c1->SetRightMargin(0.15);
    c1->SetTopMargin(0.05);
    c1->SetBottomMargin(0.2);
