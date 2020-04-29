@@ -6,8 +6,8 @@
 
 void Draw_beamline()
 {
-    gStyle->SetPadLeftMargin(0.06);
-    gStyle->SetPadRightMargin(0.025);
+    gStyle->SetPadLeftMargin(0.08);
+    gStyle->SetPadRightMargin(0.02);
     gStyle->SetPadBottomMargin(0.15);
     
     const Int_t tagger_npts=19;
@@ -17,6 +17,7 @@ void Draw_beamline()
     float Dxwall[tagger_npts]={8,8,8,8,8,8,12,3,27,32,8,8,8,-6,-6,-8,-8,-8,-8};
     
     float xbeam1= 218;
+    float textsize=0.05;
     
     float xoffset = xbeam1;    // distances from beamline.
     float zorigin=9904.1;
@@ -57,8 +58,8 @@ void Draw_beamline()
     float zorigin_approx = 10000;
       float zmin = -3000 - zorigin_approx;
       float zmax=14000 - zorigin_approx;
-      float xmin= -1500;
-      float xmax=1500;
+      float xmin= -2000;
+      float xmax=2000;
       float fudge=240./181.;
       // float fudge = 1.;
       float scale = fudge*(zmax-zmin)/(xmax-xmin);
@@ -69,12 +70,12 @@ void Draw_beamline()
       TH2D *boundaries = new TH2D("boundaries", "",zmax-zmin, zmin, zmax, xmax-xmin, xmin, xmax);
        boundaries->SetStats(0);
        boundaries->SetXTitle("Z (cm)");
-    boundaries->GetYaxis()->SetLabelSize(0.07);
-    boundaries->GetYaxis()->SetTitleSize(0.07);
-    boundaries->GetYaxis()->SetTitleOffset(0.4);
-    boundaries->GetXaxis()->SetLabelSize(0.07);
-    boundaries->GetXaxis()->SetTitleSize(0.07);
-    boundaries->GetXaxis()->SetTitleOffset(0.8);
+    boundaries->GetYaxis()->SetLabelSize(textsize);
+    boundaries->GetYaxis()->SetTitleSize(textsize);
+    boundaries->GetYaxis()->SetTitleOffset(0.7);
+    boundaries->GetXaxis()->SetLabelSize(textsize);
+    boundaries->GetXaxis()->SetTitleSize(textsize);
+    boundaries->GetXaxis()->SetTitleOffset(1.2);
     boundaries->GetXaxis()->SetNdivisions(510);
     
     boundaries->SetYTitle("X (cm)");
@@ -221,7 +222,13 @@ void Draw_beamline()
     for (Int_t jj=0; jj< Npoints; jj++) {
         zc5[jj] = zc5[jj] - zorigin;
     }
-        
+    
+    TLine *profiler = new TLine(7472-zorigin,Dxgoni/2,7472-zorigin,-Dxgoni/2);
+    profiler->SetLineWidth(4);
+    profiler->SetLineColor(kRed);
+    profiler->Draw();
+    
+    
          TPolyLine *collimator = new TPolyLine(Npoints, zc5, xc5);
          collimator->SetLineWidth(2.0);
          collimator->SetLineColor(kRed);
@@ -415,7 +422,7 @@ void Draw_beamline()
     TString string;
     string.Form("radiator");
     TLatex *t3 = new TLatex(-214-zorigin-11*Dzdash,510-Dxdash,string);
-    t3->SetTextSize(0.07);
+    t3->SetTextSize(textsize);
     t3->Draw();
     
     Dzdash = 125;
@@ -431,6 +438,13 @@ void Draw_beamline()
     dash->DrawLine(7333-zorigin,485,7333-zorigin-Dzdash,485);
     string.Form("collimator");
     t3->DrawLatex(7333-zorigin-13*Dzdash,485-Dxdash,string);
+    
+    Dzdash = 125;
+    Dxdash = 100;
+    arrow->DrawLine(7452-zorigin,0,6954-zorigin,-485);
+    dash->DrawLine(6954-zorigin,-485,6954-zorigin-Dzdash,-485);
+    string.Form("profiler");
+    t3->DrawLatex(7502-zorigin-14*Dzdash,-485-Dxdash,string);
     
     Dzdash = 125;
     Dxdash = 100;
@@ -450,9 +464,9 @@ void Draw_beamline()
     // t3->DrawLatex(9324,-425,string);
     Dzdash = 125;
     Dxdash = 100;
-    arrow->DrawLine(11791-zorigin,561,10400-zorigin,89);
-    dash->DrawLine(11791-zorigin_approx,561,11791-zorigin_approx+Dzdash,561);
-    t3->DrawLatex(11791-zorigin_approx+2*Dzdash,561-Dxdash,string);
+    arrow->DrawLine(11891-zorigin_approx,561,10400-zorigin,89);
+    dash->DrawLine(11891-zorigin_approx,561,11891-zorigin_approx+Dzdash,561);
+    t3->DrawLatex(11891-zorigin_approx+2*Dzdash,561-Dxdash,string);
     
     Dzdash = 125;
     Dxdash = 100;
@@ -497,7 +511,7 @@ void Draw_beamline()
     dash->DrawLine(-1160-zorigin,-668,-1160-zorigin+Dzdash,-668);
     string.Form("5C11B");
     TLatex *t4 = new TLatex(-1160-zorigin+2*Dzdash,-668-Dxdash,string);
-    t4->SetTextSize(0.05);
+    t4->SetTextSize(textsize);
     t4->Draw();
     
     TLine *bAD00 = new TLine(2269-zorigin,-348,2220-zorigin,-441);
