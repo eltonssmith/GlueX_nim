@@ -9,14 +9,14 @@ void TOF_postracks_2000mev()
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
    c1->SetLogz();
-   c1->SetGridx();
-   c1->SetGridy();
+   // c1->SetGridx();
+   // c1->SetGridy();
    c1->SetFrameBorderMode(0);
    c1->SetFrameBorderMode(0);
    
    // TH1D *h1d2__2 = new TH1D("h1d2__2","TOF positive charged tracks p=2.0GeV",187,0.3985,1.053);
     // eliminate last two bins to eliminate overwritting label
-   TH1D *h1d2__2 = new TH1D("h1d2__2","TOF positive charged tracks p=2.0GeV",185,0.3985,1.046);
+   TH1D *h1d2__2 = new TH1D("h1d2__2","Positive tracks in TOF (p=2.0GeV)",185,0.3985,1.046);
     h1d2__2->SetBinContent(1,1);
    h1d2__2->SetBinContent(2,1);
    h1d2__2->SetBinContent(5,2);

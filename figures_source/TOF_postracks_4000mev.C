@@ -9,12 +9,12 @@ void TOF_postracks_4000mev()
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
    c1->SetLogz();
-   c1->SetGridx();
-   c1->SetGridy();
+   //c1->SetGridx();
+   //c1->SetGridy();
    c1->SetFrameBorderMode(0);
    c1->SetFrameBorderMode(0);
    
-   TH1D *h1d4__3 = new TH1D("h1d4__3","TOF positive charged Tracks p=4.0GeV",187,0.3985,1.053);
+   TH1D *h1d4__3 = new TH1D("h1d4__3","Positive tracks in TOF (p=4.0GeV)",187,0.3985,1.053);
     h1d4__3->SetBinContent(9,1);
    h1d4__3->SetBinContent(10,1);
    h1d4__3->SetBinContent(13,1);
