@@ -564,6 +564,19 @@ below the coherent peak would average around 4~Mhz, which is at the top
 of their allowed range. These counters will be turned off when
 running at full intensity.
 
+\subsection{Tungsten keV filter}
+
+To reduce the photon flux in the $10-100$~keV range, a $100$~$\mu$m tungsten ($3\%$~R.L.) foil is installed on the beam line at the entrance of the collimator cave.  We have studied the effect of different foil materials on the anode currents and  random hits in the drift chambers (see Section\,\ref{sec:tracking}), as these factors limit the high-intensity operation of the experiment. By comparing the effect of different materials (Al, Cu, W) with fixed radiation lengths (see Fig.\ref{fig:attenuation})  we learned that the drift chambers are mostly affected by photons in the 70-90 keV range. The analysis of the pulse shape  of the random hits in the CDC confirmed that these photons directly produce hits in the inner layers of the chamber. The insertion of a  $3\%$W foil reduced the number of random hits in the inner CDC layers by a factor of up to 8 and the anode current by $55\%$. The reduction of the current in the FDC was more moderate, about $25\%$. Note that in the FDC the wires are as close as $3$~cm to the beam, while in the CDC the closest wires are at $10$~cm.
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[width=0.5\linewidth]{figures/Attenuation.png}
+\caption{Attenuation of low-energy photons in 3\% R.L. foils of different materials as a function of photon energy. The W foil was selected to reduce the random background hits in the detector drift chambers.
+\label{fig:attenuation}  }
+\end{center}
+\end{figure}
+
+
 \subsection{Beam profiler}
 The beam profiler is located immediately upstream of the collimator (see Fig.\,\ref{fig:beam:Draw_beamline}) and is
 used to measure the photon beam intensity in a plane normal to the incident
