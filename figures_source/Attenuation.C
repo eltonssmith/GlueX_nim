@@ -9,8 +9,8 @@ void Attenuation()
    c1->SetBorderSize(2);
    c1->SetLogx();
    c1->SetLogy();
-   c1->SetGridx();
-   c1->SetGridy();
+   // c1->SetGridx();
+   // c1->SetGridy();
    c1->SetLeftMargin(0.25);
    c1->SetRightMargin(0.05);
    c1->SetTopMargin(0.05);
