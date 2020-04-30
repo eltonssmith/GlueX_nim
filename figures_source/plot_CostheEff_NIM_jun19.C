@@ -12,6 +12,9 @@ void plot_CostheEff_NIM_jun19()
    c1->SetRightMargin(0.15);
    c1->SetBottomMargin(0.15);
    c1->SetFrameBorderMode(0);
+    
+    Double_t ymin=0.75;
+    Double_t ymax=1.25;
   
 // ------------>Primitives in pad: c1_1
    TPad *c1_1 = new TPad("c1_1", "c1_1",0.01,0.01,0.3233333,0.99);
@@ -143,8 +146,8 @@ void plot_CostheEff_NIM_jun19()
    gre->SetMarkerSize(0.3);
    
    TH1F *Graph_Graph01001 = new TH1F("Graph_Graph01001","BCAL",100,0,2.2);
-   Graph_Graph01001->SetMinimum(0);
-   Graph_Graph01001->SetMaximum(1.5);
+   Graph_Graph01001->SetMinimum(ymin);
+   Graph_Graph01001->SetMaximum(ymax);
    Graph_Graph01001->SetDirectory(0);
    Graph_Graph01001->SetStats(0);
 
@@ -316,8 +319,8 @@ void plot_CostheEff_NIM_jun19()
    gre->SetMarkerSize(0.3);
    
    TH1F *Graph_Graph01002 = new TH1F("Graph_Graph01002","FCAL",100,0,2.2);
-   Graph_Graph01002->SetMinimum(0);
-   Graph_Graph01002->SetMaximum(1.5);
+   Graph_Graph01002->SetMinimum(ymin);
+   Graph_Graph01002->SetMaximum(ymax);
    Graph_Graph01002->SetDirectory(0);
    Graph_Graph01002->SetStats(0);
 
@@ -487,8 +490,8 @@ void plot_CostheEff_NIM_jun19()
    gre->SetMarkerSize(0.3);
    
    TH1F *Graph_Graph01003 = new TH1F("Graph_Graph01003","FCALBCAL",100,0,2.2);
-   Graph_Graph01003->SetMinimum(0);
-   Graph_Graph01003->SetMaximum(1.5);
+   Graph_Graph01003->SetMinimum(ymin);
+   Graph_Graph01003->SetMaximum(ymax);
    Graph_Graph01003->SetDirectory(0);
    Graph_Graph01003->SetStats(0);
 
