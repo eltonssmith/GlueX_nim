@@ -19,10 +19,10 @@ double emittance_y = 0.0021; // mm.mrad
 double collimator_spos = 194.92; // m
 double harp5C11_xsigma_err = 0.030; // mm
 double harp5C11_ysigma_err = 0.030; // mm
-double harp5C11B_xsigma_err = 0.030; // mm
-double harp5C11B_ysigma_err = 0.030; // mm
-double radHarp_xsigma_err = 0.10; // mm
-double radHarp_ysigma_err = 0.10; // mm
+double harp5C11B_xsigma_err = 0.100; // mm
+double harp5C11B_ysigma_err = 0.100; // mm
+double radHarp_xsigma_err = 0.020; // mm
+double radHarp_ysigma_err = 0.020; // mm
 double harp5C11_spos = 102.97; // mm
 double harp5C11B_spos = 115.11; // mm
 double radHarp_spos = 119.70; // m
@@ -134,8 +134,8 @@ void fit_and_plot(double sx[3], double sigx[3], double sigxerr[3],
    c1->SetRightMargin(0.05);
    c1->SetTopMargin(0.05);
    c1->SetBottomMargin(0.2);
-   xfitf->SetTitle(""); // "sigma x vs accelerator s"
-   xfitf->GetXaxis()->SetTitle("accelerator coordinate (m)");
+    xfitf->SetTitle(""); // "sigma x vs accelerator s"
+   xfitf->GetXaxis()->SetTitle("accelerator s coordinate (m)");
    xfitf->GetYaxis()->SetTitle("#sigma_{x} (mm)");
    xfitf->GetXaxis()->SetTitleSize(0.07);
    xfitf->GetXaxis()->SetLabelSize(0.07);
@@ -145,7 +145,7 @@ void fit_and_plot(double sx[3], double sigx[3], double sigxerr[3],
    xfitf->GetYaxis()->SetNdivisions(505);
     xfitf->SetMinimum(0);
    xmax =1.5;   // set same y-axis for x and y
-    xfitf->SetMaximum(xmax);
+   xfitf->SetMaximum(xmax);
    xfitf->Draw();
    xdata->Draw("P");
    xshade->Draw("f");
@@ -161,17 +161,17 @@ void fit_and_plot(double sx[3], double sigx[3], double sigxerr[3],
    c1->Print("harp-x-767755.pdf");
    c1->Print("harp-x-767755.png");
    yfitf->SetTitle(""); // "sigma y vs accelerator s"
-   yfitf->GetXaxis()->SetTitle("accelerator coordinate (m)");
+   yfitf->GetXaxis()->SetTitle("accelerator s coordinate (m)");
    yfitf->GetYaxis()->SetTitle("#sigma_{y} (mm)");
-    yfitf->GetXaxis()->SetTitleSize(0.07);
-    yfitf->GetXaxis()->SetLabelSize(0.07);
-    yfitf->GetXaxis()->SetNdivisions(505);
-    yfitf->GetYaxis()->SetTitleSize(0.07);
-    yfitf->GetYaxis()->SetLabelSize(0.07);
-    yfitf->GetYaxis()->SetNdivisions(505);
-    yfitf->SetMinimum(0);
-    ymax =1.5;   // set same y-axis for x and y
-    yfitf->SetMaximum(ymax);
+   yfitf->GetXaxis()->SetTitleSize(0.07);
+   yfitf->GetXaxis()->SetLabelSize(0.07);
+   yfitf->GetXaxis()->SetNdivisions(505);
+   yfitf->GetYaxis()->SetTitleSize(0.07);
+   yfitf->GetYaxis()->SetLabelSize(0.07);
+   yfitf->GetYaxis()->SetNdivisions(505);
+   yfitf->SetMinimum(0);
+   ymax =1.5;   // set same y-axis for x and y
+   yfitf->SetMaximum(ymax);
    yfitf->Draw();
    ydata->Draw("P");
    yshade->Draw("f");
