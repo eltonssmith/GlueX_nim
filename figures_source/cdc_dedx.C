@@ -1,4 +1,4 @@
-void fig19_dedx()
+void cdc_dedx()
 {
 //=========Macro generated from canvas: c1/c1
 //=========  (Tue Jan 28 17:21:40 2020) by ROOT version6.08/06
@@ -9,12 +9,14 @@ void fig19_dedx()
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
    c1->SetLogz();
-   c1->SetRightMargin(0.14);
+   c1->SetLeftMargin(0.2);
+   c1->SetRightMargin(0.15);
    c1->SetTopMargin(0.05);
-   c1->SetBottomMargin(0.15);
+   c1->SetBottomMargin(0.2);
    c1->SetFrameBorderMode(0);
    c1->SetFrameBorderMode(0);
-   
+   gStyle->SetPalette(kRainBow);
+    
    TH2F *h5 = new TH2F("h5","",600,0,3,400,0,20);
    h5->SetBinContent(12102,1);
    h5->SetBinContent(13301,1);
@@ -40372,25 +40374,28 @@ palette->SetTitleSize(0.05);
 
    ci = TColor::GetColor("#000099");
    h5->SetLineColor(ci);
-   h5->GetXaxis()->SetTitle("momentum (GeV/c)");
+   h5->GetXaxis()->SetTitle("Momentum (GeV/c)");
    h5->GetXaxis()->SetLabelFont(42);
-   h5->GetXaxis()->SetLabelSize(0.05);
-   h5->GetXaxis()->SetTitleSize(0.05);
+   h5->GetXaxis()->SetLabelSize(0.07);
+   h5->GetXaxis()->SetTitleSize(0.07);
    h5->GetXaxis()->SetTitleOffset(1.3);
    h5->GetXaxis()->SetTitleFont(42);
    h5->GetYaxis()->SetTitle("dE/dx (keV/cm)");
    h5->GetYaxis()->SetLabelFont(42);
-   h5->GetYaxis()->SetLabelSize(0.05);
-   h5->GetYaxis()->SetTitleSize(0.05);
-   h5->GetYaxis()->SetTitleFont(42);
+   h5->GetYaxis()->SetLabelSize(0.07);
+   h5->GetYaxis()->SetTitleSize(0.07);
+    h5->GetXaxis()->SetTitleOffset(1.2);
+    h5->GetYaxis()->SetTitleFont(42);
    h5->GetZaxis()->SetTitle("Counts");
    h5->GetZaxis()->SetLabelFont(42);
    h5->GetZaxis()->SetLabelSize(0.05);
    h5->GetZaxis()->SetTitleSize(0.05);
    h5->GetZaxis()->SetTitleOffset(0.95);
-   h5->GetZaxis()->SetTitleFont(42);
+    h5->GetZaxis()->SetTitleFont(42);
    h5->Draw("colz");
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+    
+    c1->SaveAs("cdc_dedx.pdf");
 }
