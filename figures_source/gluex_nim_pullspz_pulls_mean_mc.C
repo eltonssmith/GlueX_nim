@@ -423,7 +423,8 @@ void gluex_nim_pullspz_pulls_mean_mc()
    
    gre->Draw("p");
    
-   TLegend *leg = new TLegend(0.6,0.2,0.9,0.4,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.15,0.8,0.4,0.9,NULL,"brNDC");
+   leg->SetNColumns(3);
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -448,7 +449,7 @@ void gluex_nim_pullspz_pulls_mean_mc()
    entry2->SetMarkerStyle(22);
    entry2->SetMarkerSize(1.5);
    entry2->SetTextFont(42);
-   TLegendEntry *entry3=leg->AddEntry("entry3","p","lpf");
+   TLegendEntry *entry3=leg->AddEntry("entry3","#gamma","lpf");
    entry3->SetFillStyle(1000);
    entry3->SetLineColor(4);
    entry3->SetLineStyle(1);

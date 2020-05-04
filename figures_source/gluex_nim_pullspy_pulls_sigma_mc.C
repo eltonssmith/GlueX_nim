@@ -119,7 +119,7 @@ void gluex_nim_pullspy_pulls_sigma_mc()
    gre->SetMarkerSize(1.5);
    
    TH1F *Graph_Graph1037 = new TH1F("Graph_Graph1037","",100,0,0.99);
-   Graph_Graph1037->SetMinimum(-1.5);
+   Graph_Graph1037->SetMinimum(0);
    Graph_Graph1037->SetMaximum(2);
    Graph_Graph1037->SetDirectory(0);
    Graph_Graph1037->SetStats(0);
@@ -423,7 +423,8 @@ void gluex_nim_pullspy_pulls_sigma_mc()
    
    gre->Draw("p");
    
-   TLegend *leg = new TLegend(0.6,0.2,0.9,0.4,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.15,0.8,0.4,0.9,NULL,"brNDC");
+   leg->SetNColumns(3);
    leg->SetBorderSize(1);
    leg->SetLineColor(1);
    leg->SetLineStyle(1);
@@ -448,7 +449,7 @@ void gluex_nim_pullspy_pulls_sigma_mc()
    entry2->SetMarkerStyle(22);
    entry2->SetMarkerSize(1.5);
    entry2->SetTextFont(42);
-   TLegendEntry *entry3=leg->AddEntry("entry3","p","lpf");
+   TLegendEntry *entry3=leg->AddEntry("entry3","#gamma","lpf");
    entry3->SetFillStyle(1000);
    entry3->SetLineColor(4);
    entry3->SetLineStyle(1);
