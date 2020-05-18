@@ -488,16 +488,17 @@ noise rejection.
 The ADC firmware provides an approximate time for each pulse, in addition to the
 pulse amplitude. During offline reconstruction, this time information is used to
 associate ADC and TDC pulse information from the same channel, so that a
-time-walk correction can be applied to the TDC time. Once this correction
+time-walk correction can be applied to the TDC time. 
+Once this correction
 has been applied, a time resolution of 230~ps is achieved for the TAGM.
 This resolution is based on data collected at rates on the order of 1~MHz
-per column, a factor of 2 lower than the 2.2~MHz peak rate anticipated during
-\gx{} 2 running. A brief test above 2~MHz per column allowed visual
+per column, while the typical rate in the tagger microscope is about 0.5~MHz.
+The readout was designed to operate at rates up to 4~MHz per column.
+%a factor of 2 lower than the 2.2~MHz peak rate anticipated during \gx{} 2 running. 
+A brief test above 2~MHz per column allowed visual
 inspection of the pulse waveforms from the TAGM, without change in the
-pulse shape or amplitude. Given that the readout was designed
-to operate at rates up to 4~MHz per column without significant degradation
-in performance, the TAGM time resolution should be
-substantially unaffected by the increased beam intensity of \GX{} Phase 2.
+pulse shape or amplitude. 
+%, the TAGM time resolution should be substantially unaffected by the increased beam intensity of \GX{} Phase 2.
 
 \subsubsection{Broadband tagging hodoscope}\label{sec:TAGHIntro}
 The Tagger Hodoscope (TAGH) consists of 222 scintillator counters distributed over a length of 9.25~m and mounted just behind the focal plane of the tagger magnet.
