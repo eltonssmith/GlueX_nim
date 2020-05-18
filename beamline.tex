@@ -1040,7 +1040,13 @@ investigated. The expected precision of the flux determination is on
 the level of $1\%$.
 
 \subsection{Total Absorption Counter \label{sec:tac}}
-The TAC is a high-efficiency lead-glass calorimeter, used at low beam currents ($<$ 5nA) to determine the overall normalization of the flux from the \gx{} coherent bremsstrahlung facility.  Using the device at normal \gx{} production currents is not possible, as it would very quickly succumb to radiation damage. Therefore, the TAC is only inserted into the beam during dedicated runs at very low intensities when the detector can run with near 100\% efficiency.
+The TAC is a high-efficiency lead-glass calorimeter, used at low beam currents ($<$ 5nA) to determine the overall normalization of the flux from the \gx{} coherent bremsstrahlung facility.  
+%Using the device at normal \gx{} production currents is not possible, as it would very quickly succumb to radiation damage. 
+This device is intended to count all beam photons above a certain energy threshold, which
+have a matching hit in the tagger system.
+There would be a very large number of overlapping pulses in the TAC if it is used
+with the production photon flux, resulting in low detection efficiency and therefore large
+systematic uncertainties. Therefore, the TAC is only inserted into the beam during dedicated runs at very low intensities when the detector can run with near 100\% efficiency.
 The TAC was originally developed for and deployed in Hall B, for photon beam operations with CLAS \cite{clasnote1992014, clasnote1993011,clasnote1999002}.
 
 Only a certain fraction of the photons produced at the radiator reach the
