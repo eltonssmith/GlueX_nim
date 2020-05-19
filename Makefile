@@ -58,7 +58,7 @@ tar : $(TEX_FILES) $(FILES) # tar files; will remove old tar files
 		mkdir GlueX_nim/figures
 		cp GlueX_nim.bib GlueX_nim
 #		cp GlueX_nim.bbl GlueX_nim
-				cp $(TEX_FILES) GlueX_nim
+		cp $(TEX_FILES) GlueX_nim
 		cp $(FILES) GlueX_nim/figures
 #		cp $(C_FILES) GlueX_nim
 		cp GlueX_nim.pdf GlueX_nim
