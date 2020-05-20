@@ -8,8 +8,8 @@ void bcal_ep()
    cc->SetFillColor(0);
    cc->SetBorderMode(0);
    cc->SetBorderSize(2);
-   cc->SetLeftMargin(0.15);
-   cc->SetRightMargin(0.12);
+   cc->SetLeftMargin(0.2);
+   cc->SetRightMargin(0.05);
    cc->SetTopMargin(0.05);
    cc->SetBottomMargin(0.15);
    cc->SetFrameBorderMode(0);
@@ -127,28 +127,31 @@ void bcal_ep()
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    EOverP_BothBCAL_py__1->SetLineColor(ci);
-   EOverP_BothBCAL_py__1->GetXaxis()->SetTitle("E_{CC} / Particle Momentum");
+   EOverP_BothBCAL_py__1->GetXaxis()->SetTitle("E/p");
    EOverP_BothBCAL_py__1->GetXaxis()->SetRange(21,70);
    EOverP_BothBCAL_py__1->GetXaxis()->SetLabelFont(42);
-   EOverP_BothBCAL_py__1->GetXaxis()->SetLabelSize(0.05);
-   EOverP_BothBCAL_py__1->GetXaxis()->SetTitleSize(0.055);
+   EOverP_BothBCAL_py__1->GetXaxis()->SetLabelSize(0.07);
+   EOverP_BothBCAL_py__1->GetXaxis()->SetTitleSize(0.07);
    EOverP_BothBCAL_py__1->GetXaxis()->SetTitleFont(42);
+    EOverP_BothBCAL_py__1->GetXaxis()->SetNdivisions(505);
    EOverP_BothBCAL_py__1->GetYaxis()->SetTitle("Events / 0.01");
    EOverP_BothBCAL_py__1->GetYaxis()->SetLabelFont(42);
-   EOverP_BothBCAL_py__1->GetYaxis()->SetLabelSize(0.05);
-   EOverP_BothBCAL_py__1->GetYaxis()->SetTitleSize(0.055);
+   EOverP_BothBCAL_py__1->GetYaxis()->SetLabelSize(0.07);
+   EOverP_BothBCAL_py__1->GetYaxis()->SetTitleSize(0.07);
    EOverP_BothBCAL_py__1->GetYaxis()->SetTitleOffset(1.35);
    EOverP_BothBCAL_py__1->GetYaxis()->SetTitleFont(42);
    EOverP_BothBCAL_py__1->GetZaxis()->SetLabelFont(42);
-   EOverP_BothBCAL_py__1->GetZaxis()->SetLabelSize(0.035);
-   EOverP_BothBCAL_py__1->GetZaxis()->SetTitleSize(0.035);
+   EOverP_BothBCAL_py__1->GetZaxis()->SetLabelSize(0.07);
+   EOverP_BothBCAL_py__1->GetZaxis()->SetTitleSize(0.07);
    EOverP_BothBCAL_py__1->GetZaxis()->SetTitleFont(42);
    EOverP_BothBCAL_py__1->Draw("");
-   TLatex *   tex = new TLatex(0.5,1200,"#gamma* #rightarrow e^{+} e^{-}");
-   tex->SetTextSize(0.085);
+   TLatex *   tex = new TLatex(0.5,1200,"#gamma #rightarrow e^{+} e^{-}");
+   tex->SetTextSize(0.07);
    tex->SetLineWidth(2);
    tex->Draw();
    cc->Modified();
    cc->cd();
    cc->SetSelected(cc);
+    
+    cc->SaveAs("bcal_ep.pdf");
 }
