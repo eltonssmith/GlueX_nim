@@ -33,6 +33,29 @@ FILES = figures/Draw_beamline.png figures/harp-x-767755.pdf figures/harp-y-76775
               figures/ProtonMomentumResolution.pdf figures/PionThetaResolution.pdf figures/PionPhiResolution.pdf figures/ZVertex.pdf \
               figures/125_Somov-f1.pdf figures/plot_triggerL1_c1.pdf figures/fit_FCAL_energy_resolution_sigma.pdf
 
+FILES_SOURCE = figures_source/Attenuation.C figures_source/Draw_beamline.C figures_source/MissingOmegaFit.C figures_source/OmegaCompareE.C \
+			figures_source/OmegaCompareTheta.C figures_source/PiMinus_Efficiency.C figures_source/PiPlus_Efficiency.C figures_source/PionMomentumResolution.C \
+            figures_source/PionPhiResolution.C figures_source/PionThetaResolution.C figures_source/ProtonMomentumResolution.C figures_source/SCR.data \
+            figures_source/TAGM_conceptual.pptx figures_source/TOF_postracks_1500mev.C figures_source/TOF_postracks_2000mev.C figures_source/TOF_postracks_4000mev.C \
+            figures_source/ThreePiFit.C figures_source/XimMass_2017_ver30.C \
+            figures_source/ZVertex.C figures_source/bcal_assemblies.pptx figures_source/bcal_deltat_resol.C figures_source/bcal_ep.C \
+            figures_source/beta_vs_p_positivetracks.C figures_source/cdc_dedx.C figures_source/fcal_deltat_resol.C figures_source/fcal_ep.C \
+            figures_source/fit_BCAL_energy_resolution_sigma.C figures_source/fit_FCAL_energy_resolution_sigma.C figures_source/gluex_nim_Gamma1_PxPull.C \
+            figures_source/gluex_nim_Gamma1_PyPull.C figures_source/gluex_nim_Gamma1_PzPull.C figures_source/gluex_nim_Gamma2_PxPull.C \
+            figures_source/gluex_nim_Gamma2_PyPull.C figures_source/gluex_nim_Gamma2_PzPull.C figures_source/gluex_nim_PiMinus_PxPull.C \
+            figures_source/gluex_nim_PiMinus_PyPull.C figures_source/gluex_nim_PiMinus_PzPull.C figures_source/gluex_nim_PiPlus_PxPull.C \
+            figures_source/gluex_nim_PiPlus_PyPull.C figures_source/gluex_nim_PiPlus_PzPull.C figures_source/gluex_nim_Proton_PxPull.C \
+            figures_source/gluex_nim_Proton_PyPull.C figures_source/gluex_nim_Proton_PzPull.C figures_source/gluex_nim_kfit_prob.C \
+            figures_source/gluex_nim_pullspx_pulls_mean_data.C figures_source/gluex_nim_pullspx_pulls_mean_mc.C figures_source/gluex_nim_pullspx_pulls_sigma_data.C \
+            figures_source/gluex_nim_pullspx_pulls_sigma_mc.C figures_source/gluex_nim_pullspy_pulls_mean_data.C figures_source/gluex_nim_pullspy_pulls_mean_mc.C \
+			figures_source/gluex_nim_pullspy_pulls_sigma_data.C figures_source/gluex_nim_pullspy_pulls_sigma_mc.C figures_source/gluex_nim_pullspz_pulls_mean_data.C \
+            figures_source/gluex_nim_pullspz_pulls_mean_mc.C figures_source/gluex_nim_pullspz_pulls_sigma_data.C figures_source/gluex_nim_pullspz_pulls_sigma_mc.C \
+			figures_source/harp_xy.C figures_source/jpsi_mass.C figures_source/kskpi_mass_resol.C figures_source/kskpi_mass_spect.C \
+            figures_source/mt_diff_fullTOF.C figures_source/omega_inv_mass_probCut_001.C figures_source/online_monitoring_PID.C \
+            figures_source/online_monitoring_processes.pptx figures_source/plot_CostheEff_NIM_jun19.C figures_source/plot_rcdb3_phaseI.py \
+            figures_source/plot_triggerL1.C figures_source/production_offsite_rate_vs_nthreads_NERSC.C figures_source/production_offsite_rate_vs_nthreads_PSC.C \
+			figures_source/rate_vs_nthread_src.C figures_source/rocking_curve.C figures_source/rocking_curve.root figures_source/st_tr_fit.C figures_source/tof_deltat_resol.C
+
 C_FILES_0 =
 C_FILES = $(addsuffix .C,$(C_FILES_0)) # add .C suffix
 
@@ -50,16 +73,18 @@ GlueX_nim.bbl : GlueX_nim.bib $(TEX_FILES)
 GlueX_nim.aux:
 	pdflatex -interaction=nonstopmode GlueX_nim
 
-tar : $(TEX_FILES) $(FILES) # tar files; will remove old tar files
+tar : $(TEX_FILES) $(FILES) $(FILES_SOURCE)# tar files; will remove old tar files
 		rm -f GlueX_nim.tar
 		rm -f GlueX_nim.tar.gz
 		rm -rf GlueX_nim
 		mkdir GlueX_nim
 		mkdir GlueX_nim/figures
+		mkdir GlueX_nim/figures_source
 		cp GlueX_nim.bib GlueX_nim
 #		cp GlueX_nim.bbl GlueX_nim
 		cp $(TEX_FILES) GlueX_nim
 		cp $(FILES) GlueX_nim/figures
+		cp $(FILES_SOURCE) GlueX_nim/figures_source
 #		cp $(C_FILES) GlueX_nim
 		cp GlueX_nim.pdf GlueX_nim
 		cp Makefile GlueX_nim
