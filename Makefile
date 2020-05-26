@@ -10,7 +10,7 @@ PS_FILES = $(addsuffix .ps,$(PS_FILES_0)) # add .ps suffix
 EPS_FILES_0 =
 EPS_FILES = $(addsuffix .eps,$(EPS_FILES_0)) # add .eps suffix
 
-FILES = figures/Draw_beamline.png figures/harp-x-767755.pdf figures/harp-y-767755.pdf figures/gx3102_pi0etaAsym2016_fig0_beam.pdf \
+FILES = figures/Draw_beamline.png figures/harp-x-767755.pdf figures/harp-y-767755.pdf figures/fig0_beam.pdf \
               figures/JD70-8-study1_4_sigma.png figures/TAGM_conceptual.pdf  figures/BEAM_taggerplot.pdf figures/BEAM_taggerdetectors.pdf   \
               figures/Attenuation.pdf figures/bcal_assemblies.pdf figures/FCAL_single_module.png figures/fit_BCAL_energy_resolution_sigma.pdf \
               figures/GlueX_CSS_overview.png figures/DAQ_coda.pdf figures/gluex_spectrometer_drawing_01_bw.pdf figures/GlueX-graphic.jpg \
