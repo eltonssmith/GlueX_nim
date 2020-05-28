@@ -1,0 +1,189 @@
+odu	S.	 Adhikari	
+gsi	A.	 Ali	"Also at Goethe University Frankfurt, 60323 Frankfurt am Main, Germany."
+odu	M.	 Amaryan	
+uofa	E.G.	 Anassontzis	
+cmu	A.	 Austregesilo	
+jlab	F.	 Barbosa	
+fsu	J.	 Barlow	
+cmu	A.	 Barnes	
+fsu	E.	 Barriga	
+iu	R.	 Barsotti	
+uofr	T.D.	 Beattie	
+jlab	J.	Benesch	
+"cua,mephi"	V.V.	 Berdnikov	
+jlab	G.	Biallas	
+uncw	T.	 Black	
+fiu	W.	 Boeglin	
+"jlab,odu"	P.	Brindza	
+gwu	W.J.	 Briscoe	
+jlab	T.	 Britton	
+jlab	J.	Brock	
+usm	W.K.	 Brooks	
+fsu	B.E.	 Cannon	
+jlab	C.	Carlin	
+jlab	D.S.	Carman	
+jlab	T.	Carstens	"Current address: 103 Riverside Dr, Yorktown, VA 23692."
+ihep	N.	 Cao	
+itep	O.	 Chernyshov	
+jlab	E.	 Chudakov	
+asu	S.	 Cole	
+gwu	O.	 Cortes	
+jlab	W.D.	Crahen	
+fsu	V.	 Crede	
+jlab	M.M.	 Dalton	
+uncw	T.	 Daniels	
+jlab	A.	 Deur	
+jlab	C.	Dickover	
+fsu	S.	 Dobbs	
+itep	A.	 Dolgolenko	
+fiu	R.	 Dotel	
+asu	M.	 Dugger	
+gsi	R.	 Dzhygadlo	
+iu	A.	Dzierba	
+jlab	H.	 Egiyan	
+fiu	T.	 Erbora	
+fsu	A.	 Ernst	
+fsu	P.	 Eugenio	
+mit	C.	 Fanelli	
+gwu	S.	 Fegan	"Current address: University of York, York YO10 5DD, United Kingdom."
+uofr	A.M.	 Foda	
+iu	J.	 Foote	
+iu	J.	 Frye	
+jlab	S.	 Furletov	
+uncw	L.	 Gan	
+ncatsu	A.	 Gasparian	
+itep	A.	 Gerasimov	
+yerevan	N.	 Gevorgyan	
+iu	C.	 Gleason	
+gsi	K.	 Goetzen	
+fsu	A.	 Goncalves	
+itep	V.S.	 Goryachev	
+fiu	L.	 Guo	
+usm	H.	 Hakobyan	
+gsi	A.	 Hamdi	goethe
+mit	J.	 Hardin	
+uofr	C.L.	Henschel	"Current address:Department of Physics and Astronomy, University of Calgary, Calgary, AB, T2N 1N4, Canada."
+uofr	G.M.	 Huber	
+jlab	C.	Hutton	
+wm	A.	 Hurley	
+uofa	P.	Ioannou	
+glasgow	D.G.	 Ireland	
+jlab	M.M.	 Ito	
+cmu	N.S.	 Jarvis	
+uconn	R.T.	 Jones	
+yerevan	V.	 Kakoyan	
+uofr	S. 	Katsaganis	
+cua	G.	 Kalicy	
+fiu	M.	 Kamel	
+jlab	C.D.	 Keith	
+cua	F.J.	 Klein	"Current address: Office of Academic Computing Services, University of Maryland, College Park, MD 20742."
+gsi	R.	 Kliemt	
+uofr	D.	Kolybaba	
+uofa	C.	 Kourkoumelis	
+uofr	S.T.	Krueger	"Current address: iQMetrix, 311 Portage Avenue, Winnipeg, MB, R3B 2B9, Canada."
+usm	S.	 Kuleshov	
+"umass,itep"	I.	 Larin	
+jlab	D.	 Lawrence	
+iu	J.P.	Leckey	
+fsu	D.I.	 Lersch	
+uofr	B.D.	Leverington	"Current address: Heidelberg Universitaet, Physikalisches Institut 3.406, 69120 Heidelberg, Germany."
+cmu	W.I.	 Levine	
+wm	W.	 Li	
+ihep	B.	 Liu	
+glasgow	K.	 Livingston	
+uofr	G.J.	 Lolos	
+"tomsk,tomskb"	V.	 Lyubovitskij	
+jlab	D.	 Mack	
+yerevan	H.	 Marukyan	
+jlab	P.T.	 Mattione	"Current address: Deep Silver Volition, 1 E Main St., Champaign, IL 61820."
+itep	V.	 Matveev	
+jlab	M.	 McCaughan	
+cmu	M.	 McCracken	
+cmu	W.	 McGinley	
+uconn	J.	 McIntyre	
+jlab	D.	 Meekins	
+usm	R.	 Mendez	
+cmu	C.A.	 Meyer	
+umass	R.	 Miskimen	
+iu	R.E.	 Mitchell	
+uconn	F.	 Mokaya	
+asu	K.	 Moriya	
+gsi	F.	 Nerling	goethe
+fsu	L.	 Ng	
+gwu	H.	 Ni	
+fsu	A.I.	 Ostrovidov	
+uofr	Z.	 Papandreou	
+mit	M.	 Patsyuk	
+fiu	C.	 Paudel	
+glasgow	P.	 Pauli	
+ncatsu	R.	 Pedroni	
+jlab	L.	 Pentchev	
+gsi	K.J.	 Peters	goethe
+gwu	W.	 Phelps	
+jlab	J.	 Pierce	"Current address: Oak Ridge National Laboratory, Oak Ridge, TN 37831."
+jlab	E.	 Pooser	
+jlab	V.	Popov	
+uconn	B.	 Pratt	
+jlab	Y.	 Qiang	"Current address: Toshiba Medical Research Institute USA, Inc., 706 N Deerpath Dr, Vernon Hills, IL 60061."
+nw	N.	 Qin	
+jlab	V.	Razmyslovich	"Current address:  660 E Raven way, Gilbert, AZ 85297."
+fiu	J.	 Reinhold	
+asu	B.G.	 Ritchie	
+juelich	J.	Ritman	
+nw	L.	 Robison	
+mephi	D.	 Romanov	
+usm	C.	 Romero	
+nsu	C.	 Salgado	
+jlab	N.	 Sandoval	
+jlab	T.	Satogata	
+wm	A.M.	 Schertz	
+juelich	S.	Schadmand	
+umass	A.	Schick	
+cmu	R.A.	 Schumacher	
+gsi	C.	 Schwarz	
+gsi	J.	 Schwiening	
+uofr	A.Yu.	 Semenov	
+uofr	I.A.	 Semenova	
+nw	K.K.	 Seth	
+ihep	X.	 Shen	
+iu	M.R.	 Shepherd	
+jlab	E.S.	 Smith	\corref{cor}}\cortext[cor]{Corresponding author: Tel.: +1 757 269 7625.}\ead{elton@jlab.org}
+cua	D.I.	 Sober	
+jlab	A.	 Somov	
+mephi	S.	 Somov	
+usm	O.	 Soto	
+asu	N.	 Sparks	
+cmu	M.J.	 Staib	
+jlab	C.	 Stanislav	
+wm	J.R.	 Stevens	
+jlab	J.	Stewart	"Current address: Brookhaven National Laboratory, Upton, New York 11973."
+gwu	I.I.	 Strakovsky	
+asu	B.C.L.	Summner	
+uofr	K.	 Suresh	
+itep	V.V.	Tarasov	
+jlab	S.	Taylor	
+uofr	L.A.	Teigrob	"Current address: Tykans Group Inc., 3412 25 St. NE, Calgary, AB, T1Y 6C1."
+uofr	A.	 Teymurazyan	
+glasgow	A.	 Thiel	
+mephi	I.	 Tolstukhin	"Current address: Argonne National Laboratory, Argonne, Illinois 60439."
+nw	A.	 Tomaradze	
+usm	A.	 Toro	
+fsu	A.	 Tsaris	
+cmu	Y.	Van~Haarlem	"Current address: Commonwealth Scientific and Industrial Research Organisation, Lucas Heights, NSW~2234, Australia."
+uofa	G.	 Vasileiadis	
+usm	I.	 Vega	
+iu	G.	Visser	
+uofa	G.	Voulgaris	
+cua	N.K.	Walford	"Current address: AbbVie Deutschland GmbH, Knollstrasse 67061, Ludwigshafen, Germany."
+glasgow	D.	"Werthm\""uller"	"Current address: University of York, York YO10 5DD, United Kingdom."
+jlab	T.	Whitlatch	
+odu	N.	Wickramaarachchi	
+mit	M.	Williams	
+jlab	E.	Wolin	"Current address: 2808 Linden Ln, Williamsburg, VA 23185."
+nw	T.	Xiao	
+mit	Y.	Yang	
+"iu,uofr"	J.	Zarling	
+wuhan	Z.	Zhang	
+ihep	Q.	Zhou	
+wuhan	X.	Zhou	
+jlab	B.	Zihlmann	
